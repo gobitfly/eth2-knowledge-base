@@ -1,4 +1,4 @@
-Glossary
+# Glossary
 
 ## Slot
 
@@ -18,9 +18,9 @@ An epoch is
 
 proposed , missed ,orphaned
 
-#### Validator stats types
+#### Validator status types (Lifecycle)
 
-deposited, active,pending, exiting , slashing
+deposited, active, pending, exiting , slashing
 
 #### Unique Index 
 
@@ -53,9 +53,3 @@ deposited, active,pending, exiting , slashing
 
 
 ## Slashing
-
-
-
-
-
-
