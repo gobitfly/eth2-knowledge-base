@@ -33,10 +33,10 @@ proposed , missed ,orphaned
 #### Attestations
 
 
-### Voted
+#### Voted
 
 
-### Finalization 
+#### Finalization
 
 
 ## Block Status
