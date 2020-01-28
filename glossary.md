@@ -29,16 +29,16 @@ deposited, active, pending, exiting , slashing
 #### **Current Balance**
 
 
-#### Effective Balance
+#### **Effective Balance**
 
 
-#### Attestations
+#### **Attestations**
 
 
-#### Voted
+#### **Voted**
 
 
-#### Finalization
+#### **Finalization**
 
 
 ## Block Status
