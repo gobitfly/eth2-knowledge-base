@@ -8,33 +8,48 @@ A block slot is
 
 An epoch is
 
-### Voted
+## Validator
 
-### Finalization 
 
-## Block Status
+#### Active, Pending & Ejected Validator
 
-## Active, Pending & Ejected Validator
 
-## Eligible for activation & Estimated activation
+#### Eligible for activation & Estimated activation
 
-### Validator proposal types
+
+#### Validator proposal types
 
 proposed , missed ,orphaned
 
-### Unique Index 
+#### Unique Index 
 
-### Current Balance
 
-### Effective Balance
+#### Current Balance
 
-### Attestations
+
+#### Effective Balance
+
+
+#### Attestations
+
+
+### Voted
+
+
+### Finalization 
+
+
+## Block Status
+
 
 ## Proposer 
 
+
 ## Deposits 
 
+
 ## Exits
+
 
 ## Slashing
 
