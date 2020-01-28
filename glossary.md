@@ -11,11 +11,10 @@ An epoch is
 ## Validator
 
 
-#### Eligible for activation & Estimated activation
+#### **Eligible for activation & Estimated activation**
 
 
-#### Validator proposal types
-___
+#### **Validator proposal types**
 
 proposed , missed ,orphaned
 
