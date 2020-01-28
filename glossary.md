@@ -1,4 +1,4 @@
-# Glossary
+Glossary
 
 ## Slot
 
@@ -11,15 +11,16 @@ An epoch is
 ## Validator
 
 
-#### Active, Pending & Ejected Validator
-
-
 #### Eligible for activation & Estimated activation
 
 
 #### Validator proposal types
 
 proposed , missed ,orphaned
+
+#### Validator stats types
+
+deposited, active,pending, exiting , slashing
 
 #### Unique Index 
 
