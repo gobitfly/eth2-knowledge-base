@@ -36,7 +36,7 @@ to run a validator node.
 
 **Validator Lifecycle:**
 	
-**1.**Deposited:**
+**1.Deposited:**
   32 ETH has been deposited to the ETH1 and will keep this state for around 7 hours to protect from the ETH1 chain attacks
       
       
