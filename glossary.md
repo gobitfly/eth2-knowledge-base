@@ -6,19 +6,20 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 
 **Roles**:
 
-  * Creating committees
-  
-  * Creation of randomness 
-  
-  * Manages rewards, penalties and validators
-  
-  * Responsible for timing (Slots & Epochs) 
+	* Assign validators their duties
+	* Finalize checkpoints
+	* Perform a protocol level random number generation (RNG)
+	* Progress the beacon chain
+	* Vote on the head of the chain for the fork choice
+	* Finalize checkpoints
+	* Link and vote in transitions/data of shard chains
 
 
 ## Slots (32 slots = 1 Epoch) 
 A time period of **12 seconds** in which a randomly chosen validator has time to propose a block.
 Each slot may or may not have a block in it. 
-Slots play an important role since validators are assigned to slots and each of these then represent one or more committee per Epoch. One validator from the committee will be chosen to propose a block, while the other 127 are attesting. After each Epoch, the validators are mixed and merged to new committees (minimum of 128 validators per committee).
+The total number of validators is split up in committees and one or more individual committees are responsible to attest to each slot.
+One validator from the committee will be chosen to propose a block, while the other 127 are attesting. After each Epoch, the validators are mixed and merged to new committees (minimum of 128 validators per committee).
 
 <img width="717" alt="validator" src="https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png">
 
@@ -30,7 +31,7 @@ Represents the number of slots and takes approximately **6.4 minutes** and consi
 
 
 ## Validator 
-Each validator equals 32 ETH which was deposited into the validator-deposit-contract on the ETH1 chain and requires the user 
+Each validator needs to deposit 32 ETH into the validator-deposit-contract on the ETH1 chain and requires the user 
 to run a validator node. Their job is to propose blocks and attestations.
 
 
@@ -42,18 +43,16 @@ to run a validator node. Their job is to propose blocks and attestations.
       
       
 **2. Pending: Waiting for activation on ETH2**
-  * A minimum of 4 validators per Epoch can be activated. (900 per day)
+  * Until 327680 active validators in the network, **4 validators can be activated per epoch** (900 per day). After that 5 can be 	activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active  validators**. 
   * Amount of activations scales with the amount of active validators 
     and the limit is the active validator set divided by 64.000
-  * **900 validators can be activated per day** until 327680 active validators have been reached. 
-    Then it becomes 5 per epoch
     
               
 **3. Active Validator:**
 Currently attesting and proposing blocks **(=Block proposer)**. 
 
   The Validator will stay active until:
-  * the balance drops below 16 ETH
+  * the balance drops below 16 ETH (ejected).
   * voluntary exit
   * slashed
   
@@ -80,7 +79,7 @@ Votes by validators which confirm the validity of a block.
 
 ## Unique Index:
 
-An identifier for validators, as seen on [beaconcha.in](https://www.beaconcha.in/) or [beacon.etherscan.io](https://beacon.etherscan.io/)
+A unique identifier, also called validator index, as seen on [beaconcha.in](https://www.beaconcha.in/) or [beacon.etherscan.io](https://beacon.etherscan.io/)
 
 ![grafik](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
 
