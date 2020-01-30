@@ -130,12 +130,16 @@ In order to determine if an Epoch has been finalized, validators have to agree o
   * Orphaned: In order to understand this easily we look at the diagram below: (the numbers "1, 2, 3,  ... ,9" represent the                    number of the slots).
   
   
-  1. Validator at slot 1 proposes the block “a”.
-  2. Validator at slot 2 proposes “b”.
-  3. Validator 3 proposes “c”. 
-  4. Slot 4 is being skipped because the validator didn’t propose a block (e.g.: offline).
-  5. At slot 5/6 a fork occurs: Validator(5) proposes a block, but validator(6) doesn’t receive this data (e.g.: the block          didn’t reach them fast enough). Therefore Validator(6) proposes its block with the most recent information it sees from 
-     validator(3). 
-  6. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key         here which decides which one of the available chains is the canonical one.
+	1. Validator at slot 1 proposes the block “a”.
+	  
+  	2. Validator at slot 2 proposes “b”.
+	
+  	3. Validator 3 proposes “c”.
+	
+  	4. Slot 4 is being skipped because the validator didn’t propose a block (e.g.: offline).
+  	5. At slot 5/6 a fork occurs: Validator(5) proposes a block, but validator(6) doesn’t receive this data (e.g.: the block 
+	didn’t reach them fast enough). Therefore Validator(6) proposes its block with the most recent information it sees from 	validator(3). 
+	      
+  	6. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key         	here - It decides which one of the available chains is the canonical one.
 	
 ![image](https://user-images.githubusercontent.com/26490734/73468330-e67e4380-4384-11ea-81cd-cb18d7a88e92.png)
