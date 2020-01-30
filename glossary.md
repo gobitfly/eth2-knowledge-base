@@ -59,6 +59,11 @@ Currently attesting and proposing blocks **(=proposer)**. The Validator will sta
 
   * Ejected: the validator balance fell below a threshold and was kicked out by the network
   * Exited: voluntary exit
+  
+  
+## Block proposer
+
+A validator which was chosen by the beacon chain to propose the next block. There is only one per slot. 
 
 ## Attestations: 
 
