@@ -30,8 +30,8 @@ Represents the number of slots and takes approximately **6.4 minutes** and consi
 
 
 ## Validator 
-Each validator equals 32 ETH which was deposited into the validator deposit contract and requires the user 
-to run a validator node.
+Each validator equals 32 ETH which was deposited into the validator-deposit-contract on the ETH1 chain and requires the user 
+to run a validator node. Their job is to propose blocks and attestations.
 
 
 **Validator Lifecycle:**
