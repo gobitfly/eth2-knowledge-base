@@ -36,11 +36,11 @@ to run a validator node.
 
 **Validator Lifecycle:**
 	
-1.	**Deposited:**
+**1.**Deposited:**
   32 ETH has been deposited to the ETH1 and will keep this state for around 7 hours to protect from the ETH1 chain attacks
       
       
-2.	**Pending: waiting for activation on ETH2**
+**2. Pending: waiting for activation on ETH2**
   * A minimum of 4 validators per Epoch can be activated. (900 per day)
   * Amount of activations scales with the amount of active validators 
     and the limit is the active validator set divided by 64.000
@@ -48,7 +48,7 @@ to run a validator node.
     Then it becomes 5 per epoch
     
               
-3. **Active Validator:**
+**3. Active Validator:**
 Currently attesting and proposing blocks **(=proposer)**. 
 
   The Validator will stay active until:
@@ -56,14 +56,14 @@ Currently attesting and proposing blocks **(=proposer)**.
   * voluntary exit
   * slashed
   
-4. **Slashing Validator: The Validator has been malicious.**
+**4. Slashing Validator: The Validator has been malicious.**
 
 
 ![slashed](https://user-images.githubusercontent.com/26490734/73463604-d44cd700-437d-11ea-9c11-a2fed18fdc6d.png)
 
 
 
-5. **Exiting Validator:**
+**5. Exiting Validator:**
 
   * Ejected: the validator balance fell below a threshold and was kicked out by the network
   * Exited: voluntary exit
