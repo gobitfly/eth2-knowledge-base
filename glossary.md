@@ -82,7 +82,7 @@ Votes by validators which confirm the validity of a block.
 
 An identifier for validators, as seen on [beaconcha.in](https://www.beaconcha.in/) or [beacon.etherscan.io](https://beacon.etherscan.io/)
 
-![index](https://user-images.githubusercontent.com/26490734/73463991-7a004600-437e-11ea-9ddb-78aa30f2d1ae.png)
+![grafik](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
 
 
 ## Eligible for activation & Estimated activation
