@@ -37,6 +37,7 @@ to run a validator node. Their job is to propose blocks and attestations.
 **Validator Lifecycle:**
 	
 **1. Deposited:**
+
   32 ETH has been deposited to the ETH1 and this state will be kept for around 7 hours. 
   This offers security in case the ETH1 chain gets attacked.
       
