@@ -98,13 +98,13 @@ The **effective Balance** represents a value calculated by the current balance. 
 
 Here are examples on how the effective balance is calculated:
 
-  *Current balance: 32.00 ETH – Effective balance: 32.00 ETH
+  * Current balance: 32.00 ETH – Effective balance: 32.00 ETH
   
-  *Current balance: 30.50 ETH – Effective balance: 30.00 ETH
+  * Current balance: 30.50 ETH – Effective balance: 30.00 ETH
   
-  *Current balance: 29.99 ETH – Effective balance: 29.00 ETH
+  * Current balance: 29.99 ETH – Effective balance: 29.00 ETH
   
-  *Current balance: 21.58 ETH – Effective balance: 21.00 ETH
+  * Current balance: 21.58 ETH – Effective balance: 21.00 ETH
   
 **In order to increase the effective balance, the validator requires “effective balance + 1.5 ETH”.**
 In other words, if your effective balance is 20 ETH, you will need a current balance of 
