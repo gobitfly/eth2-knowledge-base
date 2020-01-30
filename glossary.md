@@ -50,7 +50,7 @@ to run a validator node. Their job is to propose blocks and attestations.
     
               
 **3. Active Validator:**
-Currently attesting and proposing blocks **(=proposer)**. 
+Currently attesting and proposing blocks **(=Block proposer)**. 
 
   The Validator will stay active until:
   * the balance drops below 16 ETH
