@@ -29,7 +29,7 @@ Slots play an important role since validators are assigned to slots and each of 
 Represents the number of slots takes approximately 6 minutes and consists of 32 Slots (=12 seconds).
 
 
-## Validator (
+## Validator 
 Each validator equals 32 ETH which was deposited into the validator deposit contract and requires the user 
 to run a validator node.
 
