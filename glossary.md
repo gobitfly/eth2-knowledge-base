@@ -94,7 +94,7 @@ If there is a queue of [pending validators](https://www.beaconcha.in/validators)
 ## Current Balance & Effective Balance
 
 The current balance is the amount of ETH held by the validator as of now. 
-The effective Balance represents a value calculated by the current balance. It is used to determine the size of a reward or penalty a validator receives. The effective balance can **never be higher than 32 ETH.** 
+The **effective Balance** represents a value calculated by the current balance. It is used to determine the size of a reward or penalty a validator receives. The effective balance can **never be higher than 32 ETH.** 
 
 Here are examples on how the effective balance is calculated:
 
@@ -103,6 +103,8 @@ Here are examples on how the effective balance is calculated:
   *Current balance: 30.50 ETH – Effective balance: 30.00 ETH
   
   *Current balance: 29.99 ETH – Effective balance: 29.00 ETH
+  
+  *Current balance: 21.58 ETH – Effective balance: 21.00 ETH
   
 **In order to increase the effective balance, the validator requires “effective balance + 1.5 ETH”.**
 In other words, if your effective balance is 20 ETH, you will need a current balance of 
