@@ -26,7 +26,7 @@ Slots play an important role since validators are assigned to slots and each of 
 
 ## Epoch
 
-Represents the number of slots and takes approximately **6.4 minutes** and consists of 32 Slots (=12 seconds).
+Represents the number of slots and takes approximately **6.4 minutes** and consists of 32 Slots (12 seconds each).
 
 
 ## Validator 
