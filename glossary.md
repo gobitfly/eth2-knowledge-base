@@ -16,7 +16,7 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 
 
 ## Slots (32 slots = 1 Epoch) 
-A time period in which a randomly chosen validator has time to propose a block.
+A time period of 12 seconds in which a randomly chosen validator has time to propose a block.
 Each slot may or may not have a block in it. 
 Slots play an important role since validators are assigned to slots and each of these then represent one or more committee per Epoch. One validator from the committee will be chosen to propose a block, while the other 127 are attesting. After each Epoch, the validators are mixed and merged to new committees (minimum of 128 validators per committee).
 
