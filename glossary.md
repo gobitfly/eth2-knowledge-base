@@ -4,10 +4,15 @@
  
 It introduces Proof of stake to Ethereum1 and runs along it. It’s also called the coordination layer.
 
-**Roles**:Creating committees, 
-          Creation of randomness, 
-          Manages rewards, penalties and validators 
-          Responsible for timing (Slots & Epochs) 
+**Roles**:
+
+  * Creating committees
+  
+  * Creation of randomness 
+  
+  * Manages rewards, penalties and validators
+  
+  * Responsible for timing (Slots & Epochs) 
 
 
 ## Slots (32 slots = 1 Epoch): 
