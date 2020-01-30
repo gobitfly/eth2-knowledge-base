@@ -45,7 +45,7 @@ to run a validator node. Their job is to propose blocks and attestations.
   * A minimum of 4 validators per Epoch can be activated. (900 per day)
   * Amount of activations scales with the amount of active validators 
     and the limit is the active validator set divided by 64.000
-  * 900 validators can be activated per day until 327680 active validators have been reached. 
+  * **900 validators can be activated per day** until 327680 active validators have been reached. 
     Then it becomes 5 per epoch
     
               
