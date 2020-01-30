@@ -51,18 +51,19 @@ to run a validator node.
 3. **Active Validator:**
 Currently attesting and proposing blocks **(=proposer)**. 
 
-The Validator will stay active until:
+  The Validator will stay active until:
   * the balance drops below 16 ETH
   * voluntary exit
   * slashed
+  
+4. **Slashing Validator: The Validator has been malicious.**
+
 
 ![slashed](https://user-images.githubusercontent.com/26490734/73463604-d44cd700-437d-11ea-9c11-a2fed18fdc6d.png)
 
 
-4.	**Slashing Validator: The Validator has been malicious.**
 
-
-5.	**Exiting Validator:**
+5. **Exiting Validator:**
 
   * Ejected: the validator balance fell below a threshold and was kicked out by the network
   * Exited: voluntary exit
