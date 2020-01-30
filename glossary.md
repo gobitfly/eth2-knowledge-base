@@ -22,7 +22,7 @@ Slots play an important role since validators are assigned to slots and each of 
 
 <img width="717" alt="validator" src="https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png">
 
-###### [source](https://medium.com/coinmonks/eth2-0-phase-0-basics-for-new-contributors-8a0a22bc38c7)  
+###### [image source](https://medium.com/coinmonks/eth2-0-phase-0-basics-for-new-contributors-8a0a22bc38c7)  
 
 ## Epoch
 
