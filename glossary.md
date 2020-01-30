@@ -37,12 +37,11 @@ to run a validator node. Their job is to propose blocks and attestations.
 **Validator Lifecycle:**
 	
 **1. Deposited:**
-
   32 ETH has been deposited to the ETH1 and this state will be kept for around 7 hours. 
   This offers security in case the ETH1 chain gets attacked.
       
       
-**2. Pending: waiting for activation on ETH2**
+**2. Pending: Waiting for activation on ETH2**
   * A minimum of 4 validators per Epoch can be activated. (900 per day)
   * Amount of activations scales with the amount of active validators 
     and the limit is the active validator set divided by 64.000
