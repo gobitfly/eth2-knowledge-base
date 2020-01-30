@@ -49,7 +49,9 @@ to run a validator node.
     
               
 3. **Active Validator:**
-Currently attesting and proposing blocks **(=proposer)**. The Validator will stay active until:
+Currently attesting and proposing blocks **(=proposer)**. 
+
+The Validator will stay active until:
   * the balance drops below 16 ETH
   * voluntary exit
   * slashed
