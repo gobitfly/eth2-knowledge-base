@@ -107,8 +107,7 @@ Here are examples on how the effective balance is calculated:
   * Current balance: 21.58 ETH – Effective balance: 21.00 ETH
   
 **In order to increase the effective balance, the validator requires “effective balance + 1.5 ETH”.**
-In other words, if your effective balance is 20 ETH, you will need a current balance of 
-21.5 ETH in order to have an effective balance of 21 ETH.
+In other words, if the effective balance is 20 ETH, a current balance of 21.5 ETH is required in order to have an effective balance of 21 ETH.
 
 
 ## Finalization
