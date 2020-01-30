@@ -85,13 +85,13 @@ An identifier for validators, as seen on [beaconcha.in](https://www.beaconcha.in
 ![index](https://user-images.githubusercontent.com/26490734/73463991-7a004600-437e-11ea-9ddb-78aa30f2d1ae.png)
 
 
-**Eligible for activation & Estimated activation:**
+## Eligible for activation & Estimated activation
 
 Refers to pending validators. The deposit has been recognized by the ETH2 chain at the timestamp of “Eligible for activation”.
 If there is a queue of [pending validators](https://www.beaconcha.in/validators) an estimated timestamp for activation will be calculated.
 
 
-**Current Balance & Effective Balance:**
+## Current Balance & Effective Balance
 
 The current balance is the amount of ETH which is being held by the validator as of now. 
 The effective Balance represents a value calculated by the current balance. It is used to determine the size of a reward or penalty a validator receives. The effective balance can **never be higher than 32 ETH.** 
