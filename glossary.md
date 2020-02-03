@@ -142,4 +142,4 @@ In order to determine if an Epoch has been finalized, validators have to agree o
   	6. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key         	here - It decides which one of the available chains is the canonical one.
 	
 	
-	![image](https://user-images.githubusercontent.com/26490734/73468330-e67e4380-4384-11ea-81cd-cb18d7a88e92.png)
+![forkchoice](https://user-images.githubusercontent.com/26490734/73468330-e67e4380-4384-11ea-81cd-cb18d7a88e92.png)
