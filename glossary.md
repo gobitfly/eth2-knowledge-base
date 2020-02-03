@@ -48,7 +48,7 @@ to run a validator node. Their job is to propose blocks and attestations.
     and the limit is the active validator set divided by 64.000
     
               
-**3. Active Validator:**
+**3. Active Validator**
 Currently attesting and proposing blocks **(=Block proposer)**. 
 
   The Validator will stay active until:
@@ -56,14 +56,14 @@ Currently attesting and proposing blocks **(=Block proposer)**.
   * voluntary exit
   * slashed
   
-**4. Slashing Validator: The Validator has been malicious.**
+**4. Slashing Validator: The Validator has been malicious**
 
 
 ![slashed](https://user-images.githubusercontent.com/26490734/73463604-d44cd700-437d-11ea-9c11-a2fed18fdc6d.png)
 
 
 
-**5. Exiting Validator:**
+**5. Exiting Validator**
 
   * Ejected: the validator balance fell below a threshold and was kicked out by the network
   * Exited: voluntary exit
@@ -73,11 +73,11 @@ Currently attesting and proposing blocks **(=Block proposer)**.
 
 A validator which was chosen by the beacon chain to propose the next block. There is only one per slot. 
 
-## Attestations: 
+## Attestations 
 
 Votes by validators which confirm the validity of a block.
 
-## Unique Index:
+## Unique Index
 
 A unique identifier, also called validator index, as seen on [beaconcha.in](https://www.beaconcha.in/) or [beacon.etherscan.io](https://beacon.etherscan.io/)
 
