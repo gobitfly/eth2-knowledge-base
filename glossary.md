@@ -38,12 +38,12 @@ to run a validator node. Their job is to propose blocks and attestations.
 **Validator Lifecycle:**
 	
 **1. Deposited:**
-  32 ETH has been deposited to the ETH1 and this state will be kept for around 7 hours. 
+  32 ETH has been deposited to the ETH1 deposit-contract and this state will be kept for around 7 hours. 
   This offers security in case the ETH1 chain gets attacked.
       
       
 **2. Pending: Waiting for activation on ETH2**
-  * Until 327680 active validators in the network, **4 validators can be activated per epoch** (900 per day). After that 5 can be 	activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active  validators**. 
+  * Until 327680 active validators in the network, **4 validators can be activated per epoch** (900 per day). After that 5 can be activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active  validators**. 
   * Amount of activations scales with the amount of active validators 
     and the limit is the active validator set divided by 64.000
     
@@ -81,7 +81,7 @@ Votes by validators which confirm the validity of a block.
 
 A unique identifier, also called validator index, as seen on [beaconcha.in](https://www.beaconcha.in/) or [beacon.etherscan.io](https://beacon.etherscan.io/)
 
-![grafik](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
+![uniqueIndex](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
 
 
 ## Eligible for activation & Estimated activation
