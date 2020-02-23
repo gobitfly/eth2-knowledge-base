@@ -22,6 +22,7 @@ The total number of validators is split up in committees and one or more individ
 One validator from the committee will be chosen to propose a block, while the other 127 are attesting. After each Epoch, the validators are mixed and merged to new committees (minimum of 128 validators per committee).
 
 <img width="717" alt="validator" src="https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png">
+
 ###### [image source](https://medium.com/coinmonks/eth2-0-phase-0-basics-for-new-contributors-8a0a22bc38c7)  
 
 ## Epoch
