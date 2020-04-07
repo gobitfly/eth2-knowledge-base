@@ -3,7 +3,7 @@
 This post will mainly dig into the differences between PoS and PoW, their benefits, trade-offs.
 Since we are expecting a surge of new users once Proof of stake establishes itself. The goal of this post is to keep it simple and to use as few buzzwords as possible.
 
-All of the mentioned concepts (PoS, Pow) are [consensus](https://en.wikipedia.org/wiki/Wikipedia:What_is_consensus) mechanisms, and are a requirement to process transactions without a [middleman](https://www.investopedia.com/terms/m/middleman.asp) (e.g., a Bank) on the blockchain.
+All of the mentioned concepts (PoS, PoW) are [consensus](https://en.wikipedia.org/wiki/Wikipedia:What_is_consensus) mechanisms, and are a requirement to process transactions without a [middleman](https://www.investopedia.com/terms/m/middleman.asp) (e.g., a Bank) on the blockchain.
 
 ### Proof of Work (PoW)
 
@@ -16,7 +16,7 @@ First of all we need to know that users can send each other digital tokens (tran
 ![blocks&transactions](https://user-images.githubusercontent.com/26490734/78656198-53ebaa80-78c7-11ea-96f9-ed2e35a35b12.png)
 ###### [image source](https://medium.com/coinmonks/the-bitcoin-blockchain-a3eb996f7140)
 
-With PoW, miners compete against each other to mine the next block. Miners use computation power (=hashing power) to solve very complex math puzzles (e.g., Hash-functions). Apart from this, the complexity to mine increases the more miners join this competition.
+With PoW, miners compete against each other to mine the next block. Miners use computation power (=hashing power) to solve very complex math puzzles (e.g., Hash-functions). Apart from this, the difficulty to mine increases the higher the total [hashrate](https://en.bitcoinwiki.org/wiki/Hashrate) is.
 However, there’s an **incentive required** to do so: For each mined block the miner gets a reward, the block reward.
 As of now bitcoin miners are rewarded with 12.5 Bitcoins per block – roughly 10 minutes per block.
 
@@ -45,7 +45,7 @@ An 51% attack would allow those entities to **modify transactions, stop transact
 **Changing the block rewards, modifying the inflation rate (=creating coins) or stealing coins**, however, **are not possible**.
 Changing a certain block (attacking) is only possible if all subsequent confirmed blocks are discarded. This increases the costs of an attack the longer we go back in history.
 
-**As long as the incentives to be honest are higher than the ones to be malicious, the [possibility of an 51% attack is extremely low.](https://en.bitcoin.it/wiki/Majority_attack)** Note that such an attack has never been performed on Bitcoin since day one.
+**As long as the incentives to be honest are higher than the ones to be malicious, the possibility of an 51% attack is extremely low.** Note that such an attack [has never been performed on Bitcoin since day one](https://en.bitcoin.it/wiki/Majority_attack).
 
 To sum up, the main weaknesses about PoW are:
 
@@ -67,7 +67,7 @@ Due to the fact that Bitcoin was the first ever cryptocurrency, PoW has been the
 
 ## Proof of Stake (PoS)
 
-Proof of stake was introduced back in 2011 on the [bitcointalk forum](https://bitcointalk.org/index.php?topic=27787.0) 
+Proof of Stake was introduced back in 2011 on the [bitcointalk forum](https://bitcointalk.org/index.php?topic=27787.0) 
 Before we start off, it’s important to acknowledge that there are different implementations of PoS, but they are all similar. 
 
 **All of them put money into stake**
@@ -94,8 +94,8 @@ The locked stake is a motivator to **not** act maliciously. In case of an malici
 
 #### <ins>Ethereum 2.0 and Proof of Stake</ins>
 
-As of now, Ethereum is running the PoW consensus algorithm, but plans to move to Proof of stake in the near future.
-The Ethereum 2.0 research team modified the PoS algorithm slightly, which was required to perform the transition from PoW to Pos.
+As of now, Ethereum is running the PoW consensus mechanism, but plans to move to Proof of Stake in the near future.
+The Ethereum 2.0 research team modified the PoS algorithm slightly, which was required to perform the transition from PoW to PoS.
  
 Since Ethereum 2.0 has not shipped yet, it is hard to say whether these modifications turned out in favor or not. Some of these changes are covered in our [glossary](https://kb.beaconcha.in/glossary).
 The main idea stays the same. Coins get locked.
