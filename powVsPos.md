@@ -113,6 +113,18 @@ In other words, if Witness_X has the voting power of 5 and Witness_Y the power o
 
 Delegates take turns in validating blocks, process a new block every 2 seconds and each delegate is scheduled for a specific time slot. If a block producer acts maliciously, they lose their reputation and can be replaced by a new block producer.
 
+#### Weaknesses of (D)PoS
+
+If we look at the EOS voting statistics it is clear that the majority of the votes are being done from and by centralized exchanges. Which leads to the main arguments:
+
+1. Delegates can easily form cartels
+2. Rich get richer
+3. Intrinsic commitment system, The network could have attack vector’s which allow them to lose the coins themselves,
+    but gain more of them by attacking
+4. Users who leave their coins on exchanges [empower exchanges unknowingly](https://www.coindesk.com/why-crypto-should-care-about-justin-suns-steem-drama)
+
+![eosBlockproducerRankings](https://user-images.githubusercontent.com/26490734/78664339-1b060280-78d4-11ea-98ec-178f830569fa.png)
+###### [image source](https://eosauthority.com/producers_chart?network=eos#producer-rankings)
 
 
 
