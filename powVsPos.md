@@ -145,13 +145,13 @@ This is an ongoing process and will be updated once Ethereum 2.0 launches and st
 [image source](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
 
-**General sources**
+*General sources*
 
-[Bitcoin Wikipedia](https://en.bitcoinwiki.org/wiki/Proof-of-stake)
+*[Bitcoin Wikipedia](https://en.bitcoinwiki.org/wiki/Proof-of-stake)*
 
-[Binance Avademy](https://www.binance.vision/blockchain)
+*[Binance Academy](https://www.binance.vision/blockchain)*
 
-[Andreas Antonopoulos](https://youtu.be/3W_3AQrQEOM)
+*[Andreas Antonopoulos](https://youtu.be/3W_3AQrQEOM)*
 
 
 
