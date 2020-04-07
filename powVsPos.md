@@ -141,12 +141,15 @@ This is an ongoing process and will be updated once Ethereum 2.0 launches and st
 
 
 ![PoW_PoS_Overview](https://user-images.githubusercontent.com/26490734/78665293-e09d6500-78d5-11ea-8f8d-eb310c3b7ab6.png)
+
 [image source](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 
 
 **General sources**
 [Bitcoin Wikipedia](https://en.bitcoinwiki.org/wiki/Proof-of-stake)
+
 [Binance Avademy](https://www.binance.vision/blockchain)
+
 [Andreas Antonopoulos](https://youtu.be/3W_3AQrQEOM)
 
 
