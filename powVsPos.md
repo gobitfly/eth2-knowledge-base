@@ -1,7 +1,7 @@
 ## Concept of Proof of Stake (PoS) vs Proof of Work (PoW)
 
 This post will mainly dig into the differences between PoS and PoW, their benefits, trade-offs.
-Since we are expecting a surge of new users once Proof of stake establishes itself, the goal of this post is to keep it simple and to use as few buzzwords as possible.
+Since we are expecting a surge of new users once Proof of stake establishes itself. The goal of this post is to keep it simple and to use as few buzzwords as possible.
 
 All of the mentioned concepts (PoS, Pow) are [consensus](https://en.wikipedia.org/wiki/Wikipedia:What_is_consensus) mechanisms, and are a requirement to process transactions without a [middleman](https://www.investopedia.com/terms/m/middleman.asp) (e.g., a Bank) on the blockchain.
 
