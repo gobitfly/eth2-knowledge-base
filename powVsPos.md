@@ -66,7 +66,9 @@ Due to the fact that Bitcoin was the first ever cryptocurrency, PoW has been the
 ## Proof of Stake (PoS)
 
 Proof of stake was introduced back in 2011 on the [bitcointalk forum](https://bitcointalk.org/index.php?topic=27787.0) 
-Before we start off, it’s important to acknowledge that there are different implementations of PoS, but they are all similar. **All of them put money into stake**
+Before we start off, it’s important to acknowledge that there are different implementations of PoS, but they are all similar. 
+
+**All of them put money into stake**
 
 #### How does it work?
 
