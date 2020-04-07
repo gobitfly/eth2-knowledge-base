@@ -100,13 +100,13 @@ The Ethereum 2.0 research team modified the PoS algorithm slightly, which was re
 Since Ethereum 2.0 has not shipped yet, it is hard to say whether these modifications turned out in favor or not. Some of these changes are covered in our [glossary](https://kb.beaconcha.in/glossary).
 The main idea stays the same. Coins get locked.
 
-*Benefits and weaknesses will be listed in the “DPoS” section.*
+*Benefits and weaknesses will be listed in the [“DPoS” section](https://github.com/Buttaa/eth2-knowledge-base/blob/master/powVsPos.md#delegated-proof-of-stake-dpos).*
 
 ## Delegated Proof of Stake (DPoS)
 
 The DPoS consensus algorithm was invented in 2014 by a developer called Daniel Larimer and implemented in his project “EOS”. It’s an modification to the PoS idea.
 
-####<ins>How does it work?</ins>
+#### <ins>How does it work?</ins>
 
 In this specific case we are going to refer to the EOS network.
 EOS-coin holders are maintaining the system by an election system. Coin holders have the ability to vote for delegates and give them the power to validate new blocks, process transactions and earn block rewards. The number of delegates (=witnesses) is restricted to 21 entities.The power each witness gets is proportional to the amount of coins they have been voted with.
