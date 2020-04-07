@@ -73,9 +73,9 @@ Before we start off, it’s important to acknowledge that there are different im
 PoS uses a pseudo random election process to choose one of the available nodes to be the next block proposer (=validator) and process the next block. In order to be one of the chosen nodes, coin holders need to lock up their coins (=stake) into the network. By increasing the stake, the odds of being a chosen node also increases and so does the total block reward.
 Obviously, the consensus algorithm **shouldn’t** always favour the wealthiest nodes all the time. Therefore, current PoS systems take different criteria into account.
 
-##### Block selection types
+#### Block selection types
 
-###### Randomised block selection
+##### Randomised block selection
 
 The system chooses a node with a combination of the highest stake and lowest hash value. In public blockchains these information are known to the public, therefore the next node can be predicted.
 
@@ -110,6 +110,7 @@ These witnesses have the choice to forward their votes to another witness, who a
 In other words, if Witness_X has the voting power of 5 and Witness_Y the power of 10, Witness_X can hand his votes over to Witness_Y who then has 15.
 
 **Processing blocks and transactions:**
+
 Delegates take turns in validating blocks, process a new block every 2 seconds and each delegate is scheduled for a specific time slot. If a block producer acts maliciously, they lose their reputation and can be replaced by a new block producer.
 
 
