@@ -128,6 +128,26 @@ If we look at the EOS voting statistics it is clear that the majority of the vot
 ![eosBlockproducerRankings](https://user-images.githubusercontent.com/26490734/78664339-1b060280-78d4-11ea-98ec-178f830569fa.png)
 ###### [image source](https://eosauthority.com/producers_chart?network=eos#producer-rankings)
 
+#### Differences between PoW and (D)PoS
+
+The way these consensus algorithms work have been discussed above and is required to understand the differences.
+Proof of work provides security to the network by an investment of energy, which means that miners need to connect their devices and burn electricity.
+Compared to PoW, PoS runs lightweight computers to check the rules of the network and validate the transactions.
+
+![PoW_vs_Pow](https://user-images.githubusercontent.com/26490734/78664983-6076ff80-78d5-11ea-9a24-11448ee0c7f4.png)
+
+The list for sure doesn’t stop here; Ethereum 2.0 claims to solves some of the “potential centralization” points and scalability issues. 
+This is an ongoing process and will be updated once Ethereum 2.0 launches and stress tested.
+
+
+![PoW_PoS_Overview](https://user-images.githubusercontent.com/26490734/78665293-e09d6500-78d5-11ea-8f8d-eb310c3b7ab6.png)
+[image source](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+
+
+**General sources**
+[Bitcoin Wikipedia](https://en.bitcoinwiki.org/wiki/Proof-of-stake)
+[Binance Avademy](https://www.binance.vision/blockchain)
+[Andreas Antonopoulos](https://youtu.be/3W_3AQrQEOM)
 
 
 
