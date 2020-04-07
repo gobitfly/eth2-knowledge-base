@@ -146,6 +146,7 @@ This is an ongoing process and will be updated once Ethereum 2.0 launches and st
 
 
 **General sources**
+
 [Bitcoin Wikipedia](https://en.bitcoinwiki.org/wiki/Proof-of-stake)
 
 [Binance Avademy](https://www.binance.vision/blockchain)
