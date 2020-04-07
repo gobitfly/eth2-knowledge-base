@@ -45,7 +45,7 @@ An 51% attack would allow those entities to **modify transactions, stop transact
 **Changing the block rewards, modifying the inflation rate (=creating coins) or stealing coins**, however, **are not possible**.
 Changing a certain block (attacking) is only possible if all subsequent confirmed blocks are discarded. This increases the costs of an attack the longer we go back in history.
 
-**As long as the incentives to be honest are higher than the ones to be malicious, the possibility of an 51% attack is extremely low.** Note that such an attack has never been performed on Bitcoin since day one.
+**As long as the incentives to be honest are higher than the ones to be malicious, the [possibility of an 51% attack is extremely low.](https://en.bitcoin.it/wiki/Majority_attack)** Note that such an attack has never been performed on Bitcoin since day one.
 
 To sum up, the main weaknesses about PoW are:
 
