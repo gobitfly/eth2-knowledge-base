@@ -63,6 +63,79 @@ Due to the fact that Bitcoin was the first ever cryptocurrency, PoW has been the
 4. Rich doesn’t necessarily get richer
 5. Proof-of- **work** , requires (expensive) effort in the real world, which can network make attacks expensive.
 
+## Proof of Stake (PoS)
+
+Proof of stake was introduced back in 2011 on the [bitcointalk forum](https://bitcointalk.org/index.php?topic=27787.0) 
+Before we start off, it’s important to acknowledge that there are different implementations of PoS, but they are all similar. **All of them put money into stake**
+
+#### How does it work?
+
+PoS uses a pseudo random election process to choose one of the available nodes to be the next block proposer (=validator) and process the next block. In order to be one of the chosen nodes, coin holders need to lock up their coins (=stake) into the network. By increasing the stake, the odds of being a chosen node also increases and so does the total block reward.
+Obviously, the consensus algorithm **shouldn’t** always favour the wealthiest nodes all the time. Therefore, current PoS systems take different criteria into account.
+
+##### Block selection types
+
+###### Randomised block selection
+
+The system chooses a node with a combination of the highest stake and lowest hash value. In public blockchains these information are known to the public, therefore the next node can be predicted.
+
+##### Coin Age Method
+
+This model chooses a node based on how long it has been staking for.
+The calculation is simple: **(Number of coins) x (Number of days staked)**. 
+Once a node has been chosen, the coin age is set back to 0. This prevents huge stake holders from continuously having the highest priority. If an honest staker decides to stop validating blocks, they will receive all of their staked coins and additionally their belonging block rewards.
+
+**Security in PoS:**
+The locked stake is a motivator to **not** act maliciously. In case of an malicious attack, the attacker will lose a part or even all of his stake. **If the rewards are higher than the attack costs**, the incentives are given to not attack the network. Like PoW, a successful attack would require 51% of the circulating supply.
+
+##### Ethereum 2.0 and Proof of Stake
+
+As of now, Ethereum is running the PoW consensus algorithm, but plans to move to Proof of stake in the near future.
+The Ethereum 2.0 research team modified the PoS algorithm slightly, which was required to perform the transition from PoW to Pos.
+ 
+Since Ethereum 2.0 has not shipped yet, it is hard to say whether these modifications turned out in favor or not. Some of these changes are covered in our [glossary](https://kb.beaconcha.in/glossary).
+The main idea stays the same. Coins get locked.
+*Benefits and weaknesses will be listed in the “DPoS” section.*
+
+## Delegated Proof of Stake (DPoS)
+
+The DPoS consensus algorithm was invented in 2014 by a developer called Daniel Larimer and implemented in his project “EOS”. It’s an modification to the PoS idea.
+
+#### How does it work?
+
+In this specific case we are going to refer to the EOS network.
+EOS-coin holders are maintaining the system by an election system. Coin holders have the ability to vote for delegates and give them the power to validate new blocks, process transactions and earn block rewards. The number of delegates (=witnesses) is restricted to 21 entities.The power each witness gets is proportional to the amount of coins they have been voted with.
+
+These witnesses have the choice to forward their votes to another witness, who are then able to vote on their behalf.
+In other words, if Witness_X has the voting power of 5 and Witness_Y the power of 10, Witness_X can hand his votes over to Witness_Y who then has 15.
+
+**Processing blocks and transactions:**
+Delegates take turns in validating blocks, process a new block every 2 seconds and each delegate is scheduled for a specific time slot. If a block producer acts maliciously, they lose their reputation and can be replaced by a new block producer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
