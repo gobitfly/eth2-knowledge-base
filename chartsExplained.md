@@ -25,7 +25,7 @@ Displays all [validators](https://kb.beaconcha.in/glossary#validator) for each t
 
 ### [Staked Ether](https://beaconcha.in/charts/staked_ether)
 
-Displays the total amount of staked Ether *effective* balance.
+Displays the total amount of staked Ether (*effective* balance).
 
 <sub>[effective balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) </sub>
 
