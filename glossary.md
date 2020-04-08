@@ -13,7 +13,7 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 * Vote on the head of the chain for the fork choice
 * Finalize checkpoints
 * Link and vote in transitions/data of shard chains
-###### [source](https://notes.ethereum.org/@djrtwo/Bkn3zpwxB#High-level-overview)
+[source](https://notes.ethereum.org/@djrtwo/Bkn3zpwxB#High-level-overview)
 
 ## Slots (32 slots = 1 Epoch) 
 A time period of **12 seconds** in which a randomly chosen validator has time to propose a block.
@@ -23,7 +23,7 @@ One validator from the committee will be chosen to propose a block, while the ot
 
 <img width="717" alt="validator" src="https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png">
 
-###### [image source](https://medium.com/coinmonks/eth2-0-phase-0-basics-for-new-contributors-8a0a22bc38c7)  
+[image source](https://medium.com/coinmonks/eth2-0-phase-0-basics-for-new-contributors-8a0a22bc38c7)  
 
 ## Epoch
 
