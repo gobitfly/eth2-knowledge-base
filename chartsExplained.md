@@ -51,9 +51,12 @@ A minimum of 2 epochs is caused by how finalization works. An empty timestamp as
 
 ### [Participation Rate](https://beaconcha.in/charts/participation_rate)
 
-Displays ...
+Displays the participation of validators in the chosen time period.
 
+<sub> *Calculation: Participation rate = (number of attestations in last epoch) / (number of attesting validators)* </sub>
 
+![participationRate](https://user-images.githubusercontent.com/26490734/78797584-2cc0d600-79b8-11ea-99e7-d73c2d5cd8c3.png)
+---
 
 
 
