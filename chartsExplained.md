@@ -25,14 +25,18 @@ Displays all [validators](https://kb.beaconcha.in/glossary#validator) for each t
 
 ### [Staked Ether](https://beaconcha.in/charts/staked_ether)
 
-Displays the total amount of staked Ether [(effective balance)](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)
+Displays the total amount of staked Ether effective balance.
+
+[effective balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) 
 
 ![stakedEth](https://user-images.githubusercontent.com/26490734/78771349-52d28000-7990-11ea-9ba6-8ba9904e7f4c.png)
 ---
 
 ### [Validator Balance](https://beaconcha.in/charts/average_balance)
 
-Displays the average Validator balance [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) 
+Displays the average Validator balance current balance.
+
+[current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) 
 
 ![currentValidatorBalance](https://user-images.githubusercontent.com/26490734/78773270-46035b80-7993-11ea-9ab8-e3c64a63b761.png)
 ---
