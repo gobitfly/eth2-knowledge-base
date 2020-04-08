@@ -32,8 +32,19 @@ Displays the total amount of staked Ether [(effective balance)](https://kb.beaco
 
 ### [Validator Balance](https://beaconcha.in/charts/average_balance)
 
-Displays the average Validator balance 
+Displays the average Validator balance [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) 
 
+![currentValidatorBalance](https://user-images.githubusercontent.com/26490734/78773270-46035b80-7993-11ea-9ab8-e3c64a63b761.png)
+---
+
+### [Network Liveness](https://beaconcha.in/charts/network_liveness)
+
+Displays how far the last finalized Epoch compared to the Head Epoch took place.
+A minimum of 2 epochs is caused by how finalization works. An empty timestamp as shown in the picture can be interpreted as a finalization problem. In that case **all** validators get punished.
+
+<sub> [Validator?](https://kb.beaconcha.in/glossary#validator) [Epoch?](https://kb.beaconcha.in/glossary#epoch) [Finalization?](https://kb.beaconcha.in/glossary#finalization) </sub>
+
+*picture incoming*
 
 
 
