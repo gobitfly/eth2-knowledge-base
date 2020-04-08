@@ -20,6 +20,8 @@ Displays all the proposed, missed or oprhaned Blocks for a specific time period.
 
 Displays all [validators](https://kb.beaconcha.in/glossary#validator) for each timestamp
 
+<sub> [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
+
 ![testnetValitdators](https://user-images.githubusercontent.com/26490734/78768801-bb1f6280-798c-11ea-91f1-4780830542ee.png)
 ---
 
