@@ -5,11 +5,7 @@ ___
 
 Displays all the proposed, missed or oprhaned Blocks for a specific time period. 
 
-<ins>Blue candles</ins> = Proposed Blocks
-
-<ins>Green candles</ins> = Missed Blocks
-
-<ins>Orange candles</ins> = Orphaned Blocks
+<ins>Blue candles</ins> = Proposed Blocks , <ins>Green candles</ins> = Missed Blocks , <ins>Orange candles</ins> = Orphaned Blocks
 
 <sub>[Proposed, missed and orphaned block ?](https://kb.beaconcha.in/glossary#block-status)</sub>
 
@@ -50,12 +46,12 @@ A minimum of 2 epochs is caused by how finalization works. An empty timestamp as
 
 <sub> [Validator?](https://kb.beaconcha.in/glossary#validator) [Epoch?](https://kb.beaconcha.in/glossary#epoch) [Finalization?](https://kb.beaconcha.in/glossary#finalization) </sub>
 
-*picture incoming*
-
+![networkLiveness](https://user-images.githubusercontent.com/26490734/78787440-a4880400-79aa-11ea-83c3-d8f57990b964.png)
 ---
 
+### [Participation Rate](https://beaconcha.in/charts/participation_rate)
 
-
+Displays ...
 
 
 
