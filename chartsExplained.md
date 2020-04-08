@@ -30,6 +30,10 @@ Displays the total amount of staked Ether [(effective balance)](https://kb.beaco
 ![stakedEth](https://user-images.githubusercontent.com/26490734/78771349-52d28000-7990-11ea-9ba6-8ba9904e7f4c.png)
 ---
 
+### [Validator Balance](https://beaconcha.in/charts/average_balance)
+
+Displays the average Validator balance 
+
 
 
 
