@@ -11,7 +11,7 @@ Displays all the proposed, missed or oprhaned Blocks for a specific time period.
 
 <ins>Orange candles</ins> = Orphaned Blocks
 
-<sub>[Proposed, missed and orphaned block simply explained](https://kb.beaconcha.in/glossary#block-status)</sub>
+<sub>[Proposed, missed and orphaned block ?](https://kb.beaconcha.in/glossary#block-status)</sub>
 
 ![blocksGIF](https://user-images.githubusercontent.com/26490734/78765940-f3bd3d00-7988-11ea-8734-e6fd35f4e710.gif)
 ---
