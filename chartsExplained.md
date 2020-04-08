@@ -45,7 +45,7 @@ A minimum of 2 epochs is caused by how finalization works. An empty timestamp as
 <sub> [Validator?](https://kb.beaconcha.in/glossary#validator) [Epoch?](https://kb.beaconcha.in/glossary#epoch) [Finalization?](https://kb.beaconcha.in/glossary#finalization) </sub>
 
 *picture incoming*
-
+---
 
 
 
