@@ -80,7 +80,7 @@ Measurement of the relation between effective balance and current balance of **a
 
 ### [Balance Distribution](https://beaconcha.in/charts/balance_distribution)
 
-Displays the distribution of current balances of all validators for the current epoch.5404 Validators at 3.28ETH .
+Displays the distribution of current balances of all validators for the current epoch. 5404 Validators at 3.28ETH .
 
 <sub> [current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)
 
