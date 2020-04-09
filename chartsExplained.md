@@ -74,6 +74,35 @@ Measurement of the relation between effective balance and current balance of **a
 <sub> [effective & current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
 
 ![stakeEffectiveness](https://user-images.githubusercontent.com/26490734/78873129-a3a6af00-7a4a-11ea-977d-03d182c573b8.png)
+---
+
+### [Balance Distribution](https://beaconcha.in/charts/balance_distribution)
+
+Displays the distribution of current balances of all validators for the current epoch.5404 Validators at 3.28ETH .
+
+<sub> [current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)
+
+![balanceDistribution](https://user-images.githubusercontent.com/26490734/78874403-a3a7ae80-7a4c-11ea-9527-356ce17e81f6.png)
+---
+
+### [Effective Balance Distribution](https://beaconcha.in/charts/effective_balance_distribution)
+
+Displays the distribution of effective balances of all validators. 2200 at have an effective balance of 3ETH.
+
+<sub> [effective balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)
+  
+![effectiveBalanceDistribution](https://user-images.githubusercontent.com/26490734/78874836-49f3b400-7a4d-11ea-83f3-8254a94a0611.png)
+---
+
+### [Income Distribution of the last 365 Days](https://beaconcha.in/charts/performance_distribution_365d)
+
+Displays the income distribution of all validators of the last 365 days. **38 Validators have gained 0.020360794 ETH**
+
+<sub> [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
+
+![incomeDistribution](https://user-images.githubusercontent.com/26490734/78877206-c63bc680-7a50-11ea-901b-ab27a404c581.png)
+---
+
 
 
 
