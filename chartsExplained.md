@@ -86,7 +86,7 @@ Displays the distribution of [effective balances]((https://kb.beaconcha.in/gloss
 
 Displays the income distribution of all [validators](https://kb.beaconcha.in/glossary#validator) of the last 365 days. 
 
-**Example** in the picture below: 38 Validators have gained 0.020360794 ETH.
+**Example** in the picture below: 38 validators have gained 0.020360794 ETH.
 
 ![incomeDistribution](https://user-images.githubusercontent.com/26490734/78877206-c63bc680-7a50-11ea-901b-ab27a404c581.png)
 ---
