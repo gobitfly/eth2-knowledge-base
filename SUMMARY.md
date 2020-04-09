@@ -2,5 +2,5 @@
 
 * [Overview](README.md)
 * [Glossary](glossary.md)
-* [Charts](untitled.md)
+* [Charts](charts.md)
 
