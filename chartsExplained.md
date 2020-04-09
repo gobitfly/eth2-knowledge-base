@@ -84,7 +84,7 @@ Displays the distribution of [current balances](https://kb.beaconcha.in/glossary
 
 ### [Effective Balance Distribution](https://beaconcha.in/charts/effective_balance_distribution)
 
-Displays the distribution of [effective balances]((https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)) of all [validators](https://kb.beaconcha.in/glossary#validator). 
+Displays the distribution of [effective balances](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) of all [validators](https://kb.beaconcha.in/glossary#validator). 
 
 **Example** in the picture below: 2200 at have an effective balance of 3ETH.
 
