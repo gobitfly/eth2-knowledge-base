@@ -68,7 +68,7 @@ Measurement of the relation between [effective balance](https://kb.beaconcha.in/
 
 Displays the distribution of [current balances](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) of all [validators](https://kb.beaconcha.in/glossary#validator) for the current epoch. 
 
-**Example** in the picture below: 5404 Validators at 3.28ETH .
+**Example** in the picture below: 5404 validators at 3.28ETH .
 
 ![balanceDistribution](https://user-images.githubusercontent.com/26490734/78874403-a3a7ae80-7a4c-11ea-9527-356ce17e81f6.png)
 ---
