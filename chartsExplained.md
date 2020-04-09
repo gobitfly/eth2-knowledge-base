@@ -59,7 +59,7 @@ Displays the average income of all [validators](https://kb.beaconcha.in/glossary
 
 ### [Stake Effectiveness](https://beaconcha.in/charts/stake_effectiveness)
 
-Measurement of the relation between [effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) and [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) of **all validators**. 100% means that the total locked ETH is actively being staked. Due to the fact that the effective balance cannot increase more than 32, but the **current balance can**, the Stake effectiveness decreases. 
+Measurement of the relation between [effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator](https://kb.beaconcha.in/glossary#validator) and [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator](https://kb.beaconcha.in/glossary#validator) of **all validators**. 100% means that the total locked ETH is actively being staked. Due to the fact that the effective balance cannot increase more than 32, but the **current balance can**, the Stake effectiveness decreases. 
 
 ![stakeEffectiveness](https://user-images.githubusercontent.com/26490734/78873129-a3a6af00-7a4a-11ea-977d-03d182c573b8.png)
 ---
