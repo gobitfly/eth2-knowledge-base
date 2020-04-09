@@ -55,8 +55,25 @@ Displays the participation of validators in the chosen time period.
 
 <sub> *Calculation: Participation rate = (number of attestations in last epoch) / (number of attesting validators)* </sub>
 
-![participationRate](https://user-images.githubusercontent.com/26490734/78797584-2cc0d600-79b8-11ea-99e7-d73c2d5cd8c3.png)
+![participationRate](https://user-images.githubusercontent.com/26490734/78873463-39dad500-7a4b-11ea-801d-635fdfac0ce8.png)
 ---
+
+### [Average daily validator income](https://beaconcha.in/charts/validator_income)
+
+Displays the average income of all validators per day starting off at the genisis block.
+
+<sub> [validator?](https://kb.beaconcha.in/glossary#validator) [genesis block?](https://en.bitcoin.it/wiki/Genesis_block) </sub>
+
+![averageDailyIncome](https://user-images.githubusercontent.com/26490734/78872647-e4ea8f00-7a49-11ea-9bfa-625fc747e9e6.png)
+---
+
+### [Stake Effectiveness](https://beaconcha.in/charts/stake_effectiveness)
+
+Measurement of the relation between effective balance and current balance of **all validators**. 100% means that the total locked ETH is actively being staked. Due to the fact that the effective balance cannot increase more than 32, but the **current balance can**, the Stake effectiveness decreases. 
+
+<sub> [effective & current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
+
+![stakeEffectiveness](https://user-images.githubusercontent.com/26490734/78873129-a3a6af00-7a4a-11ea-977d-03d182c573b8.png)
 
 
 
