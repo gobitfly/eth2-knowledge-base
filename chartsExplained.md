@@ -16,37 +16,29 @@ Displays all the proposed, missed or oprhaned Blocks for a specific time period.
 
 ### [Validators](https://beaconcha.in/charts/validators)
 
-Displays all validators for each timestamp.
-
-<sub> [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
+Displays all [validators](https://kb.beaconcha.in/glossary#validator) for each timestamp.
 
 ![testnetValitdators](https://user-images.githubusercontent.com/26490734/78768801-bb1f6280-798c-11ea-91f1-4780830542ee.png)
 ---
 
 ### [Staked Ether](https://beaconcha.in/charts/staked_ether)
 
-Displays the total amount of staked Ether (*effective* balance).
-
-<sub>[effective balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) </sub>
+Displays the total amount of staked Ether [(*effective* balance)](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance).
 
 ![stakedEth](https://user-images.githubusercontent.com/26490734/78771349-52d28000-7990-11ea-9ba6-8ba9904e7f4c.png)
 ---
 
 ### [Validator Balance](https://beaconcha.in/charts/average_balance)
 
-Displays the average Validator *current* balance.
-
-<sub>[current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) </sub>
+Displays the [current average Validator balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance).
 
 ![currentValidatorBalance](https://user-images.githubusercontent.com/26490734/78773270-46035b80-7993-11ea-9ab8-e3c64a63b761.png)
 ---
 
 ### [Network Liveness](https://beaconcha.in/charts/network_liveness)
 
-Displays how far the last finalized Epoch compared to the Head Epoch took place.
-A minimum of 2 epochs is caused by how finalization works. An empty timestamp as shown in the picture can be interpreted as a finalization problem. In that case **all** validators get punished.
-
-<sub> [Validator?](https://kb.beaconcha.in/glossary#validator) [Epoch?](https://kb.beaconcha.in/glossary#epoch) [Finalization?](https://kb.beaconcha.in/glossary#finalization) </sub>
+Displays how far the last finalized [Epoch](https://kb.beaconcha.in/glossary#epoch) compared to the Head Epoch took place.
+A minimum of 2 epochs is caused by how [finalization](https://kb.beaconcha.in/glossary#finalization) works. An empty timestamp as shown in the picture can be interpreted as a finalization problem. In that case **all** [validators](https://kb.beaconcha.in/glossary#validator) get punished.
 
 ![networkLiveness](https://user-images.githubusercontent.com/26490734/78787440-a4880400-79aa-11ea-83c3-d8f57990b964.png)
 ---
@@ -62,45 +54,35 @@ Displays the participation of validators in the chosen time period.
 
 ### [Average daily validator income](https://beaconcha.in/charts/validator_income)
 
-Displays the average income of all validators per day starting off at the genisis block.
-
-<sub> [validator?](https://kb.beaconcha.in/glossary#validator) [genesis block?](https://en.bitcoin.it/wiki/Genesis_block) </sub>
+Displays the average income of all [validators](https://kb.beaconcha.in/glossary#validator) per day starting off at the [genisis block](https://en.bitcoin.it/wiki/Genesis_block).
 
 ![averageDailyIncome](https://user-images.githubusercontent.com/26490734/78872647-e4ea8f00-7a49-11ea-9bfa-625fc747e9e6.png)
 ---
 
 ### [Stake Effectiveness](https://beaconcha.in/charts/stake_effectiveness)
 
-Measurement of the relation between effective balance and current balance of **all validators**. 100% means that the total locked ETH is actively being staked. Due to the fact that the effective balance cannot increase more than 32, but the **current balance can**, the Stake effectiveness decreases. 
-
-<sub> [effective & current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
+Measurement of the relation between [effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) and [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator?](https://kb.beaconcha.in/glossary#validator) of **all validators**. 100% means that the total locked ETH is actively being staked. Due to the fact that the effective balance cannot increase more than 32, but the **current balance can**, the Stake effectiveness decreases. 
 
 ![stakeEffectiveness](https://user-images.githubusercontent.com/26490734/78873129-a3a6af00-7a4a-11ea-977d-03d182c573b8.png)
 ---
 
 ### [Balance Distribution](https://beaconcha.in/charts/balance_distribution)
 
-Displays the distribution of current balances of all validators for the current epoch. 5404 Validators at 3.28ETH .
-
-<sub> [current balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)
+Displays the distribution of [current balances](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) of all [validators](https://kb.beaconcha.in/glossary#validator) for the current epoch. 5404 Validators at 3.28ETH .
 
 ![balanceDistribution](https://user-images.githubusercontent.com/26490734/78874403-a3a7ae80-7a4c-11ea-9527-356ce17e81f6.png)
 ---
 
 ### [Effective Balance Distribution](https://beaconcha.in/charts/effective_balance_distribution)
 
-Displays the distribution of effective balances of all validators. 2200 at have an effective balance of 3ETH.
+Displays the distribution of [effective balances]((https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)) of all [validators](https://kb.beaconcha.in/glossary#validator). **Example** in the picture below: 2200 at have an effective balance of 3ETH.
 
-<sub> [effective balance?](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)
-  
 ![effectiveBalanceDistribution](https://user-images.githubusercontent.com/26490734/78874836-49f3b400-7a4d-11ea-83f3-8254a94a0611.png)
 ---
 
 ### [Income Distribution of the last 365 Days](https://beaconcha.in/charts/performance_distribution_365d)
 
-Displays the income distribution of all validators of the last 365 days. **38 Validators have gained 0.020360794 ETH**
-
-<sub> [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
+Displays the income distribution of all [validators](https://kb.beaconcha.in/glossary#validator) of the last 365 days. Example in the picture below: 38 Validators have gained 0.020360794 ETH.
 
 ![incomeDistribution](https://user-images.githubusercontent.com/26490734/78877206-c63bc680-7a50-11ea-901b-ab27a404c581.png)
 ---
