@@ -28,7 +28,7 @@ Displays the total amount of staked Ether [(*effective* balance)](https://kb.bea
 
 ### [Validator Balance](https://beaconcha.in/charts/average_balance)
 
-Displays the [current average Validator balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance).
+Displays the [current average validator balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance).
 
 ![currentValidatorBalance](https://user-images.githubusercontent.com/26490734/78773270-46035b80-7993-11ea-9ab8-e3c64a63b761.png)
 ---
