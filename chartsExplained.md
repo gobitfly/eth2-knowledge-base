@@ -1,5 +1,7 @@
 ## Beaconcha.in Charts Explained
 ___
+## [Overview of all charts](https://beaconcha.in/charts)
+___
 
 ### [Blocks](https://beaconcha.in/charts/blocks)
 
