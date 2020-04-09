@@ -66,21 +66,27 @@ Measurement of the relation between [effective balance](https://kb.beaconcha.in/
 
 ### [Balance Distribution](https://beaconcha.in/charts/balance_distribution)
 
-Displays the distribution of [current balances](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) of all [validators](https://kb.beaconcha.in/glossary#validator) for the current epoch. 5404 Validators at 3.28ETH .
+Displays the distribution of [current balances](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) of all [validators](https://kb.beaconcha.in/glossary#validator) for the current epoch. 
+
+**Example** in the picture below: 5404 Validators at 3.28ETH .
 
 ![balanceDistribution](https://user-images.githubusercontent.com/26490734/78874403-a3a7ae80-7a4c-11ea-9527-356ce17e81f6.png)
 ---
 
 ### [Effective Balance Distribution](https://beaconcha.in/charts/effective_balance_distribution)
 
-Displays the distribution of [effective balances]((https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)) of all [validators](https://kb.beaconcha.in/glossary#validator). **Example** in the picture below: 2200 at have an effective balance of 3ETH.
+Displays the distribution of [effective balances]((https://kb.beaconcha.in/glossary#current-balance-and-effective-balance)) of all [validators](https://kb.beaconcha.in/glossary#validator). 
+
+**Example** in the picture below: 2200 at have an effective balance of 3ETH.
 
 ![effectiveBalanceDistribution](https://user-images.githubusercontent.com/26490734/78874836-49f3b400-7a4d-11ea-83f3-8254a94a0611.png)
 ---
 
 ### [Income Distribution of the last 365 Days](https://beaconcha.in/charts/performance_distribution_365d)
 
-Displays the income distribution of all [validators](https://kb.beaconcha.in/glossary#validator) of the last 365 days. Example in the picture below: 38 Validators have gained 0.020360794 ETH.
+Displays the income distribution of all [validators](https://kb.beaconcha.in/glossary#validator) of the last 365 days. 
+
+**Example** in the picture below: 38 Validators have gained 0.020360794 ETH.
 
 ![incomeDistribution](https://user-images.githubusercontent.com/26490734/78877206-c63bc680-7a50-11ea-901b-ab27a404c581.png)
 ---
