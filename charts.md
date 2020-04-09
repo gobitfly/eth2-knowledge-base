@@ -1,6 +1,4 @@
-# Charts
-
-## Beaconcha.in Charts Explained
+# Beaconcha.in Charts Explained
 
 ## [Overview of all charts](https://beaconcha.in/charts)
 
