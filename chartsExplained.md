@@ -57,6 +57,15 @@ Displays the average income of all [validators](https://kb.beaconcha.in/glossary
 ![averageDailyIncome](https://user-images.githubusercontent.com/26490734/78872647-e4ea8f00-7a49-11ea-9bfa-625fc747e9e6.png)
 ---
 
+### [Staking Rewards](https://beaconcha.in/charts/staking_rewards)
+
+Displays the sum of all staking rewards and punishments of all validators on a specific day. 
+
+**Example** in the picture below: 1471.15 ETH have been lost on Februar 7th.
+
+![stakingRewardsPerDay](https://user-images.githubusercontent.com/26490734/78907107-8bea1d80-7a80-11ea-8cd1-29259862a4b4.png)
+---
+
 ### [Stake Effectiveness](https://beaconcha.in/charts/stake_effectiveness)
 
 Measurement of the relation between [effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator](https://kb.beaconcha.in/glossary#validator) and [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) [validator](https://kb.beaconcha.in/glossary#validator) of **all validators**. 100% means that the total locked ETH is actively being staked. Due to the fact that the effective balance cannot increase more than 32, but the **current balance can**, the Stake effectiveness decreases. 
