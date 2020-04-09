@@ -14,7 +14,7 @@ Displays all the [proposed, missed or oprhaned Blocks](https://kb.beaconcha.in/g
 
 ### [Validators](https://beaconcha.in/charts/validators)
 
-Displays all [validators](https://kb.beaconcha.in/glossary#validator) for each timestamp.
+Displays the amount of [validators](https://kb.beaconcha.in/glossary#validator) for each timestamp.
 
 ![testnetValitdators](https://user-images.githubusercontent.com/26490734/78768801-bb1f6280-798c-11ea-91f1-4780830542ee.png)
 ---
