@@ -14,7 +14,7 @@ Displays all the proposed, missed or oprhaned Blocks for a specific time period.
 
 ### [Validators](https://beaconcha.in/charts/validators)
 
-Displays all [validators](https://kb.beaconcha.in/glossary#validator) for each timestamp
+Displays all validators for each timestamp.
 
 <sub> [validator?](https://kb.beaconcha.in/glossary#validator) </sub>
 
