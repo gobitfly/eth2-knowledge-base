@@ -1,4 +1,4 @@
-# Run with Windows w/Binary files \(.exe\)
+# Run with Windows using binary files \(.exe\)
 
 #### Windows 10 w/Binary files \(.exe\) 
 

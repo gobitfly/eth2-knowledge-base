@@ -1,4 +1,4 @@
-# Run with Windows w/Docker
+# Run with Windows with Docker
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
