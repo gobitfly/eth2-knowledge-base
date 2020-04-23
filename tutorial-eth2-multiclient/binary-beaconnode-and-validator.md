@@ -1,8 +1,10 @@
-# Prysm: Windows 10 w/Binary files \(.exe\)
+# Run with Windows w/Binary files \(.exe\)
 
-#### Windows 10 w/Binary files \(.exe\)  \(Validator client currently not working - requires fix by PrysmaticLabs\)
+#### Windows 10 w/Binary files \(.exe\) 
 
-\*\*\*\*
+{% hint style="info" %}
+#### Validator client currently not working - requires fix by PrysmaticLabs
+{% endhint %}
 
 **Step 0.**
 
@@ -15,7 +17,7 @@ Open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windo
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **this is not required but changes the look of your command prompt output**
+ **this is not required. Just a cosmetic fix of your command prompot output.**
 {% endhint %}
 
 

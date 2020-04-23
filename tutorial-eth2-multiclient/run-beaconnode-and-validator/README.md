@@ -11,7 +11,7 @@ If successful, you can run the following code:
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **this is not required but changes the look of your command prompt output**
+ **this is not required. Just a cosmetic fix of your command prompot output.**
 {% endhint %}
 
 
