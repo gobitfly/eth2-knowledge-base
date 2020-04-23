@@ -1,39 +1,39 @@
-# Run with Windows with Docker
+# Run with Windows using Docker
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
 **Step 0.**
 
-Start Docker and open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If installed correctly it should give you the Docker Version. If not, please make sure to follow the steps in **Installing Docker on Windows Pro/Home**.
+Start Docker and open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If installed correctly it should give you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version,** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
 
 If successful, you can run the following code:
 
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **this is not required. Just a cosmetic fix of your command prompot output.**
+ T**his is not required. Just a cosmetic fix to your command prompt output.**
 {% endhint %}
 
 
 
-To get the latest testnet client version & starting the beaconchain follow up with this:
+To install the latest testnet client version & starting the beaconchain follow up with this:
 
-**Pull latest beaconchain updates:**
+**Download and install latest beaconchain updates:**
 
 `docker pull gcr.io/prysmaticlabs/prysm/beacon-chain:latest`
 
 ![dockerPull](https://user-images.githubusercontent.com/26490734/79550092-2efdf100-8098-11ea-948f-84cc150a2251.png)
 
-**Pull latest validator updates:**
+**Download and install latest validator updates:**
 
 `docker pull gcr.io/prysmaticlabs/prysm/validator:latest`
 
-**Starting the beaconchain:**
+**Start the beaconchain:**
 
 `docker run -it -v c:/prysm/:/data -p 4000:4000 -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data`
 
 {% hint style="info" %}
-The blockchain data will be stored in the manually created folder **\(Docker installation chapter\).**\(C:\prysm\).
+A folder called "prysm" in C:\prysm is required which will also be the location of the beaconchain data.
 {% endhint %}
 
 **Wait** for your beacon-node to be in sync with the Blockchain.   
