@@ -16,9 +16,9 @@ Before we start off, reading the [glossary](https://kb.beaconcha.in/glossary) is
 
 * Windows 10
 
-  * [Run with Windows **Pro & Home** w/Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient#offcial-prysmaticlabs-docs)
+  * [Run with Windows **Pro & Home** w/Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)
   * * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
-  * * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient#iinstalling-docker-on-windows-pro)
+  * * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
   * [Windows 10 w/Binary files \(.exe\) ](https://kb.beaconcha.in/tutorial-eth2-multiclient#windows-10-w-binary-files-exe-validator-client-currently-not-working-requires-fix-by-prysmaticlabs)
   * [Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient#run-with-prysm-sh-script-currently-not-working-requires-a-fix-by-prysm-team)
 
