@@ -19,8 +19,8 @@ Before we start off, reading the [glossary](https://kb.beaconcha.in/glossary) is
   * [Run with Windows **Pro & Home** w/Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)
   * * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
   * * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
-  * [Windows 10 w/Binary files \(.exe\) ](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator)
-  * [Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1)
+  * [Run with Windows w/Binary files \(.exe\) ](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator)
+  * [Run with Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1)
 
 * macOS
   * Docker \(soon\)

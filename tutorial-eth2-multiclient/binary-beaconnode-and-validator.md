@@ -1,4 +1,4 @@
-# Prysm: Windows 10 w/Binary files \(.exe\)
+# Run with Windows w/Binary files \(.exe\)
 
 #### Windows 10 w/Binary files \(.exe\)  \(Validator client currently not working - requires fix by PrysmaticLabs\)
 
