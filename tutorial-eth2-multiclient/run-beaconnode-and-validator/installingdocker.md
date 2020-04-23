@@ -1,4 +1,4 @@
-# Prysm: Installing Docker on Windows Pro
+# Installing Docker on Windows Pro
 
 #### **Installing Docker on Windows Pro**
 
