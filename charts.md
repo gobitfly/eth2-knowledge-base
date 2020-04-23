@@ -1,4 +1,4 @@
-# Beaconcha.in Charts Explained
+# Charts
 
 ## [Overview of all charts](https://beaconcha.in/charts)
 
@@ -38,7 +38,7 @@ Displays how far the last finalized [Epoch](https://kb.beaconcha.in/glossary#epo
 
 Displays the participation of validators in the chosen time period.
 
- _Calculation: Participation rate = \(number of attestations in last epoch\) / \(number of attesting validators\)_
+_Calculation: Participation rate = \(number of attestations in last epoch\) / \(number of attesting validators\)_
 
 ![participationRate](https://user-images.githubusercontent.com/26490734/78873463-39dad500-7a4b-11ea-801d-635fdfac0ce8.png)
 
