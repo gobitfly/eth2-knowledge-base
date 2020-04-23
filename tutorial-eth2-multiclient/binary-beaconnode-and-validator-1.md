@@ -1,8 +1,4 @@
-# Run with Prysm.sh script
+# Prysm: Prysm.sh script
 
-#### Run with Prysm.sh script 
-
-{% hint style="info" %}
-#### currently not working - requires a [fix](https://github.com/prysmaticlabs/prysm/issues/5456#issue-601128068) by PrysmaticLabs
-{% endhint %}
+#### Run with Prysm.sh script \(currently not working - REQUIRES [A FIX BY PRYSM TEAM](https://github.com/prysmaticlabs/prysm/issues/5456#issue-601128068)\)
 
