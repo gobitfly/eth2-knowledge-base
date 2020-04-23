@@ -1,4 +1,4 @@
-# Prysm: Run with Windows w/Docker
+# Run with Windows w/Docker
 
 ####  [Offcial **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
