@@ -1,8 +1,10 @@
 # Run with Windows w/Binary files \(.exe\)
 
-#### Windows 10 w/Binary files \(.exe\)  \(Validator client currently not working - requires fix by PrysmaticLabs\)
+#### Windows 10 w/Binary files \(.exe\) 
 
-\*\*\*\*
+{% hint style="info" %}
+#### Validator client currently not working - requires fix by PrysmaticLabs
+{% endhint %}
 
 **Step 0.**
 
