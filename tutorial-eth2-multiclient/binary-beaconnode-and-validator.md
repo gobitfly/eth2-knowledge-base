@@ -3,7 +3,7 @@
 #### Windows 10 w/Binary files \(.exe\) 
 
 {% hint style="info" %}
-#### Validator client currently not working - requires fix by PrysmaticLabs
+#### Validator client currently not working - requires a [fix](https://github.com/prysmaticlabs/prysm/issues/5456#issue-601128068) by PrysmaticLabs
 {% endhint %}
 
 **Step 0.**
@@ -24,7 +24,7 @@ Open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windo
 
 **Step 2.**
 
-**Download** the newest versions of the **b**eaconchain **and** validator clients. The version name might have changed because of an update, but the file name should similar \(green mark on the picture below\).
+**Download** the newest versions of the beaconchain **and** validator clients. The version name might have changed because of an update, but the file name should similar \(green mark on the picture below\).
 
 ![Prysmatic\_DownloadPage](https://user-images.githubusercontent.com/26490734/79451678-33b69c80-7fe7-11ea-80c8-b92c75fbb937.png)
 
