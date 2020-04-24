@@ -49,13 +49,13 @@ Copy the following code:
 
 `docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
 
-Once you press enter the output should look the image below.   
-If you didn't change `--password=yourPassword` your validator keys will have this password by default.   
+Once you press enter the output should look like the image below.   
+If you didn't change `--password=yourPassword` your validator keys will have **yourPassword** as its password by default.   
 For simplicity, let's keep it this way for the testnet.
 
 `C:\prysm` is the location of your keys - make sure they are available.
 
-**Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).
+**Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate). 
 
 ![keyCreation](https://user-images.githubusercontent.com/26490734/79857621-59b8b400-83ce-11ea-9bb5-6b5f0ba9ac7e.png)
 
