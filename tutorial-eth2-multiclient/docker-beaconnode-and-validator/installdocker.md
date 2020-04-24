@@ -36,7 +36,7 @@ Open the "Registry Editor" and go the following path \(picture below\):
 
 ![registryEditor](https://user-images.githubusercontent.com/26490734/80191362-dbe6e980-8615-11ea-9633-3de4909a997d.png)
 
-\(In case of a **PC restart, shutdown or Docker shutdown**, the code above needs to be re-entered otherwise Docker will not start\)
+\(In case of a **PC restart, shutdown or Docker shutdown**, the registry change above needs to be re-entered otherwise Docker will not start\)
 
 
 

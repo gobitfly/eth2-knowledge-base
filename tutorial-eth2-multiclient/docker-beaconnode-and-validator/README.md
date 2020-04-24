@@ -2,6 +2,10 @@
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
+{% hint style="info" %}
+A folder called "prysm" in C:\ is required which will also be the location of the beaconchain data.
+{% endhint %}
+
 **Step 0.**
 
 Start Docker and open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If installed correctly it should give you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version,** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
@@ -31,10 +35,6 @@ To install the latest testnet client version & starting the beaconchain follow u
 **Start the beaconchain:**
 
 `docker run -it -v c:/prysm/:/data -p 4000:4000 -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data`
-
-{% hint style="info" %}
-A folder called "prysm" in C:\ is required which will also be the location of the beaconchain data.
-{% endhint %}
 
 **Wait** for your beacon-node to be in sync with the Blockchain.   
 This may take a few hours. You will see the following message:
