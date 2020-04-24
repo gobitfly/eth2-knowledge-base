@@ -26,13 +26,15 @@ You will need to have [Virtualization](https://docs.docker.com/docker-for-window
 
 Because Docker is not available for Windows10 Home, we need to act like a Windows10 Pro user:
 
-Run the following code in a command prompt window
+Open the "Registry Editor" and go the following path \(picture below\):
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`
 
 **change** `EditionID` to `Professional` and `ProductName` to `Windows 10 Pro`
 
 **immediately** open the downloaded Docker File and **install Docker**.
+
+![registryEditor](https://user-images.githubusercontent.com/26490734/80191362-dbe6e980-8615-11ea-9633-3de4909a997d.png)
 
 \(In case of a **PC restart, shutdown or Docker shutdown**, the code above needs to be re-entered otherwise Docker will not start\)
 
