@@ -8,8 +8,6 @@ Make sure you have [Windows10 Home](https://support.microsoft.com/en-us/help/134
 
 Since Docker is usually not available for Windows 10 Home some workaround are required as mentioned below.
 
-\*\*\*\*
-
 **Step 1.**
 
 [Download Docker](https://download.docker.com/win/stable/40693/Docker%20Desktop%20Installer.exe) \(do not install yet\). _\(What is_ [_Docker_](https://docs.docker.com/docker-for-windows/install/)_?\)_
@@ -19,8 +17,6 @@ Install [Hyper-V](https://www.deskmodder.de/blog/wp-content/uploads/2018/08/hype
 You will need to have [Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled) enabled, which you can check in the Taskmanager.
 
 ![virtualization](https://user-images.githubusercontent.com/26490734/79853838-dba5de80-83c8-11ea-9fbf-d640c4bb1980.png)
-
-\*\*\*\*
 
 **Step 2.**
 
@@ -37,8 +33,6 @@ Open the "Registry Editor" and go the following path \(picture below\):
 ![registryEditor](https://user-images.githubusercontent.com/26490734/80191362-dbe6e980-8615-11ea-9633-3de4909a997d.png)
 
 \(In case of a **PC restart, shutdown or Docker shutdown**, the registry change above needs to be re-entered otherwise Docker will not start\)
-
-
 
 **Step 3.**
 
