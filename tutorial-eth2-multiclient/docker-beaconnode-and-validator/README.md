@@ -2,10 +2,6 @@
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
-{% hint style="info" %}
-A folder called "prysm" in C:\ is required which will also be the location of the beaconchain data.
-{% endhint %}
-
 **Step 0.**
 
 Start Docker and open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If installed correctly it should give you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version,** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
@@ -36,6 +32,10 @@ To install the latest testnet client version & starting the beaconchain follow u
 
 `docker run -it -v c:/prysm/:/data -p 4000:4000 -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data`
 
+{% hint style="info" %}
+A folder called "prysm" in C:\ is required which will also be the location of the beaconchain data.
+{% endhint %}
+
 **Wait** for your beacon-node to be in sync with the Blockchain.   
 This may take a few hours. You will see the following message:
 
@@ -49,13 +49,13 @@ Copy the following code:
 
 `docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
 
-Once you press enter the output should look like the image below.   
-If you didn't change `--password=yourPassword` your validator keys will have **yourPassword** as its password by default.   
+Once you press enter the output should look the image below.   
+If you didn't change `--password=yourPassword` your validator keys will have this password by default.   
 For simplicity, let's keep it this way for the testnet.
 
 `C:\prysm` is the location of your keys - make sure they are available.
 
-**Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate). 
+**Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).
 
 ![keyCreation](https://user-images.githubusercontent.com/26490734/79857621-59b8b400-83ce-11ea-9bb5-6b5f0ba9ac7e.png)
 

@@ -48,8 +48,7 @@ Change Docker File sharing settings - Manually create a folder called **"prysm"*
 
 **Step.4**
 
-Change Docker's default memory to 4GB  
-
+Change Docker's default memory to 4GB
 
 ![dockerMemory](https://user-images.githubusercontent.com/26490734/80192514-9aefd480-8617-11ea-93b4-e709a988a5c0.png)
 
