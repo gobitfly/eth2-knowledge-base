@@ -33,7 +33,7 @@ To install the latest testnet client version & starting the beaconchain follow u
 `docker run -it -v c:/prysm/:/data -p 4000:4000 -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data`
 
 {% hint style="info" %}
-A folder called "prysm" in C:\prysm is required which will also be the location of the beaconchain data.
+A folder called "prysm" in C:\ is required which will also be the location of the beaconchain data.
 {% endhint %}
 
 **Wait** for your beacon-node to be in sync with the Blockchain.   
