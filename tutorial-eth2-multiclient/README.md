@@ -20,13 +20,13 @@ Before we start off, it is recommended reading the [glossary](https://kb.beaconc
   * * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
   * * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
   * [Run with Windows using binary files \(.exe\) ](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator)
-  * [Run with Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1)
+  * [Run with Windows using Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1)
 
 * macOS
   * Docker \(coming soon\)
   * Prysm.sh script \(coming soon\)
 
-### [Lighthouse](https://lighthouse.sigmaprime.io/) \(coming soon\)
+### [Lighthouse](https://lighthouse.sigmaprime.io/) Client \(coming soon\)
 
 ## 
 
