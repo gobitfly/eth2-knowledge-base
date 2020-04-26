@@ -1,14 +1,12 @@
 # Step by Step: How to use the Ethereum 2.0 Multiclient
 
-This guide is designed for **non technical** people. It is focus on **Windows10 and MacOs**.
+This guide is designed for **non technical** people. It focuses on **Windows10 and MacOs** and is an ongoing process and it will be updated as we collect feedback and adapt to the most recent client changes!
 
-It is an ongoing process and will be updated as we collect feedback and adapt it to  the most recent client changes!
-
-There are **multiple ways** to join the ETH2.0 Testnet , using different clients.
+Side note: There are **multiple** ways to join the ETH2.0 Testnet by using different clients.
 
 **System requirements: Recommended: 8GB RAM, 100GB SSD , Minimum: 4GB RAM, 20GB SSD.**
 
-Before we start off, it is recommended reading the [glossary](https://kb.beaconcha.in/glossary) but not required.
+Before we start off, it is recommended reading the [glossary](https://kb.beaconcha.in/glossary) but not a requirement.
 
 ## Overview
 
