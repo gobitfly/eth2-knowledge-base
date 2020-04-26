@@ -3,26 +3,24 @@
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
 {% hint style="info" %}
-A folder called "prysm" in C:\ is required which will also be the location of the beaconchain data.
+A folder named "prysm" in C:\ is required which will also be the location of the beaconchain data.
 {% endhint %}
 
 ![prysmFolder](https://user-images.githubusercontent.com/26490734/80280580-2e530380-8705-11ea-9574-49b345376844.png)
 
 **Step 0.**
 
-Start Docker and open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If installed correctly it should give you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version,** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
+Start Docker, open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If Docker was installed correctly it will return you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version and** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
 
-If the previous command was successful, you can run the following code:
+If the previous command was successful, run the following code:
 
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **This is not required and is just a cosmetic fix to your command prompt output.**
+ **This is not required. This command fixes the cosmetics of the command prompt.**
 {% endhint %}
 
 **Step 1.**
-
-To install the latest testnet client version & starting the beaconchain follow up with this:
 
 **Download and install latest beaconchain updates**
 
@@ -49,14 +47,11 @@ This may take a few hours and you will see the following message:
 
 **Creating your ETH2 Keys**
 
-Use the following code:
-
 `docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
 
-Once you press enter the output should look like the image below.   
-If you didn't change `--password=yourPassword` your validator keys will have **yourPassword** as its password by default.  
-For simplicity's sake, let's keep it this way for the testnet.  
-The newly created keys should be available in `C:\prysm`. Make sure they are available.
+The output should look like the image below.   
+If you didn't change `--password=yourPassword` , your validator keys will have **yourPassword** as its password.  
+The newly created keys should be in `C:\prysm`. Make sure they are available.
 
 **Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate). 
 
@@ -66,13 +61,11 @@ The newly created keys should be available in `C:\prysm`. Make sure they are ava
 
 Some of the instructions on the **participation page** will be ignored because they were not optimized for Windows10 \(yet\).   
   
-Follow the steps below to get Goerli ETH and to deposit them. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk).
+Follow the steps below to get Goerli ETH and to deposit them. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
 ![Participation](https://user-images.githubusercontent.com/26490734/79573699-53b98f00-80bf-11ea-8c7c-4092778bab7d.png)
 
 **Step 4.**
-
-Starting the validator.
 
 Open **a new** command prompt window.
 
@@ -91,10 +84,10 @@ Wait for the inclusionSlot \(red\) to be reached. Once this slot has been proces
 
 **Running multiple validators \(voluntarily\)**
 
-Repeat **Step 2.** and **create more keys** in the same directory.   
-**Use the same password for all of the created keys.**
+Repeat **Step 2.** and **create more keys** into the same directory.   
+**Use the same password for all keys.**
 
-Copy the **Raw Transaction Data** for each validator and re-do the process on the [participation page](https://prylabs.net/participate) and deposit for each of them.
+Copy the **Raw Transaction Data** for each validator, re-do the process on the [participation page](https://prylabs.net/participate) and deposit for each of them.
 
 After all deposits have been received by the system, you can just start a single validator window and it will use **all** of the created keys \(=multiple validators\).
 

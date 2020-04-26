@@ -12,6 +12,8 @@ Before we start off, it is recommended reading the [glossary](https://kb.beaconc
 
 ### [Prysm Client by Prysmatic Labs](https://prysmaticlabs.com/)
 
+[Prysmatic Labs Discord Channel](https://discord.gg/wJW7Rjk)
+
 * Windows 10
 
   * [Run with Windows **Pro & Home** using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)

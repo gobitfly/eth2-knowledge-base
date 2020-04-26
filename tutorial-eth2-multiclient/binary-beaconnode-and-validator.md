@@ -19,7 +19,7 @@ Open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windo
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **This is not required and is just a cosmetic fix to your command prompt output.**
+**This is not required. This command fixes the cosmetics of the command prompt**.
 {% endhint %}
 
 **Step 2.**

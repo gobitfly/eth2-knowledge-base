@@ -8,19 +8,16 @@ Make sure you have [Windows10 Pro](https://support.microsoft.com/en-us/help/1344
 
 **Step 1.**
 
-[Download Docker](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe). Installing is different for everyone depending on the motherboard manufacturer. Entering BIOS may be required to change "virtualization" to "enabled".   
-****\(What is [Docker](https://docs.docker.com/docker-for-windows/install/)?\)
-
-You will need "[Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled)" enabled, which you can check in the Taskmanager.
+[Download Docker](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe). [  
+Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled) has to be enabled, which can be checked in the Taskmanager. 
 
 ![virtualization](https://user-images.githubusercontent.com/26490734/79853838-dba5de80-83c8-11ea-9fbf-d640c4bb1980.png)
 
 **Step 2.**
 
-Change Docker File sharing settings and manually create a folder called **"prysm"** in that specific directory.   
-In this case the folder "prysm" is created in C:\prysm.  
-  
-Picture below for clarification.
+Change Docker File sharing settings and create a folder named **"prysm"** in that specific directory.   
+In this case the "prysm"-folder has been created in C:\prysm.  
+
 
 ![dockerWindows](https://user-images.githubusercontent.com/26490734/79551080-7c2e9280-8099-11ea-8886-0b739b7d12c1.png)
 
