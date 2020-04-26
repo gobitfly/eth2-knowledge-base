@@ -10,7 +10,7 @@ A folder named "prysm" in C:\ is required which will also be the location of the
 
 **Step 0.**
 
-Start Docker, open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If Docker was installed correctly it will return you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version and** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
+Start Docker, open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If Docker is installed correctly, it will return you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version and** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
 
 If the previous command was successful, run the following code:
 
@@ -47,7 +47,7 @@ This may take a few hours and you will see the following message:
 
 **Creating your ETH2 Keys**
 
-`docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
+`docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/prysm --password=yourPassword`
 
 The output should look like the image below.   
 If you didn't change `--password=yourPassword` , your validator keys will have **yourPassword** as its password.  
@@ -76,9 +76,9 @@ Open **a new** command prompt window.
 **Step 5.**
 
 Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
-Once the deposit is recognized by the blockchain, the beaoncha.in explorer will allow you to track the validator more accurately.
+Once the blockchain recognizes the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
 
-Wait for the inclusionSlot \(red\) to be reached. Once this slot has been processed by the blockchain, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
+Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
 
 ![Validator&amp;beaconcha.in](https://user-images.githubusercontent.com/26490734/79860463-fda45e80-83d2-11ea-8b71-05a112117f18.png)
 
@@ -89,5 +89,5 @@ Repeat **Step 2.** and **create more keys** into the same directory.
 
 Copy the **Raw Transaction Data** for each validator, re-do the process on the [participation page](https://prylabs.net/participate) and deposit for each of them.
 
-After all deposits have been received by the system, you can just start a single validator window and it will use **all** of the created keys \(=multiple validators\).
+Once the system has received all deposits, you can just start a single validator window, and it will use **all** of the created keys \(=multiple validators\).
 
