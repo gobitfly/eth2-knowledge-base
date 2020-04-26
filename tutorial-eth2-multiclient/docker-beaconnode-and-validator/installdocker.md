@@ -6,7 +6,7 @@
 
 Make sure you have [Windows10 Home](https://support.microsoft.com/en-us/help/13443/windows-which-version-am-i-running).
 
-Since Docker is not available for Windows 10 Home, some workarounds are required and are solved by following this guide.
+Due to the fact that Docker is not available for Windows 10 Home, some workarounds are required and will be solved by following this guide.
 
 **Step 1.**
 
@@ -28,9 +28,9 @@ Open the "Registry Editor" and go to the following path:
 
 `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`
 
-**Change** `EditionID` to `Professional` and `ProductName` to `Windows 10 Pro`
+**change** `EditionID` to `Professional` and `ProductName` to `Windows 10 Pro`
 
-**Immediately** open the downloaded Docker File and **install Docker**.
+**immediately** open the downloaded Docker File and **install Docker**.
 
 ![registryEditor](https://user-images.githubusercontent.com/26490734/80191362-dbe6e980-8615-11ea-9633-3de4909a997d.png)
 
