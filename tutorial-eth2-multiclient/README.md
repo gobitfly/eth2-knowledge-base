@@ -15,18 +15,21 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
 [Prysmatic Labs Discord Channel](https://discord.gg/wJW7Rjk)
 
 * Windows 10
-
+  * [Run with Windows using Prysm.bat](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1) \(recommended\)   
   * [Run with Windows **Pro & Home** using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)
-  * * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
-  * * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
-  * [Run with Windows using binary files \(.exe\) ](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator)
-  * [Run with Windows using Prysm.](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1)bat
+    * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
+    * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
+
+
 
 * macOS
+
   * Docker \(coming soon\)
   * Prysm.sh script \(coming soon\)
 
-### [Lighthouse](https://lighthouse.sigmaprime.io/) Client \(coming soon\)
+### [Lighthouse Client](https://lighthouse.sigmaprime.io/) \(coming soon\)
+
+[Lighthouse Discord Channel](https://discord.gg/8mFMS7G)
 
 ## 
 
