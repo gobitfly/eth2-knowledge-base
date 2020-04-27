@@ -3,7 +3,7 @@
 * [Overview](README.md)
 * [Glossary](glossary.md)
 * [Charts](charts.md)
-* [Step by Step: How to use the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
+* [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
   * [Run with Windows using Prysm.bat](tutorial-eth2-multiclient/script-beaconnode-and-validator.md)
   * [Run with Windows using Docker](tutorial-eth2-multiclient/docker-beaconnode-and-validator/README.md)
     * [Installing Docker on Windows Home](tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker.md)

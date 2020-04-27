@@ -1,4 +1,4 @@
-# Step by Step: How to use the Ethereum 2.0 Testnet
+# Step by Step: How to join the Ethereum 2.0 Testnet
 
 This guide is designed for **non-technical** people. It focuses on **Windows10 and MacOs** and is an ongoing process, and it will be updated as we collect feedback and adapt to the most recent client changes!
 
