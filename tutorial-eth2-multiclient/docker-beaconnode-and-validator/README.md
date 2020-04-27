@@ -3,7 +3,7 @@
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
 {% hint style="info" %}
-A folder named "prysm" in C:\ is required which will also be the location of the beaconchain data.
+A folder named "prysm" in C:\ needs to be created which will also be the location of the beaconchain data.
 {% endhint %}
 
 ![prysmFolder](https://user-images.githubusercontent.com/26490734/80280580-2e530380-8705-11ea-9574-49b345376844.png)
@@ -41,11 +41,11 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX` 
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 **Step.2**
 
-**Creating your ETH2 Keys**
+**Create ETH2 keys**
 
 `docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/prysm --password=yourPassword`
 
