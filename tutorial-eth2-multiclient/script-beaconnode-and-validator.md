@@ -1,5 +1,7 @@
 # Run with Windows using Prysm.bat
 
+####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
+
 #### Step 0.
 
 Create a folder named **prysm** in the **C:\** directory. 
