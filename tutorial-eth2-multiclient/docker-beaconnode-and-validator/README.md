@@ -41,7 +41,7 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX` 
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 **Step.2**
 
@@ -61,7 +61,7 @@ The newly created keys should be in `C:\prysm`. Make sure they are available.
 
 Some of the instructions on the **participation page** will be ignored because they were not optimized for Windows10 \(yet\).   
   
-Follow the steps below to get Goerli ETH and to deposit them. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
+Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
 ![Participation](https://user-images.githubusercontent.com/26490734/79573699-53b98f00-80bf-11ea-8c7c-4092778bab7d.png)
 

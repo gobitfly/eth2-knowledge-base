@@ -8,4 +8,5 @@
   * [Run with Windows using Docker](tutorial-eth2-multiclient/docker-beaconnode-and-validator/README.md)
     * [Installing Docker on Windows Home](tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker.md)
     * [Installing Docker on Windows Pro](tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker.md)
+  * [Run with macOS using prysm.sh](tutorial-eth2-multiclient/run-with-macos-using-prysm.sh.md)
 
