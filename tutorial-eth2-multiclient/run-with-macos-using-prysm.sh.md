@@ -6,10 +6,11 @@
 
 **Homebrew installation**
 
-Check if **Homebrew** is installed through the terminal. This can be done by pressing `CMD+Space` and searching for **Terminal.**
+Check if **Homebrew** is installed through the terminal.   
+This can be done by pressing `CMD+Space` and searching for **Terminal**.
 
-Run `brew help.`   
-If the output is `command not found`, Homebrew is not installed, and if it matches the picture below you are good to go!  
+Run `brew help`.   
+If the output is `command not found`, **Homebrew** needs to be installed, and if it matches the picture below **skip to Step 1.**  
   
 In order to **install Homebrew** use the following code:  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
