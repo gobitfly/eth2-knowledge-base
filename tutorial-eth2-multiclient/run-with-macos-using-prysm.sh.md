@@ -80,7 +80,7 @@ Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has proces
 
 **Running multiple validators** 
 
-Repeat **Step 4.** and **create more keys** into the same directory.   
+Repeat **Step 3.** and **create more keys** into the same directory.   
 **Use the same password for all keys.**
 
 Copy the **Raw Transaction Data** for each validator, re-do the process on the [participation page](https://prylabs.net/participate) and deposit for each of them.
