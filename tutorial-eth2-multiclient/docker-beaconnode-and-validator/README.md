@@ -41,7 +41,7 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX` 
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 **Step.2**
 
@@ -76,7 +76,7 @@ Open **a new** command prompt window.
 **Step 5.**
 
 Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
-Once the blockchain recognizes the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
+Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
 
 Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
 
