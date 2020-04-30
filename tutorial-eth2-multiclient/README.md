@@ -21,8 +21,8 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
     * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
 * macOS
 
-  * Run with macOS using Prysm.sh script \(recommended\)
-  * Run with macOS using Docker
+  * [Run with macOS using Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-with-macos-using-prysm.sh) \(recommended\)
+  * [Run with macOS using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-with-macos-using-docker)
 
 ### [Lighthouse Client](https://lighthouse.sigmaprime.io/) \(coming soon\)
 
