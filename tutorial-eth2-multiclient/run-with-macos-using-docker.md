@@ -1,4 +1,4 @@
-# Run with macOS using docker
+# Run with macOS using Docker
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
