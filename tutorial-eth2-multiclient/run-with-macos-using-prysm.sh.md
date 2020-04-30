@@ -4,7 +4,7 @@
 
 #### Step 0.
 
-**Homebrew installation**
+**Install Homebrew**
 
 Check if **Homebrew** is installed through the terminal.   
 This can be done by pressing `CMD+Space` and searching for **Terminal**.
