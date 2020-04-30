@@ -32,7 +32,7 @@ If the previous command was successful, run the following code:
 
 `docker pull gcr.io/prysmaticlabs/prysm/validator:latest`
 
-**Start the beaconchain**
+**Start the beaconnode**
 
 `docker run -it -v c:/prysm/:/data -p 4000:4000 -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data`
 
@@ -41,7 +41,7 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX` 
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 **Step.2**
 
