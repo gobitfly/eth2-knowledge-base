@@ -39,11 +39,11 @@ In order to **install Homebrew** use the following code:
 
 Drag and drop the **prysm.sh** file into the **Terminal** window and add:
 
- `--datadir=$HOME/prysm`
+ `beacon-chain --datadir=$HOME/prysm`
 
 ![](https://user-images.githubusercontent.com/26490734/80689432-a33f8800-8acd-11ea-8250-f70d2dd5d6fb.gif)
 
-The directory `$HOME/prysm` contains all the beaconchain data. and can be accessed through **Finder.**
+The directory `$HOME/prysm` contains all the beaconchain data and can be accessed through **Finder.**
 
 ![](../.gitbook/assets/image%20%2817%29.png)
 
