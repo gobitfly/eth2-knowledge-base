@@ -14,7 +14,7 @@ This can be done by pressing `CMD+Space` and searching for **Terminal**.
 Run `docker -v` .  
 If the output returns the docker version, Docker is installed correctly.
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 \*\*\*\*
 
@@ -34,11 +34,11 @@ If the output returns the docker version, Docker is installed correctly.
 
 `docker run -it -v $HOME/prysm:/data -p 4000:4000 -p 13000:13000 --name beacon-node \gcr.io/prysmaticlabs/prysm/beacon-chain:latest  --datadir=/data`
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%287%29.png)
 
 The directory `$HOME/prysm` contains all the beaconchain data and can be accessed through **Finder.**
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 **Wait** for the beaconnode to be in sync with the blockchain.   
 This may take a few hours and you will see the following message:
@@ -68,9 +68,7 @@ Some of the instructions on the participation page will be ignored because they 
 
 Follow the steps below to get Goerli ETH and to deposit them ****to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](../.gitbook/assets/image%20%2827%29.png)
-
-\*\*\*\*
+![](../.gitbook/assets/image%20%2822%29.png)
 
 **Step 4.**
 
@@ -89,7 +87,7 @@ Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.
 
 Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2835%29.png)
 
 \*\*\*\*
 

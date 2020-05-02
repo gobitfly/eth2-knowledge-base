@@ -15,7 +15,7 @@ If the output is `command not found`, **Homebrew** needs to be installed, and if
 In order to **install Homebrew** use the following code:  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 **Step 1.**
 
@@ -45,7 +45,7 @@ Drag and drop the **prysm.sh** file into the **Terminal** window and add:
 
 The directory `$HOME/prysm` contains all the beaconchain data and can be accessed through **Finder.**
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 **Wait** for the beaconnode to be in sync with the blockchain.   
 This may take a few hours and you will see the following message:
@@ -64,7 +64,7 @@ Drag and drop the **prysm.sh** file into **a new\(!\)** **Terminal** window and 
   
  **** `validator accounts create --keystore-path=$HOME/eth2validator --password=yourPassword` 
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 {% hint style="info" %}
 The created Keys are now located in **$HOME/eth2validator** 
@@ -75,9 +75,7 @@ Some of the instructions on the participation page will be ignored because they 
 
 Follow the steps below to get Goerli ETH and to deposit them ****to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](../.gitbook/assets/image%20%2827%29.png)
-
-\*\*\*\*
+![](../.gitbook/assets/image%20%2814%29.png)
 
 **Step 4.**
 
@@ -95,7 +93,7 @@ Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.
 
 Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2835%29.png)
 
 **Running multiple validators** 
 
