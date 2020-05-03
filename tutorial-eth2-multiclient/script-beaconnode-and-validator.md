@@ -44,7 +44,7 @@ Use the following code:
   
 Drag and drop the **prysm.bat** file into the command prompt window and add:  
    
-`beacon-chain --datadir=C:\prysm`
+ `beacon-chain --datadir=C:\prysm`
 
 ![](../.gitbook/assets/2020-04-27_14-38-35.gif)
 
@@ -63,7 +63,7 @@ This may take a few hours and you will see the following message:
 
 Drag and drop the **prysm.bat** file into the command prompt window and add:  
   
-`validator accounts create --keystore-path=C:\prysm --password=yourPassword`
+ `validator accounts create --keystore-path=C:\prysm --password=yourPassword`
 
 ![](../.gitbook/assets/2020-04-27_14-47-29.gif)
 
@@ -80,7 +80,7 @@ Follow the steps below to get Goerli ETH and to deposit them to activate your va
 
 Drag and drop the **prysm.bat** file into **a seperate** command prompt window **while the beaconnode is running in a different command prompt window** and add:
 
-`validator --keystore-path=C:\prysm --password=yourPassword`
+ `validator --keystore-path=C:\prysm --password=yourPassword`
 
 ![](../.gitbook/assets/2020-04-27_15-03-21.gif)
 
