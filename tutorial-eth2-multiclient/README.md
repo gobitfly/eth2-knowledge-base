@@ -8,6 +8,8 @@ Side note: There are **multiple** ways to join the ETH2.0 Testnet by using diffe
 
 Before we start, it is recommended reading the [glossary](https://kb.beaconcha.in/glossary) but not a requirement.
 
+![](../.gitbook/assets/image%20%2838%29.png)
+
 ## Overview
 
 ### [Prysm Client by Prysmatic Labs](https://prysmaticlabs.com/)
@@ -16,7 +18,7 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
 
 * Windows 10
   * [Run with Windows using Prysm.bat](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1) \(recommended\)   
-  * [Run with Windows **Pro & Home** using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)
+  * [Run with Windows Pro &Home using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)
     * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
     * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
 * macOS
