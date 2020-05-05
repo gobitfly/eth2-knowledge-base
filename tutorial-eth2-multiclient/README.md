@@ -4,7 +4,7 @@ This guide is designed for **non-technical** people. It focuses on **Windows10 a
 
 Side note: There are **multiple** ways to join the ETH2.0 Testnet by using different clients.
 
-**System requirements: Recommended: 8GB RAM, 100GB SSD , Minimum: 4GB RAM, 20GB SSD.**
+**System requirements: Recommended: 8GB RAM, 100GB SSD,  Minimum: 4GB RAM, 20GB SSD.**
 
 Before we start, it is recommended reading the [glossary](https://kb.beaconcha.in/glossary) but not a requirement.
 
