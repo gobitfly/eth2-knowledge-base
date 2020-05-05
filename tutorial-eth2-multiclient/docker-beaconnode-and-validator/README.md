@@ -91,3 +91,7 @@ Copy the **Raw Transaction Data** for each validator, re-do the process on the [
 
 Once the system has received all deposits, you can just start a single validator window, and it will use **all** of the created keys \(=multiple validators\).
 
+{% hint style="info" %}
+For further assistance, please join the Prysmatic Labs Discord [channel](https://discord.gg/wJW7Rjk).
+{% endhint %}
+
