@@ -16,3 +16,9 @@
 
 [Source](https://old.reddit.com/r/ethstaker/comments/ge2qwx/looking_for_easy_suggestions_on_staking_hardware/fpl7zqn/), written by [Lamboshi](https://twitter.com/L_Nakaghini) 🤓
 
+#### 
+
+#### Q: What about notebooks?
+
+Laptops are generally not recommended, since the battery will wear out very quickly during all-day operation. A [NUC](https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html) in this case would make more sense.
+
