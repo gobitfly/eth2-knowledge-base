@@ -20,5 +20,5 @@
 
 #### Q: What about notebooks?
 
-Laptops are generally not recommended, since the battery will wear out very quickly during all-day operation. A [NUC](https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html) in this case would make more sense.
+Laptops are generally not recommended, since the battery will wear out very quickly during all-day operation. A [NUC](https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html) in this case would be more ideal.
 
