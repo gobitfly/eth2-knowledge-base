@@ -27,7 +27,7 @@ The **prysm.bat** file should appear in the **C:\prysm** directory.
 **Step 2.**
 
 {% hint style="info" %}
- **This Step is not required. This command fixes the cosmetics of the command prompt.**
+ **This Step is not required. By using this command, cosmetics of the command prompt are being fixed.**
 {% endhint %}
 
 Use the following code:
