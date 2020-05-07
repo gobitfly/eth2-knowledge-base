@@ -11,3 +11,7 @@
   * [Run with macOS using prysm.sh script](tutorial-eth2-multiclient/run-with-macos-using-prysm.sh.md)
   * [Run with macOS using Docker](tutorial-eth2-multiclient/run-with-macos-using-docker.md)
 
+## community posts <a id="community"></a>
+
+* [Staking & Hardware](community/staking-and-hardware.md)
+
