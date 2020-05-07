@@ -1,6 +1,6 @@
 # Staking & Hardware
 
-#### Q: Which hardware should I buy in order to run 5 validators as a beginner?
+#### Q: Which hardware should I buy in order to run 5 validators as a non-technical person?
 
 > 5 validators is a pretty good chunk of change \(and I think we all believe it is subject to grow\), so it makes a lot of sense to buy some nice hardware to use as it will pay for itself pretty quickly.
 >
@@ -13,4 +13,6 @@
 > Downsides are noise, and power consumption. These are loud little guys, but you can jam it in a closet somewhere and it shouldn't disturb you too much. The tower servers are quieter than rack-mount so it shouldn't be too bad. Power consumption will probably be around 100w while running your node and validator. So that'll be around 10 bucks a month, which your staking rewards should easily make up for.
 >
 > As for OS, definitely Linux. I use Mint and it works for me, but Ubuntu or any other similar flavour is also fine. Just pick a big one so if you have any issues it is easy to find solutions on google.
+
+[Source](https://old.reddit.com/r/ethstaker/comments/ge2qwx/looking_for_easy_suggestions_on_staking_hardware/fpl7zqn/), written by [Lamboshi](https://twitter.com/L_Nakaghini) 🤓
 
