@@ -1,6 +1,6 @@
 # Glossary
 
-## Beacon Chain
+## Beaconchain
 
 It introduces Proof of stake to Ethereum1 and runs along it. It’s also called the coordination layer.
 
@@ -32,9 +32,11 @@ Represents the number of slots and takes approximately **6.4 minutes** and consi
 
 Each validator needs to deposit 32 ETH into the validator-deposit-contract on the ETH1 chain and requires the user to run a validator node. Their job is to propose blocks and attestations.
 
-**Validator Lifecycle:**
+## **Validator Lifecycle:**
 
-**1. Deposited:** 32 ETH has been deposited to the ETH1 deposit-contract and this state will be kept for around 7 hours. This offers security in case the ETH1 chain gets attacked.
+**1. Deposited:** 
+
+* 32 ETH has been deposited to the ETH1 deposit-contract and this state will be kept for around 7 hours. This offers security in case the ETH1 chain gets attacked.
 
 **2. Pending: Waiting for activation on ETH2**
 
@@ -45,13 +47,13 @@ Each validator needs to deposit 32 ETH into the validator-deposit-contract on th
 
 **3. Active Validator** Currently attesting and proposing blocks **\(=Block proposer\)**.
 
-The Validator will stay active until:
+The validator will stay active until:
 
 * the balance drops below 16 ETH \(ejected\).
 * voluntary exit
-* slashed
+* it gets slashed
 
-**4. Slashing Validator: The Validator has been malicious**
+**4. Slashing Validator:** The Validator has been malicious
 
 ![slashed](https://user-images.githubusercontent.com/26490734/73463604-d44cd700-437d-11ea-9c11-a2fed18fdc6d.png)
 
@@ -62,7 +64,8 @@ The Validator will stay active until:
 
 ## Block proposer
 
-A validator which was chosen by the beacon chain to propose the next block. There is only one per slot.
+A validator which has been chosen by the beacon chain to propose the next block.   
+There is only one per slot.
 
 ## Attestations
 
@@ -108,11 +111,10 @@ In order to determine if an Epoch has been finalized, validators have to agree o
 * Orphaned: In order to understand this easily we look at the diagram below: \(the numbers "1, 2, 3, ... ,9" represent the number of the slots\).
 
 1. Validator at slot 1 proposes the block “a”.
-   1. Validator at slot 2 proposes “b”.
-   2. Validator 3 proposes “c”.
-   3. Slot 4 is being skipped because the validator didn’t propose a block \(e.g.: offline\).
-   4. At slot 5/6 a fork occurs: Validator\(5\) proposes a block, but validator\(6\) doesn’t receive this data \(e.g.: the block didn’t reach them fast enough\). Therefore Validator\(6\) proposes its block with the most recent information it sees from validator\(3\).
-   5. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key here - It decides which one of the available chains is the canonical one.
+2. Validator at slot 2 proposes “b”.
+3. Slot 4 is being skipped because the validator didn’t propose a block \(e.g.: offline\).
+4. At slot 5/6 a fork occurs: Validator\(5\) proposes a block, but validator\(6\) doesn’t receive this data \(e.g.: the block didn’t reach them fast enough\). Therefore Validator\(6\) proposes its block with the most recent information it sees from validator\(3\).
+5. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key here - It decides which one of the available chains is the canonical one.
 
 ![forkchoice](https://user-images.githubusercontent.com/26490734/73468330-e67e4380-4384-11ea-81cd-cb18d7a88e92.png)
 
