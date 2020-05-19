@@ -47,7 +47,7 @@ This may take a few hours and you will see the following message:
 
 **Create ETH2 keys**
 
-`docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/prysm --password=yourPassword`
+`docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
 
 The output should look like the image below.   
 If you didn't change `--password=yourPassword` , your validator keys will have **yourPassword** as its password.  
