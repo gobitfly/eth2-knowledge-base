@@ -21,7 +21,7 @@ Download ****[**Geth**](https://geth.ethereum.org/downloads/)
   
   
 **Step 2.**   
-Find the downloaded folder **and** open a **command prompt/terminal** _****_window
+Find the downloaded file **and** open a **command prompt/terminal** _****_window
 
   
 **Step 3. Syncing Goerli**  

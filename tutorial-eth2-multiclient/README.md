@@ -6,7 +6,7 @@ This guide is designed for **non-technical** people. It focuses on **Windows10 a
 
 Note: There are **multiple** ways to join the ETH2.0 Testnet by using different clients.
 
-## **Requirements** 
+## **Requirements**
 
 * **Recommended:** 8GB RAM, 100GB SSD, [**Metamask**](https://metamask.io/) **wallet installed**  
 * **Minimum:** 4GB RAM, 20GB SSD, [**Metamask**](https://metamask.io/) **wallet installed**
@@ -27,7 +27,6 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
     * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
     * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
 * macOS
-
   * [Run with macOS using Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-with-macos-using-prysm.sh) \(recommended\)
   * [Run with macOS using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-with-macos-using-docker)
 
@@ -36,10 +35,4 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
 [Lighthouse Discord Channel](https://discord.gg/8mFMS7G)
 
 ### 3. [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-a-goerli-node-eth1-and-beaconnode-eth2) \(mainnet scenario\)
-
-### 
-
-
-
-## 
 
