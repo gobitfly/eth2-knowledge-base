@@ -11,7 +11,7 @@ An Ethereum 1.0 node must run parallel to Ethereum 2.0 to stay fully decentraliz
 
   
 ****_The following steps only work if the beaconnode is on the **same** machine as the Goerli node.  
-Goerli-chain size is around 5GB._
+**Goerli-chain size is around 5GB.**_
 
 ## **How to connect your ETH2 beaconnode to your** _local_  **ETH1 node**
 
