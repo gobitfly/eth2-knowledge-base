@@ -24,11 +24,10 @@ Find the downloaded folder **and** open a **command prompt/terminal** _****_wind
 
   
 **Step 3. Syncing Goerli**  
-Drag and drop the _**geth**_ file and add the following   
+Drag and drop the _**geth**_ file into the terminal window and add the following   
   
  `--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545 --ws --wsaddr=127.0.0.1 --wsport=8546`   
-  
-**\(Adapt the path before pasting the code\) WINDOWS?**
+
 
 ![](../.gitbook/assets/goerlisyncs1.gif)
 
