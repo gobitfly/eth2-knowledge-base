@@ -27,8 +27,7 @@ Find the downloaded file **and** open a **command prompt/terminal** _****_window
 **Step 3. Syncing Goerli**  
 Drag and drop the _**geth**_ file into the terminal window and add the following   
   
- `--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545 --ws --wsaddr=127.0.0.1 --wsport=8546`   
-
+ `--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545 --ws --wsaddr=127.0.0.1 --wsport=8546`
 
 ![](../.gitbook/assets/goerlisyncs1.gif)
 
@@ -44,9 +43,13 @@ Once your Goerli node is synced, it should look like this including the message:
 
 #### **Step 4. Connect your beaconnode \(ETH2\) to Goerli \(ETH1\)**
 
-**While Goerli is in sync**, drag and drop the _**prysm.sh**_ file and add:   
+**While Goerli is in sync**, drag and drop the _**prysm.sh \(macos\) /prysm.bat \(windows\)**_ into the terminal window file and add:   
   
 **** `beacon-chain  --datadir=$HOME/prysm --web3provider=ws://localhost:8546/ --http-web3provider=http://localhost:8545/`
+
+{% hint style="info" %}
+**--datadir=$HOME/prysm**`is the path of the beaconchain.db file.`
+{% endhint %}
 
 ![](../.gitbook/assets/beaconoerli1.gif)
 
