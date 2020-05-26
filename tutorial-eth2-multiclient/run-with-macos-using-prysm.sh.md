@@ -62,12 +62,12 @@ This may take a few hours and you will see the following message:
 
 Drag and drop the **prysm.sh** file into **a new\(!\)** **Terminal** window and add:  
   
- **** `validator accounts create --keystore-path=$HOME/eth2validator --password=yourPassword` 
+ **** `validator accounts create --keystore-path=$HOME/prysm --password=yourPassword` 
 
 ![](../.gitbook/assets/image%20%289%29.png)
 
 {% hint style="info" %}
-The created keys are now located in **$HOME/eth2validator**
+The created keys are now located in **$HOME/prysm**
 {% endhint %}
 
 **Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).  
@@ -82,7 +82,7 @@ Follow the steps below to get Goerli ETH and to deposit them ****to activate you
 **Start the validator**
 
 Drag and drop the **prysm.sh** file into **a new\(!\)** **Terminal** window and add:  
- `validator --keystore-path=$HOME/eth2validator --password=yourPassword`
+ `validator --keystore-path=$HOME/prysm --password=yourPassword`
 
 \*\*\*\*
 
