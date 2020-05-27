@@ -10,7 +10,7 @@ Create a folder named **prysm** in the **C:\** directory.
 
 \*\*\*\*
 
-**Step 1.**
+#### **Step 1.**
 
 Enter the following code into the **command prompt window**:
 
@@ -24,7 +24,7 @@ The **prysm.bat** file should appear in the **C:\prysm** directory.
 
 \*\*\*\*
 
-**Step 2.**
+#### **Step 2.**
 
 {% hint style="info" %}
  **This Step is not required. By using this command, cosmetics of the command prompt are being fixed.**
@@ -38,7 +38,7 @@ Use the following code:
 
 \*\*\*\*
 
-**Step 3.** 
+#### **Step 3.** 
 
 **Start the beaconnode**  
   
@@ -57,7 +57,7 @@ This may take a few hours and you will see the following message:
 
 \*\*\*\*
 
-**Step 4.**
+#### **Step 4.**
 
 **Create ETH2 keys**
 
@@ -74,7 +74,7 @@ Follow the steps below to get Goerli ETH and to deposit them to activate your va
 
 ![](../.gitbook/assets/image%20%2813%29.png)
 
-**Step 5.**
+#### **Step 5.**
 
 **Start the validator**
 
@@ -86,7 +86,7 @@ Drag and drop the **prysm.bat** file into **a seperate** command prompt window *
 
 \*\*\*\*
 
-**Step 6.**
+#### **Step 6.**
 
 Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
 Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
@@ -97,7 +97,7 @@ Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has proces
 
 \*\*\*\*
 
-**Running multiple validators** 
+#### **Running multiple validators** 
 
 Repeat **Step 4.** and **create more keys** into the same directory.   
 **Use the same password for all keys.**
