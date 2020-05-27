@@ -15,19 +15,13 @@ An Ethereum 1.0 node must run parallel to Ethereum 2.0 to stay fully decentraliz
 
 ## **How to connect your ETH2 beaconnode to your** _local_  **ETH1 node**
 
-  
-**Step 1.**  
-Download ****[**Geth**](https://geth.ethereum.org/downloads/)  
-  
-  
-**Step 2.**   
-Find the downloaded file **and** open a **command prompt/terminal** _****_window
+####  **Step 1.** Download ****[**Geth**](https://geth.ethereum.org/downloads/) ****
 
-  
-**Step 3. Syncing Goerli**  
-Drag and drop the _**geth**_ file into the terminal window and add the following   
-  
- `--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545 --ws --wsaddr=127.0.0.1 --wsport=8546`
+#### **Step 2.**  Find the downloaded file **and** open a **command prompt/terminal** _****_window
+
+\*\*\*\*
+
+#### **Step 3. Syncing Goerli** Drag and drop the _**geth**_ file into the terminal window and add the following    `--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545 --ws --wsaddr=127.0.0.1 --wsport=8546`
 
 ![](../.gitbook/assets/goerlisyncs1.gif)
 

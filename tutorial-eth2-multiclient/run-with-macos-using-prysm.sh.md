@@ -17,7 +17,7 @@ In order to **install Homebrew** use the following code:
 
 ![](../.gitbook/assets/image%20%2825%29.png)
 
-**Step 1.**
+#### **Step 1.**
 
 **Install GPG**  
 `brew install gnupg`
@@ -33,7 +33,7 @@ In order to **install Homebrew** use the following code:
 
 \*\*\*\*
 
-**Step 2.**
+#### **Step 2.**
 
 **Start the beaconnode**
 
@@ -56,7 +56,7 @@ This may take a few hours and you will see the following message:
 
 \*\*\*\*
 
-**Step 3.**
+#### **Step 3.**
 
 **Create ETH2 Keys**
 
@@ -77,7 +77,7 @@ Follow the steps below to get Goerli ETH and to deposit them ****to activate you
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
-**Step 4.**
+#### **Step 4.**
 
 **Start the validator**
 
@@ -86,7 +86,7 @@ Drag and drop the **prysm.sh** file into **a new\(!\)** **Terminal** window and 
 
 \*\*\*\*
 
-**Step 5.**
+#### **Step 5.**
 
 Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
 Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
@@ -95,7 +95,7 @@ Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has proces
 
 ![](../.gitbook/assets/image%20%2835%29.png)
 
-**Running multiple validators** 
+#### **Running multiple validators** 
 
 Repeat **Step 3.** and **create more keys** into the same directory.   
 **Use the same password for all keys.**

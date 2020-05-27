@@ -6,7 +6,7 @@
 
 [Install docker ](https://docs.docker.com/docker-for-mac/install/)
 
-**Step 1.**
+#### **Step 1.**
 
 Check if **Docker** is installed through the terminal.   
 This can be done by pressing `CMD+Space` and searching for **Terminal**.
@@ -18,7 +18,7 @@ If the output returns the docker version, Docker is installed correctly.
 
 \*\*\*\*
 
-**Step 2.**
+#### **Step 2.**
 
 **Download and install latest beaconchain updates**
 
@@ -30,7 +30,7 @@ If the output returns the docker version, Docker is installed correctly.
 
 ![](../.gitbook/assets/image%20%282%29.png)
 
-**Start the beaconnode**
+#### **Start the beaconnode**
 
 `docker run -it -v $HOME/prysm:/data -p 4000:4000 -p 13000:13000 --name beacon-node \gcr.io/prysmaticlabs/prysm/beacon-chain:latest  --datadir=/data`
 
@@ -49,7 +49,7 @@ This may take a few hours and you will see the following message:
 
 \*\*\*\*
 
-**Step 3.**
+#### **Step 3.**
 
 **Create ETH2 Keys**
 
@@ -70,7 +70,7 @@ Follow the steps below to get Goerli ETH and to deposit them ****to activate you
 
 ![](../.gitbook/assets/image%20%2822%29.png)
 
-**Step 4.**
+#### **Step 4.**
 
 **Start the validator**
 
@@ -80,7 +80,7 @@ Open a **new Terminal** window and run:
 
 \*\*\*\*
 
-**Step 5.**
+#### **Step 5.**
 
 Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
 Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
@@ -91,7 +91,7 @@ Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has proces
 
 \*\*\*\*
 
-**Running multiple validators** 
+#### **Running multiple validators** 
 
 Repeat **Step 3.** and **create more keys** into the same directory.   
 **Use the same password for all keys.**

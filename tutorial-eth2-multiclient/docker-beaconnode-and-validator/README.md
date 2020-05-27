@@ -8,7 +8,7 @@ A folder named "prysm" in C:\ needs to be created which will also be the locatio
 
 ![prysmFolder](https://user-images.githubusercontent.com/26490734/80280580-2e530380-8705-11ea-9574-49b345376844.png)
 
-**Step 0.**
+#### **Step 0.**
 
 Start Docker, open a [Command Prompt](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) window and type `docker -v`. If Docker is installed correctly, it will return you the Docker Version. If not, please make sure to follow the steps in [_**Installing Docker on Windows Pro**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installingdocker) **if you are on the professional version and** [_**Installing Docker on Windows Home**_](https://kb.beaconcha.in/tutorial-eth2-multiclient/docker-beaconnode-and-validator/installdocker) **if you are on the home version**.
 
@@ -20,7 +20,7 @@ If the previous command was successful, run the following code:
  **This is not required. By using this command, cosmetics of the command prompt are being fixed.**
 {% endhint %}
 
-**Step 1.**
+#### **Step 1.**
 
 **Download and install latest beaconchain updates**
 
@@ -43,7 +43,7 @@ This may take a few hours and you will see the following message:
 
 ![](../../.gitbook/assets/image%20%2811%29.png)
 
-**Step.2**
+#### **Step.2**
 
 **Create ETH2 keys**
 
@@ -57,7 +57,7 @@ The newly created keys should be in `C:\prysm`. Make sure they are available.
 
 ![keyCreation](https://user-images.githubusercontent.com/26490734/79857621-59b8b400-83ce-11ea-9bb5-6b5f0ba9ac7e.png)
 
-**Step 3.**
+#### **Step 3.**
 
 Some of the instructions on the **participation page** will be ignored because they were not optimized for Windows10 \(yet\).   
   
@@ -65,7 +65,7 @@ Follow the steps below to get Goerli ETH and to deposit them to activate your va
 
 ![](../../.gitbook/assets/image%20%286%29.png)
 
-**Step 4.**
+#### **Step 4.**
 
 Open **a new** command prompt window.
 
@@ -73,7 +73,7 @@ Open **a new** command prompt window.
 
 `docker run -it -v c:/prysm:/data --network="host" gcr.io/prysmaticlabs/prysm/validator:latest --beacon-rpc-provider=127.0.0.1:4000 --keystore-path=/data --datadir=/data --password=yourPassword`
 
-**Step 5.**
+#### **Step 5.**
 
 Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
 Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
@@ -82,7 +82,7 @@ Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has proces
 
 ![Validator&amp;beaconcha.in](https://user-images.githubusercontent.com/26490734/79860463-fda45e80-83d2-11ea-8b71-05a112117f18.png)
 
-**Running multiple validators \(voluntarily\)**
+#### **Running multiple validators \(voluntarily\)**
 
 Repeat **Step 2.** and **create more keys** into the same directory.   
 **Use the same password for all keys.**
