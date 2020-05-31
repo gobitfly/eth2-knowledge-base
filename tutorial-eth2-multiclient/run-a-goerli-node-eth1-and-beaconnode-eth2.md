@@ -37,7 +37,7 @@ Drag and drop the _**geth**_ file into the terminal window and add the following
 
   
 The syncing-process takes about **30 minutes.** **Wait for this to complete.**  
-Once your Goerli node is synced, it should look like this including the message:  
+Once your Goerli node is synced, it should look like this and include the message:  
   
 `Imported new chain segment`
 
