@@ -11,6 +11,7 @@
   * [Run with macOS using prysm.sh script](tutorial-eth2-multiclient/run-with-macos-using-prysm.sh.md)
   * [Run with macOS using Docker](tutorial-eth2-multiclient/run-with-macos-using-docker.md)
   * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](tutorial-eth2-multiclient/run-a-goerli-node-eth1-and-beaconnode-eth2.md)
+* [ETH 1.0 & ETH 2.0 Keys](eth-1.0-and-eth-2.0-keys.md)
 
 ## Community posts <a id="community"></a>
 

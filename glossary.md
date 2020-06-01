@@ -59,8 +59,8 @@ The validator will stay active until:
 
 **5. Exiting Validator**
 
-* Ejected: the validator balance fell below a threshold and was kicked out by the network
-* Exited: voluntary exit
+* **Ejected**  The validator balance fell below a threshold and was kicked out by the network 
+* **Exited**  Voluntary exit, the withdrawal key holder has the ability to **withdraw** the current balance of the corresponding validator balance.
 
 ## Block proposer
 
@@ -69,7 +69,7 @@ There is only one per slot.
 
 ## Attestations
 
-Votes by validators which confirm the validity of a block.
+Votes by validators which confirm the validity of a block.\(=attester\)
 
 ## Unique Index
 
