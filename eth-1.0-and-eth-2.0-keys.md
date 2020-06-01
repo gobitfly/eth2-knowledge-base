@@ -91,7 +91,9 @@ A simplified overview would look like the following:
 ![](.gitbook/assets/image%20%2845%29.png)
 
   
-[Source: Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
+[Source: Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)  
+  
+Credits: _Nishant Das_ for fact-checking
 
 
 
