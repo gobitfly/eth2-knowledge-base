@@ -1,4 +1,4 @@
-# Run with macOS using Docker
+# Beaconnode & validator with macOS using Docker
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
