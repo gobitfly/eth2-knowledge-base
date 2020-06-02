@@ -6,7 +6,7 @@
 
 Create a folder named **prysm** in the **C:\** directory. 
 
-![prysmFolder](../.gitbook/assets/image%20%2810%29.png)
+![prysmFolder](../../.gitbook/assets/image%20%2810%29.png)
 
 \*\*\*\*
 
@@ -18,7 +18,7 @@ Enter the following code into the **command prompt window**:
   
 `curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.bat --output prysm.bat`
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 The **prysm.bat** file should appear in the **C:\prysm** directory.
 
@@ -34,7 +34,7 @@ Use the following code:
 
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 \*\*\*\*
 
@@ -46,14 +46,14 @@ Drag and drop the **prysm.bat** file into the command prompt window and add:
    
  `beacon-chain --datadir=C:\prysm`
 
-![](../.gitbook/assets/2020-04-27_14-38-35.gif)
+![](../../.gitbook/assets/2020-04-27_14-38-35.gif)
 
 **Wait** for the beaconnode to be in sync with the blockchain.   
 This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX`
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 \*\*\*\*
 
@@ -65,14 +65,14 @@ Drag and drop the **prysm.bat** file into the command prompt window and add:
   
  `validator accounts create --keystore-path=C:\prysm --password=yourPassword`
 
-![](../.gitbook/assets/2020-04-27_14-47-29.gif)
+![](../../.gitbook/assets/2020-04-27_14-47-29.gif)
 
 **Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).   
 Some of the instructions on the **participation page** will be ignored because they were not optimized for Windows10 \(yet\).  
   
 Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
 #### **Step 5.**
 
@@ -82,7 +82,7 @@ Drag and drop the **prysm.bat** file into **a seperate** command prompt window *
 
  `validator --keystore-path=C:\prysm --password=yourPassword`
 
-![](../.gitbook/assets/2020-04-27_15-03-21.gif)
+![](../../.gitbook/assets/2020-04-27_15-03-21.gif)
 
 \*\*\*\*
 
@@ -93,7 +93,7 @@ Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.
 
 Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2819%29.png)
 
 \*\*\*\*
 
