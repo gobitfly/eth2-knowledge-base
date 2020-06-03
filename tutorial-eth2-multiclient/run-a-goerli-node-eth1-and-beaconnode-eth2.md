@@ -53,7 +53,8 @@ Once your Goerli node is synced, it should look like this and include the messag
 **** `beacon-chain  --datadir=$HOME/prysm --web3provider=ws://localhost:8546/ --http-web3provider=http://localhost:8545/`
 
 {% hint style="info" %}
-**--datadir=$HOME/prysm**`is the path of the beaconchain.db file.`
+**--datadir=$HOME/prysm**`Please adapt the path above to your existing beaconchain.db file.   
+For simplicity reasons we will use the one above.`
 {% endhint %}
 
 ![](../.gitbook/assets/beaconoerli1.gif)
