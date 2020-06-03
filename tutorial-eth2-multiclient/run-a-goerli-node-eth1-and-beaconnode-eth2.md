@@ -5,12 +5,13 @@
 Ethereum 2.0 Testnets have been running for some time, and because the existing Ethereum 2.0 clients have always provided an Ethereum 1.0  node to users, misunderstandings arose.  
   
 **To clear things up:   
-An Ethereum 1.0 node must run parallel to Ethereum 2.0 to stay fully decentralized!**
+If you want to run a validator, an Ethereum 1.0 node must run parallel to Ethereum 2.0 to stay fully decentralized!** 
 
 ![](../.gitbook/assets/image%20%2841%29.png)
 
+**However, an Ethereum 1.0 node is not required if you do not want to stake. Without an Ethereum 1.0 node you will still be able to sync Ethereum 2.0 blocks and be a realiable peer for others in the network.**  
   
-****_The following steps only work if the beaconnode is on the **same** machine as the Goerli node.  
+_The following steps only work if the beaconnode is on the **same** machine as the Goerli node.  
 **Goerli-chain size is around 5GB.**_
 
 ## **How to connect your ETH2 beaconnode to your** _local_  **ETH1 node**
