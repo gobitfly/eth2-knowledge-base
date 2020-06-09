@@ -1,4 +1,4 @@
-# Run a Slasher with using prysm.sh \(Windows & macOS \)
+# Run a Slasher using prysm.sh
 
 ## General
 
@@ -10,7 +10,5 @@ The slasher's purpose is to find malicious validators and report slashable offen
 * **Surround votes:** An **attester** and sign an attestation that surrounds another one.
 * **Double block proposal:** A **block** **proposer** signs two different blocks for the same slot.
 
-![](../../.gitbook/assets/image%20%2865%29.png)
-
-#### TBD
+![](../../.gitbook/assets/image%20%2864%29.png)
 

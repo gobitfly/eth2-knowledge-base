@@ -17,22 +17,14 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
 
 ## Start Staking
 
-### 1. [Prysm Client by Prysmatic Labs](https://prysmaticlabs.com/)
+### 1. [Prysm Client](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client) by [Prysmatic Labs](https://prysmaticlabs.com/) - [Discord channel](https://discord.gg/wJW7Rjk)
 
-[Prysmatic Labs Discord Channel](https://discord.gg/wJW7Rjk)
+* [Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm)
+* [macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm)
 
-* Windows 10
-  * [Run with Windows using Prysm.bat](https://kb.beaconcha.in/tutorial-eth2-multiclient/binary-beaconnode-and-validator-1) \(recommended\)   
-  * [Run with Windows Pro &Home using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator)
-    * [Installing Docker on Windows Home](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installdocker)
-    * [Installing Docker on Windows Pro](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-beaconnode-and-validator/installingdocker)
-* macOS
-  * [Run with macOS using Prysm.sh script](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-with-macos-using-prysm.sh) \(recommended\)
-  * [Run with macOS using Docker](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-with-macos-using-docker)
+### 2. [Lighthouse Client ](https://kb.beaconcha.in/tutorial-eth2-multiclient/lighthouse-client)by [Sigma Prime](https://sigmaprime.io/) \(coming soon\) - [Discord channel](https://discord.gg/8mFMS7G)
 
-### 2. [Lighthouse Client](https://lighthouse.sigmaprime.io/) \(coming soon\)
+### 
 
-[Lighthouse Discord Channel](https://discord.gg/8mFMS7G)
-
-### 3. [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-a-goerli-node-eth1-and-beaconnode-eth2) \(mainnet scenario\)
+### [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-a-goerli-node-eth1-and-beaconnode-eth2)
 
