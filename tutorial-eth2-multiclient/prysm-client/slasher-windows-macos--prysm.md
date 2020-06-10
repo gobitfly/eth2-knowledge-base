@@ -12,8 +12,7 @@ The slasher's purpose is to find malicious validators **in the Ethereum 2.0 netw
 ## How does the slasher work?
 
 The s**lasher is its own entity** but requires a beacon-node to receive attestations from.  
-  
-To find malicious activity by validators, the slashers iterates through all attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block.
+To find malicious activity by validators, the slashers iterates through all attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets slashed.
 
 ## Run a slasher
 
