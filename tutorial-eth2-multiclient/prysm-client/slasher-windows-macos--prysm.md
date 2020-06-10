@@ -19,5 +19,7 @@ The slasher then sends proof to beacon-nodes which includes
 ## Run a slasher
 
 Make sure your **beaconnode** is **in sync** and running along with a **validator**.   
-If you need to make up for it, please look [here for windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator) and [here for macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh).
+If you need to make up for it, please look [here for windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator) and [here for macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh).  
+  
+**TBD.**
 
