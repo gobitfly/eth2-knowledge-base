@@ -77,7 +77,8 @@ There is only one per slot.
 
 ## Slasher 
 
-The slasher's purpose is to find malicious validators in the Ethereum 2.0 network and report slashable offenses to the beacon-node. 
+The slasher's purpose is to find malicious validators in the Ethereum 2.0 network and report slashable offenses to the beacon-node.   
+
 
 #### **Slashable offenses**
 
