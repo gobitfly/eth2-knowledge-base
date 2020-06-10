@@ -32,20 +32,24 @@ Represents the number of slots and takes approximately **6.4 minutes** and consi
 
 Each validator needs to deposit 32 ETH into the validator-deposit-contract on the ETH1 chain and requires the user to run a validator node. Their job is to propose blocks and attestations.
 
-## **Validator Lifecycle:**
+## **Validator Lifecycle**
 
-**1. Deposited:** 
+**1. Deposited** 
 
 * 32 ETH has been deposited to the ETH1 deposit-contract and this state will be kept for around 7 hours. This offers security in case the ETH1 chain gets attacked.
 
-**2. Pending: Waiting for activation on ETH2**
+**2. Pending**   
+  
+Waiting for activation on ETH2
 
 * Until 327680 active validators in the network, **4 validators can be activated per epoch** \(900 per day\). After that 5 can be activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active  validators**. 
 * Amount of activations scales with the amount of active validators 
 
   and the limit is the active validator set divided by 64.000
 
-**3. Active Validator** Currently attesting and proposing blocks **\(=Block proposer\)**.
+**3. Active Validator**   
+  
+Currently attesting and proposing blocks **\(=block proposer\)**.
 
 The validator will stay active until:
 
@@ -53,9 +57,13 @@ The validator will stay active until:
 * voluntary exit
 * it gets slashed
 
-**4. Slashing Validator:** The Validator has been malicious
+**4. Slashing Validator**   
+  
+The Validator has been malicious and will be slashed and kicked out of the system
 
-![slashed](https://user-images.githubusercontent.com/26490734/73463604-d44cd700-437d-11ea-9c11-a2fed18fdc6d.png)
+> Clarification -   
+> A _**Penalty**_ is a negative reward \(e.g. for going offline\).   
+> A _**Slashing**_ is a large penalty \(≥ 1/32 of balance at stake**\)** and a forceful exit ... **. - Justin Drake**
 
 **5. Exiting Validator**
 
@@ -66,6 +74,21 @@ The validator will stay active until:
 
 A validator which has been chosen by the beacon chain to propose the next block.   
 There is only one per slot.
+
+## Slasher 
+
+The slasher's purpose is to find malicious validators in the Ethereum 2.0 network and report slashable offenses to the beacon-node. 
+
+#### **Slashable offenses**
+
+**Attestation violation**
+
+* **Double voting:** An **attester** signs two different attestations **in one epoch.**
+* **Surround votes:** An **attester** and sign an attestation that surrounds another one.
+
+#### Proposer violation
+
+* **Double block proposal:** A **block** **proposer** signs two different blocks for the same slot.
 
 ## Attestations
 
