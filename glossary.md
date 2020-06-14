@@ -86,8 +86,8 @@ There is only one per slot.
 
 ## Slasher 
 
-The s**lasher is its own entity** but requires a beacon-node to receive attestations from.  
-To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets **slashed**.  
+The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm) **is its own entity** but requires a beacon-node to receive attestations from.  
+To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets [**slashed**](https://kb.beaconcha.in/glossary#4-slashing-validator).  
 
 
 #### **Slashable offenses**
@@ -107,9 +107,9 @@ Votes by validators which confirm the validity of a block.\(=attester\)
 
 ## Unique Index
 
-A unique identifier, also called validator index, as seen on [beaconcha.in](https://www.beaconcha.in/) or [beacon.etherscan.io](https://beacon.etherscan.io/)
+A unique identifier, also called validator index, as seen on [beaconcha.in](https://www.beaconcha.in/).
 
-![uniqueIndex](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
+![](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
 
 ## Eligible for activation & Estimated activation
 
