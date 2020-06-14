@@ -34,22 +34,18 @@ Each validator needs to deposit 32 ETH into the validator-deposit-contract on th
 
 ## **Validator Lifecycle**
 
-**1. Deposited** 
+#### **1. Deposited** 
 
 * 32 ETH has been deposited to the ETH1 deposit-contract and this state will be kept for around 7 hours. This offers security in case the ETH1 chain gets attacked.
 
-**2. Pending**   
-  
-Waiting for activation on ETH2
+#### **2. Pending**   Waiting for activation on ETH2
 
 * Until 327680 active validators in the network, **4 validators can be activated per epoch** \(900 per day\). After that 5 can be activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active  validators**. 
 * Amount of activations scales with the amount of active validators 
 
   and the limit is the active validator set divided by 64.000
 
-**3. Active Validator**   
-  
-Currently attesting and proposing blocks **\(=block proposer\)**.
+#### **3. Active Validator**   Currently attesting and proposing blocks **\(=block proposer\)**.
 
 The validator will stay active until:
 
@@ -57,15 +53,13 @@ The validator will stay active until:
 * voluntary exit
 * it gets slashed
 
-**4. Slashing Validator**   
-  
-The Validator has been malicious and will be slashed and kicked out of the system
+#### **4. Slashing Validator**   The Validator has been malicious and will be slashed and kicked out of the system
 
 > Clarification -   
 > A _**Penalty**_ is a negative reward \(e.g. for going offline\).   
 > A _**Slashing**_ is a large penalty \(≥ 1/32 of balance at stake**\)** and a forceful exit ... **. - Justin Drake**
 
-**5. Exiting Validator**
+#### **5. Exiting Validator**
 
 * **Ejected**  The validator balance fell below a threshold and was kicked out by the network 
 * **Exited**  Voluntary exit, the withdrawal key holder has the ability to **withdraw** the current balance of the corresponding validator balance.
@@ -77,7 +71,8 @@ There is only one per slot.
 
 ## Slasher 
 
-The slasher's purpose is to find malicious validators in the Ethereum 2.0 network and report slashable offenses to the beacon-node.   
+The s**lasher is its own entity** but requires a beacon-node to receive attestations from.  
+To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets **slashed**.  
 
 
 #### **Slashable offenses**
