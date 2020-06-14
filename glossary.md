@@ -14,6 +14,8 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 * Finalize checkpoints
 * Link and vote in transitions/data of shard chains
 
+[_How to run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
+
 [source](https://notes.ethereum.org/@djrtwo/Bkn3zpwxB#High-level-overview)
 
 ## Slots \(32 slots = 1 Epoch\)
@@ -30,7 +32,8 @@ Represents the number of slots and takes approximately **6.4 minutes** and consi
 
 ## Validator
 
-Each validator needs to deposit 32 ETH into the validator-deposit-contract on the ETH1 chain and requires the user to run a validator node. Their job is to propose blocks and attestations.
+Each validator needs to deposit 32 ETH into the validator-deposit-contract on the ETH1 chain and requires the user to run a validator node. Their job is to propose blocks and attestations.  
+[_How to run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
 
 ## **Validator Lifecycle**
 
@@ -88,6 +91,7 @@ There is only one per slot.
 
 The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm) **is its own entity** but requires a beacon-node to receive attestations from.  
 To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets [**slashed**](https://kb.beaconcha.in/glossary#4-slashing-validator).  
+[_How to run a slasher?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)  
 
 
 #### **Slashable offenses**
