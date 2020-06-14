@@ -51,7 +51,9 @@ Each validator needs to deposit 32 ETH into the validator-deposit-contract on th
 
 
 
-#### **3. Active Validator**   Currently attesting and proposing blocks **\(=block proposer\)**.
+#### **3. Active Validator** 
+
+Currently attesting and proposing blocks **\(=block proposer\)**.
 
 The validator will stay active until:
 
@@ -61,7 +63,10 @@ The validator will stay active until:
 
 
 
-#### **4. Slashing Validator**   The Validator has been malicious and will be slashed and kicked out of the system
+#### **4. Slashing Validator** 
+
+  
+****The Validator has been malicious and will be slashed and kicked out of the system
 
 > Clarification -   
 > A _**Penalty**_ is a negative reward \(e.g. for going offline\).   
