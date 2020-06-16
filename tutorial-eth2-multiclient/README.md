@@ -19,6 +19,7 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
 
 ### 1. [Prysm Client](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client) by [Prysmatic Labs](https://prysmaticlabs.com/) - [Discord channel](https://discord.gg/wJW7Rjk)
 
+* [TL;DR Essential commands \(macOS & Windows\)](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/tl-dr-essential-commands-macos-and-windows)
 * [Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm)
 * [macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm)
 
