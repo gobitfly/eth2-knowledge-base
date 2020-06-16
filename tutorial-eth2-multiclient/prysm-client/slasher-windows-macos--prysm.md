@@ -1,4 +1,4 @@
-# Run a Slasher using prysm.sh
+# Run a Slasher using prysm.sh \(Win & macOs\)
 
 ## General
 
@@ -14,15 +14,15 @@ The slasher's purpose is to find malicious validators **in the Ethereum 2.0 netw
 The s**lasher is its own entity** but requires a beacon-node to receive attestations from.  
 To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets slashed.
 
-## Run a slasher
+## Run a slasher \(Windows & macOS\)
 
 Make sure your **beaconnode** is **in sync**.   
-If you haven't done so already, please look [here for windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator) and [here for macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh).  
+If you haven't done so already, please look [here for Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator) and [here for macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh).  
 
 
 ####  **Step 1.**
 
-Drag and drop the **prysm.sh** file into the **Terminal** window and add:
+Drag and drop the **prysm.sh \(on macOS\)** or **prysm.bat \(on Windows\)** file into the **Terminal** window and add:
 
 `slasher  --datadir=$HOME/prysm`
 

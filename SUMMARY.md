@@ -14,7 +14,7 @@
     * [macOS](tutorial-eth2-multiclient/prysm-client/macos-prysm/README.md)
       * [Beaconnode & validator with macOS using prysm.sh script \(recommended\)](tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh.md)
       * [Beaconnode & validator with macOS using Docker](tutorial-eth2-multiclient/prysm-client/macos-prysm/docker-beaconnode-and-validator-1.md)
-    * [Run a Slasher using prysm.sh](tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm.md)
+    * [Run a Slasher using prysm.sh \(Win & macOs\)](tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm.md)
   * [Lighthouse client](tutorial-eth2-multiclient/lighthouse-client.md)
 * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](run-a-goerli-node-eth1-and-beaconnode-eth2.md)
 
