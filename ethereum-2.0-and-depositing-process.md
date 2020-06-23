@@ -28,7 +28,7 @@ If the **threshold** of 1 ETH is not met or the transaction has **no/invalid** i
 The user-created **input data**, is a reflection of the upcoming **validator and withdrawal keys** on the Ethereum 2.0 network as seen below. Our full Ethereum 2.0 keys blog is [here](https://kb.beaconcha.in/ethereum-2-keys).
 {% endhint %}
 
-#### **Why exactly does this take 7.5hours though?**
+#### **Why exactly does this take 7.5 hours though?**
 
 The Ethereum 2.0 chain only considers transactions which have been in the deposit contract for 1024  Ethereum 1.0 blocks to ensure they never end up in a [reorged](https://en.bitcoin.it/wiki/Chain_Reorganization) block.   
 **\(=**`ETH1_FOLLOW_DISTANCE` referred by [developers](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/configuration/#misc).\)   
@@ -54,7 +54,7 @@ Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-a
 
 
 
-3. 
+### 3. Validator Queue - Status: Pending
 
 ![](.gitbook/assets/image%20%2880%29.png)
 
