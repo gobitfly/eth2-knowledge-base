@@ -17,8 +17,6 @@ In order to interact with the deposit contract, the transaction requires a **gas
 Every signed transaction visits the **Mempool** first, which can be referred to as the waiting room for transactions. During this period, the _transaction status_ is usually [_pending_](https://etherscan.io/txsPending).   
 Depending on the chosen **gas fee** for the transaction, miners pick the ones that return them the most value first. If the network is highly congested \(=many pending transactions\), there's a high chance that your gas fees will be outbid, leading to **unknown** waiting times.
 
-
-
 ### 2. Deposit contract - Status: Deposited
 
 Once the transaction reaches the **deposit contract,** the contract checks the transaction for its **Input data** and **the transaction value \(=amount of ETH\).**   
@@ -55,6 +53,8 @@ Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-a
 
 
 ### 3. Validator Queue - Status: Pending
+
+
 
 ![](.gitbook/assets/image%20%2880%29.png)
 
