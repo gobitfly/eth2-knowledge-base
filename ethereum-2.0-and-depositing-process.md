@@ -14,16 +14,16 @@ In order to interact with the deposit contract, the transaction requires a **gas
 
 ###  **1. Mempool - Status: Unknown**
 
-Every signed transaction visits the **Mempool** first, which can be referred to as the waiting room for transactions. During this period, the _transaction status_ is usually [_pending_](https://etherscan.io/txsPending).   
+Every signed transaction visits the **Mempool** first, which can be referred to as the waiting room for transactions. During this period, the _transaction status_ is [_pending_](https://etherscan.io/txsPending).   
 Depending on the chosen **gas fee** for the transaction, miners pick the ones that return them the most value first. If the network is highly congested \(=many pending transactions\), there's a high chance that your gas fees will be outbid, leading to **unknown** waiting times.
 
 ### 2. Deposit contract - Status: Deposited
 
-Once the transaction reaches the **deposit contract,** the contract checks the transaction for its **Input data** and **the transaction value \(=amount of ETH\).**   
+Once the transaction reaches the **deposit contract,** the deposit contract checks the transaction for its **Input data** and **transaction value \(=amount of ETH\).**   
 If the **threshold** of 1 ETH is not met or the transaction has **no/invalid** input data, the transaction gets **rejected** and returned to the sender.
 
 {% hint style="info" %}
-The user-created **input data**, is a reflection of the upcoming **validator and withdrawal keys** on the Ethereum 2.0 network as seen below. Our full Ethereum 2.0 keys blog is [here](https://kb.beaconcha.in/ethereum-2-keys).
+The user-created **input data**, is a reflection of the upcoming **validator and withdrawal keys** on the Ethereum 2.0 network as seen in the picture below. The full Ethereum 2.0 keys blog is [here](https://kb.beaconcha.in/ethereum-2-keys).
 {% endhint %}
 
 #### **Why exactly does this take 7.5 hours though?**
