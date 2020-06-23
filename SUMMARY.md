@@ -2,8 +2,9 @@
 
 * [Overview](README.md)
 * [Glossary](glossary.md)
-* [Charts](charts.md)
+* [Beaconcha.in Charts](charts.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
+* [Ethereum 2.0 & Depositing Process](ethereum-2.0-and-depositing-process.md)
 * [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
   * [Prysm client](tutorial-eth2-multiclient/prysm-client/README.md)
     * [TL;DR Essential commands \(macOS & Windows\)](tutorial-eth2-multiclient/prysm-client/tl-dr-essential-commands-macos-and-windows.md)

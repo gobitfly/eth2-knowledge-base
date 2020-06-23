@@ -1,4 +1,4 @@
-# Charts
+# Beaconcha.in Charts
 
 ## [Overview of all charts](https://beaconcha.in/charts)
 
