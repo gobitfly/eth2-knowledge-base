@@ -33,7 +33,10 @@ The user-created **input data**, is a reflection of the upcoming **validator and
 The Ethereum 2.0 chain only considers transactions which have been in the deposit contract for 1024  Ethereum 1.0 blocks to ensure they never end up in a [reorged](https://en.bitcoin.it/wiki/Chain_Reorganization) block.   
 **\(=**`ETH1_FOLLOW_DISTANCE` referred by [developers](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/configuration/#misc).\)   
   
-****In addition to the 1024 Ethereum 1.0 blocks, 32 **Ethereum 2.0** [**Epochs**](https://kb.beaconcha.in/glossary#epoch) ****must be ****awaited before the beacon-chain recognises the deposit. During these 32 Epochs, validators vote on newly received deposits. However, [missed block](https://kb.beaconcha.in/glossary#block-status) proposals or bad Ethereum 1.0 nodes, which provide the deposit logs to the Ethereum 2.0 network , can cause longer waiting times.  
+****In addition to the 1024 Ethereum 1.0 blocks, 32 **Ethereum 2.0** [**Epochs**](https://kb.beaconcha.in/glossary#epoch) ****must be ****awaited before the beacon-chain recognises the deposit. During these 32 Epochs, validators vote on newly received deposits.   
+  
+However, [missed block](https://kb.beaconcha.in/glossary#block-status) proposals or bad Ethereum 1.0 nodes, which provide the deposit logs to the Ethereum 2.0 network , can cause longer waiting times.   
+Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-and-beaconnode-eth2)!  
   
 1024 blocks = 1024 x **~**13 seconds = 13,312 seconds = **~4 hours**  
 32 Epochs = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**  
