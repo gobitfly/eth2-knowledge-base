@@ -17,7 +17,7 @@ If the previous command was successful, run the following code:
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **This is not required. By using this command, cosmetics of the command prompt are being fixed.**
+ **This is not required. By using this command, cosmetics of the command prompt window change.**
 {% endhint %}
 
 #### **Step 1.**
