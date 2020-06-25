@@ -1,4 +1,4 @@
-# TL;DR Essential commands \(macOS & Windows\)
+# Essential commands \(macOS & Windows\)
 
 #### A summary of the most important flags to run the prysm client with **prysm.sh** or **prysm.bat.**  For beginner friendly guides please look [here for Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator) and [here for macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh).
 
