@@ -45,12 +45,12 @@ Each validator needs to deposit 32 ETH into the validator-deposit-contract on th
 
 
 
-#### **2. Pending**   Waiting for activation on ETH2
+#### **2. Pending**
 
-* Until 327680 active validators in the network, **4 validators can be activated per epoch** \(900 per day\). After that 5 can be activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active  validators**. 
-* Amount of activations scales with the amount of active validators 
+Waiting for activation on ETH2
 
-  and the limit is the active validator set divided by 64.000
+* Until 327680 active validators in the network, **4 validators can be activated per epoch** \(900 per day\). After that 5 can be activated per epoch and the number of validators **that can be activated increases by 1 for every 64k additional active validators**. 
+* Amount of activations scales with the amount of active validators and the limit is the active validator set divided by 64.000
 
 
 

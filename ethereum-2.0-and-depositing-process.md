@@ -36,8 +36,8 @@ The Ethereum 2.0 chain only considers transactions which have been in the deposi
 However, [missed block](https://kb.beaconcha.in/glossary#block-status) proposals or bad Ethereum 1.0 nodes, which provide the deposit logs to the Ethereum 2.0 network , can cause longer waiting times.   
 Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-and-beaconnode-eth2)!  
   
-1024 blocks = 1024 x **~**13 seconds = 13,312 seconds = **~4 hours**  
-32 Epochs = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**  
+**1024 blocks** = 1024 x **~**13 seconds = 13,312 seconds = **~4 hours**  
+**32 Epochs** = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**  
 
 
 {% tabs %}
@@ -54,9 +54,13 @@ Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-a
 
 ### 3. Validator Queue - Status: Pending
 
+The first 16,384 Validators, the genesis validators [`MIN_GENESIS_ACTIVE_VALIDATOR_COUNT`](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/configuration/%20), do **not** line up in a queue, but instantly start staking from [Slot](https://kb.beaconcha.in/glossary#slots-32-slots-1-epoch) 0.  
+  
+Any Ethereum 1.0 deposit **after** the 16,384th, lines up in a queue, and only four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** can get activated.
 
+### 4. Staking - Status: Active
 
-![](.gitbook/assets/image%20%2880%29.png)
+The validator is now actively staking, proposing blocks and signing attestations, and ready to earn rewards!
 
 
 
