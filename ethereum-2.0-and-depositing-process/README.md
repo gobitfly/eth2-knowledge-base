@@ -1,4 +1,4 @@
-# Ethereum 2.0 & Depositing Process
+# Ethereum 2.0 - Depositing Process
 
 Due to confusion on how depositing works, especially without the usage of prylabs.net/participate, this post will guide you through the process and explain relevant steps!  
   
