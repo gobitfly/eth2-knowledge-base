@@ -2,7 +2,7 @@
 
 ## Warning
 
-**The following steps occur on a Ethereum Testnet, use Goerli Testnet-ETH and might be outdated for the Ethereum main-net launch.**
+**The following steps occur on a Ethereum Testnet with Goerli Testnet-ETH and might be outdated for the Ethereum main-net launch.**
 
 ## **Requirements**
 
@@ -35,6 +35,7 @@ These letters, **the input data**, have to be included into the transaction to t
 3. **Recipient** is the deposit contract - Prysm 'Onyx' Testnet in this case. `0x0F0F0fc0530007361933EaB5DB97d09aCDD6C1c8`
 4. **Amount** Minimum of 1 ETH
 5. **Gas Limit** 500,000
+6. Send transaction
 
 {% tabs %}
 {% tab title="First Tab" %}
