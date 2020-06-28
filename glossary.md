@@ -80,8 +80,8 @@ There is only one per slot.
 ## Slasher 
 
 The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm) **is its own entity** but requires a beacon-node to receive attestations from.  
-To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. The slasher then **sends proof** to beacon-nodes which includes it into the next block and the malicious validator gets [**slashed**](https://kb.beaconcha.in/glossary#4-slashing-validator).  
-[_How to run a slasher?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)  
+To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. Found slashings are broadcasted to the network and the next block proposer adds the proof to the block. The block proposer get the reward for slashing - not the whistleblower \(=Slasher\).  
+[_More infos and how to run a slasher_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)_._  
 
 
 #### **Slashable offenses**
