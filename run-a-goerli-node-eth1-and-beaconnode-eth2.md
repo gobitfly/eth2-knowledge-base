@@ -15,7 +15,7 @@ However, an Ethereum 1.0 node is not required if you do not want to stake. Witho
 ****_The following steps only work if the beaconnode is on the **same** machine as the Goerli node.  
 **Goerli-chain size is around 5GB.**_
 
-## **How to connect your ETH2 beaconnode to your** _local_  **ETH1 node**
+## **Connect to your** _local_  **ETH1 node**
 
 #### Step 1.
 
@@ -66,7 +66,7 @@ If the beaconnode **successfully connects** to the local Goerli node, the follow
 
 ![](.gitbook/assets/connected.png)
 
-## TL;DR
+### Essential commands
 
 **Goerli**
 
@@ -75,4 +75,31 @@ If the beaconnode **successfully connects** to the local Goerli node, the follow
 **Beaconnode**
 
 `--datadir=$HOME/prysm --web3provider=ws://localhost:8546/ --http-web3provider=http://localhost:8545/`
+
+## Infura as an ETH 1.0 node
+
+#### 
+
+#### 1. Sign up on [Infura](https://infura.io/)
+
+#### 2. Create a project with any name
+
+![](.gitbook/assets/image%20%28100%29.png)
+
+3. Change `Endpoints: Mainnet` to `Goerli`
+
+**That's it!**   
+Copy your Project ID URL and run the beacon-node with   
+`./prysm.sh beacon-chain --http-web3provider=`**`https://goerli.infura.io/v3/YOUR-PROJECT-ID`**
+
+![](.gitbook/assets/image%20%2896%29.png)
+
+  
+**Confirmation via beacon-node**
+
+![](.gitbook/assets/image%20%2899%29.png)
+
+
+
+
 

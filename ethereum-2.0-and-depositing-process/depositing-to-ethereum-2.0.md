@@ -39,7 +39,7 @@ These letters, **the input data**, have to be included into the transaction to t
 6. Send transaction
 7. Track your deposit with your Ethereum 1.0 address here [https://beaconcha.in/validators/eth1deposits](https://beaconcha.in/validators/eth1deposits)
 
-![Transaction Overview](../.gitbook/assets/image%20%2896%29.png)
+![Transaction Overview](../.gitbook/assets/image%20%28101%29.png)
 
 
 
