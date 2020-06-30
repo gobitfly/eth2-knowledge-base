@@ -23,18 +23,74 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 **32 Slots = 1 Epoch**  
 A time period of **12 seconds** in which a randomly chosen validator has time to propose a block. Each slot may or may not have a block in it. The total number of validators is split up in committees and one or more individual committees are responsible to attest to each slot. One validator from the committee will be chosen to propose a block, while the other 127 are attesting. After each Epoch, the validators are mixed and merged to new committees \(minimum of 128 validators per committee\).
 
-![validator](https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png)
+![](https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png)
 
 [image source](https://medium.com/coinmonks/eth2-0-phase-0-basics-for-new-contributors-8a0a22bc38c7)
 
 ## Epoch
 
-Represents the number of slots and takes approximately **6.4 minutes** and consists of 32 Slots \(12 seconds each\).
+**1 Epoch = 32 Slots**  
+Represents the number of 32 slots and takes approximately **6.4 minutes.**   
+Epochs play an important role when it comes to the [validator queue](https://kb.beaconcha.in/glossary#2-pending) and [finality](https://kb.beaconcha.in/glossary#finalization). 
+
+## Deposit contract
+
+The Deposit contract is the **gateway** to Ethereum 2.0 **through a smart contract** on Ethereum 1.0.   
+The smart contract accepts any transaction with a minimum amount of 1 ETH and a valid input data.  
+Ethereum 2.0 beacon-nodes listen to the deposit contract and use the input data to credit each validator.   
+[_Deeper insight into the Deposit Contract_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)
 
 ## Validator
 
-Each validator needs to deposit 32 ETH into the validator deposit-contract on the Ethereum 1.0 chain and requires the user to run a validator node. Its job is to propose blocks and attestations.  
+Validators need to deposit 32 ETH into the validator deposit contract on the Ethereum 1.0 chain.  
+Validator operators have to run a validator node. Its job is to propose blocks and sign attestations.  
+A validator has to be online for at least 50% of the time in order to have positive returns.     
 [_How to run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
+
+### Eligible for activation & Estimated activation
+
+Refers to pending validators. The deposit has been recognized by the ETH2 chain at the timestamp of “Eligible for activation”. If there is a queue of [pending validators](https://www.beaconcha.in/validators) an estimated timestamp for activation will be calculated.
+
+### Unique Index
+
+Every validator receives its unique index.  [beaconcha.in](https://www.beaconcha.in/).
+
+![](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
+
+### Current Balance & Effective Balance
+
+The current balance is the amount of ETH held by the validator as of now. The **effective Balance** represents a value calculated by the current balance. It is used to determine the size of a reward or penalty a validator receives. The effective balance can **never be higher than 32 ETH.  
+  
+In order to increase the effective balance, the validator requires “effective balance + 1.25 ETH”.** In other words, if the effective balance is 20 ETH, a current balance of 21.25 ETH is required in order to have an effective balance of 21 ETH. The effective balance **will adjust once it drops by 0.25** below the threshold as seen in the examples above.
+
+Here are examples on how the effective balance changes
+
+* If the Current balance is 32.00 ETH – the Effective balance is 32.00 ETH
+* If the Current balance dropped from 22 ETH to 21.76 ETH – Effective balance will be **22.00 ETH**
+* If the Current balance increases to 22.25 **and** the effective balance is 21 ETH, the effective balance will increase to 22 ETH
+
+## Attestation
+
+Votes by validators which confirm the validity of a block. \(=Attester\)
+
+## Block proposer
+
+A chosen validator by the beacon chain to propose the next block. There can only be one valid block per slot.
+
+## Block status
+
+* **Proposed** The block passed and was proposed by a validator.
+* **Scheduled**  Validators are currently submitting data.
+* **Missed/Skipped**  The proposer didn’t propose the block within the given time frame, so the block was missed/skipped.
+* **Orphaned**  In order to understand this, let us look at the diagram below "1, 2, 3, ... ,9" represent the slots.
+
+1. Validator at slot 1 proposes the block “a”.
+2. Validator at slot 2 proposes “b”.
+3. Slot 4 is being skipped because the validator didn’t propose a block \(e.g.: offline\).
+4. At slot 5/6 a fork occurs: Validator\(5\) proposes a block, but validator\(6\) doesn’t receive this data \(e.g.: the block didn’t reach them fast enough\). Therefore Validator\(6\) proposes its block with the most recent information it sees from validator\(3\).
+5. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key here - It decides which of the available chains is the canonical one.
+
+![](.gitbook/assets/image%20%28102%29.png)
 
 ## **Validator Lifecycle**
 
@@ -72,56 +128,22 @@ The Validator has been malicious and will be slashed and kicked out of the syste
 * **Ejected**  The validator balance fell below a threshold and was kicked out by the network 
 * **Exited**  Voluntary exit, the withdrawal key holder has the ability to **withdraw** the current balance of the corresponding validator balance.
 
-## Block proposer
-
-A validator which has been chosen by the beacon chain to propose the next block.   
-There is only one per slot.
-
 ## Slasher 
 
 The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm) **is its own entity** but requires a beacon-node to receive attestations from.  
 To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. Found slashings are broadcasted to the network and the next block proposer adds the proof to the block. The block proposer get the reward for slashing - not the whistleblower \(=Slasher\).  
 [_More infos and how to run a slasher_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)_._  
-
-
-#### **Slashable offenses**
+  
+**Slashable offenses**
 
 **Attestation violation**
 
-* **Double voting:** An **attester** signs two different attestations **in one epoch.**
-* **Surround votes:** An **attester** and sign an attestation that surrounds another one.
+* **Double voting**  An **attester** signs two different attestations **in one epoch.** 
+* **Surround votes** An **attester** and sign an attestation that surrounds another one.
 
 #### Proposer violation
 
-* **Double block proposal:** A **block** **proposer** signs two different blocks for the same slot.
-
-## Attestations
-
-Votes by validators which confirm the validity of a block. \(=Attester\)
-
-## Unique Index
-
-A unique identifier, also called validator index, as seen on [beaconcha.in](https://www.beaconcha.in/).
-
-![](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
-
-## Eligible for activation & Estimated activation
-
-Refers to pending validators. The deposit has been recognized by the ETH2 chain at the timestamp of “Eligible for activation”. If there is a queue of [pending validators](https://www.beaconcha.in/validators) an estimated timestamp for activation will be calculated.
-
-## Current Balance & Effective Balance
-
-The current balance is the amount of ETH held by the validator as of now. The **effective Balance** represents a value calculated by the current balance. It is used to determine the size of a reward or penalty a validator receives. The effective balance can **never be higher than 32 ETH.  
-  
-In order to increase the effective balance, the validator requires “effective balance + 1.25 ETH”.** In other words, if the effective balance is 20 ETH, a current balance of 21.25 ETH is required in order to have an effective balance of 21 ETH. The effective balance **will adjust once it drops by 0.25** below the threshold as seen in the examples above.
-
-Here are examples on how the effective balance gets calculated:
-
-* If the Current balance is 32.00 ETH – the Effective balance is 32.00 ETH
-* If the Current balance dropped from 22 ETH to 21.76 ETH – Effective balance will be **22.00 ETH**
-* If the Current balance dropped from 22 ETH to 21.749 ETH – Effective balance will be **21.00 ETH**
-* If the Current balance increases to 19.25 **and** the effective balance is 18 ETH, the effective balance will increase to 19 ETH
-* If the Current balance increases to 22.25 **and** the effective balance is 21 ETH, the effective balance will increase to 22 ETH
+* **Double block proposal** A **block** **proposer** signs two different blocks for the same slot.
 
 ## Finalization
 
@@ -129,20 +151,5 @@ In Ethereum 2.0 **at least two third of the validators have to be honest**, ther
 
 In order to determine if an Epoch has been finalized, validators have to agree on the latest two epochs in a row \(= “justified”\) then all previous Epochs can be considered as finalized.
 
-![finalization](https://user-images.githubusercontent.com/26490734/73467349-81761e00-4383-11ea-8733-af69fa72ebf6.png)
-
-## Block status
-
-* **Proposed**: The block passed and was proposed by a validator.
-* **Scheduled**: Validators are currently submitting data.
-* **Missed/Skipped**: The proposer didn’t propose the block within the given time frame, so the block was missed/skipped.
-* **Orphaned**: In order to understand this easily we look at the diagram below: \(the numbers "1, 2, 3, ... ,9" represent the number of the slots\).
-
-1. Validator at slot 1 proposes the block “a”.
-2. Validator at slot 2 proposes “b”.
-3. Slot 4 is being skipped because the validator didn’t propose a block \(e.g.: offline\).
-4. At slot 5/6 a fork occurs: Validator\(5\) proposes a block, but validator\(6\) doesn’t receive this data \(e.g.: the block didn’t reach them fast enough\). Therefore Validator\(6\) proposes its block with the most recent information it sees from validator\(3\).
-5. The [fork choice rule](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#LMD-GHOST-fork-choice-rule) is the key here - It decides which of the available chains is the canonical one.
-
-![forkchoice](https://user-images.githubusercontent.com/26490734/73468330-e67e4380-4384-11ea-81cd-cb18d7a88e92.png)
+![](https://user-images.githubusercontent.com/26490734/73467349-81761e00-4383-11ea-8733-af69fa72ebf6.png)
 
