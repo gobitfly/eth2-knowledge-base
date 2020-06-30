@@ -16,7 +16,7 @@ There are multiple wallets and possibilities, however, let's demonstrate the mos
 
 For demonstration purposes the Prysm Client will be used to create Ethereum 2.0 keys, any other Ethereum 2.0 client would work as well.  
   
-Create your own keys - [macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh#step-3) or [Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator#step-4)
+Create your own keys - on [macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh#step-3) or [Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator#step-4)
 
 ![Key generation](../.gitbook/assets/image%20%2895%29.png)
 
