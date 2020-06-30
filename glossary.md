@@ -45,7 +45,7 @@ Ethereum 2.0 beacon-nodes listen to the deposit contract and use the input data 
 Validators need to deposit 32 ETH into the validator deposit contract on the Ethereum 1.0 chain.  
 Validator operators have to run a validator node. Its job is to propose blocks and sign attestations.  
 A validator has to be online for at least 50% of the time in order to have positive returns.     
-[_Run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
+[_Run a validator & beacon-node_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
 
 ### Eligible for activation & Estimated activation
 
@@ -56,6 +56,8 @@ Refers to pending validators. The deposit has been recognized by the ETH2 chain 
 Every validator receives its unique index.  [beaconcha.in](https://www.beaconcha.in/).
 
 ![](https://user-images.githubusercontent.com/26490734/73483294-7630eb80-439f-11ea-85ef-2ce08c7a7e1a.png)
+
+### 
 
 ### Current Balance & Effective Balance
 
@@ -68,6 +70,25 @@ Here are examples on how the effective balance changes
 * If the Current balance is 32.00 ETH – the Effective balance is 32.00 ETH
 * If the Current balance dropped from 22 ETH to 21.76 ETH – Effective balance will be **22.00 ETH**
 * If the Current balance increases to 22.25 **and** the effective balance is 21 ETH, the effective balance will increase to 22 ETH
+
+## Slasher 
+
+The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm) **is its own entity** but requires a beacon-node to receive [attestations](https://kb.beaconcha.in/glossary#attestation).  
+To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found.   
+Found slashings are broadcasted to the network and the next [block proposer](https://kb.beaconcha.in/glossary#block-proposer) adds the proof to the block. The block proposer receives a reward for slashing the malicious validator.   
+However, the whistleblower \(=Slasher\) does not receive a reward.  
+[_More infos and how to run a slasher_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)_._  
+  
+**Slashable offenses**
+
+**Attestation violation**
+
+* **Double voting**  An **attester** signs two different attestations **in one epoch.** 
+* **Surround votes** An **attester** and sign an attestation that surrounds another one.
+
+#### Proposer violation
+
+* **Double block proposal** A **block** **proposer** signs two different blocks for the same slot.
 
 ## Attestation
 
@@ -127,23 +148,6 @@ The Validator has been malicious and will be slashed and kicked out of the syste
 
 * **Ejected**  The validator balance fell below a threshold and was kicked out by the network 
 * **Exited**  Voluntary exit, the withdrawal key holder has the ability to **withdraw** the current balance of the corresponding validator balance.
-
-## Slasher 
-
-The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm) **is its own entity** but requires a beacon-node to receive attestations from.  
-To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found. Found slashings are broadcasted to the network and the next block proposer adds the proof to the block. The block proposer get the reward for slashing - not the whistleblower \(=Slasher\).  
-[_More infos and how to run a slasher_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)_._  
-  
-**Slashable offenses**
-
-**Attestation violation**
-
-* **Double voting**  An **attester** signs two different attestations **in one epoch.** 
-* **Surround votes** An **attester** and sign an attestation that surrounds another one.
-
-#### Proposer violation
-
-* **Double block proposal** A **block** **proposer** signs two different blocks for the same slot.
 
 ## Finalization
 
