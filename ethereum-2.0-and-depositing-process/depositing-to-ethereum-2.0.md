@@ -37,7 +37,7 @@ These letters, **the input data**, have to be included into the transaction to t
 4. **Amount** Minimum of 1 ETH
 5. **Gas Limit** 500,000
 6. Send transaction
-7. Track your deposit with your Ethereum 1.0 address here [https://beaconcha.in/validators/eth1deposits](https://beaconcha.in/validators/eth1deposits)
+7. Track your deposit on the [beaconcha.in](https://beaconcha.in/validators/eth1deposits) explorer with your Ethereum 1.0 address
 
 ![Transaction Overview](../.gitbook/assets/image%20%28101%29.png)
 
