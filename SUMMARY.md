@@ -2,7 +2,7 @@
 
 * [Overview](README.md)
 * [Glossary](glossary.md)
-* [Beaconcha.in Charts](charts.md)
+* [Beaconcha.in Explorer Charts](eth2-charts.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
 * [Ethereum 2.0 - Depositing Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)

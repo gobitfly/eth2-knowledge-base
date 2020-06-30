@@ -14,7 +14,7 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 * Finalize checkpoints
 * Link and vote in transitions/data of shard chains
 
-[_How to run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
+[_Run a validator & beacon-node_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)
 
 [source](https://notes.ethereum.org/@djrtwo/Bkn3zpwxB#High-level-overview)
 
@@ -45,11 +45,11 @@ Ethereum 2.0 beacon-nodes listen to the deposit contract and use the input data 
 Validators need to deposit 32 ETH into the validator deposit contract on the Ethereum 1.0 chain.  
 Validator operators have to run a validator node. Its job is to propose blocks and sign attestations.  
 A validator has to be online for at least 50% of the time in order to have positive returns.     
-[_How to run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
+[_Run a validator & beacon-node?_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
 
 ### Eligible for activation & Estimated activation
 
-Refers to pending validators. The deposit has been recognized by the ETH2 chain at the timestamp of “Eligible for activation”. If there is a queue of [pending validators](https://www.beaconcha.in/validators) an estimated timestamp for activation will be calculated.
+Refers to pending validators. The deposit has been recognized by the ETH2 chain at the timestamp of “Eligible for activation”. If there is a queue of [pending validators](https://www.beaconcha.in/validators), an estimated timestamp for activation is calculated.
 
 ### Unique Index
 
