@@ -29,7 +29,7 @@ These 842 letters are the Ethereum 2.0 validator [identity](https://kb.beaconcha
   
 These letters, **the input data**, have to be included into the transaction to the deposit contract.
 
-####  Depositing
+###  Depositing
 
 1. Open [MyCrypto](https://beta.mycrypto.com/add-account) and open your wallet. 
 2. Paste the 842 letters into the **Data field** `0x22895118000000000000000000...`. 

@@ -12,12 +12,12 @@ Before we start off, in order to understand the basic idea of how Ethereum 2.0 k
 Let's go through each of the **Status** above and explain how their **durations** are approximately determined.  
 In order to interact with the deposit contract, the transaction requires a **gas limit of ~500,000** an a minimum of 1 ETH. Top ups are [possible](https://kb.beaconcha.in/ethereum-2-keys#what-happens-to-multiple-deposits-from-a-single-eth1-wallet-multiple-validators)!
 
-###  **1. Mempool - Status: Unknown**
+##  **1. Mempool - Status: Unknown**
 
 Every signed transaction visits the **Mempool** first, which can be referred to as the waiting room for transactions. During this period, the _transaction status_ is [_pending_](https://etherscan.io/txsPending).   
 Depending on the chosen **gas fee** for the transaction, miners pick the ones that return them the most value first. If the network is highly congested \(=many pending transactions\), there's a high chance that your gas fees will be outbid, leading to **unknown** waiting times.
 
-### 2. Deposit contract - Status: Deposited
+## 2. Deposit contract - Status: Deposited
 
 Once the transaction reaches the **deposit contract,** the deposit contract checks the transaction for its **Input data** and **transaction value \(=amount of ETH\).**   
 If the **threshold** of 1 ETH is not met or the transaction has **no/invalid** input data, the transaction gets **rejected** and returned to the sender.
@@ -52,13 +52,13 @@ Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-a
 
 
 
-### 3. Validator Queue - Status: Pending
+## 3. Validator Queue - Status: Pending
 
 The first 16,384 Validators, the genesis validators [`MIN_GENESIS_ACTIVE_VALIDATOR_COUNT`](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/configuration/%20), do **not** line up in a queue, but instantly start staking from [Slot](https://kb.beaconcha.in/glossary#slots-32-slots-1-epoch) 0.  
   
 Any Ethereum 1.0 deposit **after** the 16,384th, lines up in a queue, and only four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** can get activated.
 
-### 4. Staking - Status: Active
+## 4. Staking - Status: Active
 
 The validator is now actively staking, proposing blocks and signing attestations, and ready to earn rewards!
 
