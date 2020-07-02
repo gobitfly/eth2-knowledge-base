@@ -1,16 +1,15 @@
 # Ethereum 2.0 - Depositing Process
 
-Due to confusion on how depositing works, especially without the usage of prylabs.net/participate, this post will guide you through the process and explain essential steps!  
+This post will explain the depositing process and explain each of the steps.  
   
 Before we start, to understand the basic idea of how Ethereum 2.0 keys work, the [Ethereum 2.0 Keys](https://kb.beaconcha.in/ethereum-2-keys) blog is highly recommended.
 
 ## The deposit contract
 
-![Depositing process](../.gitbook/assets/image%20%2874%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
   
-Let's go through each of the **Status** above and explain how their **durations** are approximately determined.  
-In order to interact with the deposit contract, the transaction requires a **gas limit of ~500,000** and a minimum of 1 ETH. Topping up your validator balance is [possible](https://kb.beaconcha.in/ethereum-2-keys#what-happens-to-multiple-deposits-from-a-single-eth1-wallet-multiple-validators)!
+Let's go through each of the **states** above and explain how their **durations** are approximately determined.
 
 ##  **1. Mempool - Status: Unknown**
 
