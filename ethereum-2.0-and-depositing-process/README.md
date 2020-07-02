@@ -6,9 +6,8 @@ Before we start, to understand the basic idea of how Ethereum 2.0 keys work, the
 
 ## The deposit contract
 
-![](../.gitbook/assets/image%20%2874%29.png)
+![](../.gitbook/assets/image%20%28111%29.png)
 
-  
 Let's go through each of the **states** above and explain how their **durations** are approximately determined.
 
 ##  **1. Mempool - Status: Unknown**
@@ -38,7 +37,7 @@ Therefore, run your [own node](https://kb.beaconcha.in/run-a-goerli-node-eth1-an
 **1024 blocks** = 1024 x **~**13 seconds = 13,312 seconds = **~4 hours**  
 **32 Epochs** = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](../.gitbook/assets/image%20%28115%29.png)
 
 Also, when the Ethereum 2.0 chain recognizes the deposit \(after 7.5 hours\), the validator status will change to _**Deposited**_ on the [beaconcha.in](https://beaconcha.in/validator/0) explorer.
 
@@ -52,7 +51,7 @@ Also, when the Ethereum 2.0 chain recognizes the deposit \(after 7.5 hours\), th
 
 ## 3. Validator Queue - Status: Pending
 
-![](../.gitbook/assets/image%20%28107%29.png)
+![](../.gitbook/assets/image%20%28108%29.png)
 
 The first 16,384 Validators, the genesis validators, do **not** line up in a queue, but instantly start staking from [Slot](https://kb.beaconcha.in/glossary#slots-32-slots-1-epoch) 0.  
   
@@ -61,7 +60,7 @@ Any Ethereum 1.0 deposit **after** the 16,384th, lines up in a queue, and only f
 
 ## 4. Staking - Status: Active
 
-![](../.gitbook/assets/image%20%28110%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 The validator is now actively staking, proposing blocks and signing attestations - ready to earn rewards!
 
@@ -73,13 +72,13 @@ The validator is now actively staking, proposing blocks and signing attestations
 
 The transaction had an invalid [BLS](https://kb.beaconcha.in/ethereum-2-keys#general) signature.
 
-![](../.gitbook/assets/image%20%28109%29.png)
+![](../.gitbook/assets/image%20%28110%29.png)
 
 #### Active Offline
 
 An active validator has not been attesting for two epochs.
 
-![](../.gitbook/assets/image%20%28115%29.png)
+![](../.gitbook/assets/image%20%28117%29.png)
 
 #### Exiting Online
 
@@ -104,7 +103,7 @@ The validator **is online** but has been malicious and was forced to exit the ne
 The validator **is offline** but has been malicious and was forced to exit the network.   
 It is currently in the exiting queue with a minimum of 25 minutes.
 
-![](../.gitbook/assets/image%20%28112%29.png)
+![](../.gitbook/assets/image%20%28114%29.png)
 
 #### Slashed
 
@@ -116,7 +115,7 @@ The validator has been kicked out of the network. The funds will be withdrawable
 
 The validator has exited the network. The funds will be withdrawable after 1 day.
 
-![](../.gitbook/assets/image%20%28114%29.png)
+![](../.gitbook/assets/image%20%28116%29.png)
 
 
 
