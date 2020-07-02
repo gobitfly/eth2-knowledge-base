@@ -6,7 +6,7 @@ Before we start, to understand the basic idea of how Ethereum 2.0 keys work, the
 
 ## The deposit contract
 
-![](../.gitbook/assets/image%20%28118%29.png)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 Let's go through each of the **states** above and explain how their **durations** are approximately determined.
 
