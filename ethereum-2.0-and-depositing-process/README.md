@@ -1,6 +1,6 @@
 # Ethereum 2.0 - Depositing Process
 
-This post will explain the depositing process and and each of the phases.  
+This post will explain the depositing process and each of the phases.  
   
 Before we start, to understand the basic idea of how Ethereum 2.0 keys work, the [Ethereum 2.0 Keys](https://kb.beaconcha.in/ethereum-2-keys) blog is highly recommended.
 
