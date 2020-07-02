@@ -37,15 +37,14 @@ However, [missed block](https://kb.beaconcha.in/glossary#block-status) proposals
 Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-and-beaconnode-eth2)!  
   
 **1024 blocks** = 1024 x **~**13 seconds = 13,312 seconds = **~4 hours**  
-**32 Epochs** = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**  
+**32 Epochs** = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**
 
+![](../.gitbook/assets/image%20%28113%29.png)
+
+Also, when the Ethereum 2.0 chain recognizes the deposit \(after 7.5 hours\), the validator status will change to _**Deposited**_ on the [beaconcha.in](https://beaconcha.in/validator/0) explorer.
 
 {% tabs %}
-{% tab title="Input Data \(ETH 2.0 Keys\)" %}
-![ETH 2.0 Key Generation via Input Data](../.gitbook/assets/image%20%2876%29.png)
-{% endtab %}
-
-{% tab title="Rejected Transaction" %}
+{% tab title="Rejected Deposit" %}
 ![Rejected Transaction](../.gitbook/assets/image%20%2878%29.png)
 {% endtab %}
 {% endtabs %}
@@ -54,15 +53,54 @@ Therefore, run your [own nodes](https://kb.beaconcha.in/run-a-goerli-node-eth1-a
 
 ## 3. Validator Queue - Status: Pending
 
+![](../.gitbook/assets/image%20%28107%29.png)
+
 The first 16,384 Validators, the genesis validators [`MIN_GENESIS_ACTIVE_VALIDATOR_COUNT`](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/configuration/%20), do **not** line up in a queue, but instantly start staking from [Slot](https://kb.beaconcha.in/glossary#slots-32-slots-1-epoch) 0.  
   
-Any Ethereum 1.0 deposit **after** the 16,384th, lines up in a queue, and only four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** can get activated.
+Any Ethereum 1.0 deposit **after** the 16,384th, lines up in a queue, and only four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch)   
+\(**900 validators per day\)** can get activated.
 
 ## 4. Staking - Status: Active
 
-The validator is now actively staking, proposing blocks and signing attestations, and ready to earn rewards!
+![](../.gitbook/assets/image%20%28110%29.png)
+
+The validator is now actively staking, proposing blocks and signing attestations - ready to earn rewards!
+
+## Other validator status
 
 
+
+#### Deposit Invalid
+
+![](../.gitbook/assets/image%20%28109%29.png)
+
+#### Active Offline
+
+![](../.gitbook/assets/image%20%28115%29.png)
+
+#### Exiting Online
+
+![](../.gitbook/assets/image%20%28104%29.png)
+
+#### Exiting Offline 
+
+![](../.gitbook/assets/image%20%28103%29.png)
+
+#### Slashing Online
+
+![](../.gitbook/assets/image%20%28105%29.png)
+
+#### Slashing Offline 
+
+![](../.gitbook/assets/image%20%28112%29.png)
+
+#### Slashed
+
+![](../.gitbook/assets/image%20%28106%29.png)
+
+#### Exited
+
+![](../.gitbook/assets/image%20%28114%29.png)
 
 
 
