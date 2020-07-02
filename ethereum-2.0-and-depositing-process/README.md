@@ -6,11 +6,11 @@ Before we start, to understand the basic idea of how Ethereum 2.0 keys work, the
 
 ## The deposit contract
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28118%29.png)
 
 Let's go through each of the **states** above and explain how their **durations** are approximately determined.
 
-##  **1. Mempool - Status: Unknown**
+## **1. Mempool - Status: Unknown**
 
 Every signed transaction visits the **Mempool** first, which can be referred to as the waiting room for transactions. During this period, the _transaction status_ is [_pending_](https://etherscan.io/txsPending).   
 Depending on the chosen **gas fee** for the transaction, miners pick the ones that return them the most value first. If the network is highly congested \(=many pending transactions\), there's a high chance that new transactions will outbid\(gas fees\) older transactions, leading to **unknown** waiting times.
