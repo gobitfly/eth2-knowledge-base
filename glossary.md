@@ -106,7 +106,7 @@ Votes by validators which confirm the validity of a block. \(=Attester\)
 
 ## Block proposer
 
-A chosen validator by the beacon chain to propose the next block. There can only be one valid block per slot.
+A chosen validator by the beacon chain to propose the next block. There can only be one valid block per [slot](https://kb.beaconcha.in/glossary#slots).
 
 ## Block status
 
