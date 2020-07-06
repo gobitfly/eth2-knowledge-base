@@ -11,8 +11,6 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 * Perform a protocol level random number generation \(RNG\)
 * Progress the beacon chain
 * Vote on the head of the chain for the fork choice
-* Finalize checkpoints
-* Link and vote in transitions/data of shard chains
 
 [_Run a validator & beacon-node_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)
 
