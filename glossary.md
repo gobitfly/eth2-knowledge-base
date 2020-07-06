@@ -1,6 +1,6 @@
 # Glossary
 
-## Beaconchain
+## Beacon-chain
 
 It introduces Proof of stake to Ethereum1 and runs along it. It’s also called the coordination layer.
 
@@ -38,7 +38,12 @@ Epochs play an important role when it comes to the [validator queue](https://kb.
 The Deposit contract is the **gateway** to Ethereum 2.0 **through a smart contract** on Ethereum 1.0.   
 The smart contract accepts any transaction with a minimum amount of 1 ETH and a valid input data.  
 Ethereum 2.0 beacon-nodes listen to the deposit contract and use the input data to credit each validator.   
-[_Deeper insight into the Deposit Contract_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)
+[_More infos the Deposit Contract_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)
+
+## Input Data
+
+The Input data, also called the deposit data, is a user generated, 842 long sequence of characters. It represents the [validator public key and the withdrawal public key](https://kb.beaconcha.in/ethereum-2-keys), which were signed with by the validator private key. The input data needs to be added to the transaction to the [deposit contract](https://kb.beaconcha.in/glossary#deposit-contract) in order to get identified by the beacon-chain.  
+
 
 ## Validator
 
