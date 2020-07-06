@@ -37,19 +37,23 @@ Epochs play an important role when it comes to the [validator queue](https://kb.
 
 The Deposit contract is the **gateway** to Ethereum 2.0 **through a smart contract** on Ethereum 1.0.   
 The smart contract accepts any transaction with a minimum amount of 1 ETH and a valid input data.  
-Ethereum 2.0 beacon-nodes listen to the deposit contract and use the input data to credit each validator.   
+Ethereum 2.0 beacon-nodes listen to the deposit contract and use the input data to credit each validator.  
+   
 [_More infos the Deposit Contract_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)
 
 ## Input Data
 
-The Input data, also called the deposit data, is a user generated, 842 long sequence of characters. It represents the [validator public key and the withdrawal public key](https://kb.beaconcha.in/ethereum-2-keys), which were signed with by the validator private key. The input data needs to be added to the transaction to the [deposit contract](https://kb.beaconcha.in/glossary#deposit-contract) in order to get identified by the beacon-chain.  
-
+The Input data, also called the **deposit data**, is a user generated, 842 long sequence of characters.   
+It represents the [validator public key and the withdrawal public key](https://kb.beaconcha.in/ethereum-2-keys), which were signed with by the validator private key. The input data needs to be added to the transaction to the [deposit contract](https://kb.beaconcha.in/glossary#deposit-contract) in order to get identified by the [beacon-chain](https://kb.beaconcha.in/glossary#beacon-chain).  
+  
+[_More infos about the Deposit process._](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0)
 
 ## Validator
 
 Validators need to deposit 32 ETH into the validator deposit contract on the Ethereum 1.0 chain.  
 Validator operators have to run a validator node. Its job is to propose blocks and sign attestations.  
 A validator has to be online for at least 50% of the time in order to have positive returns.     
+  
 [_Run a validator & beacon-node_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
 
 ### Eligible for activation & Estimated activation
@@ -82,6 +86,7 @@ The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client
 To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found.   
 Found slashings are broadcasted to the network and the next [block proposer](https://kb.beaconcha.in/glossary#block-proposer) adds the proof to the block. The block proposer receives a reward for slashing the malicious validator.   
 However, the whistleblower \(=Slasher\) does not receive a reward.  
+  
 [_More infos and how to run a slasher_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)_._  
   
 **Slashable offenses**
