@@ -31,9 +31,9 @@ These letters, **the input data**, have to be included into the transaction to t
 
 ###  Depositing
 
-1. Open [MyCrypto](https://beta.mycrypto.com/add-account) and open your wallet. 
+1. Open [MyCrypto](https://beta.mycrypto.com/add-account) and open your wallet and head over to _**Send Assets**_. 
 2. Paste the 842 letters into the **Data field** `0x22895118000000000000000000...`. 
-3. **Recipient** is the deposit contract - Prysm 'Onyx' Testnet in this case. `0x0F0F0fc0530007361933EaB5DB97d09aCDD6C1c8`
+3. **Recipient** is the deposit contract **Onyx Testnet:** `0x0F0F0fc0530007361933EaB5DB97d09aCDD6C1c8` **Altona** Multiclient Testnet**:** `0x16e82D77882A663454Ef92806b7DeCa1D394810f` 
 4. **Amount** Minimum of 1 ETH
 5. **Gas Limit** 500,000
 6. Send transaction
