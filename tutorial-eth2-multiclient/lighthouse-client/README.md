@@ -1,2 +1,2 @@
-# Lighthouse client \(Altona Testnet\)
+# Lighthouse client
 
