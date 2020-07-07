@@ -7,7 +7,7 @@ description: Altona Testnet
 [Official Lighthouse docs  
 ](https://lighthouse-book.sigmaprime.io/become-a-validator-source.html)[Lighthouse Discord server](https://discord.gg/8mFMS7G)
 
-#### Requirements:  A running Goerli node \([Guide](https://kb.beaconcha.in/run-a-goerli-node-eth1-and-beaconnode-eth2#step-1) till step 3.\)
+#### Requirements:  A synced Goerli node \([Guide](https://kb.beaconcha.in/run-a-goerli-node-eth1-and-beaconnode-eth2#step-1) till step 3.\)
 
 #### 
 
