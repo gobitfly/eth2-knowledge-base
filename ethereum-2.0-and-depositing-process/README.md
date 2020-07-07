@@ -53,7 +53,7 @@ Also, when the Ethereum 2.0 chain recognizes the deposit \(after 7.5 hours\), th
 
 ![](../.gitbook/assets/image%20%28108%29.png)
 
-The deposit is accessible now for the beacon-chain. Depending on how many deposits have occurred, there is a queue. Only four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** get activated.  
+The deposit is accessible now for the beacon-chain. Depending on how many deposits in total have occurred, there is a queue. Only four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** get activated.  
   
 **Note:**   
 The first 16,384 Validators, the genesis validators, do **not** line up in a queue, but instantly start staking from [Slot](https://kb.beaconcha.in/glossary#slots-32-slots-1-epoch) 0.
