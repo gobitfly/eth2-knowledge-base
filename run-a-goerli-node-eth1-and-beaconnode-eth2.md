@@ -4,9 +4,8 @@
 
 Ethereum 2.0 Testnets have been running for some time, and because the existing Ethereum 2.0 clients have always provided an Ethereum 1.0  node to users, misunderstandings arose.  
   
-**To clear things up:   
-If you want to run a validator, an Ethereum 1.0 node must run parallel to Ethereum 2.0 to stay fully decentralized!**   
-However, an Ethereum 1.0 node is not required if you do not want to stake. Without an Ethereum 1.0 node you will still be able to sync Ethereum 2.0 blocks and be a realiable peer for others in the network.  
+**In order to run a validator, an Ethereum 1.0 node must run parallel to Ethereum 2.0 to stay fully decentralized!**   
+However, an Ethereum 1.0 node is not required if you do not want to stake. Without an Ethereum 1.0 node  syncing Ethereum 2.0 blocks is still possible and also being a reliable peer for others in the network.  
 
 
 ![](.gitbook/assets/image%20%2841%29.png)
