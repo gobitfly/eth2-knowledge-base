@@ -1,11 +1,11 @@
-# Run a Slasher using prysm.sh \(Win & macOs\)
+# Slasher with Windows using prysm.bat
 
 ## General
 
 The slasher's purpose is to find malicious validators **in the Ethereum 2.0 network** and report slashable offenses to the beacon-node.  
 ****
 
-![](../../.gitbook/assets/image%20%2869%29.png)
+![](../../../.gitbook/assets/image%20%2869%29.png)
 
 #### 
 
@@ -26,7 +26,7 @@ Drag and drop the **prysm.sh \(on macOS\)** or **prysm.bat \(on Windows\)** file
 
 `slasher  --datadir=$HOME/prysm`
 
-![](../../.gitbook/assets/slashergif.gif)
+![](../../../.gitbook/assets/slashergif.gif)
 
 
 
@@ -38,5 +38,5 @@ Debug mode enabled with `--verbosity=debug`
 For **selfish** slashing, add `--disable-broadcast-slashings` to the beaconnode.  
 
 
-![](../../.gitbook/assets/image%20%2871%29.png)
+![](../../../.gitbook/assets/image%20%2871%29.png)
 

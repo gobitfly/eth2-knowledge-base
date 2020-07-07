@@ -1,4 +1,4 @@
-# Beaconnode & validator with macOS using prysm.sh script \(recommended\)
+# Beaconnode & validator using prysm.sh \(recommended\)
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 

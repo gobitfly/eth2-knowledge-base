@@ -1,4 +1,4 @@
-# Beaconnode & validator with Windows using Docker
+# Beaconnode & validator using Docker
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 

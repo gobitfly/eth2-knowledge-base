@@ -1,4 +1,4 @@
-# Beaconnode & validator with Windows using Prysm.bat \(recommended\)
+# Beaconnode & validator using prysm.bat \(recommended\)
 
 ####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
 
