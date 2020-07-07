@@ -12,8 +12,7 @@ However, an Ethereum 1.0 node is not required if you do not want to stake. Witho
 ![](.gitbook/assets/image%20%2841%29.png)
 
   
-****_The following steps only work if the beaconnode is on the **same** machine as the Goerli node.  
-**Goerli-chain size is around 5GB.**_
+****_**Goerli-chain size is around 5GB.**_
 
 ## **Connect to your** _local_  **ETH1 node**
 
@@ -55,7 +54,7 @@ Once your Goerli node is synced, it should look like this and include the messag
 
 {% hint style="info" %}
 **--datadir=$HOME/prysm**`Please adapt the path above to your existing beaconchain.db file.   
-For simplicity reasons we will use the one above.`
+For simplicity reasons we will use $HOME/prysm.`
 {% endhint %}
 
 ![](.gitbook/assets/beaconoerli1.gif)
