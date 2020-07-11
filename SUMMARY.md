@@ -2,7 +2,7 @@
 
 * [Overview](README.md)
 * [Glossary](glossary.md)
-* [Beaconcha.in Explorer Charts](eth2-charts.md)
+* [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
 * [Ethereum 2.0 - Depositing Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
@@ -23,7 +23,9 @@
     * [Beaconnode & validator with macOS](tutorial-eth2-multiclient/lighthouse-client/beaconnode-and-validator-with-macos.md)
 * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](run-a-goerli-node-eth1-and-beaconnode-eth2.md)
 
-## Community posts <a id="community"></a>
+## Beaconcha.in <a id="community"></a>
 
-* [Staking & Hardware](community/staking-and-hardware.md)
+---
+
+* [Beaconcha.in Charts](eth2-charts.md)
 
