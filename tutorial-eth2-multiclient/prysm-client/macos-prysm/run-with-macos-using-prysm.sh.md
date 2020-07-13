@@ -7,8 +7,7 @@
 **Install Homebrew**
 
 Check if **Homebrew** is installed through the terminal.   
-This can be done by pressing `CMD+Space` and searching for **Terminal**.
-
+This can be done by pressing `CMD+Space` and searching for **Terminal**.  
 Run `brew help`  
 If the output is `command not found`, **Homebrew** needs to be installed, and if it matches the picture below **skip to Step 1.**  
   
