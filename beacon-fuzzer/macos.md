@@ -46,9 +46,11 @@ This process can take up to one hour.
 
 ![](../.gitbook/assets/image%20%28138%29.png)
 
-Once the building process is done, the Fuzzer will start by fuzzing the Lighthouse client and fuzz the next client after one hour.
+Once the building process is done, the Fuzzer will start by fuzzing the Lighthouse client and fuzz the next client after one hour. The total process takes 5hours.
 
 ![Fuzzing Lighthouse](../.gitbook/assets/image%20%28139%29.png)
 
-### Report Bugs 
+### Report Bugs & find bugs
+
+###  
 
