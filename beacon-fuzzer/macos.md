@@ -4,7 +4,7 @@ description: Beacon Fuzzer guide for macOS users.
 
 # macOS
 
-### General 
+### General
 
 #### [_**Fuzzing**_](https://en.wikipedia.org/wiki/Fuzzing) _or **fuzz testing** is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program._
 
