@@ -8,9 +8,8 @@ description: Beacon Fuzzer guide for macOS users.
 
 #### [_**Fuzzing**_](https://en.wikipedia.org/wiki/Fuzzing) _or **fuzz testing** is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program._
 
-#### Repository
-
 * [https://github.com/sigp/beacon-fuzz](https://github.com/sigp/beacon-fuzz)
+* [Lighthouse Discord Channel](https://discord.gg/Xdc9xZX)
 
 #### Requirements
 
