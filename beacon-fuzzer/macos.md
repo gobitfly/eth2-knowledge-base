@@ -74,5 +74,7 @@ Search the workspace folder for files called "_**crash-..."**_, which is the bug
 An example:  
 _****`crash-efc8b3f0753ddd9df52b066d2f4549d548a21a58`_
 
+Post the zip file on the beacon-fuzz [github repository](https://github.com/sigp/beacon-fuzz/issues/new/choose).
+
 ![](../.gitbook/assets/crash5.gif)
 
