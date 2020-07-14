@@ -17,7 +17,7 @@ Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtual
 
 Change Docker File sharing settings and give access to `C:`
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28147%29.png)
 
 **Step.4**
 

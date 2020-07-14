@@ -40,7 +40,7 @@ In case of a **PC restart, shutdown or Docker shutdown**, the registry change ab
 
 Change Docker File sharing settings and give access to `C:`
 
-![](../../.gitbook/assets/image%20%28143%29.png)
+![](../../.gitbook/assets/image%20%28147%29.png)
 
 **Step.4**
 
