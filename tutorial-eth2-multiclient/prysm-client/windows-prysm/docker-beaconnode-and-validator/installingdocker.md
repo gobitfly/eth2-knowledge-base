@@ -9,7 +9,7 @@ Make sure you have [Windows10 Pro](https://support.microsoft.com/en-us/help/1344
 **Step 1.**
 
 [Download Docker](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe). [  
-Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled) has to be enabled, which can be checked in the Taskmanager. 
+](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled)[Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled) must be enabled \([Guide](https://support.bluestacks.com/hc/en-us/articles/115003174386-How-can-I-enable-virtualization-VT-on-my-PC-)\) 
 
 ![virtualization](https://user-images.githubusercontent.com/26490734/79853838-dba5de80-83c8-11ea-9fbf-d640c4bb1980.png)
 
