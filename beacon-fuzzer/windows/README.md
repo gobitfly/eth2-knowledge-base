@@ -20,12 +20,9 @@ description: Beacon Fuzzer guide for windows users.
 
 ### Downloading the Fuzzer
 
-
-
 #### Step 0. 
 
-Open a **terminal window** and test if docker is up and running with **docker -v**  
-
+Open a **terminal window** and test if docker is up and running with ****`docker -v`
 
 #### **Step 0.**
 
@@ -40,10 +37,10 @@ Continue with ****`cd desktop` ****followed by ****`git clone https://github.com
 Head over to the desktop and open the downloaded folder `beacon-fuzz` .  
 Continue to the subfolder `eth2fuzz` and open the `Makefile` file with **a text editor**.
 
-Replace all `DOCKER_BUILDKIT=1` in the **Makefile** with `docker build \` and **save** the changes.
-
+Replace all `DOCKER_BUILDKIT=1` in the **Makefile** with `docker build \` and **save** the changes.  
 There are five **"DOCKER\_BUILDKIT=1"** in total.   
-Alternatively, copy this [file](https://gist.github.com/Buttaa/7493f747f673f513eb5c60b20661e780).
+  
+Alternatively, copy this [file](https://gist.github.com/Buttaa/7493f747f673f513eb5c60b20661e780), which has everything replaced.
 
 ![](../../.gitbook/assets/image%20%28149%29.png)
 
@@ -66,11 +63,11 @@ That's it, the process will take multiple hours!
 
 ### Report Bugs
 
-Search the `beacon-fuzz` folder for files called "_**crash-..."**_, which is the bug file and compress it   
-to a **zip.file**
-
-\*\*\*\*[**Web tool**](https://archive.online-convert.com/convert-to-zip) **to convert files into zip.  
-Post the zip file on the beacon-fuzz** [**github repository**](https://github.com/sigp/beacon-fuzz/issues/new/choose)**.**
+Search the `beacon-fuzz` folder for files called "_**crash-..."**_, which is the bug file, and compress it   
+to a **zip file.**   
+[Web tool](https://archive.online-convert.com/convert-to-zip) to convert files into zip.  
+  
+**Post the zip file on the beacon-fuzz** [**github repository**](https://github.com/sigp/beacon-fuzz/issues/new/choose)**.**
 
 An example:  
 _****`crash-efc8b3f0753ddd9df52b066d2f4549d548a21a58`_
