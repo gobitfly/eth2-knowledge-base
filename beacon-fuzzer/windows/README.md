@@ -18,7 +18,7 @@ description: Beacon Fuzzer guide for windows users.
 * 8-16 GB RAM 
 * 2-4 Core CPU 
 
-### Downloading the Fuzzer
+### Download the Fuzzer
 
 #### Step 0. 
 
@@ -32,7 +32,7 @@ Continue with ****`cd desktop` ****followed by ****`git clone https://github.com
 
 ### 
 
-### Editing the MAKE file
+### Edit the MAKE file
 
 Head over to the desktop and open the downloaded folder `beacon-fuzz` .  
 Continue to the subfolder `eth2fuzz` and open the `Makefile` file with **a text editor**.
