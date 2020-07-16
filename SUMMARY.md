@@ -30,7 +30,6 @@
 
 ## Beaconcha.in Explorer
 
----
-
-* [Beaconcha.in Charts](eth2-charts.md)
+* [Beaconcha.in Charts](beaconcha.in-explorer/eth2-charts.md)
+* [Test](beaconcha.in-explorer/test.md)
 
