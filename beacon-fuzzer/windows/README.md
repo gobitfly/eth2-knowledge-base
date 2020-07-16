@@ -13,11 +13,14 @@ description: Beacon Fuzzer guide for windows users.
 
 #### Requirements
 
-* Install Docker on [Windows Pro](https://kb.beaconcha.in/beacon-fuzzer/windows/installing-docker-on-windows-pro) or [Windows Home](https://kb.beaconcha.in/beacon-fuzzer/windows/installing-docker-on-windows-home)
+* Install **Docker** on [Windows Pro](https://kb.beaconcha.in/beacon-fuzzer/windows/installing-docker-on-windows-pro) or [Windows Home](https://kb.beaconcha.in/beacon-fuzzer/windows/installing-docker-on-windows-home)
+* Install **MAKE** for Windows \(External [Video Guide](https://www.youtube.com/watch?v=sXW2VLrQ3Bs) & [StackOverflow](https://stackoverflow.com/a/32127632)\)
 * 8-16 GB RAM 
 * 2-4 Core CPU
 
 ### Fuzzing
+
+Open a terminal
 
 ### Report Bugs
 

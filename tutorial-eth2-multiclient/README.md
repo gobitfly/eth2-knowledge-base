@@ -1,3 +1,7 @@
+---
+description: A guide for non-technical users using the Prysm and Lighthouse client
+---
+
 # Step by Step: How to join the Ethereum 2.0 Testnet
 
 ## General

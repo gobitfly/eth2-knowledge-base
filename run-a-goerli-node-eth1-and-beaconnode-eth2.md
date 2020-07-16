@@ -1,3 +1,7 @@
+---
+description: Run your own ETH1 and connect it to ETH2
+---
+
 # Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)
 
 ## General
