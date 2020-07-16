@@ -28,9 +28,7 @@
     * [Installing Docker on Windows Home](beacon-fuzzer/windows/installing-docker-on-windows-home.md)
   * [macOS](beacon-fuzzer/macos.md)
 
-## Beaconcha.in <a id="community"></a>
+## Beaconcha.in <a id="beaconcha.in-explorer"></a>
 
----
-
-* [Beaconcha.in Charts](eth2-charts.md)
+* [Beaconcha.in Charts](beaconcha.in-explorer/eth2-charts.md)
 
