@@ -23,10 +23,10 @@
     * [Beaconnode & validator with macOS](tutorial-eth2-multiclient/lighthouse-client/beaconnode-and-validator-with-macos.md)
 * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](run-a-goerli-node-eth1-and-beaconnode-eth2.md)
 * [Beacon Fuzzer](beacon-fuzzer/README.md)
-  * [Windows](beacon-fuzzer/windows/README.md)
+  * [Fuzzing on Windows](beacon-fuzzer/windows/README.md)
     * [Installing Docker on Windows Pro](beacon-fuzzer/windows/installing-docker-on-windows-pro.md)
     * [Installing Docker on Windows Home](beacon-fuzzer/windows/installing-docker-on-windows-home.md)
-  * [macOS](beacon-fuzzer/macos.md)
+  * [Fuzzing on macOS](beacon-fuzzer/macos.md)
 
 ## Beaconcha.in Explorer
 

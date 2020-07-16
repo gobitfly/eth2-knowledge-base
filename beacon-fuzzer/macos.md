@@ -2,7 +2,7 @@
 description: Beacon Fuzzer guide for macOS users.
 ---
 
-# macOS
+# Fuzzing on macOS
 
 ### General
 
