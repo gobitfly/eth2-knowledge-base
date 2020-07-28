@@ -30,9 +30,13 @@ If the output returns the docker version, Docker is installed correctly.
 
 ![](../../../.gitbook/assets/image%20%282%29.png)
 
+#### **Create a docker network**
+
+`docker network create --attachable medalla`
+
 #### **Start the beaconnode**
 
-`docker run -it -v $HOME/prysm:/data -p 4000:4000 -p 13000:13000 --name beacon-node \gcr.io/prysmaticlabs/prysm/beacon-chain:latest  --datadir=/data`
+`docker run -ti --name beacon-chain --network medalla -v $HOME/prysm:/data  -p 12000:12000/udp -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data --rpc-host=0.0.0.0`
 
 ![](../../../.gitbook/assets/image%20%287%29.png)
 
@@ -76,9 +80,7 @@ Follow the steps below to get Goerli ETH and to deposit them ****to activate you
 
 Open a **new Terminal** window and run:
 
-`docker run -it -v $HOME/eth2validator:/data --network="host" gcr.io/prysmaticlabs/prysm/validator:latest --beacon-rpc-provider=127.0.0.1:4000 --keystore-path=/data --password=yourPassword`
-
-\*\*\*\*
+`docker run -ti --name validator --network medalla -v $HOME/eth2validator:/data gcr.io/prysmaticlabs/prysm/validator:latest --keystore-path=/data --datadir=/data --password=yourPassword --beacon-rpc-provider=beacon-chain:4000`
 
 #### **Step 5.**
 

@@ -28,13 +28,17 @@ If the previous command was successful, run the following code:
 
 ![dockerPull](https://user-images.githubusercontent.com/26490734/79550092-2efdf100-8098-11ea-948f-84cc150a2251.png)
 
-**Download and install latest validator updates**
+#### **Download and install latest validator updates**
 
 `docker pull gcr.io/prysmaticlabs/prysm/validator:latest`
 
-**Start the beaconnode**
+#### **Create a docker network** 
 
-`docker run -it -v c:/prysm/:/data -p 4000:4000 -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data`
+`docker network create --attachable medalla`
+
+#### **Start the beaconnode**
+
+`docker run -ti --name beacon-chain --network medalla -v c:/prysm:/data -p 12000:12000/udp -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data --rpc-host=0.0.0.0`
 
 **Wait** for your beaconnode to be in sync with the blockchain.   
 This may take a few hours and you will see the following message:
@@ -71,7 +75,7 @@ Open **a new** command prompt window.
 
 **Start your validator**
 
-`docker run -it -v c:/prysm:/data --network="host" gcr.io/prysmaticlabs/prysm/validator:latest --beacon-rpc-provider=127.0.0.1:4000 --keystore-path=/data --datadir=/data --password=yourPassword`
+`docker run -ti -name validator --network medalla -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest --keystore-path=/data --datadir=/data --password=yourPassword --medalla --beacon-rpc-provider=beacon-chain:4000` 
 
 #### **Step 5.**
 
