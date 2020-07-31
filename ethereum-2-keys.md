@@ -67,7 +67,7 @@ Over the last few years, we have become so accustomed to the [12 or 24 word-syst
 Why do we take steps back again and make our lives more complicated and more insecure with locally stored keys?
 
 Known hardware wallets will not be able to support ETH2.0 key generation until the BLS library gets audited. [EIP-2333](https://eips.ethereum.org/EIPS/eip-2333) and [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334) offer a solution but yet need to be implemented.  
-With all this knowledge, we can assume that the known _Mnemonics_ will not be accessible from day one of Phase0.
+With all this knowledge, we can assume that the known _Mnemonics_ will not be accessible from day one of Phase 0.
 
 #### How does it work?
 
