@@ -49,14 +49,14 @@ To withdraw, the validator status needs to be "[exited](https://kb.beaconcha.in/
 
 ## What happens to **multiple** deposits from a single ETH1 wallet \(=multiple validators\)?
 
-Each validator has their own _**unique deposit data**_ by which they are identified by the [beaconchain](https://kb.beaconcha.in/glossary#beaconchain).   
-**Four keys** for **one validator**.  
-  
-**Q:** How can I re-deposit to my validator balance? \(e.g. [Effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) has dropped\)  
-  
-**A:** Send another transaction \(&gt;=1ETH\) to the _deposit contract_ with the _validator specific deposit data_ as the transaction input. After the first deposit-transaction, the _unique deposit data_ is stored on the blockchain and can be found on various explorers.  
-  
-**Note:**   
+Each validator has their own _**unique deposit data**_ by which they are identified by the [beaconchain](https://kb.beaconcha.in/glossary#beaconchain).  
+**Four keys** for **one validator**.
+
+**Q:** How can I re-deposit to my validator balance? \(e.g. [Effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) has dropped\)
+
+**A:** Send another transaction \(&gt;=1ETH\) to the _deposit contract_ with the _validator specific deposit data_ as the transaction input. After the first deposit-transaction, the _unique deposit data_ is stored on the blockchain and can be found on various explorers.
+
+**Note:**  
 The deposit contract takes about **360,000 gas** but due how refunds for freed storage work, **400,000 - 500,000 as a gas limit** for the transaction is recommended.
 
 ![](.gitbook/assets/image%20%2848%29.png)
@@ -75,25 +75,21 @@ With all this knowledge, we can assume that the known _Mnemonics_ will not be ac
 
 **"Old ETH 1.0" path structure and example:**
 
- `m/44'/60'/0'/0`
+`m/44'/60'/0'/0`
 
 [`m / purpose' / coin_type' / account' / change / address_index`](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0)
 
 ![](.gitbook/assets/image%20%2860%29.png)
 
-  
-The same logic applies to ETH2.0 Keys, just with **different** parameters.   
+The same logic applies to ETH2.0 Keys, just with **different** parameters.  
 **There is a single "master key"** \(=Mnemonic phrase\) which allows the user to attach as many validators to a single **withdrawal key** as they want.  
-This way the user can **derive all keys** from the Mnemonic phrase.  
-  
+This way the user can **derive all keys** from the Mnemonic phrase.
+
 A simplified overview would look like the following:
 
 ![](.gitbook/assets/image%20%2845%29.png)
 
-  
-[Source: Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)  
-  
+[Source: Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
+
 Credits: _Nishant Das_ for fact-checking
-
-
 
