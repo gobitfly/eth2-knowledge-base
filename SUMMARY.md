@@ -4,22 +4,11 @@
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
-* [Medalla Testnet: Prysm Client - Windows](medalla-testnet-prysm-client-windows.md)
 * [Ethereum 2.0 - Depositing Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
 * [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
   * [Prysm client](tutorial-eth2-multiclient/prysm-client/README.md)
-    * [Windows](tutorial-eth2-multiclient/prysm-client/windows-prysm/README.md)
-      * [Beaconnode & validator using prysm.bat \(recommended\)](tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator.md)
-      * [Slasher with Windows using prysm.bat](tutorial-eth2-multiclient/prysm-client/windows-prysm/slasher-with-windows-using-prysm.bat.md)
-      * [Beaconnode & validator using Docker](tutorial-eth2-multiclient/prysm-client/windows-prysm/docker-beaconnode-and-validator/README.md)
-        * [Installing Docker on Windows Home](tutorial-eth2-multiclient/prysm-client/windows-prysm/docker-beaconnode-and-validator/installdocker.md)
-        * [Installing Docker on Windows Pro](tutorial-eth2-multiclient/prysm-client/windows-prysm/docker-beaconnode-and-validator/installingdocker.md)
-    * [macOS](tutorial-eth2-multiclient/prysm-client/macos-prysm/README.md)
-      * [Beaconnode & validator using prysm.sh \(recommended\)](tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh.md)
-      * [Run a Slasher using prysm.sh](tutorial-eth2-multiclient/prysm-client/macos-prysm/slasher-windows-macos-prysm.md)
-      * [Beaconnode & validator using Docker](tutorial-eth2-multiclient/prysm-client/macos-prysm/docker-beaconnode-and-validator-macos.md)
-    * [Essential commands \(macOS & Windows\)](tutorial-eth2-multiclient/prysm-client/tl-dr-essential-commands-macos-and-windows.md)
+    * [Medalla Testnet: Prysm Client - Windows](tutorial-eth2-multiclient/prysm-client/medalla-testnet-prysm-client-windows.md)
   * [Lighthouse client](tutorial-eth2-multiclient/lighthouse-client/README.md)
     * [Beaconnode & validator with macOS](tutorial-eth2-multiclient/lighthouse-client/beaconnode-and-validator-with-macos.md)
 * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](run-a-goerli-node-eth1-and-beaconnode-eth2.md)
@@ -32,4 +21,19 @@
 ## Beaconcha.in Explorer
 
 * [Beaconcha.in Charts](beaconcha.in-explorer/eth2-charts.md)
+
+## Archive
+
+* [OUTDATED: Prysm Client Guides](archive/outdated-prysm-client-windows/README.md)
+  * [Essential commands \(macOS & Windows\)](archive/outdated-prysm-client-windows/tl-dr-essential-commands-macos-and-windows.md)
+  * [macOS](archive/outdated-prysm-client-windows/macos-prysm/README.md)
+    * [Beaconnode & validator using prysm.sh \(recommended\)](archive/outdated-prysm-client-windows/macos-prysm/run-with-macos-using-prysm.sh.md)
+    * [Run a Slasher using prysm.sh](archive/outdated-prysm-client-windows/macos-prysm/slasher-windows-macos-prysm.md)
+    * [Beaconnode & validator using Docker](archive/outdated-prysm-client-windows/macos-prysm/docker-beaconnode-and-validator-macos.md)
+  * [Prysm Client - Windows](archive/outdated-prysm-client-windows/prysm-client-windows/README.md)
+    * [Beaconnode & validator using prysm.bat \(recommended\)](archive/outdated-prysm-client-windows/prysm-client-windows/script-beaconnode-and-validator.md)
+    * [Beaconnode & validator using Docker](archive/outdated-prysm-client-windows/prysm-client-windows/docker-beaconnode-and-validator/README.md)
+      * [Installing Docker on Windows Home](archive/outdated-prysm-client-windows/prysm-client-windows/docker-beaconnode-and-validator/installdocker.md)
+      * [Installing Docker on Windows Pro](archive/outdated-prysm-client-windows/prysm-client-windows/docker-beaconnode-and-validator/installingdocker.md)
+    * [Slasher with Windows using prysm.bat](archive/outdated-prysm-client-windows/prysm-client-windows/slasher-with-windows-using-prysm.bat.md)
 
