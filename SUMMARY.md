@@ -7,7 +7,7 @@
 * [Ethereum 2.0 - Depositing Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
 * [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
-  * [Prysm client](tutorial-eth2-multiclient/prysm-client/README.md)
+  * [Prysm Client](tutorial-eth2-multiclient/prysm-client/README.md)
     * [Medalla Testnet: Prysm Client - Windows](tutorial-eth2-multiclient/prysm-client/medalla-testnet-prysm-client-windows.md)
   * [Lighthouse client](tutorial-eth2-multiclient/lighthouse-client/README.md)
     * [Beaconnode & validator with macOS](tutorial-eth2-multiclient/lighthouse-client/beaconnode-and-validator-with-macos.md)
