@@ -20,11 +20,11 @@ Let's use the launchpad to generate Ethereum 2.0 validator keys and to deposit 3
 
 **Download** the **latest** Eth2.0-deposit-cli [here](https://github.com/ethereum/eth2.0-deposit-cli/releases/) to generate keys.
 
-![](../../.gitbook/assets/image%20%28153%29.png)
+![](../.gitbook/assets/image%20%28153%29.png)
 
 **Create** a folder named **prysm\_medalla** in **C:\** and **move** the downloaded file into **C:\prysm\_medalla**.
 
-![](../../.gitbook/assets/2020-08-05_11-39-50.gif)
+![](../.gitbook/assets/2020-08-05_11-39-50.gif)
 
 ####  **2.**_**Step**_
 
@@ -37,11 +37,11 @@ Each validator will cost 32 Goerli ETH.
   
 **Request** Goerli Eth from the r/ethstaker discord [here](https://discord.gg/3fAHvPD) or in the prysmatic labs discord [here](https://discord.gg/gmSMfrF).
 
-![](../../.gitbook/assets/image%20%28158%29.png)
+![](../.gitbook/assets/image%20%28158%29.png)
 
 **Skip** every step until you have to upload the deposit file as shown below.
 
-![](../../.gitbook/assets/image%20%28156%29.png)
+![](../.gitbook/assets/image%20%28156%29.png)
 
 #### 3. Step 
 
@@ -54,7 +54,7 @@ Adapt `--num_validators X` to the amount of validators you chose on the launchpa
   
 **WRITE DOWN THE GENERATED 24 WORD MNEMONIC PHRASE** 
 
-![](../../.gitbook/assets/2020-08-05_12-25-54.gif)
+![](../.gitbook/assets/2020-08-05_12-25-54.gif)
 
 The generated keys are now located in `C:\Users\Inan\validator_keys`
 
@@ -64,11 +64,11 @@ The generated keys are now located in `C:\Users\Inan\validator_keys`
 
 Import the `deposit-data-[timestamp].json` file to the launchpad and deposit with Metamask.
 
-![](../../.gitbook/assets/2020-08-05_12-34-29.gif)
+![](../.gitbook/assets/2020-08-05_12-34-29.gif)
 
 Once the transactions went through it will look like the following
 
-![](../../.gitbook/assets/image%20%28155%29.png)
+![](../.gitbook/assets/image%20%28155%29.png)
 
 #### \*\*\*\*
 
@@ -83,7 +83,7 @@ Open a terminal window and type the following
 
 The **prysm.bat** file will appear in **C:\prysm\_medalla**
 
-![](../../.gitbook/assets/prysmbatdownload%20%281%29.png)
+![](../.gitbook/assets/prysmbatdownload%20%281%29.png)
 
 #### 6. Step
 
@@ -92,7 +92,7 @@ The **prysm.bat** file will appear in **C:\prysm\_medalla**
 **Open** a **command prompt window** and the downloaded **prysm.bat file  
 Drag and drop** the **Prysm.bat** file and add `beacon-chain --datadir=C:\prysm_medalla`
 
-![](../../.gitbook/assets/2020-08-05_13-11-27.gif)
+![](../.gitbook/assets/2020-08-05_13-11-27.gif)
 
 **Wait** for the beaconnode to be in sync with the blockchain.   
 This may take a few hours and you will see the following message  
@@ -113,7 +113,7 @@ Set the new wallet directory to `C:\prysm_medalla\wallet` and enter the amount o
   
 _The Eth1 Deposit Transaction data, which is required to_ [_deposit_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0#create-eth-2-0-keys)_, can be **ignored** since this was automatically done on the Launchpad._
 
-![](../../.gitbook/assets/image%20%28154%29.png)
+![](../.gitbook/assets/image%20%28154%29.png)
 
 #### 7. Step
 
@@ -125,7 +125,7 @@ Again, open a **new command prompt window**, **drag and drop the prysm.bat file*
 Enter your wallet password which was set in the previous step.   
 **That's it. We are done!**
 
-![](../../.gitbook/assets/validator.png)
+![](../.gitbook/assets/validator.png)
 
 Enter your pubkey on the [beaconcha.in](https://beaconcha.in/) to explorer to track its current status and performance.  
 _"What does "_[_Unknown status_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)_" mean?"_ 
