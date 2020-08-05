@@ -4,6 +4,7 @@
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
+* [Medalla Testnet: Prysm Client - Windows](medalla-testnet-prysm-client-windows.md)
 * [Ethereum 2.0 - Depositing Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
 * [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
