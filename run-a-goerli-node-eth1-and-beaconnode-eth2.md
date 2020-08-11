@@ -34,12 +34,10 @@ Find the downloaded file **and** open a **command prompt/terminal** _****_window
 
   
 Drag and drop the _**geth**_ file into the terminal window and add the following   
-  
- `--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545 --ws --wsaddr=127.0.0.1 --wsport=8546`
+`--goerli --datadir="$HOME/Goerli" --rpc --rpcaddr=127.0.0.1 --rpcport=8545`
 
-![](.gitbook/assets/goerlisyncs1.gif)
+![](.gitbook/assets/image%20%28159%29.png)
 
-  
 The syncing-process takes about **30 minutes.** **Wait for this to complete.**  
 Once your Goerli node is synced, it should look like this and include the message:  
   

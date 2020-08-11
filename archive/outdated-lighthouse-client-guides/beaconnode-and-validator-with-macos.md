@@ -51,11 +51,11 @@ Open **Finder** and head over to `~/.cargo/bin/`
 
 #### 4. Start the beaconnode
 
-Drag and drop the **Lighthouse** file and add `bn --eth1-endpoint http:127.0.0.1:8545 --http`
+_Make sure the goerli node \(ETH1\) is running as mentioned in the_ [_requirements_](https://kb.beaconcha.in/archive/outdated-lighthouse-client-guides/beaconnode-and-validator-with-macos#requirements-a-synced-goerli-node-guide-till-step-3)_._
 
-![](../../.gitbook/assets/lhsync.gif)
+Drag and drop the **Lighthouse** file and add `--testnet medalla beacon --eth1 --http`  
 
-#### 
+![](../../.gitbook/assets/image%20%28160%29.png)
 
 #### 5. Create ETH2 Wallet
 
@@ -81,7 +81,7 @@ Use the same Terminal window, drag and drop the Lighthouse file and **add**
 
 #### 7. Depositing to Ethereum 2.0
 
-First, find the newly created ETH2 Key its deposit data, which is located in `.lighthouse/validators/`   
+First, find the deposit data of the newly created ETH2 Key , which is located in `.lighthouse/validators/`   
   
 There are two lighthouse folders, `.lighthouse` is a hidden folder.  
 **Enable hidden folders with** **`CMD + Shift + .`**
@@ -89,9 +89,9 @@ There are two lighthouse folders, `.lighthouse` is a hidden folder.
 Open the `eth1-deposit-data.rlp` file with a **text editor.   
 Copy** the 842 long text sequence and **follow these** [**steps**](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0#depositing)**.  
   
-Altona Deposit contract address:** `0x16e82D77882A663454Ef92806b7DeCa1D394810f`
+Medalla Deposit contract address:** `0x07b39F4fDE4A38bACe212b546dAc87C58DfE3fDC`
 
-The deposit will be recognised by the beacon-chain in 8hours.
+The deposit will be recognised by the beacon-chain in 8.5 hours.
 
 ![](../../.gitbook/assets/image%20%28127%29.png)
 
