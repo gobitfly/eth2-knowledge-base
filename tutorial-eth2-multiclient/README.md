@@ -27,9 +27,7 @@ Before we start, it is recommended reading the [glossary](https://kb.beaconcha.i
 
 ### 2. [Lighthouse Client ](https://kb.beaconcha.in/tutorial-eth2-multiclient/lighthouse-client)by [Sigma Prime](https://sigmaprime.io/) - [Discord channel](https://discord.gg/8mFMS7G)
 
-* TBD
+* [macos](https://kb.beaconcha.in/tutorial-eth2-multiclient/beaconnode-and-validator-with-macos)
 
-### 
-
-### [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-a-goerli-node-eth1-and-beaconnode-eth2)
+[Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](https://kb.beaconcha.in/tutorial-eth2-multiclient/run-a-goerli-node-eth1-and-beaconnode-eth2)
 
