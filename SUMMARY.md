@@ -8,7 +8,7 @@
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
 * [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
   * [Medalla Testnet: Prysm Client - Windows](tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
-  * [Lighthouse client](tutorial-eth2-multiclient/lighthouse-client.md)
+  * [Medalla Testnet: Lighthouse Client - macOS](tutorial-eth2-multiclient/beaconnode-and-validator-with-macos.md)
 * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](run-a-goerli-node-eth1-and-beaconnode-eth2.md)
 * [Beacon Fuzzer](beacon-fuzzer/README.md)
   * [Fuzzing on Windows](beacon-fuzzer/windows/README.md)
@@ -22,8 +22,6 @@
 
 ## Archive
 
-* [OUTDATED: Lighthouse Client Guides](archive/outdated-lighthouse-client-guides/README.md)
-  * [Beaconnode & validator with macOS](archive/outdated-lighthouse-client-guides/beaconnode-and-validator-with-macos.md)
 * [OUTDATED: Prysm Client Guides](archive/outdated-prysm-client-windows/README.md)
   * [Essential commands \(macOS & Windows\)](archive/outdated-prysm-client-windows/tl-dr-essential-commands-macos-and-windows.md)
   * [macOS](archive/outdated-prysm-client-windows/macos-prysm/README.md)
