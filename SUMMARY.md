@@ -35,7 +35,3 @@
       * [Installing Docker on Windows Pro](archive/outdated-prysm-client-windows/prysm-client-windows/docker-beaconnode-and-validator/installingdocker.md)
     * [Slasher with Windows using prysm.bat](archive/outdated-prysm-client-windows/prysm-client-windows/slasher-with-windows-using-prysm.bat.md)
 
----
-
-* [Linux test](linux-test.md)
-
