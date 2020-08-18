@@ -19,7 +19,7 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 ## Slots
 
 **32 Slots = 1 Epoch**  
-A time period of **12 seconds** in which a randomly chosen validator has time to propose a block. Each slot may or may not have a block in it. The total number of validators is split up in committees and one or more individual committees are responsible to attest to each slot. One validator from the committee will be chosen to propose a block, while the other 127 are attesting. After each Epoch, the validators are mixed and merged to new committees \(minimum of 128 validators per committee\).
+A time period of **12 seconds** in which a randomly chosen validator has time to propose a block. Each slot may or may not have a block in it. The total number of validators is split up in committees and one or more individual committees are responsible to attest to each slot. One validator from the committee will be chosen to be the aggregator, while the other validators are attesting. After each Epoch, the validators are mixed and merged to new committees. There is a minimum of 128 validators 
 
 ![](https://user-images.githubusercontent.com/26490734/73458538-bd09eb80-4375-11ea-83a1-27b5fb1394a1.png)
 
