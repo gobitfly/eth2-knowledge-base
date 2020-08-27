@@ -4,6 +4,10 @@ description: Attestation Inclusion delay and why it is important
 
 # Attestation
 
+This post will use [AttestantIO](https://twitter.com/attestantio)'s post about [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) as a reference.
+
+## General
+
 #### Attestation 
 
 Every [Epoch](https://kb.beaconcha.in/glossary#epoch) \(~6.4 minutes\) a validator proposes an attestation \(vote\) to the network.  
@@ -30,7 +34,5 @@ As shown below, the validators send their unaggregated attestation to the aggreg
 
 ![](../.gitbook/assets/image%20%28164%29.png)
 
-  
-_Credits  
-This post uses_ [_AttestantIO_](https://twitter.com/attestantio)_'s post about_ [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) _as a reference._
+
 
