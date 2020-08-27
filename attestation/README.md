@@ -4,7 +4,7 @@ description: Attestation Inclusion delay and why it is important
 
 # Attestation
 
-This post will use [AttestantIO](https://twitter.com/attestantio)'s post about [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) as a reference and explain which metrics in regards of attestations the [beaconcha.in](https://beaconcha.in/) explorer is displaying and why it is important for the end user.
+This post will use [AttestantIO](https://twitter.com/attestantio)'s post about [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) as a reference.
 
 ## General
 
