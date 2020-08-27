@@ -7,7 +7,6 @@
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
 * [Attestation](attestation/README.md)
   * [Attestation Rewards](attestation/attestation-rewards.md)
-  * [Untitled](attestation/untitled-1.md)
 * [Ethereum 2.0 - Deposit Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
 
