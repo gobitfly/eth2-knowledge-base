@@ -19,7 +19,7 @@ This vote consists of the following segments:
 * Signature
 * Chain head vote \(vote on what the validator believes is the head of the chain\) 
 
-As we know a minimum of 16,384 validators is required to start Ethereum 2.0.   
+A minimum of 16,384 validators is required to start Ethereum 2.0.   
 If we multiply that with the information included in each Attestation per Epoch, it adds up quickly. Therefore, Ethereum 2.0 **aggregates** all of that information and minimises the data growth.  
 
 
