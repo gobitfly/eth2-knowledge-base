@@ -1,5 +1,5 @@
 ---
-description: Attestation inclusion delay and they are important
+description: Attestation inclusion delay explained
 ---
 
 # Attestation Rewards
