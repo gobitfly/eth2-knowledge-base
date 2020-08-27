@@ -1,22 +1,27 @@
 # Table of contents
 
 * [Overview](README.md)
+* [Untitled](untitled.md)
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
 * [Attestation](attestation/README.md)
   * [Attestation Rewards](attestation/attestation-rewards.md)
+  * [Untitled](attestation/untitled-1.md)
 * [Ethereum 2.0 - Deposit Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
-* [Step by Step: How to join the Ethereum 2.0 Testnet](tutorial-eth2-multiclient/README.md)
-  * [Medalla Testnet: Prysm Client - Windows](tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
-  * [Medalla Testnet: Lighthouse Client - macOS](tutorial-eth2-multiclient/beaconnode-and-validator-with-macos.md)
-* [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](run-a-goerli-node-eth1-and-beaconnode-eth2.md)
-* [Beacon Fuzzer](beacon-fuzzer/README.md)
-  * [Fuzzing on Windows](beacon-fuzzer/windows/README.md)
-    * [Installing Docker on Windows Pro](beacon-fuzzer/windows/installing-docker-on-windows-pro.md)
-    * [Installing Docker on Windows Home](beacon-fuzzer/windows/installing-docker-on-windows-home.md)
-  * [Fuzzing on macOS](beacon-fuzzer/macos.md)
+
+## Guides
+
+* [Step by Step: How to join the Ethereum 2.0 Testnet](guides/tutorial-eth2-multiclient/README.md)
+  * [Medalla Testnet: Prysm Client - Windows](guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
+  * [Medalla Testnet: Lighthouse Client - macOS](guides/tutorial-eth2-multiclient/beaconnode-and-validator-with-macos.md)
+* [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](guides/run-a-goerli-node-eth1-and-beaconnode-eth2.md)
+* [Beacon Fuzzer](guides/beacon-fuzzer/README.md)
+  * [Fuzzing on Windows](guides/beacon-fuzzer/windows/README.md)
+    * [Installing Docker on Windows Pro](guides/beacon-fuzzer/windows/installing-docker-on-windows-pro.md)
+    * [Installing Docker on Windows Home](guides/beacon-fuzzer/windows/installing-docker-on-windows-home.md)
+  * [Fuzzing on macOS](guides/beacon-fuzzer/macos.md)
 
 ## Beaconcha.in Explorer
 
