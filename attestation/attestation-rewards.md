@@ -6,7 +6,8 @@ description: Attestation inclusion delay and they are important
 
 ## Rewards
 
-The attestation reward is dependent on two variables, the [**base reward**](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#constants) and the **inclusion delay.**
+The attestation reward is dependent on two variables, the [**base reward**](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#constants) and the **inclusion delay.  
+The best case for the inclusion delay is to be 1.**
 
 ![Source: ConsenSys Codefi Analysis](../.gitbook/assets/image%20%28165%29.png)
 
@@ -42,5 +43,12 @@ Lucky aggregegators can also be chosen to be the block proposer. If the attestat
 
 ## Beaconcha.in Explorer & Inclusion delay
 
+Let's look at the example below.   
+The attestation for `slot 156508` was included included in `slot 156510` but why is the inclusion distance 0?  
+If were to use the formula from above and set the inclusion delay to 0, the rewards would be 0 for a proposed attestation as well.
+
 ![](../.gitbook/assets/image%20%28166%29.png)
+
+Technically speaking, there is an inclusion delay of two slots, but since the attestant is not responsible for the block proposal, and to only warn the user about its **own** faults \(e.g. slow internet connection, power failure etc.\), the beaconcha.in explorer displays the distance as 0.  
+
 
