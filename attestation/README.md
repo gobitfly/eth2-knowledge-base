@@ -1,12 +1,8 @@
 ---
-description: Attestation Inclusion delay and why it is important
+description: A overview of attestations
 ---
 
 # Attestation
-
-This post will use [AttestantIO](https://twitter.com/attestantio)'s post about [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) as a reference.
-
-## General
 
 #### Attestation 
 
@@ -34,5 +30,7 @@ As shown below, the validators send their unaggregated attestation to the aggreg
 
 ![](../.gitbook/assets/image%20%28164%29.png)
 
-
+  
+_Credits  
+This post uses_ [_AttestantIO_](https://twitter.com/attestantio)_'s post about_ [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) _as a reference._
 
