@@ -4,10 +4,6 @@ description: Attestation Inclusion delay and why it is important
 
 # Attestation
 
-This post will use [AttestantIO](https://twitter.com/attestantio)'s post about [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) as a reference.
-
-## General
-
 #### Attestation 
 
 Every [Epoch](https://kb.beaconcha.in/glossary#epoch) \(~6.4 minutes\) a validator proposes an attestation \(vote\) to the network.  
@@ -25,7 +21,7 @@ If we multiply that with the information included in each Attestation per Epoch,
 
 #### Aggregated Attestation
 
-> [_**Aggregation**_](http://dos.iitm.ac.in/OOSD_Material/Basic%20Concepts/Basic%20Concepts%20Of%20OO/aggregation.htm) _is a way of composing different abstractions together in defining a class. For **example**, a car class can be defined to contain other classes such as engine class, seat class, wheels class etc._
+> An [aggregation](https://www.vocabulary.com/dictionary/aggregation) is a collection, or the gathering of things together. Your baseball card collection might represent the aggregation of lots of different types of cards.
 
 So what does that mean for Attestations?  
   
@@ -34,5 +30,7 @@ As shown below, the validators send their unaggregated attestation to the aggreg
 
 ![](../.gitbook/assets/image%20%28164%29.png)
 
-
+  
+_Credits  
+This post uses_ [_AttestantIO_](https://twitter.com/attestantio)_'s post about_ [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) _as a reference._
 
