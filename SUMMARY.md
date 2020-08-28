@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Untitled](untitled.md)
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
