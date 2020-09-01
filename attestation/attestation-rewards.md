@@ -48,6 +48,6 @@ If were to use the formula from above and set the inclusion delay to 0, the rewa
 
 ![](../.gitbook/assets/image%20%28166%29.png)
 
-Technically speaking, there is an inclusion delay of two slots, but since the attestant is not responsible for the block proposal, and to only warn the user about its faults \(e.g. slow internet connection, power failure etc.\), the beaconcha.in explorer displays the distance as 0.  
+Technically speaking, there is an inclusion delay of two slots, but since the attestant is not responsible for the block proposal, and to only warn the user about its faults \(e.g. slow internet connection, power failure etc.\), the [beaconcha.in explorer](https://beaconcha.in/) displays the distance as 0.  
 
 
