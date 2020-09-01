@@ -1,5 +1,5 @@
 ---
-description: A overview of attestations
+description: An overview of attestations
 ---
 
 # Attestation
@@ -26,9 +26,9 @@ If we multiply that with the information included in each Attestation per Epoch,
 So what does that mean for Attestations?  
   
 Each block one or more committees are chosen to attest. A committee has a minimum of 128 validators, of which 16 are randomly selected to become an aggregator.  
-As shown below, the validators send their unaggregated attestation to the aggregators. They then merge the attestations and forward a single aggregated attestation to the [block proposer](https://github.com/gobitfly/eth2-beaconchain-explorer/pull/218).
+As shown below, the validators broadcast their unaggregated attestation to the aggregators \(red arrow\). The aggregators then merge the attestations and forward a single aggregated attestation to the [block proposer](https://github.com/gobitfly/eth2-beaconchain-explorer/pull/218).
 
-![](../.gitbook/assets/image%20%28164%29.png)
+![](../.gitbook/assets/image%20%28168%29.png)
 
   
 _Credits  
