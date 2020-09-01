@@ -13,7 +13,7 @@ The best case for the inclusion delay is to be 1.**
 
 #### **Base reward**
 
-**\(**Validator effective balance**\)** **/ \(**Effective balance of **all** active validators**\)** \* **\(**2\*\*6**\)**
+**\(**Validator effective balance \* 2\*\*6**\)** **/ SQRT\(**Effective balance of **all** active validators**\)** 
 
 #### Inclusion delay
 
@@ -34,12 +34,11 @@ These validators have a maximum of 1 epoch to submit their attestation. If the a
 
 There are 16 Aggregators per epoch in total, additionally, random validators from the beacon-chain subscribe to **two subnets for 256 Epochs** and serve as a backup in case aggregators are missing.
 
-![](../.gitbook/assets/image%20%28167%29.png)
+![](../.gitbook/assets/image%20%28169%29.png)
 
 #### Missing block proposer
 
-Lucky aggregators can also be chosen to be the block proposer. If the attestation was not included because the block proposer has gone missing, the next block proposer would pick them up, but the **inclusion delay** will increase by one.  
-
+In some cases a lucky aggregator may also become the block proposer. If the attestation was not included because the block proposer has gone missing, the next block proposer would pick the aggregated attestation up and include it into the block. However, the **inclusion delay** will increase by one.
 
 ## Beaconcha.in Explorer & Inclusion delay
 
