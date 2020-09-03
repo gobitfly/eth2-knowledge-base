@@ -41,5 +41,6 @@ As shown below, the validators broadcast their unaggregated attestation to the a
   
 _Credits_  
 [_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) _-_ [_AttestantIO_](https://twitter.com/attestantio)  
-__
+__[_Attestation Inclusion_](https://www.youtube.com/watch?v=SPcgevcDqDE&feature=youtu.be) _-_ [_Adrian Sutton_ ](https://twitter.com/ajsutton)_\(Consensys\)_  
+
 

@@ -65,6 +65,6 @@ Technically speaking, there is an inclusion delay of two slots, but since the at
 
 
 _Source:_   
-[_Attestation Inclusion_](https://www.youtube.com/watch?v=SPcgevcDqDE&feature=youtu.be) _- Adrian Sutton_  
+[_Attestation Inclusion_](https://www.youtube.com/watch?v=SPcgevcDqDE&feature=youtu.be) _-_ [_Adrian Sutton_ ](https://twitter.com/ajsutton)_\(Consensys\)_  
 
 
