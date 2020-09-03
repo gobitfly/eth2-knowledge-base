@@ -26,13 +26,9 @@ Therefore attestations naturally get included **one block** later; so all attest
 
 #### The effects of the inclusion delay on the attestation reward 
 
-As seen below, an Inclusion delay of 2 causes the the reward to drop by 50%. 
+As shown below, an Inclusion delay of 2 causes the the reward to drop by 50%. 
 
 ![Source: Consensys](../.gitbook/assets/image%20%28170%29.png)
-
-
-
-
 
 ##  **What if the voting validator, all aggregators and/or the block proposer are missing?**
 
