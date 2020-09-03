@@ -22,6 +22,18 @@ Therefore attestations naturally get included **one block** later; so all attest
 
 ![](../.gitbook/assets/image%20%28162%29.png)
 
+#### 
+
+#### The effects of the inclusion delay on the attestation reward 
+
+As seen below, an Inclusion delay of 2 causes the the reward to drop by 50%. 
+
+![Source: Consensys](../.gitbook/assets/image%20%28170%29.png)
+
+
+
+
+
 ##  **What if the voting validator, all aggregators and/or the block proposer are missing?**
 
 #### \*\*\*\*
@@ -38,7 +50,7 @@ There are 16 Aggregators per epoch in total, additionally, random validators fro
 
 #### Missing block proposer
 
-In some cases a lucky aggregator may also become the block proposer. If the attestation was not included because the block proposer has gone missing, the next block proposer would pick the aggregated attestation up and include it into the block. However, the **inclusion delay** will increase by one.
+Note that in some cases a lucky aggregator may also become the block proposer. If the attestation was not included because the block proposer has gone missing, the next block proposer would pick the aggregated attestation up and include it into the next block. However, the **inclusion delay** will increase by one.
 
 ## Beaconcha.in Explorer & Inclusion delay
 
@@ -48,6 +60,11 @@ If were to use the formula from above and set the inclusion delay to 0, the rewa
 
 ![](../.gitbook/assets/image%20%28166%29.png)
 
-Technically speaking, there is an inclusion delay of two slots, but since the attestant is not responsible for the block proposal, and to only warn the user about its faults \(e.g. slow internet connection, power failure etc.\), the [beaconcha.in explorer](https://beaconcha.in/) displays the distance as 0.  
+Technically speaking, there is an inclusion delay of two slots, but since the attestant is not responsible for the block proposal, and to only warn the user about its faults \(e.g. slow internet connection, power failure etc.\), the [beaconcha.in explorer](https://beaconcha.in/) displays the distance as 0.
+
+
+
+_Source:_   
+[_Attestation Inclusion_](https://www.youtube.com/watch?v=SPcgevcDqDE&feature=youtu.be) _- Adrian Sutton_  
 
 
