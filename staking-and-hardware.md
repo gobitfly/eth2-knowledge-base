@@ -1,9 +1,5 @@
 # Staking & Hardware
 
-## Q: Which hardware should I buy in order to run 5 validators as a non-technical person?
-
-
-
 ### **General** 
 
 The ideal set up, and best practice is to have a [dedicated computer](https://www.toppr.com/ask/question/what-is-meant-by-a-dedicated-computer-2/) for staking. Try to limit additional processes running on your staking box. Especially if it is something that is connecting to the outside world.
