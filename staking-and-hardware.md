@@ -14,7 +14,7 @@ A [battery back up](https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5
 
 ### Hardware:
 
-[**Raspberry Pi 4 4gb**](https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/?src=raspberrypi)
+### [**Raspberry Pi 4 4gb**](https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/?src=raspberrypi)
 
 **Price**:   
 $84.80 \(including case, power supply, SD card, and heat sinks\)
@@ -30,7 +30,7 @@ I would **not** recommend purchasing a RPI4 for staking until further testing is
 
 
 
-#### **Old laptop/desktop**
+### **Old laptop/desktop**
 
 **Price**:   
 Free! Well, kind of anyways.
@@ -51,13 +51,13 @@ If you are planning on staking with an older laptop, consider that they have red
 
 
 
-**New laptop**
+### **New laptop**
 
 If you are buying brand new, I do not see any value in paying the price premium for a portable form factor, screen, keyboard, and trackpad. Once you get your staking machine set up, you do not need any of these features, you can just remote into the staking machine from your daily driver computer. The low profile form factor will actually be a downside when taking thermal performance in to account. Laptops typically do not include an ethernet port now, which means you will be relying on wifi. Wifi is very reliable now, but you can't beat the simplicity and reliability of a cable.
 
 
 
-#### [**New prebuilt desktop**](https://www.newegg.com/hp-prodesk-400-g5/p/1VK-001E-3XHM0)
+### [**New prebuilt desktop**](https://www.newegg.com/hp-prodesk-400-g5/p/1VK-001E-3XHM0)
 
 **Price:**   
 Probably $400-600. There are likely better deals out there than the one linked above.
@@ -77,7 +77,7 @@ I won't go too in-depth here because this is essentially the same as using a pre
 
 
 
-\*\*\*\*[**NUC**](https://www.newegg.com/intel-nuc8i5bek-entertainment-productivity/p/1VK-004K-003M7?Item=9SIAJA29669337) **/** [**Mini PC**](https://www.newegg.com/p/pl?d=mini+pc) **/** [**DApp Node**](https://dappnode.io/)\*\*\*\*
+### \*\*\*\*[**NUC**](https://www.newegg.com/intel-nuc8i5bek-entertainment-productivity/p/1VK-004K-003M7?Item=9SIAJA29669337) **/** [**Mini PC**](https://www.newegg.com/p/pl?d=mini+pc) **/** [**DApp Node**](https://dappnode.io/)\*\*\*\*
 
 **Price:**   
 $678.
@@ -93,7 +93,7 @@ NUCs are super cute, and their small form factor gives them a very high wife app
 
 
 
-#### **Server**
+### **Server**
 
 [One option](https://www.usedservers.com/hp-proliant-ml350p-g8-8x-2-5-server-build-to-order/), or a [more modern option](https://www.usedservers.com/hpe-proliant-ml350-g9-8x-2-5-server-build-to-order/). You really need to look around for deals when it comes to this. Usedservers.com charges a premium for the convenience and customisation they offer. If you search through eBay, or even better your local classifieds you can often find some gear that someone paid a large pile of money to get for a few hundred bucks.
 
@@ -108,13 +108,13 @@ This is my favourite option. Enterprise servers are jam packed with features, an
 
 
 
-#### [**Avado**](https://ava.do/shop)
+### [**Avado**](https://ava.do/shop)
 
 It's a NUC, but expensive. The most expensive one at 1100 USD only rates in at 3349 on passmark. They have their own OS which might have a really great UX, I don't know, but it likely is not worth the price of admission. [Dappnode](https://dappnode.io/) is another option if you are looking for a custom built OS with an easy UX.
 
 
 
-#### **Virtual Private Server**
+### **Virtual Private Server**
 
 **Price:**   
 Anywhere from $20-40 a month.
