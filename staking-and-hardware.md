@@ -12,8 +12,6 @@ A [battery back up](https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5
 
 
 
-### Hardware:
-
 ### [**Raspberry Pi 4 4gb**](https://www.pishop.us/product/raspberry-pi-4-model-b-4gb/?src=raspberrypi)
 
 **Price**:   
