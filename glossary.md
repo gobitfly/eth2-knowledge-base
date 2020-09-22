@@ -14,8 +14,6 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 
 [source](https://notes.ethereum.org/@djrtwo/Bkn3zpwxB#High-level-overview)
 
-[_Run a validator & beacon-node_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)
-
 ## Slots
 
 **32 Slots = 1 Epoch**  
@@ -52,10 +50,9 @@ It represents the [validator public key and the withdrawal public key](https://k
 Validators need to deposit 32 ETH into the validator deposit contract on the Ethereum 1.0 chain.  
 Validator operators have to run a validator node. Its job is to propose blocks and sign attestations.  
 A validator has to be online for at least 50% of the time in order to have positive returns.     
-  
-[_Run a validator & beacon-node_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client)\_\_
 
-### Eligible for activation & Estimated activation
+
+#### Eligible for activation & Estimated activation
 
 Refers to pending validators. The deposit has been recognized by the ETH2 chain at the timestamp of “Eligible for activation”. If there is a queue of [pending validators](https://www.beaconcha.in/validators), an estimated timestamp for activation is calculated.
 
@@ -85,8 +82,6 @@ The [**slasher**](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client
 To find malicious activity by validators, the slashers iterates through all received attestations until a **slashable offense** has been found.   
 Found slashings are broadcasted to the network and the next [block proposer](https://kb.beaconcha.in/glossary#block-proposer) adds the proof to the block. The block proposer receives a reward for slashing the malicious validator.   
 However, the whistleblower \(=Slasher\) does not receive a reward.  
-  
-[_More infos and how to run a slasher_](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/slasher-windows-macos--prysm)_._  
   
 **Slashable offenses**
 
