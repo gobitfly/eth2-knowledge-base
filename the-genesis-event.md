@@ -38,6 +38,7 @@ The goal of the trigger block `(min_genesis_time - genesis_delay)` is that the c
 ### Scenario Two
 
 The required amount of deposits \(`Min_Genesis_Active_Validator_Count)` to fulfill the first condition occurs **after** `min_genesis_time.`   
+  
 In this case, the second condition is met first, the trigger block becomes whatever `min_genesis_time` was set to. The trigger block \(second condition\) is achieved right after.   
 Genesis time becomes `Trigger-block-timestamps + genesis_delay`.
 
