@@ -21,17 +21,25 @@ description: A visualisation of the Genesis Event on Ethereum 2.0
 There are two conditions that have to be met to trigger the Ethereum 2.0 chain
 
 1. The threshold of **16,384 validators** has been hit
-2. The  **ETH1** block \(=Trigger block\) which **determines the genesis** time for ETH2 **cannot be earlier** than  `min_genesis_time - genesis_delay (7d)`
+2. The  **ETH1** block \(=Trigger block\) which **determines the genesis** time for ETH2 **cannot be earlier** than  `min_genesis_time.`
 
-###  Scenario One
+_Trigger ETH1 block `= min_genesis_time - genesis_delay`_
 
-`min_genesis_time - genesis_delay <= min_genesis_time`
+###  Scenario One 
 
-Once the threshold of **16,384 deposits** has been met, the network will try to accomplish the second condition. Now the system tries to find the **trigger block** by calculating `min_genesis_time - genesis_delay.`
+The required amount of deposits \(`Min_Genesis_Active_Validator_Count)` to fulfill the first condition occurs very quickly once the deposit contract has been deployed and **before** `min_genesis_time`.   
+  
+Once the threshold of **16,384 deposits** has been met, the network will try to accomplish the second condition by trying to find the **trigger block** by calculating `min_genesis_time - genesis_delay.`
+
+The goal of the trigger block `(min_genesis_time - genesis_delay)` is that the chain can never start earlier than `min_genesis_time`. The second scenario will make this clearer.
 
 ![](.gitbook/assets/image%20%28174%29.png)
 
 ### Scenario Two
+
+The required amount of deposits \(`Min_Genesis_Active_Validator_Count)` to fulfill the first condition occurs **after** `min_genesis_time.`   
+In this case, the second condition is met first, the trigger block becomes whatever `min_genesis_time` was set to. The trigger block \(second condition\) is achieved right after.   
+Genesis time becomes `Trigger-block-timestamps + genesis_delay`.
 
 ![](.gitbook/assets/image%20%28172%29.png)
 
