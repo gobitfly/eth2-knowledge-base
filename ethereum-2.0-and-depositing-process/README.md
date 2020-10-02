@@ -1,4 +1,4 @@
-# Ethereum 2.0 - Deposit Process
+# Deposit Process
 
 This post will explain the depositing process and each of the phases.  
   

@@ -3,12 +3,13 @@
 * [Overview](README.md)
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
-* [The Genesis Event](the-genesis-event.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
-* [Ethereum 2.0 - Deposit Process](ethereum-2.0-and-depositing-process/README.md)
+* [Deposit Process](ethereum-2.0-and-depositing-process/README.md)
   * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
+* [The Genesis Event](the-genesis-event.md)
 * [Attestation](attestation/README.md)
   * [Attestation Rewards](attestation/attestation-rewards.md)
+* [Blocks](ethereum-2.0-blocks.md)
 
 ## Guides
 
