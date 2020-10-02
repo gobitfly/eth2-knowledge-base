@@ -4,6 +4,8 @@ description: Blocks 'n' roots
 
 # Blocks
 
+**WORK IN PROGRESS**  
+  
 _This post is going to explain the data Ethereum 2.0 explorers visualize such as_ [_beaconcha.in_](https://beaconcha.in/)\_\_
 
 ### Overview
