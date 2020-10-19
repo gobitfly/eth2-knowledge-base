@@ -15,17 +15,30 @@ _Epoch, Slot, Status, Proposer are covered in the_ [_glossary_](https://kb.beaco
 
 ### Block root
 
+The hash-tree-root of the [BeaconBlock](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#beaconblock).
+
 ### State root
 
+The hash-tree-root of the [BeaconState](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#beacon-state).
+
 ### Signature
+
+The BLS signature [obtained by](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/validator.md#packaging-into-a-signedbeaconblock) using the BeaconState, BeaconBlock and private key.
+
+`def get_block_signature(state: BeaconState, block: BeaconBlock, privkey: int)   
+-> BLSSignature`
 
 ### Randao Reveal
 
 ### Grafitti
 
+A block proposer can include 32 byte long message to its block proposal.
+
 ### Eth 1 Data
 
-* Block Hash
+_Received Eth1 Block headers and Deposit data_ 
+
+* Block Hash: The hash of the
 * Deposit Count
 * Deposit Root
 
