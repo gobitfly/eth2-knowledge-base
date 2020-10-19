@@ -30,6 +30,8 @@ The BLS signature [obtained by](https://github.com/ethereum/eth2.0-specs/blob/de
 
 ### Randao Reveal
 
+_TODO_
+
 ### Grafitti
 
 A block proposer can include 32 byte long message to its block proposal.
@@ -38,17 +40,26 @@ A block proposer can include 32 byte long message to its block proposal.
 
 _Received Eth1 Block headers and Deposit data_ 
 
-* Block Hash: The hash of the
-* Deposit Count
-* Deposit Root
+* **Block Hash:** The Hash of the received Eth1 Block.
+* **Deposit Count:** Amount of validator deposits to the deposit contract in this block.
+* **Deposit Root:** The root of the merkle tree of deposits.
 
 ### Attestations
 
+Amount of Attestations included in this block by the block proposer.
+
 ### Deposits
+
+Amount of Validator deposits included in this block by the block proposer
 
 ### Voluntary Exits
 
-### Slashings 
+Amount of Voluntary Exits included in this block by the block proposer.
+
+### Slashings
+
+Amount of Slashings included in this block by the block proposer.  
+
 
 ![](.gitbook/assets/image%20%28176%29.png)
 
