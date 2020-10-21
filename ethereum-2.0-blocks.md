@@ -89,7 +89,7 @@ Each "1" bit is a successful attestation submitted by the validator. "0" bits vi
 
 ### Validators
 
-Validators who have submitted their attestation successfully.
+Validators who have submitted their attestation and have been included by the block proposer.
 
 ### Beacon Block Root
 
