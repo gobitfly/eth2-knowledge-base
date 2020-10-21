@@ -6,7 +6,7 @@ description: Blocks 'n' roots
 
 **WORK IN PROGRESS**  
   
-_This post is going to explain the data, Ethereum 2.0 explorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
+_This post is going to explain data, Ethereum 2.0 explorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
 
 ## Overview
 
