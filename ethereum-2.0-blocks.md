@@ -10,8 +10,7 @@ _This post is going to explain the data Ethereum 2.0 explorers visualize such as
 
 ## Overview
 
-_Epoch, Slot, Status, Proposer are covered in the_ [_glossary_](https://kb.beaconcha.in/glossary)  
-
+_Epoch, Slot, Status, Proposer are covered in the_ [_glossary_](https://kb.beaconcha.in/glossary)
 
 ### Block root
 
@@ -65,6 +64,8 @@ Amount of Slashings included in this block by the block proposer.
 
 ##  Votes
 
+Represents the total amount of votes in a specific block. In the example below there were 128 attestations. These attestations received a **total** of 2802 votes.  
+The aggregation bit is an additional way of representing the votes.  
 
 
 ![](.gitbook/assets/image%20%28177%29.png)
@@ -73,11 +74,22 @@ Amount of Slashings included in this block by the block proposer.
 
 ### Slot
 
+Is the slot number to which the validator is attesting. The slot number points to the same block as the beacon-block-root.
+
 ### Committee Index
+
+Every epoch the total number of validators is split up in committees and one or more individual committees are responsible to attest to each slot. The committee Index is the identifier for this specific committee during a slot.
 
 ### Aggregation Bits
 
+Represents the aggregated attestation of all participating validators in this attestation.  
+Each "1" bit is a successful attestation submitted by the validator. "0" bits visualise missed attestations.
+
+![](.gitbook/assets/image%20%28181%29.png)
+
 ### Validators
+
+Validators who have submitted their attestation successfully.
 
 ### Beacon Block Root
 
