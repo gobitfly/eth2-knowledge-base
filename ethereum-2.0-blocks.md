@@ -62,8 +62,7 @@ Amount of slashings which have been included in this block by the block proposer
 
 ##  Votes
 
-Represents the total amount of votes in a specific block. In the example below there were 128 attestations. These attestations received a **total** of 2802 votes.  
-The aggregation bit is an additional way of representing the votes.  
+Represents the total amount of votes in a specific block. In the example below there were 128 attestations. These attestations received a **total** of 2802 votes. The aggregation bit is an additional way of representing the votes.  
 
 
 ![](.gitbook/assets/image%20%28177%29.png)
