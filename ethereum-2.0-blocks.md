@@ -4,9 +4,7 @@ description: Blocks 'n' roots
 
 # Blocks
 
-**WORK IN PROGRESS**  
-  
-_This post is going to explain data, Ethereum 2.0 explorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
+_This post is going to lay out data, Ethereum 2.0 explorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
 
 ## Overview
 
@@ -45,19 +43,19 @@ _Received Eth1 Block headers and Deposit data_
 
 ### Attestations
 
-Amount of Attestations included in this block by the block proposer.
+Amount of attestations included in this block by the block proposer.
 
 ### Deposits
 
-Amount of Validator deposits which have been included in this block by the block proposer
+Amount of validator deposits which have been included in this block by the block proposer
 
 ### Voluntary Exits
 
-Amount of Voluntary Exits which have been included in this block by the block proposer.
+Amount of voluntary Exits which have been included in this block by the block proposer.
 
 ### Slashings
 
-Amount of Slashings which have been included in this block by the block proposer.  
+Amount of slashings which have been included in this block by the block proposer.  
 
 
 ![](.gitbook/assets/image%20%28176%29.png)
@@ -95,7 +93,9 @@ Validators who have submitted their attestation and have been included by the bl
 
 The beacon block root points to the block to which validators are attesting. The difference between the block number in which the attestation has been included, and the one the beacon block root is pointing to, causes the attestation inclusion delay.
 
-### Source  Target
+### Source & Target
+
+These are two additional votes a validator has to submit. The source points to the latest justified epoch, and the target to the latest epoch boundary.
 
 ### Signature
 
