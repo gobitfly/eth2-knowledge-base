@@ -49,15 +49,15 @@ Amount of Attestations included in this block by the block proposer.
 
 ### Deposits
 
-Amount of Validator deposits included in this block by the block proposer
+Amount of Validator deposits which have been included in this block by the block proposer
 
 ### Voluntary Exits
 
-Amount of Voluntary Exits included in this block by the block proposer.
+Amount of Voluntary Exits which have been included in this block by the block proposer.
 
 ### Slashings
 
-Amount of Slashings included in this block by the block proposer.  
+Amount of Slashings which have been included in this block by the block proposer.  
 
 
 ![](.gitbook/assets/image%20%28176%29.png)
@@ -92,6 +92,8 @@ Each "1" bit is a successful attestation submitted by the validator. "0" bits vi
 Validators who have submitted their attestation and have been included by the block proposer.
 
 ### Beacon Block Root
+
+The beacon block root points to the block to which validators are attesting. The difference between the block number in which the attestation has been included, and the one the beacon block root is pointing to, causes the attestation inclusion delay.
 
 ### Source  Target
 
