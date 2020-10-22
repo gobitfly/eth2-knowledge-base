@@ -2,13 +2,13 @@
 description: Blocks 'n' roots
 ---
 
-# Blocks
+# Block view
 
 _This post is going to lay out data, Ethereum 2.0 explorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
 
 ## Overview
 
-_Epoch, Slot, Status, Proposer are covered in the_ [_glossary_](https://kb.beaconcha.in/glossary)
+\_\_[_Epoch_](https://kb.beaconcha.in/glossary#epoch)_,_ [_Slot_](https://i.imgur.com/y8tVVUr.png)_,_ [_Status_](https://kb.beaconcha.in/glossary#validator-lifecycle)_,_ [_Proposer_](https://kb.beaconcha.in/glossary#validator-lifecycle) _are covered in the_ [_glossary_](https://kb.beaconcha.in/glossary)
 
 ### Block root
 

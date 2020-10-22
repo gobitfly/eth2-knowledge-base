@@ -9,7 +9,13 @@
 * [The Genesis Event](the-genesis-event.md)
 * [Attestation](attestation/README.md)
   * [Attestation Rewards](attestation/attestation-rewards.md)
-* [Blocks](ethereum-2.0-blocks.md)
+
+## Beaconcha.in Explorer
+
+---
+
+* [Block view](ethereum-2.0-blocks.md)
+* [Beaconcha.in Charts](eth2-charts.md)
 
 ## Guides
 
@@ -22,10 +28,6 @@
     * [Installing Docker on Windows Pro](guides/beacon-fuzzer/windows/installing-docker-on-windows-pro.md)
     * [Installing Docker on Windows Home](guides/beacon-fuzzer/windows/installing-docker-on-windows-home.md)
   * [Fuzzing on macOS](guides/beacon-fuzzer/macos.md)
-
-## Beaconcha.in Explorer
-
-* [Beaconcha.in Charts](beaconcha.in-explorer/eth2-charts.md)
 
 ## Archive
 
