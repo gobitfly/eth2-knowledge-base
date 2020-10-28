@@ -4,11 +4,11 @@
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
-* [Deposit Process](ethereum-2.0-and-depositing-process/README.md)
-  * [Depositing to Ethereum 2.0](ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0.md)
+* [Deposit Process](ethereum-2.0-and-depositing-process.md)
+* [Depositing to Ethereum 2.0](depositing-to-ethereum-2.0.md)
 * [The Genesis Event](the-genesis-event.md)
-* [Attestation](attestation/README.md)
-  * [Attestation Rewards](attestation/attestation-rewards.md)
+* [Attestation](attestation.md)
+* [Rewards and Penalties](rewards-and-penalties.md)
 
 ## Beaconcha.in Explorer
 
@@ -16,6 +16,7 @@
 
 * [Block view](ethereum-2.0-blocks.md)
 * [Beaconcha.in Charts](eth2-charts.md)
+* [Untitled](untitled.md)
 
 ## Guides
 

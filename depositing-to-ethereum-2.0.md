@@ -18,7 +18,7 @@ For demonstration purposes the Prysm Client will be used to create Ethereum 2.0 
   
 Create your own keys - on [macOS](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/macos-prysm/run-with-macos-using-prysm.sh#step-3) or [Windows](https://kb.beaconcha.in/tutorial-eth2-multiclient/prysm-client/windows-prysm/script-beaconnode-and-validator#step-4) with the prysm client
 
-![Key generation](../.gitbook/assets/image%20%2895%29.png)
+![Key generation](.gitbook/assets/image%20%2895%29.png)
 
 These 842 characters are the Ethereum 2.0 validator [identity](https://kb.beaconcha.in/ethereum-2-keys).
 
@@ -39,7 +39,7 @@ These letters, **the input data**, have to be included into the transaction to t
 6. Send transaction
 7. Track your deposit on the [beaconcha.in](https://beaconcha.in/validators/eth1deposits) explorer with your Ethereum 1.0 address
 
-![Transaction Overview](../.gitbook/assets/image%20%28101%29.png)
+![Transaction Overview](.gitbook/assets/image%20%28101%29.png)
 
 
 
