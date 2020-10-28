@@ -16,7 +16,7 @@
 
 * [Block view](ethereum-2.0-blocks.md)
 * [Beaconcha.in Charts](eth2-charts.md)
-* [Untitled](untitled.md)
+* [Optimal Inclusion Distance](optimal-inclusion-distance.md)
 
 ## Guides
 
