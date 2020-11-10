@@ -33,17 +33,17 @@ Once the threshold of **16,384 deposits** is met, the network will try to accomp
 
 The goal of the trigger block `(min_genesis_time - genesis_delay)` is that the chain can never start earlier than `min_genesis_time`. The second scenario will make this clearer.
 
-![](.gitbook/assets/image%20%28174%29.png)
+![](.gitbook/assets/image%20%28182%29.png)
 
 ### Scenario Two
 
 The required amount of deposits \(`Min_Genesis_Active_Validator_Count)` to fulfil the first condition occurs **after** `min_genesis_time.`   
   
-In this case, the second condition is met first and the trigger block becomes whatever `min_genesis_time` was set to.   
+In this case, the second condition is met first and the trigger block becomes whatever `min_genesis_time` was set.   
 The trigger block \(second condition\) is achieved right after the deposit contract receives 16,384 validator deposits.   
 Genesis time becomes `Trigger-block-timestamp + genesis_delay`.
 
-![](.gitbook/assets/image%20%28172%29.png)
+![](.gitbook/assets/image%20%28183%29.png)
 
 
 
