@@ -161,3 +161,9 @@ In order to determine if an Epoch has been finalized, validators have to agree o
 
 ![](https://user-images.githubusercontent.com/26490734/73467349-81761e00-4383-11ea-8733-af69fa72ebf6.png)
 
+### Finality issues
+
+If there are less than 66.6% votes \(=participation rate\) in a specific epoch, the epoch cannot be justified. As mentioned in "[Finalization](https://kb.beaconcha.in/glossary#finalizationhttps://kb.beaconcha.in/glossary#finalization)", three justified epochs in a row are required to reach finality. As long as the chain cannot reach this state it has finality issues.  
+  
+During finality issues the validator \(entry\) queue will be halted and new validators will not be able to join the network, however, inactive validators with less than &lt;16ETH balance will be kicked out of the network. This leads to more stability in the network and higher participation rate.
+
