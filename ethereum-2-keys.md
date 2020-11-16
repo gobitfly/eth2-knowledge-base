@@ -47,7 +47,7 @@ To withdraw, the validator status needs to be "[exited](https://kb.beaconcha.in/
 
 ![](.gitbook/assets/image%20%2858%29.png)
 
-## What happens to **multiple** deposits from a single ETH1 wallet \(=multiple validators\)?
+## Multiple validators from a single wallet
 
 Each validator has their own _**unique deposit data**_ by which they are identified by the [beaconchain](https://kb.beaconcha.in/glossary#beaconchain).  
 **Four keys** for **one validator**.
