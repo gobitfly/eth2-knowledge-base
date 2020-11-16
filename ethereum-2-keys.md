@@ -54,10 +54,10 @@ Each validator has their own _**unique deposit data**_ by which they are identif
 
 **Q:** How can I re-deposit to my validator balance? \(e.g. [Effective balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) has dropped\)
 
-**A:** Send another transaction \(&gt;=1ETH\) to the _deposit contract_ with the _validator specific deposit data_ as the transaction input. After the first deposit-transaction, the _unique deposit data_ is stored on the blockchain and can be found on various explorers.
+**A:** Send another transaction \(&gt;=1ETH\) to the _deposit contract_ with the _validator specific **deposit data**_ ****as the transaction input. After the first deposit-transaction, the _unique deposit data_ is stored on the blockchain and can be found on various explorers.
 
 **Note:**  
-The deposit contract takes about **360,000 gas** but due how refunds for freed storage work, **400,000 - 500,000 as a gas limit** for the transaction is recommended.
+The deposit contract requires about **150,000 gas** **limit.**
 
 ![](.gitbook/assets/image%20%2848%29.png)
 
