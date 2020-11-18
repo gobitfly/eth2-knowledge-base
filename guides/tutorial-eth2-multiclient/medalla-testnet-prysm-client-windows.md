@@ -26,10 +26,12 @@ Let's use the launchpad to generate Ethereum 2.0 validator keys and to deposit 3
 
 ![](../../.gitbook/assets/2020-08-05_11-39-50.gif)
 
-####  **2.**_**Step**_
+###  **Choosing Eth1 & Eth2 clients**
 
-**Head** over to ****the [Medalla launchpad](https://medalla.launchpad.ethereum.org/)  
-Skip the overview until you get to **Generate Key Pairs.**
+Head over to ****the [Pyrmont launchpad](https://pyrmont.launchpad.ethereum.org/)  
+Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your Eth 2 client.**
+
+![](../../.gitbook/assets/image%20%28184%29.png)
 
 **Generate Key Pairs**  
 Choose the amount of validators you would like to run and Windows as the operating system.  
@@ -39,7 +41,26 @@ Each validator will cost 32 Goerli ETH.
 
 ![](../../.gitbook/assets/image%20%28158%29.png)
 
-**Skip** every step until you have to upload the deposit file as shown below.
+### Creating keys
+
+Download the [**eth2.0-deposit-cli**](https://github.com/ethereum/eth2.0-deposit-cli)
+
+![](../../.gitbook/assets/image%20%28186%29.png)
+
+**Create** a new folder named **prysm\_pyrmont** and **move** the downloaded file into **prysm\_pyrmont**.
+
+![](../../.gitbook/assets/2020-11-18_12-02-09.gif)
+
+
+
+**Open a Terminal window** and drag&drop the **deposit.exe** file into the terminal as shown below.  
+Follow the instructions to create your Ethereum 2.0 keys!
+
+![](../../.gitbook/assets/2020-11-18_12-17-59.gif)
+
+  
+  
+Let's go to the **next page** and upload our **deposit data file.**
 
 ![](../../.gitbook/assets/image%20%28156%29.png)
 
