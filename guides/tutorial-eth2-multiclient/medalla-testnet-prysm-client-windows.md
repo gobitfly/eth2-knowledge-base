@@ -12,7 +12,7 @@ There are multiple ways on how to get started, we will use the one which is the 
 [Official Prysm docs](https://docs.prylabs.network/docs/getting-started)  
 [Prysmatic labs discord server](https://discord.gg/wJW7Rjk)
 
-## [Official **Medalla** Launchpad](https://medalla.launchpad.ethereum.org/)
+## [Official **Pyrmont** Launchpad](https://pyrmont.launchpad.ethereum.org/)
 
 Let's use the launchpad to generate Ethereum 2.0 validator keys and to deposit 32 **Goerli** ETH.
 
