@@ -6,7 +6,7 @@ description: A guide for non-technical users
 
 ## Disclaimer
 
-The following steps only apply for the [**Medalla Testnet**](https://beaconcha.in/) and may be outdated in a few weeks as Ethereum 2.0 clients develop rapidly, however, we will try to keep these documents updated.  
+The following steps only apply for the [**Pyrmont Testnet**](https://pyrmont.beaconcha.in/) and may be outdated in a few weeks as Ethereum 2.0 clients develop rapidly, however, we will try to keep these documents updated.  
 There are multiple ways on how to get started, we will use the one which is the easiest as of now.    
   
 [Official Prysm docs](https://docs.prylabs.network/docs/getting-started)  
@@ -14,19 +14,7 @@ There are multiple ways on how to get started, we will use the one which is the 
 
 ## [Official **Pyrmont** Launchpad](https://pyrmont.launchpad.ethereum.org/)
 
-Let's use the launchpad to generate Ethereum 2.0 validator keys and to deposit 32 **Goerli** ETH.
-
-#### 1. Step
-
-**Download** the **latest** Eth2.0-deposit-cli [here](https://github.com/ethereum/eth2.0-deposit-cli/releases/) to generate keys.
-
-![](../../.gitbook/assets/image%20%28153%29.png)
-
-**Create** a folder named **prysm\_medalla** in **C:\** and **move** the downloaded file into **C:\prysm\_medalla**.
-
-![](../../.gitbook/assets/2020-08-05_11-39-50.gif)
-
-##  **Choosing Eth1 & Eth2 clients**
+## **Choosing Eth1 & Eth2 clients**
 
 Head over to ****the [Pyrmont launchpad](https://pyrmont.launchpad.ethereum.org/)  
 Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your Eth 2 client.**
@@ -35,7 +23,17 @@ Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your
 
 ## **Start Ethereum 1.0 Node**
 
-asd
+1. Create a folder named `prysm` in `C:\`
+2. Download [Geth](https://geth.ethereum.org/downloads/) and open a terminal window.
+3. Double click the .exe `geth-windows-amd64-x.x.xx-cc05b050`. Once the installation is complete there should be **`geth.exe`** in the directory chosen during the installation. 
+4. Drag and Drop the geth.exe and add `--datadir="C:\prysm" --goerli --http`
+
+![](../../.gitbook/assets/2020-11-19_14-13-02.gif)
+
+Wait for the Ethereum 1.0 node to be in sync. The logs will look like the following once the node is in sync  
+This terminal window needs to run in parallel to the Ethereum 2.0 node, which will be covered in the next steps. 
+
+![](../../.gitbook/assets/grafik%20%284%29.png)
 
 ## **Generate Key Pairs**
 
@@ -66,14 +64,14 @@ Follow the instructions to create your Ethereum 2.0 keys!
 
 ![](../../.gitbook/assets/2020-11-18_12-17-59.gif)
 
-![](../../.gitbook/assets/grafik%20%286%29.png)
+![](../../.gitbook/assets/grafik%20%288%29.png)
 
 Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **file** \(located in the path shown in the terminal\)**, continue** and deposit 32 goerli Eth**.**  
 
 
 ![](../../.gitbook/assets/2020-08-05_12-34-29.gif)
 
-![](../../.gitbook/assets/grafik%20%283%29.png)
+![](../../.gitbook/assets/grafik%20%285%29.png)
 
 ## Downloading Prysm
 
@@ -87,7 +85,7 @@ This is only required for the initial setup
 2. `curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.bat --output prysm.bat` Downloads the prysm.bat file 
 3. `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1` Changes some vizulations in the terminal window
 
-![](../../.gitbook/assets/grafik%20%284%29.png)
+![](../../.gitbook/assets/grafik%20%286%29.png)
 
 ## Importing validator keys 
 
@@ -101,59 +99,27 @@ This is only required for the initial setup
 **Enter a new wallet directory and a new password.**   
 In this example we chose `C:\prysm` as the new wallet directory.
 
+![](../../.gitbook/assets/grafik%20%281%29.png)
+
+
+
+## **Start the beacon node**
+
+Open a new terminal window, **drag & drop the prysm.bat** file and add  
+`--datadir=C:\prysm --http-web3provider=http://localhost:8545/ --pyrmont`
+
+![](../../.gitbook/assets/2020-11-19_14-41-10.gif)
+
+## **Start the validator node**Open a new terminal window, **drag & drop the prysm.bat** file and add `validator --wallet-dir=C:\prysm --datadir=C:\prysm --pyrmont`
+
+![](../../.gitbook/assets/2020-11-19_14-54-29.gif)
+
+Enter your wallet password which was set in the previous step.   
+Find the **validator public keys** in the logs
+
 ![](../../.gitbook/assets/grafik.png)
 
 
-
-#### **5. Step**
-
-**Download Prysm.bat**  
-  
-Open a terminal window and type the following  
-`cd C:\prysm_medalla`  
-  
-`curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.bat --output prysm.bat`
-
-The **prysm.bat** file will appear in **C:\prysm\_medalla**
-
-![](../../.gitbook/assets/prysmbatdownload%20%281%29.png)
-
-#### 6. Step
-
-#### Start the beacon node
-
-**Open** a **command prompt window** and the downloaded **prysm.bat file  
-Drag and drop** the **Prysm.bat** file and add `beacon-chain --datadir=C:\prysm_medalla`
-
-![](../../.gitbook/assets/2020-08-05_13-11-27.gif)
-
-**Wait** for the beaconnode to be in sync with the blockchain.   
-This may take a few hours and you will see the following message  
-  
-`Synced new block block=...`
-
-\*\*\*\*
-
-#### **6. Converting Launchpad's Ethereum 2.0 keys** 
-
-_We now need to convert the Launchpad keys into a format that the validator can read.   
-There are multiple ways to do this. This guide will use the 24 word Mnemonic phrase \(generated by the launchpad in 3.Step\) to convert the keys to the correct format by using the prysm client._  
-  
-Open a **new command prompt window**, **drag and drop the prysm.bat file** and add `validator wallet recover`
-
-Followed by the **24 word Mnemonmic phrase**. Afterwards, choose a strong password.  
-Set the new wallet directory to `C:\prysm_medalla\wallet` and enter the amount of validators you previously chose.   
-  
-_The Eth1 Deposit Transaction data, which is required to_ [_deposit_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0#create-eth-2-0-keys)_, can be **ignored** since this was automatically done on the Launchpad._
-
-![](../../.gitbook/assets/image%20%28154%29.png)
-
-#### 7. Step
-
-#### Starting the validator
-
-Again, open a **new command prompt window**, **drag and drop the prysm.bat file** and add   
-`validator --wallet-dir=C:\prysm_medalla\wallet --datadir=C:\prysm_medalla --graffiti="beaconcha.in<3"`
 
 Enter your wallet password which was set in the previous step.   
 **That's it. We are done!**
