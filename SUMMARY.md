@@ -22,16 +22,16 @@
 
 * [Step by Step: How to join the Ethereum 2.0 Testnet](guides/tutorial-eth2-multiclient/README.md)
   * [Pyrmont Testnet: Prysm Client - Windows](guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
-  * [Medalla Testnet: Lighthouse Client - macOS](guides/tutorial-eth2-multiclient/beaconnode-and-validator-with-macos.md)
-* [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](guides/run-a-goerli-node-eth1-and-beaconnode-eth2.md)
-* [Beacon Fuzzer](guides/beacon-fuzzer/README.md)
-  * [Fuzzing on Windows](guides/beacon-fuzzer/windows/README.md)
-    * [Installing Docker on Windows Pro](guides/beacon-fuzzer/windows/installing-docker-on-windows-pro.md)
-    * [Installing Docker on Windows Home](guides/beacon-fuzzer/windows/installing-docker-on-windows-home.md)
-  * [Fuzzing on macOS](guides/beacon-fuzzer/macos.md)
 
 ## Archive
 
+* [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](archive/run-a-goerli-node-eth1-and-beaconnode-eth2.md)
+* [Medalla Testnet: Lighthouse Client - macOS](archive/beaconnode-and-validator-with-macos.md)
+* [Beacon Fuzzer](archive/beacon-fuzzer/README.md)
+  * [Fuzzing on Windows](archive/beacon-fuzzer/windows/README.md)
+    * [Installing Docker on Windows Pro](archive/beacon-fuzzer/windows/installing-docker-on-windows-pro.md)
+    * [Installing Docker on Windows Home](archive/beacon-fuzzer/windows/installing-docker-on-windows-home.md)
+  * [Fuzzing on macOS](archive/beacon-fuzzer/macos.md)
 * [OUTDATED: Prysm Client Guides](archive/outdated-prysm-client-windows/README.md)
   * [Essential commands \(macOS & Windows\)](archive/outdated-prysm-client-windows/tl-dr-essential-commands-macos-and-windows.md)
   * [macOS](archive/outdated-prysm-client-windows/macos-prysm/README.md)
