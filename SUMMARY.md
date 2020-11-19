@@ -21,7 +21,7 @@
 ## Guides
 
 * [Step by Step: How to join the Ethereum 2.0 Testnet](guides/tutorial-eth2-multiclient/README.md)
-  * [Medalla Testnet: Prysm Client - Windows](guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
+  * [Pyrmont Testnet: Prysm Client - Windows](guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
   * [Medalla Testnet: Lighthouse Client - macOS](guides/tutorial-eth2-multiclient/beaconnode-and-validator-with-macos.md)
 * [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](guides/run-a-goerli-node-eth1-and-beaconnode-eth2.md)
 * [Beacon Fuzzer](guides/beacon-fuzzer/README.md)

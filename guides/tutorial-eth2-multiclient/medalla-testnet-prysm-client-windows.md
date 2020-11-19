@@ -2,7 +2,7 @@
 description: A guide for non-technical users
 ---
 
-# Medalla Testnet: Prysm Client - Windows
+# Pyrmont Testnet: Prysm Client - Windows
 
 ## Disclaimer
 
@@ -26,14 +26,19 @@ Let's use the launchpad to generate Ethereum 2.0 validator keys and to deposit 3
 
 ![](../../.gitbook/assets/2020-08-05_11-39-50.gif)
 
-###  **Choosing Eth1 & Eth2 clients**
+##  **Choosing Eth1 & Eth2 clients**
 
 Head over to ****the [Pyrmont launchpad](https://pyrmont.launchpad.ethereum.org/)  
 Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your Eth 2 client.**
 
 ![](../../.gitbook/assets/image%20%28184%29.png)
 
-**Generate Key Pairs**  
+## **Start Ethereum 1.0 Node**
+
+asd
+
+## **Generate Key Pairs**
+
 Choose the amount of validators you would like to run and Windows as the operating system.  
 Each validator will cost 32 Goerli ETH.  
   
@@ -41,7 +46,7 @@ Each validator will cost 32 Goerli ETH.
 
 ![](../../.gitbook/assets/image%20%28158%29.png)
 
-### Creating keys
+## Creating keys
 
 Download the [**eth2.0-deposit-cli**](https://github.com/ethereum/eth2.0-deposit-cli)
 
@@ -54,44 +59,51 @@ Download the [**eth2.0-deposit-cli**](https://github.com/ethereum/eth2.0-deposit
 
 
 **Open a Terminal window** and drag&drop the **deposit.exe** file into the terminal as shown below.  
-Follow the instructions to create your Ethereum 2.0 keys!
+Follow the instructions to create your Ethereum 2.0 keys!  
+**Drag and drop** the Eth2.0-deposit-cli file and **add** `new-mnemonic --chain pyrmont`
+
+**WRITE DOWN THE GENERATED 24 WORD MNEMONIC PHRASE** 
 
 ![](../../.gitbook/assets/2020-11-18_12-17-59.gif)
 
-  
-  
-Let's go to the **next page** and upload our **deposit data file.**
+![](../../.gitbook/assets/grafik%20%286%29.png)
 
-![](../../.gitbook/assets/image%20%28156%29.png)
+Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **file** \(located in the path shown in the terminal\)**, continue** and deposit 32 goerli Eth**.**  
 
-#### 3. Step 
-
-**Generating the validator keys for the launchpad.**  
-  
-  
-Open a command prompt window and the downloaded Eth2.0-deposit-cli.  
-**Drag and drop** the Eth2.0-deposit-cli file and add ****`--num_validators 2 --chain medalla`  
-Adapt `--num_validators X` to the amount of validators you chose on the launchpad previously.  
-  
-**WRITE DOWN THE GENERATED 24 WORD MNEMONIC PHRASE** 
-
-![](../../.gitbook/assets/2020-08-05_12-25-54.gif)
-
-The generated keys are now located in `C:\Users\Inan\validator_keys`
-
-#### 
-
-#### 4. Step
-
-Import the `deposit-data-[timestamp].json` file to the launchpad and deposit with Metamask.
 
 ![](../../.gitbook/assets/2020-08-05_12-34-29.gif)
 
-Once the transactions went through it will look like the following
+![](../../.gitbook/assets/grafik%20%283%29.png)
 
-![](../../.gitbook/assets/image%20%28155%29.png)
+## Downloading Prysm
 
-#### \*\*\*\*
+{% hint style="success" %}
+This is only required for the initial setup
+{% endhint %}
+
+#### Open a Terminal window and run: 
+
+1.  `mkdir prysm && cd prysm`  creates a folder named "prysm" 
+2. `curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.bat --output prysm.bat` Downloads the prysm.bat file 
+3. `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1` Changes some vizulations in the terminal window
+
+![](../../.gitbook/assets/grafik%20%284%29.png)
+
+## Importing validator keys 
+
+**Drag and drop** the prysm.bat file and **add** `validator accounts import --keys-dir=` **AND** the path to your newly created keys**.** For this example the path is `C:\Users\Inan\validator_keys`
+
+**Which results**   
+`prysm.bat validator accounts import --keys-dir=C:\Users\Inan\validator_keys`
+
+![](../../.gitbook/assets/2020-11-19_12-10-45.gif)
+
+**Enter a new wallet directory and a new password.**   
+In this example we chose `C:\prysm` as the new wallet directory.
+
+![](../../.gitbook/assets/grafik.png)
+
+
 
 #### **5. Step**
 
