@@ -26,7 +26,7 @@ Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your
 1. Create a folder named `prysm` in `C:\`
 2. Download [Geth](https://geth.ethereum.org/downloads/) and open a terminal window.
 3. Double click the .exe `geth-windows-amd64-x.x.xx-cc05b050`. Once the installation is complete there should be **`geth.exe`** in the directory chosen during the installation. 
-4. Drag and Drop the geth.exe and add `--datadir="C:\prysm" --goerli --http`
+4. **Drag and Drop** the `geth.exe` file and add `--datadir="C:\prysm" --goerli --http`
 
 ![](../../.gitbook/assets/2020-11-19_14-13-02.gif)
 
@@ -101,8 +101,6 @@ In this example we chose `C:\prysm` as the new wallet directory.
 
 ![](../../.gitbook/assets/grafik%20%281%29.png)
 
-
-
 ## **Start the beacon node**
 
 Open a new terminal window, **drag & drop the prysm.bat** file and add  
@@ -123,7 +121,9 @@ Find the **validator public keys** in the logs
 ![](../../.gitbook/assets/grafik.png)
 
 Enter your wallet password which was set in the[ previous step](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows#importing-validator-keys).   
-**That's it. We are done!**
+**That's it. We are done! Your setup should now have three running terminal windows**
+
+![](../../.gitbook/assets/grafik%20%2810%29.png)
 
 Enter your pubkey on the [**beaconcha.in**](https://pyrmont.beaconcha.in/) **explorer** to track its current status and performance.  
 Find out what each of the validator status mean - _"**What does "**_[_**Unknown status**_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)_**" mean?"**_ ****
