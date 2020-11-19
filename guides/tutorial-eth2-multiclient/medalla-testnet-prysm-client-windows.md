@@ -50,7 +50,7 @@ Download the [**eth2.0-deposit-cli**](https://github.com/ethereum/eth2.0-deposit
 
 ![](../../.gitbook/assets/image%20%28186%29.png)
 
-**Create** a new folder named **prysm\_pyrmont** and **move** the downloaded file into **prysm\_pyrmont**.
+**Create** a new folder named **prysm** and **move** the downloaded file into **prysm**.
 
 ![](../../.gitbook/assets/2020-11-18_12-02-09.gif)
 
@@ -110,7 +110,10 @@ Open a new terminal window, **drag & drop the prysm.bat** file and add
 
 ![](../../.gitbook/assets/2020-11-19_14-41-10.gif)
 
-## **Start the validator node**Open a new terminal window, **drag & drop the prysm.bat** file and add `validator --wallet-dir=C:\prysm --datadir=C:\prysm --pyrmont`
+## **Start the validator node**
+
+Open a new terminal window, **drag & drop the prysm.bat** file and add  
+`validator --wallet-dir=C:\prysm --datadir=C:\prysm --pyrmont`
 
 ![](../../.gitbook/assets/2020-11-19_14-54-29.gif)
 
@@ -119,13 +122,9 @@ Find the **validator public keys** in the logs
 
 ![](../../.gitbook/assets/grafik.png)
 
-
-
-Enter your wallet password which was set in the previous step.   
+Enter your wallet password which was set in the[ previous step](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows#importing-validator-keys).   
 **That's it. We are done!**
 
-![](../../.gitbook/assets/validator.png)
-
-Enter your pubkey on the [beaconcha.in](https://beaconcha.in/) to explorer to track its current status and performance.  
-_"What does "_[_Unknown status_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)_" mean?"_ 
+Enter your pubkey on the [**beaconcha.in**](https://pyrmont.beaconcha.in/) **explorer** to track its current status and performance.  
+Find out what each of the validator status mean - _"**What does "**_[_**Unknown status**_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)_**" mean?"**_ ****
 
