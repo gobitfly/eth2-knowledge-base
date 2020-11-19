@@ -30,8 +30,8 @@ Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your
 
 ![](../.gitbook/assets/2020-11-19_14-13-02.gif)
 
-Wait for the Ethereum 1.0 node to be in sync. The logs will look like the following once the node is in sync  
-This terminal window needs to run in parallel to the Ethereum 2.0 node, which will be covered in the next steps. 
+This terminal window needs to run in parallel to the Ethereum 2.0 node, which will be covered in the next steps.   
+Wait for the Ethereum 1.0 node to be in sync. The logs will look like the following once the node is in sync
 
 ![](../.gitbook/assets/grafik%20%284%29.png)
 
