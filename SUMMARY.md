@@ -20,8 +20,8 @@
 
 ## Guides
 
-* [Step by Step: How to join the Ethereum 2.0 Testnet](guides/tutorial-eth2-multiclient/README.md)
-  * [Pyrmont Testnet: Prysm Client - Windows](guides/tutorial-eth2-multiclient/medalla-testnet-prysm-client-windows.md)
+* [Step by Step: How to join the Ethereum 2.0 Testnet](guides/tutorial-eth2-multiclient.md)
+* [Pyrmont Testnet: Prysm Client - Windows](guides/medalla-testnet-prysm-client-windows.md)
 
 ## Archive
 

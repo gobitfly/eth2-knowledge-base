@@ -17,7 +17,7 @@ Note: There are **multiple** ways to join the ETH2.0 Testnet by using different 
 
 Before we start, it is recommended reading the [glossary](https://kb.beaconcha.in/glossary) but not a requirement.
 
-![](../../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 ## Start Staking
 
