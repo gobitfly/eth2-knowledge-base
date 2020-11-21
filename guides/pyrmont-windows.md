@@ -104,7 +104,7 @@ In this example we chose `C:\prysm` as the new wallet directory.
 ## **Start the beacon node**
 
 Open a new terminal window, **drag & drop the prysm.bat** file and add  
-`--datadir=C:\prysm --http-web3provider=http://localhost:8545/ --pyrmont`
+`beacon-chain -datadir=C:\prysm --http-web3provider=http://localhost:8545/ --pyrmont`
 
 ![](../.gitbook/assets/2020-11-19_14-41-10.gif)
 
