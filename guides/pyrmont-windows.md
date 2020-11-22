@@ -50,7 +50,7 @@ Download the [**eth2.0-deposit-cli**](https://github.com/ethereum/eth2.0-deposit
 
 ![](../.gitbook/assets/image%20%28186%29.png)
 
-**Create** a new folder named **prysm** and **move** the downloaded file into **prysm**.
+**Move** the downloaded file into **prysm**.
 
 ![](../.gitbook/assets/2020-11-18_12-02-09.gif)
 
@@ -81,7 +81,7 @@ This is only required for the initial setup
 
 #### Open a Terminal window and run: 
 
-1.  `mkdir prysm && cd prysm`  creates a folder named "prysm" 
+1.  `cd C:\prysm`  changes the directory  
 2. `curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.bat --output prysm.bat` Downloads the prysm.bat file 
 3. `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1` Changes some vizulations in the terminal window
 
