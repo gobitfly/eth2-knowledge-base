@@ -5,7 +5,7 @@
 * [Staking & Hardware](staking-and-hardware.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
 * [The Genesis Event](the-genesis-event.md)
-* [Deposit Process](ethereum-2.0-and-depositing-process.md)
+* [Deposit Process](ethereum-2.0--depositing.md)
 * [Depositing to Ethereum 2.0](depositing-to-ethereum-2.0.md)
 * [Attestation](attestation.md)
 * [Rewards and Penalties](rewards-and-penalties.md)
