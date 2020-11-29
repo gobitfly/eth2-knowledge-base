@@ -25,7 +25,7 @@
 
 ## Archive
 
-* [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](archive/run-a-goerli-node-eth1-and-beaconnode-eth2.md)
+* [Run a Goerli node \(ETH1\) & beaconnode \(ETH2\)](archive/eth1-infura.md)
 * [Medalla Testnet: Lighthouse Client - macOS](archive/beaconnode-and-validator-with-macos.md)
 * [Beacon Fuzzer](archive/beacon-fuzzer/README.md)
   * [Fuzzing on Windows](archive/beacon-fuzzer/windows/README.md)
