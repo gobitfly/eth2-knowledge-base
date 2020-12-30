@@ -52,16 +52,13 @@ Once the deposit is in the deposit contract, the state of the validator will swi
 
 ![](.gitbook/assets/image%20%28108%29.png)
 
-The deposit is accessible now for the beacon-chain. Depending on how many deposits in total have occurred, the validators line up a queue. Four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** get activated.  
-  
-**Note:**   
-The first 16,384 Validators, the genesis validators, do **not** line up in a queue.
+The deposit is accessible now for the beacon-chain. Depending on the amount of total deposits, the validators have to wait in a queue. Four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** can get activated.
 
 ## 4. Staking - Status: Active
 
 ![](.gitbook/assets/image%20%28112%29.png)
 
-The validator is now actively staking, proposing blocks and signing attestations - ready to earn rewards!
+The validator is now actively staking. It is proposing blocks and signing attestations - ready to earn ETH!
 
 ## Other validator status
 
@@ -75,13 +72,13 @@ The transaction had an invalid [BLS](https://kb.beaconcha.in/ethereum-2-keys#gen
 
 #### Active Offline
 
-An active validator has not been attesting for two epochs.
+An active validator has not been attesting for at least two epochs.
 
 ![](.gitbook/assets/image%20%28117%29.png)
 
 #### Exiting Online
 
-The validator **is online** and currently exiting the network because either its **balance dropped below 16ETH** or the **exit was requested** by the validator.
+The validator **is online** and currently exiting the network because either its **balance dropped below 16ETH \(forced exit\)** or the **exit was requested** **\(voluntary exit\)** by the validator.
 
 ![](.gitbook/assets/image%20%28104%29.png)
 
@@ -93,14 +90,14 @@ The validator **is offline** and currently exiting the network because either it
 
 #### Slashing Online
 
-The validator **is online** but has been malicious and was forced to exit the network.
+The validator **is online** but was malicious and therefore forced to **exit** the network.
 
 ![](.gitbook/assets/image%20%28105%29.png)
 
 #### Slashing Offline 
 
-The validator **is offline** but has been malicious and was forced to exit the network.   
-It is currently in the exiting queue with a minimum of 25 minutes.
+The validator **is offline** and was malicious and which lead to a forced to exit out of the network.   
+The validator is currently in the exiting queue with a minimum of 25 minutes.
 
 ![](.gitbook/assets/image%20%28114%29.png)
 
