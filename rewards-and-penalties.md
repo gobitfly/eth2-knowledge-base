@@ -26,7 +26,7 @@ Rewards and penalties are based on the correctness of
 
 ###  **Possible Attestation properties**
 
-![](.gitbook/assets/image%20%28194%29.png)
+![](.gitbook/assets/image%20%28197%29.png)
 
 The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an inclusion distance of 32 ****and the **best** is **base\_reward \* 1/1 \* 7/8** with an inclusion distance of 1.
 
