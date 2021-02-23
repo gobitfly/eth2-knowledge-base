@@ -14,9 +14,9 @@ A validator can propose **one attestation** and **one block** per epoch and depe
 
 Rewards and penalties are based on the correctness of
 
-* **Source:** base\_reward
-* **Head:** base\_reward
-* **Target:** base\_reward
+* **Source**
+* **Head**
+* **Target**
 
 **Head, Source, target,** can be either positive or negative, however the **inclusion delay** can just be positive. The **Source** has to be **correct** in order to get included. 
 
@@ -24,17 +24,29 @@ Rewards and penalties are based on the correctness of
 
 ![](.gitbook/assets/image%20%28195%29.png)
 
+The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an inclusion distance of 32 ****and the **best** is **base\_reward \* 1/1 \* 7/8** with an inclusion distance of 1.
+
 ###  **Possible Attestation properties**
 
-![](.gitbook/assets/image%20%28204%29.png)
+![](.gitbook/assets/image%20%28206%29.png)
 
-The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an inclusion distance of 32 ****and the **best** is **base\_reward \* 1/1 \* 7/8** with an inclusion distance of 1.
+
+
+### **Common case scenarios**
+
+_Assumption: The participation rate is 100%_
+
+1. You vote correctly and gets included in the next slot: you get **31/8\*base\_reward**
+2. You miss head because you got a late block and it gets included in the next slot: **15/8\*base\_reward**
+3. You miss head and target cause you got late a block, you get **-1/8\* base\_reward**
+4. You attest and vote correctly, but the next block is missed, you get **55/16 \* base\_reward**
+5. You attest correctly and get perfect inclusion distance, but you attested on a block that most people got late as in 2., you get **~7/8 \* base\_reward**  _The last one is the most confusing one: When there is a late block where validators miss the head, the validator that misses the head earns **more** than the validator that votes correctly, as in 2.  15/8 &gt; 7/8_
 
 **Best possible reward**  
 3 \* base reward + base reward \* \(base reward \* 7/8\)  
   
 **Worst possible reward with an included attestation \("Negative Reward"\)**  
-\(base reward\) - \( 2 \* base reward \) + \(base reward \* 1/28\)
+\(base reward\) - \( 2 \* base reward \) + \(base reward \* 7/256\)
 
 
 
