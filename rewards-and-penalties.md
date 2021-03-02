@@ -10,7 +10,7 @@ A simplified overview of the most common validator rewards.
 
 A validator can propose **one attestation** and **one block** per epoch and depending on their properties the reward varies.
 
-### Attestation reward
+## Attestation reward
 
 Rewards and penalties are based on the correctness of
 
@@ -28,7 +28,7 @@ The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an 
 
 ###  **Possible Attestation properties**
 
-![](.gitbook/assets/image%20%28206%29.png)
+![](.gitbook/assets/image%20%28207%29.png)
 
 
 
@@ -43,18 +43,19 @@ _Assumption: The participation rate is 100%_
 5. You attest correctly and get perfect inclusion distance, but you attested on a block that most people got late as in 2., you get **~7/8 \* base\_reward**  _The last one is the most confusing one: When there is a late block where validators miss the head, the validator that misses the head earns **more** than the validator that votes correctly, as in 2.  15/8 &gt; 7/8_
 
 **Best possible reward**  
-3 \* base reward + base reward \* \(base reward \* 7/8\)  
+31/8 \* base\_reward  
   
 **Worst possible reward with an included attestation \("Negative Reward"\)**  
-\(base reward\) - \( 2 \* base reward \) + \(base reward \* 7/256\)
+-249/256 \* base\_reward
 
 
+
+## Block reward
 
 {% hint style="info" %}
-THIS POST IS WORK IN PROGRESS AND VERY LIKELY TO BE WRONG
+TBD
 {% endhint %}
 
+  
 
-
-### Block reward 
 
