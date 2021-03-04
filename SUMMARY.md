@@ -3,6 +3,7 @@
 * [Overview](README.md)
 * [Glossary](glossary.md)
 * [Staking & Hardware](staking-and-hardware.md)
+* [Port Forwarding](port-forwarding.md)
 * [Ethereum 2.0 Keys](ethereum-2-keys.md)
 * [The Genesis Event](the-genesis-event.md)
 * [Deposit Process](ethereum-2.0-depositing.md)
