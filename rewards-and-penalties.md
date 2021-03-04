@@ -50,13 +50,7 @@ _Assumption: The participation rate is 100%_
 **Worst possible reward with an included attestation \("Negative Reward"\)**  
 -249/256 \* base\_reward
 
-
-
 ## Block reward
-
-{% hint style="info" %}
-TBD
-{% endhint %}
 
 Only **valid** attestations \(correct source\) can be included in a block and the rewards for a block proposal scale with the amount of included [aggregated attestations](https://kb.beaconcha.in/attestation#aggregated-attestation). Theoretically, block proposers could include aggregated attestations from a parent block, but there is incentive to do so. 
 
