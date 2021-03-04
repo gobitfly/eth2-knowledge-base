@@ -58,5 +58,5 @@ Each included attestation in a block will be rewarded with `base_reward/8` where
 
 There is **no** penalty for not proposing a block.  
   
-A block proposer which includes slashing will be rewarded with the `base_reward/8 * slashed_validators_effective_balance) / 512`
+A block proposer which includes slashing will be rewarded with the `base_reward/8 * ((slashed_validators_effective_balance) / 512)`
 
