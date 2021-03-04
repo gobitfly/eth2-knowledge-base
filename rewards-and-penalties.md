@@ -60,9 +60,5 @@ TBD
 
 Only **valid** attestations \(correct source\) can be included in a block and the rewards for a block proposal scale with the amount of included [aggregated attestations](https://kb.beaconcha.in/attestation#aggregated-attestation). Theoretically, block proposers could include aggregated attestations from a parent block, but there is incentive to do so. 
 
-Each included attestation in a block will be rewarded with `base_reward/8` where `8` is the `Proposer_Reward_Quotient` .
-
-#### Maximum Block reward
-
-`MAX_ATTESTATIONS(128)` x _`MAX_VALIDATORS_PER_COMMITTEE(2048)` x_ `base_reward/8` 
+Each included attestation in a block will be rewarded with `base_reward/8` where `8` is the `Proposer_Reward_Quotient` 
 
