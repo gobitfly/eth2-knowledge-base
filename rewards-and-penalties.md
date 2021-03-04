@@ -20,6 +20,8 @@ Rewards and penalties are based on the correctness of
 
 **Head, Source, target,** can be either positive or negative, however the **inclusion delay** can just be positive. The **Source** has to be **correct** in order to get included. 
 
+### Base Reward
+
 ![](.gitbook/assets/grafik%20%2811%29.png)
 
 ![](.gitbook/assets/image%20%28195%29.png)
@@ -56,6 +58,11 @@ _Assumption: The participation rate is 100%_
 TBD
 {% endhint %}
 
-  
+Only **valid** attestations \(correct source\) can be included in a block and the rewards for a block proposal scale with the amount of included [aggregated attestations](https://kb.beaconcha.in/attestation#aggregated-attestation). Theoretically, block proposers could include aggregated attestations from a parent block, but there is incentive to do so. 
 
+Each included attestation in a block will be rewarded with `base_reward/8` where `8` is the `Proposer_Reward_Quotient` .
+
+#### Maximum Block reward
+
+`MAX_ATTESTATIONS(128)` x _`MAX_VALIDATORS_PER_COMMITTEE(2048)` x_ `base_reward/8` 
 
