@@ -52,11 +52,11 @@ _Assumption: The participation rate is 100%_
 
 ## Block reward
 
-Only **valid** attestations \(correct source\) can be included in a block and the rewards for a block proposal scale with the amount of included [aggregated attestations](https://kb.beaconcha.in/attestation#aggregated-attestation). Theoretically, block proposers could include aggregated attestations from a parent block, but there is incentive to do so. 
+Only **valid** attestations \(correct source\) can be included in a block and the rewards for a block proposal scale with the amount of included [attestations](https://kb.beaconcha.in/attestation). Theoretically, block proposers could include aggregated attestations from a parent block, but there is incentive to do so. 
 
-Each included attestation in a block will be rewarded with `base_reward/8` where `8` is the `Proposer_Reward_Quotient` 
+Each included attestation in a block will be rewarded \(if it is the first time that is included in a block\) with `base_reward/8` where `8` is the `Proposer_Reward_Quotient` 
 
 There is **no** penalty for not proposing a block.  
   
-A block proposer which includes slashing will be rewarded with the `base_reward/8 * ((slashed_validators_effective_balance) / 512)`
+A block proposer which includes slashing will be rewarded with the `slashed_validators_effective_balance / 512` where `512` is the `Whistleblower_reward_quotient`
 
