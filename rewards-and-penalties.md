@@ -60,3 +60,12 @@ There is **no** penalty for not proposing a block.
   
 A block proposer which includes slashing will be rewarded with the `slashed_validators_effective_balance / 512` where `512` is the `Whistleblower_reward_quotient`
 
+
+
+
+
+_Sources_   
+[_https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/_](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)  
+__[_https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/_](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)  
+
+
