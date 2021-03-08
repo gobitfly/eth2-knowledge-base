@@ -4,7 +4,7 @@ description: The journey of a validator balance
 
 # Rewards and Penalties
 
-A simplified overview of the most common validator rewards. 
+A simplified overview of the most common validator rewards and penalties. 
 
 ## Epoch
 
