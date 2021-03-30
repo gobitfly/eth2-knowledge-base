@@ -15,6 +15,7 @@
 
 ---
 
+* [Mobile App &lt;&gt; beacon node](mobile-app-less-than-greater-than-beacon-node.md)
 * [Block view](ethereum-2.0-blocks.md)
 * [Beaconcha.in Charts](eth2-charts.md)
 * [Optimal Inclusion Distance](optimal-inclusion-distance.md)
