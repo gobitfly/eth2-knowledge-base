@@ -4,7 +4,7 @@ description: >-
   the beaconcha.in mobile app.
 ---
 
-# Mobile App &lt;&gt; beacon node
+# Mobile App &lt;&gt; Beacon node
 
 ## Lighthouse
 
