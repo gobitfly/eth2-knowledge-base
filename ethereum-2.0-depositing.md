@@ -36,13 +36,13 @@ Therefore, run your [own node](https://kb.beaconcha.in/run-a-goerli-node-eth1-an
 **2048 blocks** = 2048 x 14 seconds = 28,672 seconds = **~8 hours**  
 **32 Epochs** = 32 x 6.4 minutes =  204.8 minutes = **~3.5 hours**
 
-![](.gitbook/assets/image%20%28115%29.png)
+![](.gitbook/assets/image%20%28115%29%20%281%29.png)
 
 Once the deposit is in the deposit contract, the state of the validator will switch to _**Deposited**_ on the [beaconcha.in](https://mainnet.beaconcha.in/validator/0xa40fa34c70f5958524a45c748b4054dda3add825fb37b7614eba1796da31ea73891a69dfddf823409230f78e7fc9b10d) explorer.
 
 {% tabs %}
 {% tab title="Rejected Deposit" %}
-![Rejected Transaction](.gitbook/assets/image%20%2878%29.png)
+![Rejected Transaction](.gitbook/assets/image%20%2878%29%20%282%29.png)
 {% endtab %}
 {% endtabs %}
 

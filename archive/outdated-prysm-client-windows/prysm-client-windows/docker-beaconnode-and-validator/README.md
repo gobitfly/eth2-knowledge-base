@@ -45,7 +45,7 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX` 
 
-![](../../../../.gitbook/assets/image%20%2811%29.png)
+![](../../../../.gitbook/assets/image%20%2827%29.png)
 
 #### **Step.2**
 

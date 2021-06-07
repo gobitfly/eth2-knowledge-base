@@ -71,7 +71,7 @@ Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **f
 
 ![](../.gitbook/assets/2020-08-05_12-34-29.gif)
 
-![](../.gitbook/assets/grafik%20%285%29.png)
+![](../.gitbook/assets/image%20%28155%29%20%282%29.png)
 
 ## Downloading Prysm
 
@@ -85,7 +85,7 @@ This is only required for the initial setup
 2. `curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.bat --output prysm.bat` Downloads the prysm.bat file 
 3. `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1` Changes some vizulations in the terminal window
 
-![](../.gitbook/assets/grafik%20%286%29.png)
+![](../.gitbook/assets/grafik%20%287%29.png)
 
 ## Importing validator keys 
 
@@ -99,7 +99,7 @@ This is only required for the initial setup
 **Enter a new wallet directory and a new password.**   
 In this example we chose `C:\prysm` as the new wallet directory.
 
-![](../.gitbook/assets/grafik%20%281%29.png)
+![](../.gitbook/assets/grafik%20%289%29.png)
 
 ## **Start the beacon node**
 
