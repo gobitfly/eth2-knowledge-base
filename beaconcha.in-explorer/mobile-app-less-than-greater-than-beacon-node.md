@@ -34,8 +34,11 @@ Both, the beaconcha.in [explorer](https://github.com/gobitfly/eth2-beaconchain-e
 
 _A step by step guide on the Prater Testnet. Please adjust the network for your own needs._
 
-1. Head over to the [user settings](https://beaconcha.in/user/settings) on beaconcha.in 
-2. Open the **Mobile App** Tab and enter a name for your staking setup.  _Use the same worker name even if your beaconnode runs on a seperate machine than your validator node._
+1. Head over to the [user settings](https://beaconcha.in/user/settings) on beaconcha.in and create an API key 
+
+![](../.gitbook/assets/image%20%2811%29.png)
+
+1. Open the **Mobile App** Tab and enter a name for your staking setup.  _Use the same worker name even if your beaconnode runs on a seperate machine than your validator node._
 
 ![beaconcha.in/user/settings](../.gitbook/assets/grafik%20%282%29.png)
 
