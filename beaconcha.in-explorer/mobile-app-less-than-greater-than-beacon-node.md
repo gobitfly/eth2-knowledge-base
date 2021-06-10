@@ -44,7 +44,7 @@ _A step by step guide on the Prater Testnet. Please adjust the network for your 
 
 3. Copy the generated flag and paste it add it to your beacon & validator node
 
-![Lighthouse Beacon &amp; Validator node](../.gitbook/assets/grafik%20%281%29.png)
+![Lighthouse Beacon &amp; Validator node](../.gitbook/assets/image%20%2822%29.png)
 
 _If your beacon-node or Ethereum 1.0 node is not in sync yet, you will see some warning logs!_
 
