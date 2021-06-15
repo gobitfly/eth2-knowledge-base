@@ -34,7 +34,7 @@ Both, the beaconcha.in [explorer](https://github.com/gobitfly/eth2-beaconchain-e
 
 _A step by step guide on the Prater Testnet. Please adjust the network for your own needs._
 
-1. Head over to the [user settings](https://beaconcha.in/user/settings) on beaconcha.in and create an API key 
+1. Head over to the [user settings](https://beaconcha.in/user/settings#api) on beaconcha.in and create an API key 
 
 ![](../.gitbook/assets/image%20%2811%29.png)
 
@@ -62,7 +62,7 @@ This functionality is in its early stage alpha testing and may not be fully func
 
 1. Head over to the [user settings](https://beaconcha.in/user/settings) on beaconcha.in 
 2. Open the **Mobile App** Tab and enter a name for your staking setup.  _Use the same worker name even if your beaconnode runs on a seperate machine than your validator node._ 
-3. Make sure your **prysm.sh** file is updated and supports client-stats Updated version: [https://github.com/prysmaticlabs/prysm/blob/develop/prysm.sh](https://github.com/prysmaticlabs/prysm/blob/develop/prysm.sh) 
+3. Make sure your **prysm.sh** file is updated and supports client-stats Updated version: [https://raw.githubusercontent.com/prysmaticlabs/prysm/develop/prysm.sh](https://raw.githubusercontent.com/prysmaticlabs/prysm/develop/prysm.sh) 
 4. Open an extra terminal next to your validator and beacon-node and modify **YOUR-API-KEY** and **DEVICE-NAME**  
 
 
