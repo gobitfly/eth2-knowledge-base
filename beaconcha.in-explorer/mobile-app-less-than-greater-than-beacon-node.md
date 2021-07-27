@@ -69,7 +69,7 @@ This functionality is in its early stage alpha testing and may not be fully func
    _Use the same worker name even if your beaconnode runs on a seperate machine than your validator node._
 
   
-   `./prysm.sh client-stats --beacon-node-metrics-url=`[`http://localhost:8080/metrics`](http://localhost:8080/metrics) `--validator-metrics-url=`[`http://localhost:8081/metrics`](http://localhost:8081/metrics) `--clientstats-api-url=https://beaconcha.in/api/v1/stats/`**`<YOUR-API-KEY>`**`/`**`<DEVICE-NAME>`**
+   `./prysm.sh client-stats --beacon-node-metrics-url=`[`http://localhost:8080/metrics`](http://localhost:8080/metrics) `--validator-metrics-url=`[`http://localhost:8081/metrics`](http://localhost:8081/metrics) `--clientstats-api-url=https://beaconcha.in/api/v1/client/metrics?apikey=`**`<YOUR-API-KEY>`**`&machine=`**`<DEVICE-NAME>`**
 
 **Docs:** [**https://docs.prylabs.network/docs/prysm-usage/client-stats/**](https://docs.prylabs.network/docs/prysm-usage/client-stats/)\*\*\*\*
 
