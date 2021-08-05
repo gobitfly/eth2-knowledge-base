@@ -48,7 +48,25 @@ Your staking device will appear under _Machines_ !
 
 ## Prysm
 
+1. Head over to the [beaconcha.in settings](https://beaconcha.in/user/settings#app) and open the prysm section:
 
+![](../.gitbook/assets/firefox_2021-08-05_09-51-26.png)
+
+2. Open a **new Terminal** and copy paste the commands
+
+![](../.gitbook/assets/anydesk_2021-08-05_09-09-52.png)
+
+![](../.gitbook/assets/mspaint_2021-08-05_09-53-29.png)
+
+3. Make sure your Prysm client \(beacon & validator\) is already up and running. The exporter will now send the data to your mobile app!
+
+![](../.gitbook/assets/mspaint_2021-08-05_09-55-15.png)
+
+4. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._    
+  
+Your staking device will appear under _Machines_ !  
+
+![](../.gitbook/assets/grafik%20%285%29.png)
 
 ## Nimbus
 
