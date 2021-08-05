@@ -20,6 +20,8 @@ _By using this endpoint, beaconcha.in will be allowed and is required to store t
 * beaconcha.in [Mobile App](https://beaconcha.in/mobile) 
 * **Lighthouse**  [**v.1.4.0**](https://github.com/sigp/lighthouse/releases) or higher
 * **Prysm** [**v1.3.10**](https://github.com/prysmaticlabs/prysm/releases) or higher
+* **Nimbus** [**v1.4.1**](https://github.com/status-im/nimbus-eth2/releases) **or higher**
+* **Teku \(support to be added\)**
 * Staking on Linux \(No windows support by clients yet!\)
 
 {% hint style="info" %}
