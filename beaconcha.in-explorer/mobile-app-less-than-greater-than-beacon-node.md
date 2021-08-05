@@ -70,5 +70,21 @@ Your staking device will appear under _Machines_ !
 
 ## Nimbus
 
+1. Head over to the [beaconcha.in settings](https://beaconcha.in/user/settings#app) and open the nimbus section:
+
+![](../.gitbook/assets/mspaint_2021-08-05_10-14-30.png)
+
+2. Add `--metrics --metrics-port=8008` to your nimbus client! Otherwise the exporter will not be able to get any data from your client.
+
+![](../.gitbook/assets/mspaint_2021-08-05_10-13-08.png)
+
+3. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._    
+  
+Your staking device will appear under _Machines_ !  
+
+![](../.gitbook/assets/grafik%20%285%29.png)
+
 ## Teku
+
+Support to be added!
 
