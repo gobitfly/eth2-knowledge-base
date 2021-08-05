@@ -90,3 +90,7 @@ Your staking device will appear under _Machines_ !
 
 Support to be added!
 
+## Monitoring with Rocket Pool
+
+tbd
+
