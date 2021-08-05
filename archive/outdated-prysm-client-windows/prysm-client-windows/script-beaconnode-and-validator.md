@@ -72,7 +72,7 @@ Some of the instructions on the **participation page** will be ignored because t
   
 Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](../../../.gitbook/assets/image%20%286%29%20%281%29.png)
+![](../../../.gitbook/assets/image%20%286%29%20%283%29%20%281%29.png)
 
 #### **Step 5.**
 

@@ -6,7 +6,7 @@ The ideal set up, and best practice is to have a [dedicated computer](https://ww
 
 **Use Linux!** It's easy, I promise. For the foreseeable future Linux will receive better support from the client teams. It is light weight, stable, secure, and it doesn't force you to restart for updates every other day.
 
-You are **locking** up at least 32 ETH ($80,000 in Aug 2021) in this endeavour, until the Eth2 mainnet merge (expected Q1 2021). No one knows how much that ETH will be worth during that time period, but it makes sense to buy some good hardware to secure it.
+You are **locking** up at least 32 ETH \($80,000 in Aug 2021\) in this endeavour, until the Eth2 mainnet merge \(expected Q1 2021\). No one knows how much that ETH will be worth during that time period, but it makes sense to buy some good hardware to secure it.
 
 A [battery back up](https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5-15r/p/N82E16842301561?Description=battery%20back%20up&cm_re=battery_back_up-_-42-301-561-_-Product&quicklink=true) is **strongly** recommended! Plug your modem and router in to it also. My ISP has generators to support emergency services communications, meaning the internet continues to work during a power outage as long as my equipment is powered. Your ISP may be the same.
 

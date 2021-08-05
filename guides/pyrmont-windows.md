@@ -71,7 +71,7 @@ Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **f
 
 ![](../.gitbook/assets/2020-08-05_12-34-29.gif)
 
-![](../.gitbook/assets/image%20%28155%29%20%282%29.png)
+![](../.gitbook/assets/image%20%28155%29%20%282%29%20%282%29.png)
 
 ## Downloading Prysm
 
@@ -99,7 +99,7 @@ This is only required for the initial setup
 **Enter a new wallet directory and a new password.**   
 In this example we chose `C:\prysm` as the new wallet directory.
 
-![](../.gitbook/assets/grafik%20%289%29.png)
+![](../.gitbook/assets/grafik%20%289%29%20%281%29.png)
 
 ## **Start the beacon node**
 
