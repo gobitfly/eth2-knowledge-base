@@ -1,5 +1,5 @@
 ---
-description: Altona Testnet
+description: A guide for getting set up on the Prater testnet with the Lighthouse Client.
 ---
 
 # Medalla Testnet: Lighthouse Client - macOS
@@ -53,7 +53,7 @@ Open **Finder** and head over to `~/.cargo/bin/`
 
 _Make sure the goerli node \(ETH1\) is running as mentioned in the_ [_requirements_](https://kb.beaconcha.in/archive/outdated-lighthouse-client-guides/beaconnode-and-validator-with-macos#requirements-a-synced-goerli-node-guide-till-step-3)_._
 
-Drag and drop the **Lighthouse** file and add `--testnet medalla beacon --eth1 --http --graffiti "beaconcha.in<3"` 
+Drag and drop the **Lighthouse** file and add `--network prater beacon --eth1 --http --graffiti "beaconcha.in<3"` 
 
 ![](../.gitbook/assets/image%20%28160%29.png)
 
@@ -89,7 +89,7 @@ There are two lighthouse folders, `.lighthouse` is a hidden folder.
 Open the `eth1-deposit-data.rlp` file with a **text editor.   
 Copy** the 842 long text sequence and **follow these** [**steps**](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0#depositing)**.  
   
-Medalla Deposit contract address:** `0x07b39F4fDE4A38bACe212b546dAc87C58DfE3fDC`
+Prater Deposit Contract address:** `0xff50ed3d0ec03aC01D4C79aAd74928BFF48a7b2b`
 
 The deposit will be recognised by the beacon-chain in 8.5 hours.
 
@@ -102,7 +102,7 @@ The deposit will be recognised by the beacon-chain in 8.5 hours.
 Open a new terminal window, drag and drop the **Lighthouse** file and add `validator --auto-register`
 
 In total there are **three** terminal windows running simultaneously!   
-[Track](https://altona.beaconcha.in/dashboard?validators=) your validator performance.
+[Track](https://prater.beaconcha.in/dashboard?validators=) your validator performance.
 
 ![](../.gitbook/assets/image%20%28122%29.png)
 
