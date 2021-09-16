@@ -127,6 +127,8 @@ A chosen validator by the beacon chain to propose the next block. There can only
 
 Waiting for activation on ETH2
 
+Before validators enter the validator queue, they need to be voted in by other active validators. This occurs every 4 hours.
+
 * Until 327680 active validators in the network, **4 validators can be activated per epoch**.  For every **65536** \(=4 \* 16384\) active validator, the validator **activation rate** goes up by one. 5 validators per epoch requires 327680 active validators. 
 * Amount of activations scales with the amount of active validators and the limit is the active validator set divided by 64.000
 
