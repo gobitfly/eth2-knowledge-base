@@ -52,7 +52,7 @@ Once the deposit is in the deposit contract, the state of the validator will swi
 
 ![](.gitbook/assets/image%20%28108%29.png)
 
-The deposit is accessible now for the beacon-chain. Depending on the amount of total deposits, the validators have to wait in a queue. Four validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**900 validators per day\)** can get activated.
+The deposit is accessible now for the beacon-chain. Depending on the amount of total deposits, the validators have to wait in a queue. Five validators per [Epoch](https://kb.beaconcha.in/glossary#epoch) \(**1125 validators per day\)** can get activated.
 
 ## 4. Staking - Status: Active
 
