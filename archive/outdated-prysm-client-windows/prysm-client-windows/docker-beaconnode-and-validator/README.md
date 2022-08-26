@@ -1,6 +1,6 @@
 # Beaconnode & validator using Docker
 
-####  [Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)\*\*\*\*
+#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)****
 
 {% hint style="info" %}
 A folder named "prysm" in C:\ needs to be created which will also be the location of the beaconchain data.
@@ -17,7 +17,7 @@ If the previous command was successful, run the following code:
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
 {% hint style="info" %}
- **This is not required. By using this command, cosmetics of the command prompt window change.**
+&#x20;**This is not required. By using this command, cosmetics of the command prompt window change.**
 {% endhint %}
 
 #### **Step 1.**
@@ -32,7 +32,7 @@ If the previous command was successful, run the following code:
 
 `docker pull gcr.io/prysmaticlabs/prysm/validator:latest`
 
-#### **Create a docker network** 
+#### **Create a docker network**&#x20;
 
 `docker network create --attachable medalla`
 
@@ -40,12 +40,12 @@ If the previous command was successful, run the following code:
 
 `docker run -ti --name beacon-chain --network medalla -v c:/prysm:/data -p 12000:12000/udp -p 13000:13000 gcr.io/prysmaticlabs/prysm/beacon-chain:latest --datadir=/data --rpc-host=0.0.0.0`
 
-**Wait** for your beaconnode to be in sync with the blockchain.   
+**Wait** for your beaconnode to be in sync with the blockchain. \
 This may take a few hours and you will see the following message:
 
-`INFO initial-sync: Synced up to slot XXXXX` 
+`INFO initial-sync: Synced up to slot XXXXX`&#x20;
 
-![](../../../../.gitbook/assets/image%20%2827%29%20%283%29.png)
+![](<../../../../.gitbook/assets/image (27) (3) (2) (2).png>)
 
 #### **Step.2**
 
@@ -53,21 +53,21 @@ This may take a few hours and you will see the following message:
 
 `docker run -it -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
 
-The output should look like the image below.   
-If you didn't change `--password=yourPassword` , your validator keys will have **yourPassword** as its password.  
+The output should look like the image below. \
+If you didn't change `--password=yourPassword` , your validator keys will have **yourPassword** as its password.\
 The newly created keys should be in `C:\prysm`. Make sure they are available.
 
-**Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate). 
+**Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).&#x20;
 
 ![keyCreation](https://user-images.githubusercontent.com/26490734/79857621-59b8b400-83ce-11ea-9bb5-6b5f0ba9ac7e.png)
 
 #### **Step 3.**
 
-Some of the instructions on the **participation page** will be ignored because they were not optimized for Windows10 \(yet\).   
-  
+Some of the instructions on the **participation page** will be ignored because they were not optimized for Windows10 (yet). \
+\
 Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](../../../../.gitbook/assets/image%20%286%29%20%283%29.png)
+![](<../../../../.gitbook/assets/image (6) (3) (2).png>)
 
 #### **Step 4.**
 
@@ -75,27 +75,26 @@ Open **a new** command prompt window.
 
 **Start your validator**
 
-`docker run -ti -name validator --network medalla -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest --keystore-path=/data --datadir=/data --password=yourPassword --medalla --beacon-rpc-provider=beacon-chain:4000` 
+`docker run -ti -name validator --network medalla -v c:/prysm:/data gcr.io/prysmaticlabs/prysm/validator:latest --keystore-path=/data --datadir=/data --password=yourPassword --medalla --beacon-rpc-provider=beacon-chain:4000`&#x20;
 
 #### **Step 5.**
 
-Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key \(orange\).   
+Track your validator performance on [beaconcha.in](https://beaconcha.in/dashboard?validators=) with your public key (orange). \
 Once the blockchain recognises the deposit, the [beaoncha.in](https://beaconcha.in/) explorer will allow you to track the validator more accurately.
 
-Wait for the inclusionSlot \(red\) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
+Wait for the inclusionSlot (red) to be reached. Once the blockchain has processed this slot, you will be staking! The Slot number can be tracked [here](https://beaconcha.in/blocks).
 
-![Validator&amp;beaconcha.in](https://user-images.githubusercontent.com/26490734/79860463-fda45e80-83d2-11ea-8b71-05a112117f18.png)
+![Validator\&beaconcha.in](https://user-images.githubusercontent.com/26490734/79860463-fda45e80-83d2-11ea-8b71-05a112117f18.png)
 
-#### **Running multiple validators \(voluntarily\)**
+#### **Running multiple validators (voluntarily)**
 
-Repeat **Step 2.** and **create more keys** into the same directory.   
+Repeat **Step 2.** and **create more keys** into the same directory. \
 **Use the same password for all keys.**
 
 Copy the **Raw Transaction Data** for each validator, re-do the process on the [participation page](https://prylabs.net/participate) and deposit for each of them.
 
-Once the system has received all deposits, you can just start a single validator window, and it will use **all** of the created keys \(=multiple validators\).
+Once the system has received all deposits, you can just start a single validator window, and it will use **all** of the created keys (=multiple validators).
 
 {% hint style="info" %}
 For further assistance, please join the Prysmatic Labs Discord [channel](https://discord.gg/wJW7Rjk).
 {% endhint %}
-

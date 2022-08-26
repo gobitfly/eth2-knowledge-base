@@ -8,7 +8,7 @@ _This post is going to lay out data, Ethereum 2.0 explorers such as_ [_beaconcha
 
 ## Overview
 
-\_\_[_Epoch_](https://kb.beaconcha.in/glossary#epoch)_,_ [_Slot_](https://i.imgur.com/y8tVVUr.png)_,_ [_Status_](https://kb.beaconcha.in/glossary#validator-lifecycle)_,_ [_Proposer_](https://kb.beaconcha.in/glossary#validator-lifecycle) _are covered in the_ [_glossary_](https://kb.beaconcha.in/glossary)
+__[_Epoch_](https://kb.beaconcha.in/glossary#epoch)_,_ [_Slot_](https://i.imgur.com/y8tVVUr.png)_,_ [_Status_](https://kb.beaconcha.in/glossary#validator-lifecycle)_,_ [_Proposer_](https://kb.beaconcha.in/glossary#validator-lifecycle) _are covered in the_ [_glossary_](https://kb.beaconcha.in/glossary)
 
 ### Block root
 
@@ -22,8 +22,8 @@ The hash-tree-root of the [BeaconState](https://github.com/ethereum/eth2.0-specs
 
 The BLS signature [obtained by](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/validator.md#packaging-into-a-signedbeaconblock) using the BeaconState, BeaconBlock and private key.
 
-`def get_block_signature(state: BeaconState, block: BeaconBlock, privkey: int)   
--> BLSSignature`
+`def get_block_signature(state: BeaconState, block: BeaconBlock, privkey: int)` \
+`-> BLSSignature`
 
 ### Randao Reveal
 
@@ -35,7 +35,7 @@ A block proposer can include 32 byte long message to its block proposal.
 
 ### Eth 1 Data
 
-_Received Eth1 Block headers and Deposit data_ 
+_Received Eth1 Block headers and Deposit data_&#x20;
 
 * **Block Hash:** The Hash of the received Eth1 Block.
 * **Deposit Count:** Amount of validator deposits to the deposit contract in this block.
@@ -55,17 +55,19 @@ Amount of voluntary Exits which have been included in this block by the block pr
 
 ### Slashings
 
-Amount of slashings which have been included in this block by the block proposer.  
+Amount of slashings which have been included in this block by the block proposer.\
 
 
-![](../.gitbook/assets/image%20%28176%29.png)
+![](<../.gitbook/assets/image (176).png>)
 
-##  Votes
+\
+Votes
+-----
 
-Represents the total amount of votes in a specific block. In the example below there were 128 attestations. These attestations received a **total** of 2802 votes. The aggregation bit is an additional way of representing the votes.  
+Represents the total amount of votes in a specific block. In the example below there were 128 attestations. These attestations received a **total** of 2802 votes. The aggregation bit is an additional way of representing the votes.\
 
 
-![](../.gitbook/assets/image%20%28177%29.png)
+![](<../.gitbook/assets/image (177).png>)
 
 ## Attestations
 
@@ -79,10 +81,10 @@ Every epoch the total number of validators is split up in committees and one or 
 
 ### Aggregation Bits
 
-Represents the aggregated attestation of all participating validators in this attestation.  
+Represents the aggregated attestation of all participating validators in this attestation.\
 Each "1" bit is a successful attestation submitted by the validator. "0" bits visualise missed attestations.
 
-![](../.gitbook/assets/image%20%28181%29.png)
+![](<../.gitbook/assets/image (181).png>)
 
 ### Validators
 
@@ -98,5 +100,4 @@ These are two additional votes a validator has to submit. The source points to t
 
 ### Signature
 
-![](../.gitbook/assets/image%20%28175%29.png)
-
+![](<../.gitbook/assets/image (175).png>)
