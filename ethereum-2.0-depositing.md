@@ -24,17 +24,17 @@ If the **threshold** of 1 ETH is not met or the transaction has **no/invalid** i
 The user-created **input data** is a reflection of the upcoming **validator and withdrawal keys** on the Ethereum 2.0 network as seen in the picture below. The full Ethereum 2.0 keys blog is [here](https://kb.beaconcha.in/ethereum-2-keys).
 {% endhint %}
 
-#### **Why exactly does this take at least 12 hours?**
+#### **Why exactly does this take at least 13.6 hours?**
 
 The Ethereum 2.0 chain only considers transactions which have been in the deposit contract for at least 2048 Ethereum 1.0 blocks to ensure they never end up in a [reorged](https://en.bitcoin.it/wiki/Chain\_Reorganization) block. **(=**`ETH1_FOLLOW_DISTANCE`**)**
 
-In addition to the 2048 Ethereum 1.0 blocks, 32 **Ethereum 2.0** [**Epochs**](https://kb.beaconcha.in/glossary#epoch) \*\*\*\*must be \*\*\*\*awaited before the beacon-chain recognises the deposit. During these 32 Epochs, validators vote on newly received deposits.
+In addition to the 2048 Ethereum 1.0 blocks, 64 **Ethereum 2.0** [**Epochs**](https://kb.beaconcha.in/glossary#epoch) \*\*\*\*must be\*\*\*\* awaited before the beacon-chain recognises the deposit. During these 64 Epochs, validators vote on newly received deposits.
 
 However, [missed block](https://kb.beaconcha.in/glossary#block-status) proposals or bad Ethereum 1.0 nodes, which provide the deposit logs to the Ethereum 2.0 network can cause longer waiting times.\
 Therefore, run your [own node](https://kb.beaconcha.in/run-a-goerli-node-eth1-and-beaconnode-eth2)!
 
-**2048 blocks** = 2048 x 14 seconds = 28,672 seconds = **\~8 hours**\
-**32 Epochs** = 32 x 6.4 minutes = 204.8 minutes = **\~3.5 hours**
+**2048 blocks** = 2048 x 12 seconds = 24,576 seconds = 409.6 minutes = **\~6.82 hours**\
+**64 Epochs** = 64 x 6.4 minutes = 409.6 minutes = **\~6.82 hours**
 
 ![](<.gitbook/assets/image (115) (1).png>)
 
