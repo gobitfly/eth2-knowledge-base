@@ -22,6 +22,7 @@ _By using this endpoint, beaconcha.in will be allowed and is required to store t
 * **Prysm** [**v1.3.10**](https://github.com/prysmaticlabs/prysm/releases) or higher
 * **Nimbus** [**v1.4.1**](https://github.com/status-im/nimbus-eth2/releases) **or higher**
 * **Teku v22.3.0 or higher**
+* **Lodestar** [**v1.6.0**](https://github.com/ChainSafe/lodestar/releases) **or higher**
 * Staking on Linux (No windows support by clients yet!)
 
 {% hint style="info" %}
@@ -95,6 +96,14 @@ Your staking device will appear under _Machines_ ! &#x20;
 Add the following endpoint to your teku node `--metrics-publish-endpoint https://beaconcha.in/api/v1/client/metrics?apikey=YOUR_API_KEY`
 
 You can find your API Key here: [https://beaconcha.in/user/settings#app](https://beaconcha.in/user/settings#app)
+
+## Lodestar
+
+Add the following CLI flags to your Lodestar validator and beaconnode `--monitoring.endpoint 'https://beaconcha.in/api/v1/client/metrics?apikey=YOUR_API_KEY' --metrics`
+
+You can find your API Key in the [account settings](https://beaconcha.in/user/settings#api).
+
+Check out the Lodestar documentation about [client monitoring](https://chainsafe.github.io/lodestar/usage/client-monitoring/) for further details.
 
 ## Monitoring with Rocket Pool
 
