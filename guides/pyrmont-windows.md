@@ -72,7 +72,7 @@ Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **f
 
 ![](../.gitbook/assets/2020-08-05\_12-34-29.gif)
 
-![](<../.gitbook/assets/image (155) (2) (2).png>)
+![](<../.gitbook/assets/image (155) (2) (2) (1).png>)
 
 ## Downloading Prysm
 
