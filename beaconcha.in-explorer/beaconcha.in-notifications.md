@@ -49,7 +49,12 @@ You may have noticed that the Notification Center allows you to configure _**Pus
    \
    Verify that the notifications were added successfully by logging in at [https://beaconcha.in/user/notifications](https://beaconcha.in/user/notifications) and scrolling to the Validator table at the bottom of the page\
    \
-   ![](<../.gitbook/assets/image (23).png>)
+   ![](<../.gitbook/assets/image (23).png>)\
+
+
+{% hint style="info" %}
+You may have noticed that the Notification Center allows you to configure _**Push notifications**_ for the mobile app. This is crucial since some users may not receive any push notifications if it is disabled.
+{% endhint %}
 
 
 
