@@ -55,7 +55,7 @@ You may have noticed that the Notification Center allows you to configure _**Pus
 
 #### Webhooks
 
-1. Follow the steps as described [above](https://kb.beaconcha.in/beaconcha.in-explorer/beaconcha.in-notifications#enabling-notifications-via-web).
+1. Follow the steps as described [above](https://kb.beaconcha.in/beaconcha.in-explorer/beaconcha.in-notifications#enabling-notifications-via-web) in "_**Enabling notifications via web"**_.
 2. Double-check that webhooks are enabled\
    ![](<../.gitbook/assets/image (11).png>)
 3. Add a webhook via [https://beaconcha.in/user/webhooks](https://beaconcha.in/user/webhooks)
