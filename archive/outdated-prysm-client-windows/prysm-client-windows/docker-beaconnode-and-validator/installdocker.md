@@ -25,7 +25,7 @@ Install [Hyper-V](https://www.deskmodder.de/blog/wp-content/uploads/2018/08/hype
 1.  Open the "Registry Editor" and go to the following path:
 
     `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`\
-    ****
+
 2. **Change** `EditionID` to `Professional` and `ProductName` to `Windows 10 Pro`\
 
 3. **Immediately** open the downloaded Docker File and **install Docker**.

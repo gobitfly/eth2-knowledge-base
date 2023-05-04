@@ -50,5 +50,5 @@ Genesis time becomes `Trigger-block-timestamp + genesis_delay`.
 
 
 _Sources:_ \
-__[_Ethereum 2.0 Spec_](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#configuration)__\
-__[_The Genesis of a Beacon Chain_](https://hackmd.io/@benjaminion/genesis)__
+[_Ethereum 2.0 Spec_](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#configuration)\
+[_The Genesis of a Beacon Chain_](https://hackmd.io/@benjaminion/genesis)

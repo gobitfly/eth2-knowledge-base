@@ -1,6 +1,6 @@
 # Beaconnode & validator using prysm.sh (recommended)
 
-#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)****
+#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)
 
 #### Step 0.
 
@@ -19,18 +19,18 @@ In order to **install Homebrew** use the following code:\
 #### **Step 1.**
 
 **Install GPG**\
-****`brew install gnupg`
+`brew install gnupg`
 
 **Create the prysm directory:**\
-****`mkdir prysm`
+`mkdir prysm`
 
 **Enter the prysm directory:**\
-****`cd prysm`
+`cd prysm`
 
 **Get the prysm.sh script and make it executable:**\
-****`curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --output prysm.sh && chmod +x prysm.sh`
+`curl https://raw.githubusercontent.com/prysmaticlabs/prysm/master/prysm.sh --output prysm.sh && chmod +x prysm.sh`
 
-****
+
 
 #### **Step 2.**
 
@@ -51,9 +51,9 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX`
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
-****
+
 
 #### **Step 3.**
 
@@ -61,7 +61,7 @@ This may take a few hours and you will see the following message:
 
 Drag and drop the **prysm.sh** file into **a new(!)** **Terminal** window and add:\
 \
-&#x20;****  `validator accounts create --keystore-path=$HOME/prysm --password=yourPassword`&#x20;
+&#x20; `validator accounts create --keystore-path=$HOME/prysm --password=yourPassword`&#x20;
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
@@ -72,7 +72,7 @@ The created keys are now located in **$HOME/prysm**
 **Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).\
 Some of the instructions on the participation page will be ignored because they are not required anymore.&#x20;
 
-Follow the steps below to get Goerli ETH and to deposit them **** to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
+Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
 ![](<../../../.gitbook/assets/image (6) (3) (2) (1) (2).png>)
 
@@ -83,7 +83,7 @@ Follow the steps below to get Goerli ETH and to deposit them **** to activate yo
 Drag and drop the **prysm.sh** file into **a new(!)** **Terminal** window and add:\
 &#x20;`validator --keystore-path=$HOME/prysm --password=yourPassword`
 
-****
+
 
 #### **Step 5.**
 

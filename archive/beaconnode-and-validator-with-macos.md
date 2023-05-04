@@ -20,12 +20,12 @@ Open a terminal window and paste the following in:
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
 _"Current installation options"_\
-__Press **"1"** and confirm with Enter.
+Press **"1"** and confirm with Enter.
 
 ![](<../.gitbook/assets/image (130).png>)
 
 _"Next time you log in this will be done automatically"_\
-__**Close** this terminal window and **open a new one.**
+**Close** this terminal window and **open a new one.**
 
 #### 2. Downloading and building Lighthouse
 
@@ -37,7 +37,7 @@ and then run `make`
 ![](<../.gitbook/assets/image (133).png>)
 
 _Wait a few minutes_\
-__Once the process is done it will look like the following
+Once the process is done it will look like the following
 
 ![](<../.gitbook/assets/image (128).png>)
 
@@ -75,7 +75,7 @@ The wallet is located in `$HOME/lighthouse`
 #### 6. Create ETH2 Keys
 
 Use the same Terminal window, drag and drop the Lighthouse file and **add** \
-****`lighthouse account validator create --wallet-name my-validators --wallet-passphrase my-validators.pass --count 1`
+`lighthouse account validator create --wallet-name my-validators --wallet-passphrase my-validators.pass --count 1`
 
 ![](<../.gitbook/assets/image (131).png>)
 
@@ -88,7 +88,7 @@ There are two lighthouse folders, `.lighthouse` is a hidden folder.\
 
 Open the `eth1-deposit-data.rlp` file with a **text editor.** \
 **Copy** the 842 long text sequence and **follow these** [**steps**](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process/depositing-to-ethereum-2.0#depositing)**.**\
-****\
+\
 **Medalla Deposit contract address:** `0x07b39F4fDE4A38bACe212b546dAc87C58DfE3fDC`
 
 The deposit will be recognised by the beacon-chain in 8.5 hours.

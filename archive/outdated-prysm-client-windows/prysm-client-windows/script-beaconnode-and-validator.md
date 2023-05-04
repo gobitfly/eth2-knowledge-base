@@ -1,6 +1,6 @@
 # Beaconnode & validator using prysm.bat (recommended)
 
-#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)****
+#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)
 
 #### Step 0.
 
@@ -8,7 +8,7 @@ Create a folder named **prysm** in the **C:\\** directory.&#x20;
 
 ![prysmFolder](<../../../.gitbook/assets/image (10).png>)
 
-****
+
 
 #### **Step 1.**
 
@@ -22,7 +22,7 @@ Enter the following code into the **command prompt window**:
 
 The **prysm.bat** file should appear in the **C:\prysm** directory.
 
-****
+
 
 #### **Step 2.**
 
@@ -36,7 +36,7 @@ Use the following code:
 
 ![](<../../../.gitbook/assets/image (5).png>)
 
-****
+
 
 #### **Step 3.**&#x20;
 
@@ -55,7 +55,7 @@ This may take a few hours and you will see the following message:
 
 ![](<../../../.gitbook/assets/image (4).png>)
 
-****
+
 
 #### **Step 4.**
 
@@ -84,7 +84,7 @@ Drag and drop the **prysm.bat** file into **a seperate** command prompt window *
 
 ![](../../../.gitbook/assets/2020-04-27\_15-03-21.gif)
 
-****
+
 
 #### **Step 6.**
 
@@ -95,7 +95,7 @@ Wait for the inclusionSlot (red) to be reached. Once the blockchain has processe
 
 ![](<../../../.gitbook/assets/image (19).png>)
 
-****
+
 
 #### **Running multiple validators**&#x20;
 

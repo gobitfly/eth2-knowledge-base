@@ -1,6 +1,6 @@
 # Beaconnode & validator using Docker
 
-#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)****
+#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)
 
 #### Step 0.&#x20;
 
@@ -16,7 +16,7 @@ If the output returns the docker version, Docker is installed correctly.
 
 ![](<../../../.gitbook/assets/image (18).png>)
 
-****
+
 
 #### **Step 2.**
 
@@ -49,9 +49,9 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX`
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
-****
+
 
 #### **Step 3.**
 
@@ -61,7 +61,7 @@ Open a **new Terminal** window and run:
 
 `docker run -it -v $HOME/eth2validator:/data gcr.io/prysmaticlabs/prysm/validator:latest accounts create --keystore-path=/data --password=yourPassword`
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
 {% hint style="info" %}
 The created Keys are now located in **$HOME/eth2validator**&#x20;
@@ -70,7 +70,7 @@ The created Keys are now located in **$HOME/eth2validator**&#x20;
 **Copy the Raw Transaction Data** and go to the [participation page](https://prylabs.net/participate).\
 Some of the instructions on the participation page will be ignored because they are not required anymore.&#x20;
 
-Follow the steps below to get Goerli ETH and to deposit them **** to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
+Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
 ![](<../../../.gitbook/assets/image (6) (3) (2) (1) (1).png>)
 
@@ -91,7 +91,7 @@ Wait for the inclusionSlot (red) to be reached. Once the blockchain has processe
 
 ![](<../../../.gitbook/assets/image (35).png>)
 
-****
+
 
 #### **Running multiple validators**&#x20;
 

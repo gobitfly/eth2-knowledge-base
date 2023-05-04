@@ -32,8 +32,8 @@ Open up a **Terminal** and test if docker is up and running `docker -v`
 ![](<../../.gitbook/assets/image (142).png>)
 
 **Step 1.**\
-****\
-****Clone the repository `git clone https://github.com/sigp/beacon-fuzz`
+\
+Clone the repository `git clone https://github.com/sigp/beacon-fuzz`
 
 #### Step 2.
 
@@ -61,7 +61,7 @@ Change the search settings to **Search the Current Folder**
 
 #### Step 1.
 
-If the fuzzer finds a bug it creates a _**crash**  **file** _ in the workspace folder\
+If the fuzzer finds a bug it creates a _**crash**_ _**file**_ in the workspace folder\
 `~/beacon-fuzz/eth2fuzz/workspace`
 
 ![](<../../.gitbook/assets/image (145).png>)
@@ -72,7 +72,7 @@ If the fuzzer finds a bug it creates a _**crash**  **file** _ in the workspace f
 
 Search the workspace folder for files called "_**crash-..."**_, which is the bug file and compress it to a **zip.file**\
 An example:\
-_****`crash-efc8b3f0753ddd9df52b066d2f4549d548a21a58`_
+_`crash-efc8b3f0753ddd9df52b066d2f4549d548a21a58`_
 
 Post the zip file on the beacon-fuzz [github repository](https://github.com/sigp/beacon-fuzz/issues/new/choose).
 

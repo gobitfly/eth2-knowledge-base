@@ -23,11 +23,11 @@ description: Beacon Fuzzer guide for windows users.
 
 #### Step 0.&#x20;
 
-Open a **terminal window** and test if docker is up and running with **** `docker -v`
+Open a **terminal window** and test if docker is up and running with `docker -v`
 
 #### **Step 0.**
 
-Continue with **** `cd desktop` **** followed by **** `git clone https://github.com/sigp/beacon-fuzz`
+Continue with `cd desktop` followed by `git clone https://github.com/sigp/beacon-fuzz`
 
 ![](<../../../.gitbook/assets/image (150).png>)
 
@@ -52,7 +52,7 @@ Alternatively, copy this [file](https://gist.github.com/Buttaa/7493f747f673f513e
 #### Step 0.
 
 Open a **terminal window** and go to the eth2fuzz directory with \
-****`cd desktop/beacon-fuzz/eth2fuzz`
+`cd desktop/beacon-fuzz/eth2fuzz`
 
 #### Step 1.
 
@@ -66,12 +66,12 @@ That's it, the process will take multiple hours!
 
 Search the `beacon-fuzz` folder for files called "_**crash-..."**_, which is the bug file, and compress it \
 to a **zip file.** \
-****[Web tool](https://archive.online-convert.com/convert-to-zip) to convert files into zip.\
+[Web tool](https://archive.online-convert.com/convert-to-zip) to convert files into zip.\
 \
 **Post the zip file on the beacon-fuzz** [**github repository**](https://github.com/sigp/beacon-fuzz/issues/new/choose)**.**
 
 An example:\
-_****`crash-efc8b3f0753ddd9df52b066d2f4549d548a21a58`_
+_`crash-efc8b3f0753ddd9df52b066d2f4549d548a21a58`_
 
 ![](<../../../.gitbook/assets/image (151).png>)
 

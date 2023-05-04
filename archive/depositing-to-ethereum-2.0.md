@@ -33,9 +33,9 @@ These letters, **the input data**, have to be included into the transaction to t
 
 1. Open [MyCrypto](https://beta.mycrypto.com/add-account) and open your wallet and head over to _**Send Assets**_.&#x20;
 2. **Advanced options**\
-   ****Paste the 842 letters into the **Data field** `0x22895118000000000000000000...`.&#x20;
+   Paste the 842 letters into the **Data field** `0x22895118000000000000000000...`.&#x20;
 3. **Recipient** is the deposit contract\
-   [**Medalla**](https://beaconcha.in/) **** Testnet**:** `0x07b39F4fDE4A38bACe212b546dAc87C58DfE3fDC`
+   [**Medalla**](https://beaconcha.in/) Testnet**:** `0x07b39F4fDE4A38bACe212b546dAc87C58DfE3fDC`
 4. **Amount** Minimum of 1 ETH
 5. **Gas Limit** 500,000
 6. Send transaction

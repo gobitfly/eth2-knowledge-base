@@ -34,9 +34,9 @@ You may have noticed that the Notification Center allows you to configure _**Pus
    \
    _**Note**: If you added validators to your Notification center through_ [_https://beaconcha.in/user/notifications_](https://beaconcha.in/user/notifications) _they will **not** appear in your mobile app automatically._\
    _If push notifications were enabled in the web notification center, the mobile app push the notifications through even if the validators are not visible in your app._\
-   __\
+   \
    _This UX issue will be part of the improvements later this year._\
-   __
+
 3. Add validators to your mobile app dashboard&#x20;
 4. Head over to the settings and enable the desired notifications\
    ![](<../.gitbook/assets/image (30).png>)\
@@ -64,5 +64,7 @@ You may have noticed that the Notification Center allows you to configure _**Pus
 2. Double-check that webhooks are enabled\
    ![](<../.gitbook/assets/image (11).png>)
 3. Add a webhook via [https://beaconcha.in/user/webhooks](https://beaconcha.in/user/webhooks)
-4. Done
+4. Enable the same notification types as on the notification center and enable "discord" if the notifications should be sent to a discord channel\
+   ![](../.gitbook/assets/image.png)
+5. Done
 

@@ -38,7 +38,7 @@ As shown below, the validators broadcast their unaggregated attestation to the a
 
 ![](<.gitbook/assets/image (168).png>)
 
-### __ __Rewards
+### &#x20;Rewards
 
 The attestation reward is dependent on two variables, the [**base reward**](https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md#constants) and the **inclusion delay.**\
 **The best case for the inclusion delay is to be 1.**
@@ -64,7 +64,7 @@ As shown below, an Inclusion delay of 2 causes the the reward to drop by 50%.&#x
 
 ![Source: Consensys](<.gitbook/assets/image (170).png>)
 
-### **** **A**ttestation scenarios&#x20;
+### &#x20;**A**ttestation scenarios&#x20;
 
 **Missing Voting Validator**
 
@@ -82,6 +82,5 @@ Note that in some cases a lucky aggregator may also become the block proposer. I
 
 
 _Credits_\
-__[_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) _-_ [_AttestantIO_](https://twitter.com/attestantio)__\
-__[_Attestation Inclusion_](https://www.youtube.com/watch?v=SPcgevcDqDE\&feature=youtu.be) _-_ [_Adrian Sutton_ ](https://twitter.com/ajsutton)_(Consensys)_\
-__
+[_Attestation effectiveness_](https://www.attestant.io/posts/defining-attestation-effectiveness/) _-_ [_AttestantIO_](https://twitter.com/attestantio)\
+[_Attestation Inclusion_](https://www.youtube.com/watch?v=SPcgevcDqDE\&feature=youtu.be) _-_ [_Adrian Sutton_ ](https://twitter.com/ajsutton)_(Consensys)_\

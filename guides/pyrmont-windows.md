@@ -16,7 +16,7 @@ There are multiple ways on how to get started, we will use the one which is the 
 
 ## **Choosing Eth1 & Eth2 clients**
 
-Head over to **** the [Pyrmont launchpad](https://pyrmont.launchpad.ethereum.org/)\
+Head over to the [Pyrmont launchpad](https://pyrmont.launchpad.ethereum.org/)\
 Choose **Geth as your Eth 1** client and in the next step choose **Prysm as your Eth 2 client.**
 
 ![](<../.gitbook/assets/image (184).png>)
@@ -68,7 +68,7 @@ Follow the instructions to create your Ethereum 2.0 keys!\
 ![](<../.gitbook/assets/grafik (8).png>)
 
 Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **file** (located in the path shown in the terminal)**, continue** and deposit 32 goerli Eth**.**\
-****
+
 
 ![](../.gitbook/assets/2020-08-05\_12-34-29.gif)
 
@@ -98,7 +98,7 @@ This is only required for the initial setup
 **Drag and drop** the prysm.bat file and **add** `validator accounts import --keys-dir=` **AND** the path to your newly created keys**.** For this example the path is `C:\Users\Inan\validator_keys`
 
 **Which results** \
-****`prysm.bat validator accounts import --keys-dir=C:\Users\Inan\validator_keys`
+`prysm.bat validator accounts import --keys-dir=C:\Users\Inan\validator_keys`
 
 ![](../.gitbook/assets/2020-11-19\_12-10-45.gif)
 
@@ -132,4 +132,4 @@ Enter your wallet password which was set in the[ previous step](https://kb.beaco
 ![](<../.gitbook/assets/grafik (10).png>)
 
 Enter your pubkey on the [**beaconcha.in**](https://pyrmont.beaconcha.in/) **explorer** to track its current status and performance.\
-Find out what each of the validator status mean - _"**What does "**_[_**Unknown status**_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)_**" mean?"**_** **&#x20;
+Find out what each of the validator status mean - _"**What does "**_[_**Unknown status**_](https://kb.beaconcha.in/ethereum-2.0-and-depositing-process)_**" mean?"**_&#x20;

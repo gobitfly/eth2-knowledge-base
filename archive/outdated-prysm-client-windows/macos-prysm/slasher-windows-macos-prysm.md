@@ -3,7 +3,7 @@
 ## General
 
 The slasher's purpose is to find malicious validators **in the Ethereum 2.0 network** and report slashable offenses to the beacon-node.\
-****
+
 
 ![](<../../../.gitbook/assets/image (69).png>)
 
@@ -30,7 +30,7 @@ Drag and drop the **prysm.sh** file into the **Terminal** window and add:
 
 
 **That's it!**\
-****The slasher now iterates through all attestations and sends proof to the detection service. \
+The slasher now iterates through all attestations and sends proof to the detection service. \
 \
 Debug mode enabled with `--verbosity=debug`
 

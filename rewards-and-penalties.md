@@ -26,9 +26,9 @@ Rewards and penalties are based on the correctness of
 
 ![](<.gitbook/assets/image (196).png>)
 
-The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an inclusion distance of 32 **** and the **best** is **base\_reward \* 1/1 \* 7/8** with an inclusion distance of 1.
+The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an inclusion distance of 32 and the **best** is **base\_reward \* 1/1 \* 7/8** with an inclusion distance of 1.
 
-### **** **Possible Attestation properties**
+### &#x20;**Possible Attestation properties**
 
 ![](<.gitbook/assets/image (207).png>)
 
@@ -43,8 +43,8 @@ _Assumption: The participation rate is 100%_
 3. You miss head and target cause you got late a block, you get **-1/8\* base\_reward**
 4. You attest and vote correctly, but the next block is missed, you get **55/16 \* base\_reward**
 5. You attest correctly and get perfect inclusion distance, but you attested on a block that most people got late as in 2., you get **\~7/8 \* base\_reward**\
-   ****\
-   ****_The last one is the most confusing one: When there is a late block where validators miss the head, the validator that misses the head earns **more** than the validator that votes correctly, as in 2._ \
+   \
+   _The last one is the most confusing one: When there is a late block where validators miss the head, the validator that misses the head earns **more** than the validator that votes correctly, as in 2._ \
    _15/8 > 7/8_
 
 **Best possible reward**\
@@ -68,5 +68,5 @@ A block proposer which includes slashing will be rewarded with the `slashed_vali
 
 
 _Sources_ \
-__[_https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/_](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)__\
-__[_https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/_](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)\
+[_https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/_](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)\
+[_https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/_](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)\

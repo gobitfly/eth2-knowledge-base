@@ -1,6 +1,6 @@
 # Beaconnode & validator using Docker
 
-#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)****
+#### &#x20;[Official **PrysmaticLabs Docs**](https://docs.prylabs.network/docs/getting-started/)
 
 {% hint style="info" %}
 A folder named "prysm" in C:\ needs to be created which will also be the location of the beaconchain data.
