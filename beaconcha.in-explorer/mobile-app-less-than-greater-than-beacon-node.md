@@ -99,7 +99,7 @@ You can find your API Key here: [https://beaconcha.in/user/settings#app](https:/
 
 ## Lodestar
 
-Add the following CLI flags to your Lodestar validator and beaconnode `--monitoring.endpoint 'https://beaconcha.in/api/v1/client/metrics?apikey=YOUR_API_KEY' --metrics`
+Add the following CLI flag to your Lodestar validator and beaconnode `--monitoring.endpoint 'https://beaconcha.in/api/v1/client/metrics?apikey=YOUR_API_KEY'`
 
 You can find your API Key in the [account settings](https://beaconcha.in/user/settings#api).
 
