@@ -107,10 +107,10 @@ Check out the Lodestar documentation about [client monitoring](https://chainsafe
 
 ## Monitoring with Rocket Pool
 
-**Works with Lighthouse, Teku and Nimbus only.**
+**Works with Lighthouse, Lodestar, Teku and Nimbus only.**
 
 ****\
-**Lighthouse and Teku**
+**Lighthouse, Lodestar and Teku**
 
 Add Your [beaconcha.in API key ](https://beaconcha.in/user/settings#app)in Monitoring/Metrics (service config)
 
