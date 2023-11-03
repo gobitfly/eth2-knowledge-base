@@ -24,7 +24,7 @@ Rewards and penalties are based on the correctness of
 
 ![](<.gitbook/assets/grafik (11).png>)
 
-![](<.gitbook/assets/image (196).png>)
+![](<.gitbook/assets/image (196) (1).png>)
 
 The **worst** inclusion speed reward is **base\_reward \* 1/32 \* 7/8** with an inclusion distance of 32 and the **best** is **base\_reward \* 1/1 \* 7/8** with an inclusion distance of 1.
 

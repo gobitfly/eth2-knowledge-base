@@ -58,7 +58,7 @@ Once your Goerli node is synced, it should look like this and include the messag
 `For simplicity reasons we will use $HOME/prysm.`
 {% endhint %}
 
-![](../.gitbook/assets/beaconoerli1.gif)
+![](<../.gitbook/assets/beaconoerli1 (1).gif>)
 
 
 

@@ -79,7 +79,7 @@ With all this knowledge, we can assume that the known _Mnemonics_ will not be ac
 
 [`m / purpose' / coin_type' / account' / change / address_index`](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0)
 
-![](<.gitbook/assets/image (54) (1) (1).png>)
+![](<.gitbook/assets/image (54) (1).png>)
 
 The same logic applies to ETH2.0 Keys, just with **different** parameters.\
 **There is a single "master key"** (=Mnemonic phrase) which allows the user to attach as many validators to a single **withdrawal key** as they want.\

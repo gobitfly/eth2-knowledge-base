@@ -45,7 +45,7 @@ This may take a few hours and you will see the following message:
 
 `INFO initial-sync: Synced up to slot XXXXX`&#x20;
 
-![](<../../../../.gitbook/assets/image (27) (3) (2) (1).png>)
+![](<../../../../.gitbook/assets/image (27) (3) (1).png>)
 
 #### **Step.2**
 
@@ -67,7 +67,7 @@ Some of the instructions on the **participation page** will be ignored because t
 \
 Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](<../../../../.gitbook/assets/image (6) (3) (2) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (3) (1).png>)
 
 #### **Step 4.**
 

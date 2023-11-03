@@ -14,7 +14,7 @@ If the output is `command not found`, **Homebrew** needs to be installed, and if
 In order to **install Homebrew** use the following code:\
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 
-![](<../../../.gitbook/assets/image (25) (2) (1).png>)
+![](<../../../.gitbook/assets/image (25) (2) (2) (1) (1).png>)
 
 #### **Step 1.**
 
@@ -74,7 +74,7 @@ Some of the instructions on the participation page will be ignored because they 
 
 Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](<../../../.gitbook/assets/image (6) (3) (2) (1) (2).png>)
+![](<../../../.gitbook/assets/image (6) (3) (1) (2).png>)
 
 #### **Step 4.**
 

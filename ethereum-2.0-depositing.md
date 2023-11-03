@@ -42,7 +42,7 @@ Once the deposit is in the deposit contract, the state of the validator will swi
 
 {% tabs %}
 {% tab title="Rejected Deposit" %}
-![Rejected Transaction](<.gitbook/assets/image (78) (3) (1) (1).png>)
+![Rejected Transaction](<.gitbook/assets/image (78) (3) (1) (1) (3).png>)
 {% endtab %}
 {% endtabs %}
 

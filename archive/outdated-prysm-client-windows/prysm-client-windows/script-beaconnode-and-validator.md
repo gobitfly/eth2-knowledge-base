@@ -34,7 +34,7 @@ Use the following code:
 
 `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`
 
-![](<../../../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (5) (1).png>)
 
 
 
@@ -72,7 +72,7 @@ Some of the instructions on the **participation page** will be ignored because t
 \
 Follow the steps below to get Goerli ETH and to deposit them to activate your validator. If you cannot get any Goerli ETH through the participation page, join the [Prysm Discord](https://discord.gg/wJW7Rjk) channel.
 
-![](<../../../.gitbook/assets/image (6) (3) (1).png>)
+![](<../../../.gitbook/assets/image (6) (3) (2) (1) (1).png>)
 
 #### **Step 5.**
 

@@ -72,7 +72,7 @@ Let's go to the **next page** and upload our `deposit-data-[timestamp].json` **f
 
 ![](../.gitbook/assets/2020-08-05\_12-34-29.gif)
 
-![](<../.gitbook/assets/image (155) (2) (2) (1).png>)
+![](<../.gitbook/assets/image (155) (2) (1) (1).png>)
 
 ## Downloading Prysm
 
@@ -91,7 +91,7 @@ This is only required for the initial setup
 3. `reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1`\
    Changes some vizulations in the terminal window
 
-![](<../.gitbook/assets/grafik (7).png>)
+![](<../.gitbook/assets/grafik (7) (1).png>)
 
 ## Importing validator keys&#x20;
 
@@ -105,7 +105,7 @@ This is only required for the initial setup
 **Enter a new wallet directory and a new password.** \
 In this example we chose `C:\prysm` as the new wallet directory.
 
-![](<../.gitbook/assets/grafik (9) (1).png>)
+![](<../.gitbook/assets/grafik (9) (1) (1).png>)
 
 ## **Start the beacon node**
 

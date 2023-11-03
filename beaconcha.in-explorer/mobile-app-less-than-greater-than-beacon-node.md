@@ -16,9 +16,9 @@ _By using this endpoint, beaconcha.in will be allowed and is required to store t
 
 ### **Requirements**
 
-* beaconcha.in [Account](https://beaconcha.in/register)&#x20;
-* beaconcha.in [Mobile App](https://beaconcha.in/mobile)&#x20;
-* **Lighthouse**  [**v.1.4.0**](https://github.com/sigp/lighthouse/releases) or higher
+* beaconcha.in [Account](https://beaconcha.in/register)
+* beaconcha.in [Mobile App](https://beaconcha.in/mobile)
+* **Lighthouse** [**v.1.4.0**](https://github.com/sigp/lighthouse/releases) or higher
 * **Prysm** [**v1.3.10**](https://github.com/prysmaticlabs/prysm/releases) or higher
 * **Nimbus** [**v1.4.1**](https://github.com/status-im/nimbus-eth2/releases) **or higher**
 * **Teku v22.3.0 or higher**
@@ -35,11 +35,11 @@ Both, the beaconcha.in [explorer](https://github.com/gobitfly/eth2-beaconchain-e
 
 _A step by step guide on the Prater Testnet. Please adjust the network for your own needs._
 
-1. Open the [**Mobile App** ](https://beaconcha.in/user/settings#app)Tab and enter a name for your staking setup.  \
+1. Open the [**Mobile App** ](https://beaconcha.in/user/settings#app)Tab and enter a name for your staking setup.\
    _Use the same worker name even if your beaconnode runs on a seperate machine than your validator node._\
-   __\
-   __Copy the generated flag and paste it add it to your **beacon & validator node**\
-   __
+   \_\_\
+   \_\_Copy the generated flag and paste it add it to your **beacon & validator node**\
+   \_\_
 
 ![](../.gitbook/assets/mspaint\_2021-08-05\_08-47-46.png)
 
@@ -48,8 +48,8 @@ _A step by step guide on the Prater Testnet. Please adjust the network for your 
 _If your beacon-node or Ethereum 1.0 node is not in sync yet, you will see some warning logs!_
 
 \
-2\. Open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._  \
-Your staking device will appear under _Machines_ ! &#x20;
+2\. Open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._\
+Your staking device will appear under _Machines_ !
 
 ![](<../.gitbook/assets/grafik (5).png>)
 
@@ -69,9 +69,9 @@ Your staking device will appear under _Machines_ ! &#x20;
 
 ![](../.gitbook/assets/mspaint\_2021-08-05\_09-55-15.png)
 
-4\. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._  \
+4\. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._\
 \
-Your staking device will appear under _Machines_ ! &#x20;
+Your staking device will appear under _Machines_ !
 
 ![](<../.gitbook/assets/grafik (5).png>)
 
@@ -85,9 +85,9 @@ Your staking device will appear under _Machines_ ! &#x20;
 
 ![](../.gitbook/assets/mspaint\_2021-08-05\_10-13-08.png)
 
-3\. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._  \
+3\. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._\
 \
-Your staking device will appear under _Machines_ ! &#x20;
+Your staking device will appear under _Machines_ !
 
 ![](<../.gitbook/assets/grafik (5).png>)
 
@@ -109,21 +109,29 @@ Check out the Lodestar documentation about [client monitoring](https://chainsafe
 
 **Works with Lighthouse, Lodestar, Teku and Nimbus only.**
 
-****\
+\*\*\*\*\
 **Lighthouse, Lodestar and Teku**
 
 Add Your [beaconcha.in API key ](https://beaconcha.in/user/settings#app)in Monitoring/Metrics (service config)
 
-![](<../.gitbook/assets/image (6).png>)****
+![](<../.gitbook/assets/image (6).png>)\*\*\*\*
 
-****
+***
 
-**Nimbus**&#x20;
+**Nimbus**
 
 Nimbus does not expose every data, thus, some data such as validators are not visible in the app.
 
 Guide: [https://gist.github.com/jshufro/89e32d417801bf3dfb02c32a983b63cf](https://gist.github.com/jshufro/89e32d417801bf3dfb02c32a983b63cf)
 
-****
+***
 
-****
+## Gnosis
+
+Just as on Ethereum, the flag can be found at [https://beaconcha.in/user/settings#app](https://beaconcha.in/user/settings#app) **OR** [https://gnosischa.in/user/settings#app](https://gnosischa.in/user/settings#app).&#x20;
+
+Please note that the API key for beaconcha.in users is the same on gnosischa.in, so it doesn't matter which one is chosen.&#x20;
+
+The same applies to the flag in the instructions. However, it's recommended to use the beaconcha.in endpoint as it offers several fallbacks.&#x20;
+
+The best support for the metric feature is available using the Lighthouse client. Other clients **may not work or may only support a limited number of metrics in the app.**
