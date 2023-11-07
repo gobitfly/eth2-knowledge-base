@@ -1,2 +1,0 @@
-# OUTDATED: Prysm Client Guides
-

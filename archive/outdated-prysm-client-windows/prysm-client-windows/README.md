@@ -1,2 +1,0 @@
-# Prysm Client - Windows
-
