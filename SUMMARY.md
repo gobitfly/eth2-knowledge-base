@@ -1,9 +1,8 @@
 # Table of contents
 
-* [Deposit Process](README.md)
-
 ## Beaconcha.in Explorer
 
+* [Deposit Process](README.md)
 * [Glossary](beaconcha.in-explorer/glossary.md)
 * [Ethereum 2.0 Keys](beaconcha.in-explorer/ethereum-2-keys.md)
 * [The Genesis Event](beaconcha.in-explorer/the-genesis-event.md)
