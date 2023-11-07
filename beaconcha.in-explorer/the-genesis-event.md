@@ -18,7 +18,7 @@ description: A visualisation of the Genesis Event on Ethereum 2.0
 
 ### Conditions
 
-There are two conditions that have to get triggered to get the Ethereum 2.0 chain started!.
+There are two conditions that have to get triggered to get the Ethereum 2.0 chain started!
 
 1. The threshold of **16,384 validators** needs to be hit
 2. The  **ETH1** block (=Trigger block) which **determines the genesis** time for ETH2 **cannot be earlier** than  `min_genesis_time.`

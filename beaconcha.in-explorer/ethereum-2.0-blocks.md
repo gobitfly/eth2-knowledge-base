@@ -4,7 +4,7 @@ description: block page explainer
 
 # Block view
 
-_This post is going to lay out data, Ethereum 2.0 explorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
+_This post is going to lay out data, Ethereumexplorers such as_ [_beaconcha.in_](https://beaconcha.in/) _visualise_
 
 ## Overview
 

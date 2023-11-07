@@ -12,7 +12,7 @@ This is a free monitoring tool provided by [beaconcha.in](https://beaconcha.in/)
 
 ![](<../.gitbook/assets/image (152).png>)
 
-_By using this endpoint, beaconcha.in will be allowed and is required to store the given data to display it in the beaconcha.in the mobile application. To protect user privacy, the IP address will **never** be stored._
+_By using this endpoint, beaconcha.in will be allowed and is required to store the given data to display it in the beaconcha.in the mobile application. To protect user privacy, the IP address will **never** be stored_
 
 ### **Requirements**
 

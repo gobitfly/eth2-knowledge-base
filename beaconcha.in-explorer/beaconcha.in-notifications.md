@@ -8,7 +8,7 @@ description: How to configure beaconcha.in notifications
 
 This article provides a tutorial on setting up and debugging notifications using beaconcha.in's web and mobile platforms.&#x20;
 
-It's worth noting that the current notification center will undergo an upgrade in late 2023 to upgrade its user-friendliness.
+It's worth noting that the current notification center will undergo an upgrade in late 2023 to upgrade its user-friendliness
 
 #### Enabling notifications via web
 

@@ -1,3 +1,7 @@
+---
+description: An overview of ethereum staking keys
+---
+
 # Ethereum 2.0 Keys
 
 ## Extended overview of Ethereum Staking Keys

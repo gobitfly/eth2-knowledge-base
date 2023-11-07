@@ -21,7 +21,7 @@ If we multiply that with the information included in each Attestation per Epoch,
 
 ### Aggregated Attestation
 
-> An [aggregation](https://www.vocabulary.com/dictionary/aggregation) is a collection, or the gathering of things together. Your baseball card collection might represent the aggregation of lots of different types of cards.
+> An [aggregation](https://www.vocabulary.com/dictionary/aggregation) is a collection, or the gathering of things together. Your baseball card collection might represent the aggregation of lots of different types of cards
 
 So what does that mean for Attestations?\
 \

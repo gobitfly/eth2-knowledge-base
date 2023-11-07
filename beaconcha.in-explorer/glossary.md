@@ -10,7 +10,7 @@ It introduces Proof of stake to Ethereum1 and runs along it. It’s also called 
 * Finalize checkpoints
 * Perform a protocol-level random number generation (RNG)
 * Progress the beacon chain
-* Vote on the head of the chain for the fork choice
+* Vote on the head of the chain for the fork choice.
 
 [source](https://notes.ethereum.org/@djrtwo/Bkn3zpwxB#High-level-overview)
 
