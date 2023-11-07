@@ -2,7 +2,7 @@
 
 ## Beacon-chain
 
-It introduces Proof of stake to Ethereum1 and runs along it. It’s also called the coordination layer.
+It introduces Proof of stake to Ethereum1 and runs along it. It’s also called the coordination layer..
 
 **Roles**:
 
