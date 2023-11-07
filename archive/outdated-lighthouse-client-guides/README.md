@@ -1,2 +1,0 @@
-# OUTDATED: Lighthouse Client Guides
-
