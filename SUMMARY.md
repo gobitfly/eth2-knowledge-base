@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Welcome](README.md)
 
 ## Beaconcha.in Explorer
 
@@ -11,9 +11,9 @@
 
 ## Ethereum Staking
 
-* [The Genesis Event](ethereum-staking/the-genesis-event.md)
-* [Ethereum 2.0 Keys](ethereum-staking/ethereum-2-keys.md)
-* [Deposit Process](ethereum-staking/readme.md)
-* [Rewards and Penalties](ethereum-staking/rewards-and-penalties.md)
-* [Attestation](ethereum-staking/attestation.md)
-* [Glossary](ethereum-staking/glossary.md)
+* [The Genesis Event](beaconcha.in-explorer/the-genesis-event.md)
+* [Ethereum 2.0 Keys](beaconcha.in-explorer/ethereum-2-keys.md)
+* [Deposit Process](<README (1).md>)
+* [Rewards and Penalties](beaconcha.in-explorer/rewards-and-penalties.md)
+* [Attestation](beaconcha.in-explorer/attestation.md)
+* [Glossary](beaconcha.in-explorer/glossary.md)
