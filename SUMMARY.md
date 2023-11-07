@@ -15,7 +15,7 @@
 
 * [The Genesis Event](beaconcha.in-explorer/the-genesis-event.md)
 * [Ethereum 2.0 Keys](beaconcha.in-explorer/ethereum-2-keys.md)
-* [Deposit Process](<README (1).md>)
+* [Deposit Process](ethereum-staking/deposit-process.md)
 * [Rewards and Penalties](beaconcha.in-explorer/rewards-and-penalties.md)
 * [Attestation](beaconcha.in-explorer/attestation.md)
 * [Glossary](beaconcha.in-explorer/glossary.md)
