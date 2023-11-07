@@ -1,5 +1,5 @@
 ---
-description: Blocks 'n' roots
+description: block page explainer
 ---
 
 # Block view
@@ -58,7 +58,7 @@ Amount of voluntary Exits which have been included in this block by the block pr
 Amount of slashings which have been included in this block by the block proposer.\
 
 
-![](<../.gitbook/assets/image (176).png>)
+![](<../.gitbook/assets/image (151).png>)
 
 \
 Votes
@@ -67,7 +67,7 @@ Votes
 Represents the total amount of votes in a specific block. In the example below there were 128 attestations. These attestations received a **total** of 2802 votes. The aggregation bit is an additional way of representing the votes.\
 
 
-![](<../.gitbook/assets/image (177).png>)
+![](<../.gitbook/assets/image (156).png>)
 
 ## Attestations
 
@@ -84,7 +84,7 @@ Every epoch the total number of validators is split up in committees and one or 
 Represents the aggregated attestation of all participating validators in this attestation.\
 Each "1" bit is a successful attestation submitted by the validator. "0" bits visualise missed attestations.
 
-![](<../.gitbook/assets/image (181).png>)
+![](<../.gitbook/assets/image (191).png>)
 
 ### Validators
 
@@ -100,4 +100,4 @@ These are two additional votes a validator has to submit. The source points to t
 
 ### Signature
 
-![](<../.gitbook/assets/image (175).png>)
+![](<../.gitbook/assets/image (168).png>)

@@ -1,7 +1,7 @@
 ---
 description: >-
   A step by step tutorial on how to monitor your staking device & beaconnode on
-  the beaconcha.in mobile app.
+  the beaconcha.in mobile app
 ---
 
 # Mobile App <> Node Monitoring
@@ -10,7 +10,7 @@ description: >-
 
 This is a free monitoring tool provided by [beaconcha.in](https://beaconcha.in/) to enhance the solo staking experience. The user specifies the monitoring endpoint on its beacon & validator node.
 
-![](<../.gitbook/assets/image (209).png>)
+![](<../.gitbook/assets/image (152).png>)
 
 _By using this endpoint, beaconcha.in will be allowed and is required to store the given data to display it in the beaconcha.in the mobile application. To protect user privacy, the IP address will **never** be stored._
 
@@ -61,7 +61,7 @@ Your staking device will appear under _Machines_ !
 
 2\. Open a **new Terminal** and copy paste the commands
 
-![](../.gitbook/assets/anydesk\_2021-08-05\_09-09-52.png)
+![](../.gitbook/assets/AnyDesk\_2021-08-05\_09-09-52.png)
 
 ![](../.gitbook/assets/mspaint\_2021-08-05\_09-53-29.png)
 
@@ -114,7 +114,7 @@ Check out the Lodestar documentation about [client monitoring](https://chainsafe
 
 Add Your [beaconcha.in API key ](https://beaconcha.in/user/settings#app)in Monitoring/Metrics (service config)
 
-![](<../.gitbook/assets/image (6).png>)\*\*\*\*
+![](<../.gitbook/assets/image (1).png>)\*\*\*\*
 
 ***
 
