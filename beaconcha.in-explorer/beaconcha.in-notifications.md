@@ -1,5 +1,7 @@
 # beaconcha.in notifications
 
+## Configuration
+
 This article provides a tutorial on setting up and debugging notifications using beaconcha.in's web and mobile platforms.&#x20;
 
 It's worth noting that the current notification center will undergo an upgrade in late 2023 to upgrade its user-friendliness.
@@ -68,3 +70,6 @@ You may have noticed that the Notification Center allows you to configure _**Pus
    ![](../.gitbook/assets/image.png)
 5. Done
 
+## When do notifications trigger?
+
+#### Web, push, mobile, machine alerts
