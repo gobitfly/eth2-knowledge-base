@@ -14,7 +14,7 @@
 ## Ethereum Staking
 
 * [The Genesis Event](beaconcha.in-explorer/the-genesis-event.md)
-* [Ethereum 2.0 Keys](beaconcha.in-explorer/ethereum-2-keys.md)
+* [Ethereum Validator Keys](beaconcha.in-explorer/ethereum-2-keys.md)
 * [Deposit Process](ethereum-staking/deposit-process.md)
 * [Rewards and Penalties](beaconcha.in-explorer/rewards-and-penalties.md)
 * [Attestation](beaconcha.in-explorer/attestation.md)

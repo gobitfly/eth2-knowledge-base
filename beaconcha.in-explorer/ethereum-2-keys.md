@@ -2,20 +2,21 @@
 description: An overview of ethereum staking keys
 ---
 
-# Ethereum 2.0 Keys
+# Ethereum Validator Keys
 
-## Extended overview of Ethereum Staking Keys
+## Extended overview of Ethereum Validator Keys
 
 ![Ethereum 2.0 Key overview](<../.gitbook/assets/image (140).png>)
 
 ## General
 
-Both of these keys (ETH 1.0 and ETH 2.0) are based on the same idea and use [elliptic-curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve\_cryptography) to create keys.\
-However, Ethereum 2.0 has additional functionality, and its keys require different parameters when creating them, and use the [**B**oneh-**L**ynn-**S**hacham](https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham) (=**BLS**) signature scheme.
+Both of these keys (Keys for EOA-wallets and validator-keys) are based on the same idea and use [elliptic-curve cryptography](https://en.wikipedia.org/wiki/Elliptic-curve\_cryptography) to create keys.\
+\
+However, validator keys have additional functionality, and its keys require different parameters when creating them, and use the [**B**oneh-**L**ynn-**S**hacham](https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham) (=**BLS**) signature scheme.
 
-## Ethereum 2 Keys
+## Ethereum validator keys
 
-Compared to Ethereum 1.0, where users only have a **single private** key to access their funds, Ethereum 2.0 offers two different keys. The **validator** **private** key and the **withdrawal** **private** key.
+Compared to EOA-keys, where users only have a **single private** key to access their funds, validator-keys offers two different keys. The **validator** **private** key and the **withdrawal** **private** key.
 
 ### The validator key
 
@@ -24,7 +25,7 @@ As seen in the cutout below the validator signing key consists of two elements:
 * Validator **private** key
 * Validator **public** key
 
-The purpose of the **validator private key** is to **actively** sign on-chain (ETH2) operations such as block proposals and attestations. Therefore these keys have to be held in a hot wallet.
+The purpose of the **validator private key** is to **actively** sign on-chain operations such as block proposals and attestations. Therefore these keys have to be held in a hot wallet.
 
 This flexibility has the advantage to move validator signing keys very quickly from one device to another, however, if they have gotten lost or stolen, the thief has the ability to **act maliciously** in two ways:
 
@@ -34,13 +35,13 @@ This flexibility has the advantage to move validator signing keys very quickly f
   * Being an [attester](https://kb.beaconcha.in/glossary#attestations) and sign two different attestations having the same target.&#x20;
 * Force a [voluntary exit](https://kb.beaconcha.in/glossary#validator-lifecycle), which stops the validator from "staking", and grants access to its ETH balance to the withdrawal key owner.
 
-The **validator public key** is included in the _deposit data_ which allows ETH2 to identify the validator.
+The **validator public key** is included in the _deposit data_ which allows the consensus layer to identify the validator.
 
 ![](<../.gitbook/assets/image (124).png>)
 
 ### The withdrawal key
 
-The withdrawal key is required to move the validator balance once it is possible in [Phase1/2](https://notes.ethereum.org/@serenity/handbook). Just like the validator keys, the withdrawal keys also consist of two components:
+Just like the validator keys, the withdrawal keys also consist of two components:
 
 * Withdrawal **private** key
 * Withdrawal **public** key
@@ -65,13 +66,12 @@ The deposit contract requires about **150,000 gas** **limit.**
 
 ![](<../.gitbook/assets/image (145).png>)
 
-## Mnemonics for ETH2.0 validators
+## Mnemonics for  validator keys
 
 Over the last few years, we have become so accustomed to the [12 or 24 word-system](https://en.bitcoin.it/wiki/Seed\_phrase).\
 Why do we take steps back again and make our lives more complicated and more insecure with locally stored keys?
 
-Known hardware wallets will not be able to support ETH2.0 key generation until the BLS library gets audited. [EIP-2333](https://eips.ethereum.org/EIPS/eip-2333) and [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334) offer a solution but yet need to be implemented.\
-With all this knowledge, we can assume that the known _Mnemonics_ will not be accessible from day one of Phase 0.
+Known hardware wallets will not be able to support validator key generation until the BLS library gets audited. [EIP-2333](https://eips.ethereum.org/EIPS/eip-2333) and [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334) offer a solution but yet need to be implemented.
 
 #### How does it work?
 
@@ -85,7 +85,7 @@ With all this knowledge, we can assume that the known _Mnemonics_ will not be ac
 
 ![](<../.gitbook/assets/image (54) (1).png>)
 
-The same logic applies to ETH2.0 Keys, just with **different** parameters.\
+The same logic applies to validator Keys, just with **different** parameters.\
 **There is a single "master key"** (=Mnemonic phrase) which allows the user to attach as many validators to a single **withdrawal key** as they want.\
 This way the user can **derive all keys** from the Mnemonic phrase.
 
