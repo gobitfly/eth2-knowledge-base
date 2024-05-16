@@ -9,6 +9,7 @@
   * [Notification configuration](beaconcha.in-explorer/notifications/beaconcha.in-notifications.md)
 * [Mobile App <> Node Monitoring](beaconcha.in-explorer/mobile-app-less-than-greater-than-beacon-node.md)
 * [Optimal Inclusion Distance](beaconcha.in-explorer/optimal-inclusion-distance.md)
+* [Page](beaconcha.in-explorer/page.md)
 
 ## Ethereum Staking
 
