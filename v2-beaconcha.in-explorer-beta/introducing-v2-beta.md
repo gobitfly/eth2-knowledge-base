@@ -20,7 +20,7 @@ During our transition to v2, the v1 code base will not receive any updates unles
 
 
 \
-New **v2 validator dashboard features**
+**New v2 validator dashboard features**
 
 \
 **Data**
