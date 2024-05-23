@@ -1,10 +1,17 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [👋 Welcome](README.md)
 
-## v2 beaconcha.in explorer \[BETA]
+## 🖥️ v2 beaconcha.in explorer \[BETA]
 
-* [Introducing v2-beta](v2-beaconcha.in-explorer-beta/introducing-v2-beta.md)
+* [🎉 Introducing v2-beta](v2-beaconcha.in-explorer-beta/introducing-v2-beta.md)
+* [👁️ Validator dashboard Overview](v2-beaconcha.in-explorer-beta/validator-dashboard-overview.md)
+* [🟩 Slot visualization](v2-beaconcha.in-explorer-beta/slot-visualization.md)
+* [🫂 Validator groups](v2-beaconcha.in-explorer-beta/validator-groups.md)
+* [⚒️ Manage Validators](v2-beaconcha.in-explorer-beta/manage-validators.md)
+* [🤝 Share your custom dashboard](v2-beaconcha.in-explorer-beta/share-your-custom-dashboard.md)
+* [🦸 Summary table](v2-beaconcha.in-explorer-beta/summary-table.md)
+* [📈 Metric: Validator Efficiency](v2-beaconcha.in-explorer-beta/metric-validator-efficiency.md)
 
 ## v1 beaconcha.in Explorer
 
