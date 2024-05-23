@@ -20,6 +20,12 @@ Some examples are available here.
 
 
 
+{% hint style="info" %}
+Note that the duty weighting is based on the consensus layer specification.&#x20;
+
+Huge thanks to [Ben Edington](https://x.com/benjaminion\_xyz) for providing [https://eth2book.info/capella/](https://eth2book.info/capella/)
+{% endhint %}
+
 ### **Attester Efficiency** 
 
 84.4% (= 54/64)  of validators' rewards come from attestations. Every epoch (\~6.4 minutes), a validator proposes an attestation (vote) to the network.&#x20;
@@ -140,12 +146,6 @@ efficiency = 1 * attester_efficiency
 ```
 
 
-
-{% hint style="info" %}
-Note that the duty weighting is based on the consensus layer specification.&#x20;
-
-Huge thanks to Ben Edington for providing [https://eth2book.info/capella/](https://eth2book.info/capella/)
-{% endhint %}
 
 
 
