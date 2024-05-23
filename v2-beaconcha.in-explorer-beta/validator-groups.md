@@ -9,6 +9,4 @@ The grouping feature extremely flexible and covers multiple use cases such as re
 \
 Create groups in the Manage Groups modal and assign your validators to specific groups in the Manage Validators window.
 
-
-
-<mark style="color:red;">\[xxxx]</mark>
+<figure><img src="../.gitbook/assets/CreateGroup.webp" alt=""><figcaption></figcaption></figure>

@@ -16,10 +16,12 @@ layout:
 
 V2-beta introduces a new validator dashboard with a variety of new features and addresses issues observed in the past years when monitoring validators. We have worked tirelessly over the last year and will roll out more features over the next weeks.&#x20;
 
-During our transition to v2, the v1 code base will not receive any updates unless there are critical issues. Expect all new features to launch in our new github repository here: _TBD_\
+During our transition to v2, the v1 code base will not receive any updates unless there are critical issues. Expect all new features to launch in our new github repository here: _TBD_
 
+{% embed url="https://www.youtube.com/watch?v=dc97T87R8Zs" %}
 
-\
+***
+
 **New v2 validator dashboard features**
 
 \
@@ -40,9 +42,3 @@ Sharing Grafana login information in large corporations can be complicated; the 
 **New Metric: Efficiency**
 
 The familiar "Attestation Effectiveness" metric has been replaced by a new metric called "Efficiency," which considers all validator duties and provides better feedback to the user.
-
-\
-<mark style="color:red;">**\[video]**</mark>
-
-
-
