@@ -7,12 +7,12 @@ description: Efficiency, a metric to measure validator performance
 The validator **Efficiency** metric is a comprehensive measure of validator performance, integrating multiple components:&#x20;
 
 1. [**Attestations**](metric-validator-efficiency.md#attester-efficiency)
-2. **Block proposals**
-3. **Sync committees**.&#x20;
+2. [**Block proposals**](metric-validator-efficiency.md#proposer-efficiency)
+3. [**Sync committees**](metric-validator-efficiency.md#sync-efficiency)
 
 This metric is designed to provide a holistic view of a validator's effectiveness. \
 \
-Some examples are available here.
+Some examples are available [here](metric-validator-efficiency.md#examples-efficiency-calculation).
 
 ***
 
