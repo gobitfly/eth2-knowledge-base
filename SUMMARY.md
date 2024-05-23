@@ -2,16 +2,16 @@
 
 * [👋 Welcome](README.md)
 
-## 🖥️ v2 beaconcha.in explorer \[BETA]
+## 🖥️ v2 beaconcha.in explorer \[BETA] <a href="#v2beta" id="v2beta"></a>
 
-* [🎉 Introducing v2-beta](v2-beaconcha.in-explorer-beta/introducing-v2-beta.md)
-* [👁️ Validator dashboard Overview](v2-beaconcha.in-explorer-beta/validator-dashboard-overview.md)
-* [🟩 Slot visualization](v2-beaconcha.in-explorer-beta/slot-visualization.md)
-* [🫂 Validator groups](v2-beaconcha.in-explorer-beta/validator-groups.md)
-* [⚒️ Manage Validators](v2-beaconcha.in-explorer-beta/manage-validators.md)
-* [🤝 Share your custom dashboard](v2-beaconcha.in-explorer-beta/share-your-custom-dashboard.md)
-* [🦸 Summary table](v2-beaconcha.in-explorer-beta/summary-table.md)
-* [📈 Metric: Validator Efficiency](v2-beaconcha.in-explorer-beta/metric-validator-efficiency.md)
+* [🎉 Introducing v2-beta](v2beta/introduction.md)
+* [👁️ Validator dashboard Overview](v2beta/validator-dashboard-overview.md)
+* [🟩 Slot visualization](v2beta/slot-visualization.md)
+* [🫂 Validator groups](v2beta/validator-groups.md)
+* [⚒️ Manage Validators](v2beta/manage-validators.md)
+* [🤝 Share your custom dashboard](v2beta/share-your-custom-dashboard.md)
+* [🦸 Summary table](v2beta/summary-table.md)
+* [📈 Metric: Validator Efficiency](v2beta/metric-validator-efficiency.md)
 
 ## v1 beaconcha.in Explorer
 
