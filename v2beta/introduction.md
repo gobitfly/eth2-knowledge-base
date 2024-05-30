@@ -14,7 +14,9 @@ layout:
 
 # 🎉 Introducing v2-beta
 
-V2-beta introduces a new validator dashboard with a variety of new features and addresses issues observed in the past years when monitoring validators. We have worked tirelessly over the last year and will roll out more features over the next weeks.&#x20;
+V2-beta introduces a new validator dashboard with a variety of new features and addresses issues observed in the past years when monitoring validators. Most importantly, it scales up to 100,000 validators, a 35,600% increase over our V1 dashboard.\
+\
+We have worked tirelessly over the last year and will roll out more features over the next weeks.&#x20;
 
 During our transition to v2, the v1 code base will not receive any updates unless there are critical issues. Expect all new features to launch in our new github repository here: _TBD_
 
@@ -27,7 +29,7 @@ During our transition to v2, the v1 code base will not receive any updates unles
 \
 **Data**
 
-v2 introduces real-time data for identifying problems and aggregated historical data for debugging and research purposes. Users will no longer need to \*read\* the tables to spot problems with their validators; instead, they can \*look\* at the slot viz which provides multi-color feedback, and the best part – it scales to up to 100,000 validators per dashboard.
+v2 introduces real-time data for identifying problems and aggregated historical data for debugging and research purposes. Users will no longer need to _read_ the tables to spot problems with their validators; instead, they can _look_ at the slot viz which provides multi-color feedback, and the best part – it scales to up to 100,000 validators per dashboard.
 
 **Groups**
 
