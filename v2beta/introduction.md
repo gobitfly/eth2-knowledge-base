@@ -20,6 +20,8 @@ We have worked tirelessly over the last year and will roll out more features ove
 
 During our transition to v2, the v1 code base will not receive any updates unless there are critical issues. Expect all new features to launch in our new github repository here: [https://github.com/gobitfly/beaconchain](https://github.com/gobitfly/beaconchain)
 
+:point\_right: [https://v2-beta-holesky.beaconcha.in/dashboard](https://v2-beta-holesky.beaconcha.in/dashboard)
+
 {% embed url="https://www.youtube.com/watch?v=dc97T87R8Zs" %}
 
 ***
