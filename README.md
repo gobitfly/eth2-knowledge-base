@@ -10,7 +10,7 @@ This knowledgebase covers&#x20;
 * Definitions&#x20;
 * API explanations
 
-For questions and suggestions you can find us on [X](https://x.com/beaconcha\_in), [Discord](https://dsc.gg/beaconchain), or [Github](https://github.com/gobitfly/eth2-beaconchain-explorer)
+For questions and suggestions you can find us on [X](https://x.com/beaconcha\_in), [Discord](https://dsc.gg/beaconchain),  [v1-Github](https://github.com/gobitfly/eth2-beaconchain-explorer) or [v2-Github](https://github.com/gobitfly/beaconchain)
 
 
 
