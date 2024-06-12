@@ -46,3 +46,15 @@ Sharing Grafana login information in large corporations can be complicated; the 
 **New Metric: Efficiency**
 
 The familiar "Attestation Effectiveness" metric has been replaced by a new metric called "Efficiency," which considers all validator duties and provides better feedback to the user.
+
+
+
+{% hint style="success" %}
+For those who have been subscribed to beaconcha.in in the past -- Thank you for supporting us!
+
+<mark style="color:green;">You will have access to the new premium features for the same price.</mark>\
+
+
+* Plankton and Goldfish subscribers have been migrated to '[Guppy](https://v2-beta-holesky.beaconcha.in/pricing).'&#x20;
+* Whale subscribers have been migrated to '[Dolphin](https://v2-beta-holesky.beaconcha.in/pricing)'.
+{% endhint %}
