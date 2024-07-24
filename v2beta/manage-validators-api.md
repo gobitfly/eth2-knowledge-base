@@ -12,9 +12,11 @@ After creating a [validator dashboard](https://v2-beta-holesky.beaconcha.in/) an
 
 * For Holesky, please adjust the base URL to: `v2-beta-holesky.beaconcha.in`
 * The Group ID can be found in the `Group Manage` [modal ](validator-groups.md)on the Dashboard
+* The Dashboad ID can be found in the URL of your dashboard, ie `https://v2-beta-holesky.beaconcha.in/dashboard/{dashboard_id}#summary`
 * During our beta the **API key** will only be visible in the [account settings](https://beaconcha.in/user/settings#api) on [https://beaconcha.in/user/settings#api](https://beaconcha.in/user/settings#api)
 * Pass the API key as a parameter `api_key`
-  * `https://v2-beta-holesky.beaconcha.in/api/v2/validator-dashboards/{dashboard_id}/validators?api_key=KEY`    \
+  * `https://v2-beta-holesky.beaconcha.in/api/v2/validator-dashboards/{dashboard_id}/validators?api_key=KEY`
+    \
 
 
 {% swagger src="../.gitbook/assets/api.json" path="/api/v2/validator-dashboards/{dashboard_id}/validators" method="post" %}
