@@ -47,6 +47,8 @@ _A step by step guide on the Prater Testnet. Please adjust the network for your 
 
 _If your beacon-node or Ethereum 1.0 node is not in sync yet, you will see some warning logs!_
 
+_If you are using Sedge from Nethermind, the way to config this is adding (into your docker-compose.yml file): - --monitoring-endpoint=https://beaconcha.in/api/v1/client/metrics?apikey=YOUR_API_KEY
+
 \
 2\. Open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._\
 Your staking device will appear under _Machines_ !
