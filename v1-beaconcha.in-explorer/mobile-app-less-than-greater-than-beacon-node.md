@@ -114,7 +114,7 @@ Check out the Lodestar documentation about [client monitoring](https://chainsafe
 
 Add Your [beaconcha.in API key ](https://beaconcha.in/user/settings#app)in Monitoring/Metrics (service config)
 
-![](<../.gitbook/assets/image (1) (1).png>)\*\*\*\*
+![](<../.gitbook/assets/image (1) (1) (1).png>)\*\*\*\*
 
 ***
 

@@ -20,7 +20,7 @@ Users looking to add thousands of validators have several options:
 * Add validators by **withdrawal credentials**
 * Add validators with a **comma-separated** list (e.g., `1,2,3,4,5`)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Adding validators with a comma seperated list</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Adding validators with a comma seperated list</p></figcaption></figure>
 
 
 
