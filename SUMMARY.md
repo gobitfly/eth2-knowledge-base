@@ -5,14 +5,14 @@
 ## 🖥️ v2 beaconcha.in explorer \[BETA] <a href="#v2beta" id="v2beta"></a>
 
 * [🎉 Introducing v2-beta](v2beta/introduction.md)
-* [👁️ Validator dashboard Overview](v2beta/validator-dashboard-overview.md)
+* [🦸 Summary view](v2beta/summary-table.md)
 * [🟩 Slot visualization](v2beta/slot-visualization.md)
 * [🫂 Validator groups](v2beta/validator-groups.md)
 * [⚒️ Manage Validators](v2beta/manage-validators.md)
 * [⚒️ Manage Validators \[API\]](v2beta/manage-validators-api.md)
 * [🤝 Share your custom dashboard](v2beta/share-your-custom-dashboard.md)
-* [🦸 Summary view](v2beta/summary-table.md)
 * [📈 Metric: Validator Efficiency](v2beta/metric-validator-efficiency.md)
+* [⏰ WIP: Notifications v2](v2beta/wip-notifications-v2.md)
 
 ## v1 beaconcha.in Explorer
 

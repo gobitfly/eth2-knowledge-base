@@ -6,11 +6,27 @@ description: A modal to add, remove and assign validators
 
 This is the place where you can add and delete validators and assign them to groups. (Groups can be created in the Group Manage modal on the dashboard)
 
-
-
 ***
 
-The dropdown in the left top corner has two use cases:
+
+
+## Bulk adding to the validator dashboard
+
+Users looking to add thousands of validators have several options:
+
+* Add validators using our [API](manage-validators-api.md)
+* Add validators using validator **graffiti**
+* Add validators by **deposit address**
+* Add validators by **withdrawal credentials**
+* Add validators with a **comma-separated** list (e.g., `1,2,3,4,5`)
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Adding validators with a comma seperated list</p></figcaption></figure>
+
+
+
+
+
+## Filtering validators in the validator manage modal
 
 #### Filter for a specific group
 
