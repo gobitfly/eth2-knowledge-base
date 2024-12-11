@@ -43,7 +43,7 @@ The attestation reward is dependent on two variables, the [**base reward**](http
 
 #### **Base reward**
 
-**(**Validator effective balance \* 2\*\*6**)** **/ SQRT(**Effective balance of **all** active validators**)**&#x20;
+**(**&#x56;alidator effective balance \* 2\*\*&#x36;**)** **/ SQRT(**&#x45;ffective balance of **all** active validator&#x73;**)**&#x20;
 
 #### Inclusion delay
 

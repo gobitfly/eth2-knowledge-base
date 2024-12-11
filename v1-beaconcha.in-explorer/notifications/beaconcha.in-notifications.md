@@ -38,7 +38,7 @@ You may have noticed that the Notification Center allows you to configure _**Pus
 1. Download the app for iOS and Android here [https://beaconcha.in/mobile](https://beaconcha.in/mobile)
 2. Create an account and log in with your e-mail address\
    \
-   _**Note**: If you added validators to your Notification center through_ [_https://beaconcha.in/user/notifications_](https://beaconcha.in/user/notifications) _they will **not** appear in your mobile app automatically._\
+   &#xNAN;_**Note**: If you added validators to your Notification center through_ [_https://beaconcha.in/user/notifications_](https://beaconcha.in/user/notifications) _they will **not** appear in your mobile app automatically._\
    _If push notifications were enabled in the web notification center, the mobile app push the notifications through even if the validators are not visible in your app._\
    \
    _This UX issue will be part of the improvements later this year._\

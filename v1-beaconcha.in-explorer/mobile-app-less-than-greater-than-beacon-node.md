@@ -36,14 +36,14 @@ Both, the beaconcha.in [explorer](https://github.com/gobitfly/eth2-beaconchain-e
 _A step by step guide on the Prater Testnet. Please adjust the network for your own needs._
 
 1. Open the [**Mobile App** ](https://beaconcha.in/user/settings#app)Tab and enter a name for your staking setup.\
-   _Use the same worker name even if your beaconnode runs on a seperate machine than your validator node._\
+   &#xNAN;_&#x55;se the same worker name even if your beaconnode runs on a seperate machine than your validator node._\
    \_\_\
    \_\_Copy the generated flag and paste it add it to your **beacon & validator node**\
    \_\_
 
-![](../.gitbook/assets/mspaint\_2021-08-05\_08-47-46.png)
+![](../.gitbook/assets/mspaint_2021-08-05_08-47-46.png)
 
-![](../.gitbook/assets/mspaint\_2021-08-05\_08-59-42.png)
+![](../.gitbook/assets/mspaint_2021-08-05_08-59-42.png)
 
 _If your beacon-node or Ethereum 1.0 node is not in sync yet, you will see some warning logs!_
 
@@ -57,17 +57,17 @@ Your staking device will appear under _Machines_ !
 
 1. Head over to the [beaconcha.in settings](https://beaconcha.in/user/settings#app) and open the prysm section:
 
-![](../.gitbook/assets/firefox\_2021-08-05\_09-51-26.png)
+![](../.gitbook/assets/firefox_2021-08-05_09-51-26.png)
 
 2\. Open a **new Terminal** and copy paste the commands
 
-![](../.gitbook/assets/AnyDesk\_2021-08-05\_09-09-52.png)
+![](../.gitbook/assets/AnyDesk_2021-08-05_09-09-52.png)
 
-![](../.gitbook/assets/mspaint\_2021-08-05\_09-53-29.png)
+![](../.gitbook/assets/mspaint_2021-08-05_09-53-29.png)
 
 3\. Make sure your Prysm client (beacon & validator) is already up and running. The exporter will now send the data to your mobile app!
 
-![](../.gitbook/assets/mspaint\_2021-08-05\_09-55-15.png)
+![](../.gitbook/assets/mspaint_2021-08-05_09-55-15.png)
 
 4\. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._\
 \
@@ -79,11 +79,11 @@ Your staking device will appear under _Machines_ !
 
 1. Head over to the [beaconcha.in settings](https://beaconcha.in/user/settings#app) and open the nimbus section:
 
-![](../.gitbook/assets/mspaint\_2021-08-05\_10-14-30.png)
+![](../.gitbook/assets/mspaint_2021-08-05_10-14-30.png)
 
 2\. Add `--metrics --metrics-port=8008` to your nimbus client! Otherwise the exporter will not be able to get any data from your client.
 
-![](../.gitbook/assets/mspaint\_2021-08-05\_10-13-08.png)
+![](../.gitbook/assets/mspaint_2021-08-05_10-13-08.png)
 
 3\. Wait a few minutes and open the [beaconcha.in mobile app](https://beaconcha.in/mobile) and login with your account under _Preferences._\
 \
