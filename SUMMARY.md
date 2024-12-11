@@ -11,7 +11,7 @@
 * [⚒️ Manage Validators](v2beta/manage-validators.md)
 * [⚒️ Manage Validators \[API\]](v2beta/manage-validators-api.md)
 * [🤝 Share your custom dashboard](v2beta/share-your-custom-dashboard.md)
-* [🦸 Summary view](v2beta/summary-view.md)
+* [🦸 Summary view](v2beta/summary-table.md)
 * [📈 Metric: Validator Efficiency](v2beta/metric-validator-efficiency.md)
 
 ## v1 beaconcha.in Explorer

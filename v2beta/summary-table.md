@@ -4,13 +4,13 @@ description: Visualizes your validator performance in multiple time frames
 
 # 🦸 Summary view
 
-The summary table is part of the validator dashboard. It provides detailed performance metrics for each validator group, including efficiency and validator rewards across various time frames. It also features a historical chart view.
+The summary table is part of the [validator dashboard](https://v2-beta-mainnet.beaconcha.in/dashboard). It provides detailed performance metrics for each validator [group](validator-groups.md), including [efficiency](summary-table.md#efficiency) and validator rewards across various time frames. It also features a [historical chart view](summary-table.md#summary-chart-view).
 
 ***
 
 ## Overview
 
-Each row in the summary table represents a validator group. Users with multiple groups will see an additional row above the thin orange line, labeled as the Σ-row.
+Each row in the summary table represents a [validator group](validator-groups.md). Users with multiple groups will see an additional row above the thin orange line, labeled as the Σ-row.
 
 <figure><img src="../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
 
@@ -89,7 +89,7 @@ _The relative value only accounts for online and offline validators, ignoring th
 
 ## Efficiency
 
-The Validator Efficiency metric is a new, comprehensive measure of validator performance, combining multiple components:
+The Validator [Efficiency](summary-table.md#efficiency) metric is a new, comprehensive measure of validator performance, combining multiple components:
 
 * **Red arrow**: Underperforming the network average by at least 0.25%.
 * **Green arrow**: Outperforming the network average by at least 0.25%.
