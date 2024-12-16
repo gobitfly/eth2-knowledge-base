@@ -45,7 +45,7 @@ The total rewards are divided by the number of hours in the selected period and 
 `APR = ((RewardsInPeriod / HoursInPeriod) / (32 * ValidatorCount)) * (24 * 365) * 100`
 
 {% hint style="warning" %}
-The **All Time** period currently shows the **90-day APR**. This is subject to change in the future.
+The **All time** period currently shows the **90-day APR**. This is subject to change in the future.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/apr.png" alt=""><figcaption></figcaption></figure>
@@ -64,13 +64,15 @@ Luck values are purely informative and cannot be actively influenced.
 
 1. It is calculated how likely a validator was to be chosen to propose a block in each epoch.
 
-<pre><code><strong>ExpectedBlocks = (ValidatorEffectiveBalance / NetworkEffectiveBalance) * SlotsPerEpoch
-</strong></code></pre>
+```
+ExpectedBlocks = (ValidatorEffectiveBalance / NetworkEffectiveBalance) * SlotsPerEpoch
+```
 
 2. The number of blocks a validator proposed is measured against the expected number, expressed as a percentage.
 
-<pre><code><strong>BlockLuckPercent = (ProposedBlocks / ExpectedBlocks) * 100
-</strong></code></pre>
+```
+BlockLuckPercent = (ProposedBlocks / ExpectedBlocks) * 100
+```
 
 In practice, this calculation is performed for all validators over the selected time frame.
 
