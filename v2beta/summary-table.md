@@ -38,9 +38,57 @@ The summary table can be viewed in both absolute and relative values. This featu
 
 <figure><img src="../.gitbook/assets/image (194).png" alt=""><figcaption><p><strong>Summary table with absolute values</strong></p></figcaption></figure>
 
-## APR and Luck calculation
+## APR calculation
 
-<mark style="color:red;">**WIP**</mark>
+The total rewards are divided by the number of hours in the selected period and then by the 32 ETH stake per validator to calculate the base hourly return per validator. This hourly rate is then scaled up to an annual percentage.
+
+`APR = ((RewardsInPeriod / HoursInPeriod) / (32 * ValidatorCount)) * (24 * 365) * 100`
+
+{% hint style="warning" %}
+The **All Time** period currently shows the **90-day APR**. This is subject to change in the future.
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/apr.png" alt=""><figcaption></figcaption></figure>
+
+## Luck calculation
+
+<figure><img src="../.gitbook/assets/luck.png" alt=""><figcaption></figcaption></figure>
+
+Validators are randomly selected for duties, such as proposing blocks or participating in the sync committee. The chance of being assigned duties depends on the total number of validators on the network and their effective balance.&#x20;
+
+{% hint style="info" %}
+Luck values are purely informative and cannot be actively influenced.
+{% endhint %}
+
+**Blocks**
+
+1. It is calculated how likely a validator was to be chosen to propose a block in each epoch.
+
+<pre><code><strong>ExpectedBlocks = (ValidatorEffectiveBalance / NetworkEffectiveBalance) * SlotsPerEpoch
+</strong></code></pre>
+
+2. The number of blocks a validator proposed is measured against the expected number, expressed as a percentage.
+
+<pre><code><strong>BlockLuckPercent = (ProposedBlocks / ExpectedBlocks) * 100
+</strong></code></pre>
+
+In practice, this calculation is performed for all validators over the selected time frame.
+
+**Sync Committee**
+
+1. It is calculate how likely it was for a validator to be chosen as a member of the sync committee in each election.
+
+```
+ExpectedSyncParticipations = (ValidatorEffectiveBalance / NetworkEffectiveBalance) * SyncCommitteeSize
+```
+
+2. The number of actual participations is compared to the expected participations and expressed as a percentage.
+
+```
+SyncLuckPercent = (ActualSyncParticipations / ExpectedSyncParticipations) * 100
+```
+
+In practice, this calculation is performed for all validators over the selected time frame.
 
 ## Summary chart view
 
