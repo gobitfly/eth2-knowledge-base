@@ -78,7 +78,7 @@ In practice, this calculation is performed for all validators over the selected 
 
 **Sync Committee**
 
-1. It is calculate how likely it was for a validator to be chosen as a member of the sync committee in each election.
+1. It is calculated how likely it was for a validator to be chosen as a member of the sync committee in each election.
 
 ```
 ExpectedSyncParticipations = (ValidatorEffectiveBalance / NetworkEffectiveBalance) * SyncCommitteeSize
