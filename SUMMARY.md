@@ -12,7 +12,7 @@
 * [⚒️ Manage Validators \[API\]](v2beta/manage-validators-api.md)
 * [🤝 Share your custom dashboard](v2beta/share-your-custom-dashboard.md)
 * [📈 Metric: Validator Efficiency](v2beta/metric-validator-efficiency.md)
-* [⏰ WIP: Notifications v2](v2beta/wip-notifications-v2.md)
+* [⏰ Notifications v2](v2beta/wip-notifications-v2.md)
 
 ## v1 beaconcha.in Explorer
 

@@ -21,7 +21,7 @@ It's worth noting that the current notification center will undergo an upgrade i
    \
    ![](<../../.gitbook/assets/image (13).png>)
 5. Verify that the subscriptions are enabled\
-   ![](<../../.gitbook/assets/image (4) (1).png>)
+   ![](<../../.gitbook/assets/image (4) (1) (1).png>)
 6. If a notification was triggered it will show up in the Most recent column\
    ![](<../../.gitbook/assets/image (12).png>)\
 
@@ -55,7 +55,7 @@ You may have noticed that the Notification Center allows you to configure _**Pus
    \
    Verify that the notifications were added successfully by logging in at [https://beaconcha.in/user/notifications](https://beaconcha.in/user/notifications) and scrolling to the Validator table at the bottom of the page\
    \
-   ![](<../../.gitbook/assets/image (2) (1).png>)\
+   ![](<../../.gitbook/assets/image (2) (1) (1).png>)\
 
 
 {% hint style="info" %}
@@ -71,7 +71,7 @@ You may have noticed that the Notification Center allows you to configure _**Pus
    ![](<../../.gitbook/assets/image (6).png>)
 3. Add a webhook via [https://beaconcha.in/user/webhooks](https://beaconcha.in/user/webhooks)
 4. Enable the same notification types as on the notification center and enable "discord" if the notifications should be sent to a discord channel\
-   ![](<../../.gitbook/assets/image (5).png>)
+   ![](<../../.gitbook/assets/image (5) (1).png>)
 5. Done
 
 ## When do notifications trigger?

@@ -2,7 +2,7 @@
 description: Manage notifications in the v2 dashboard
 ---
 
-# ⏰ WIP: Notifications v2
+# ⏰ Notifications v2
 
 ## Requirements
 
@@ -55,19 +55,42 @@ To set up notifications:
 4. Send a test notification to ensure everything is working.
 5. Click Save.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Client notifications
 
 To set up notifications for EL and CL clients like Geth, Nimbus, or Erigon, go to the Clients tab.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Network notifications
 
 To set up notifications for Gas prices, Rocket Pool reward round or Participation rate of the network, go to the Networks tab.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+
+## Migrating from v1 notification to v2
+
+{% hint style="warning" %}
+NOTE: This method works for up to 100 validators for free users and up to 280 for premium users! Users exceeding this limit, please continue from 4.&#x20;
+{% endhint %}
+
+1. Head over to [https://beaconcha.in/user/notifications](https://beaconcha.in/user/notifications)
+2.  Scroll down and click "View Stats"
+
+    <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 
+3. Copy the validator indices from the website that opens:\
+   e.g `1,2641,2642,2643,2645,3288,3292,3400,3401,3402,3403,3404`
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+4. Login on [https://v2-beta-mainnet.beaconcha.in/login](https://v2-beta-mainnet.beaconcha.in/login), and create a v2 dashboard here: [https://v2-beta-mainnet.beaconcha.in/dashboard](https://v2-beta-mainnet.beaconcha.in/dashboard)\
+
+5. Add your validators as a comma-separated list or use other methods as described in [#bulk-adding-to-the-validator-dashboard](manage-validators.md#bulk-adding-to-the-validator-dashboard "mention"):
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+6. Follow the steps from [#setting-up-v2-notifications-via-web](wip-notifications-v2.md#setting-up-v2-notifications-via-web "mention") — done!
 

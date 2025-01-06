@@ -29,7 +29,7 @@ Holesky:  [https://v2-beta-holesky.beaconcha.in/dashboard](https://v2-beta-holes
 **New v2 validator dashboard features**
 
 \
-[**Data**](summary-table.md)
+[**Data**](broken-reference)
 
 v2 introduces real-time data for identifying problems and aggregated historical data for debugging and research purposes. Users will no longer need to _read_ the tables to spot problems with their validators; instead, they can _look_ at the slot viz which provides [multi-color feedback](slot-visualization.md), and the best part – it scales to up to 100,000 validators per dashboard.
 
