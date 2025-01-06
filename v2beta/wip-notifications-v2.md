@@ -88,9 +88,17 @@ NOTE: This method works for up to 100 validators for free users and up to 280 fo
 
 4. Login on [https://v2-beta-mainnet.beaconcha.in/login](https://v2-beta-mainnet.beaconcha.in/login), and create a v2 dashboard here: [https://v2-beta-mainnet.beaconcha.in/dashboard](https://v2-beta-mainnet.beaconcha.in/dashboard)\
 
-5. Add your validators as a comma-separated list or use other methods as described in [#bulk-adding-to-the-validator-dashboard](manage-validators.md#bulk-adding-to-the-validator-dashboard "mention"):
+5. Click on `Manage Validators`and add your validators as a comma-separated list or use other methods as described in [#bulk-adding-to-the-validator-dashboard](manage-validators.md#bulk-adding-to-the-validator-dashboard "mention"):
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-6. Follow the steps from [#setting-up-v2-notifications-via-web](wip-notifications-v2.md#setting-up-v2-notifications-via-web "mention") — done!
+With the dashboard successfully set up, you can configure notifications. :relaxed:
+
+6. Go to [https://v2-beta-mainnet.beaconcha.in/notifications#dashboards](https://v2-beta-mainnet.beaconcha.in/notifications#dashboards).
+7. Click on `Manage Notifications`.
+8. Ensure email and push notifications are **enabled**.
+9. Send a test notification to confirm you receive notifications.
+10. Go to the Dashboard tab, select the group, and edit the subscription column.
+
+<figure><img src="../.gitbook/assets/Export-1733926931270.gif" alt=""><figcaption></figcaption></figure>
 
