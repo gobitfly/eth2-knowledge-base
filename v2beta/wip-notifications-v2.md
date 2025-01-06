@@ -81,7 +81,7 @@ NOTE: This method works for up to 100 validators for free users and up to 280 fo
     <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 
-3. Copy the validator indices from the website that opens:\
+3. Copy the validator indices from the URL of the website that opens:\
    e.g `1,2641,2642,2643,2645,3288,3292,3400,3401,3402,3403,3404`
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
