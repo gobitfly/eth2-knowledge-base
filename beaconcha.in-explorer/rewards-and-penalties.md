@@ -44,14 +44,14 @@ _Assumption: The participation rate is 100%_
 4. You attest and vote correctly, but the next block is missed, you get **55/16 \* base\_reward**
 5. You attest correctly and get perfect inclusion distance, but you attested on a block that most people got late as in 2., you get **\~7/8 \* base\_reward**\
    \
-   _The last one is the most confusing one: When there is a late block where validators miss the head, the validator that misses the head earns **more** than the validator that votes correctly, as in 2._ \
+   &#xNAN;_&#x54;he last one is the most confusing one: When there is a late block where validators miss the head, the validator that misses the head earns **more** than the validator that votes correctly, as in 2._ \
    _15/8 > 7/8_
 
 **Best possible reward**\
 31/8 \* base\_reward\
 \
 **Worst possible reward with an included attestation ("Negative Reward")**\
-\-249/256 \* base\_reward
+-249/256 \* base\_reward
 
 ## Block reward
 
