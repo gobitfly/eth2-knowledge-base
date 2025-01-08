@@ -103,7 +103,7 @@ Add the following CLI flag to your Lodestar validator and beaconnode `--monitori
 
 You can find your API Key in the [account settings](https://beaconcha.in/user/settings#api).
 
-Check out the Lodestar documentation about [client monitoring](https://chainsafe.github.io/lodestar/logging-and-metrics/client-monitoring/) for further details.
+Check out the Lodestar documentation about [client monitoring](https://chainsafe.github.io/lodestar/run/logging-and-metrics/client-monitoring) for further details.
 
 ## Monitoring with Rocket Pool
 
