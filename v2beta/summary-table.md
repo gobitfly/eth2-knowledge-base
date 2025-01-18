@@ -40,6 +40,29 @@ The missed rewards, which include both the consensus layer and the execution lay
 
 `slot >= missed.slot - 16` AND `slot < missed.slot + 16`
 
+### Missed Rewards Calculation
+
+When a validator misses rewards — whether from the Consensus Layer (CL) or Execution Layer (EL) proposals, including MEV — those missed rewards are calculated using the median (p50) of the surrounding rewards. Specifically:
+
+1. **Identify the Surrounding Slots**
+   * For each missed slot, consider the 32 slots surrounding it: slots where `slot >= missed.slot - 16` AND `slot < missed.slot + 16`
+2. **Calculate the Median (p50)**
+   * Collect the rewards from each of those surrounding 32 slots.
+   * Compute the _median_ (50th percentile, or p50) of that set of rewards.\
+
+3. **Assign the Median as the Missed Reward**
+   * The resulting median value becomes the _missed reward_ for that specific slot.
+
+#### Example
+
+* Suppose a missed proposal occurred at slot `100`.
+  * Look at slots `84` through `115` (i.e., `100 - 16` to `100 + 15`).
+  * Gather each validator’s reward (MEV rewards + CL rewards) from those slots.
+  * Sort these rewards and take the median value.
+  * The median is then recorded as the missed reward for slot `100`.
+
+
+
 ## APR calculation
 
 The total rewards are divided by the number of hours in the selected period and then by the 32 ETH stake per validator to calculate the base hourly return per validator. This hourly rate is then scaled up to an annual percentage.
