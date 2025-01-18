@@ -34,11 +34,7 @@ The summary table can be viewed in both absolute and relative values. This featu
 
 <figure><img src="../.gitbook/assets/image (194).png" alt=""><figcaption><p><strong>Summary table with absolute values</strong></p></figcaption></figure>
 
-## Missed rewards
 
-The missed rewards, which include both the consensus layer and the execution layer, are determined by calculating the median (P50) of the rewards from slots where the specified criteria are met for each missed slot. This missed reward metric utilizes the MEV reward provided by relays for missed transaction rewards.&#x20;
-
-`slot >= missed.slot - 16` AND `slot < missed.slot + 16`
 
 ### Missed Rewards Calculation
 
@@ -51,7 +47,10 @@ When a validator misses rewards — whether from the Consensus Layer (CL) or Exe
    * Compute the _median_ (50th percentile, or p50) of that set of rewards.\
 
 3. **Assign the Median as the Missed Reward**
-   * The resulting median value becomes the _missed reward_ for that specific slot.
+   * The resulting median value becomes the _missed reward_ for that specific slot.\
+
+
+<figure><img src="../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
 
 #### Example
 
