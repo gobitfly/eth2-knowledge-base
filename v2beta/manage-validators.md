@@ -18,7 +18,7 @@ Users looking to add thousands of validators have several options:
 * Add validators using validator **graffiti**
 * Add validators by **deposit address**
 * Add validators by **withdrawal credentials**
-* Add validators with a **comma-separated** list (e.g., `1,2,3,4,5`)
+* Add validators with a **comma-separated** list via validator indices or validator public key (e.g., `1,2,3,4,5`)
 
 <figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Adding validators with a comma seperated list</p></figcaption></figure>
 
