@@ -23,7 +23,8 @@ After creating a [validator dashboard](https://v2-beta-holesky.beaconcha.in/) an
 Please adjust the base URL from the examples below based on the network. \
 \
 Holesky: `v2-beta-holesky.beaconcha.in`\
-Mainnet: `v2-beta-mainnet.beaconcha.in`&#x20;
+Mainnet: `v2-beta-mainnet.beaconcha.in` \
+Gnosis: `v2-beta-gnosis.beaconcha.in`
 {% endhint %}
 
 {% openapi src="../.gitbook/assets/API_spec.json" path="/validator-dashboards/{dashboard_id}/validators" method="post" %}
