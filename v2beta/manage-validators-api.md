@@ -26,10 +26,15 @@ Holesky: `v2-beta-holesky.beaconcha.in`\
 Mainnet: `v2-beta-mainnet.beaconcha.in`&#x20;
 {% endhint %}
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v2/validator-dashboards/{dashboard_id}/validators" method="post" %}
-[api.json](../.gitbook/assets/api.json)
-{% endswagger %}
+{% openapi src="../.gitbook/assets/API_spec.json" path="/validator-dashboards/{dashboard_id}/validators" method="post" %}
+[API_spec.json](../.gitbook/assets/API_spec.json)
+{% endopenapi %}
 
-{% swagger src="../.gitbook/assets/api.json" path="/api/v2/validator-dashboards/{dashboard_id}/validators" method="delete" %}
-[api.json](../.gitbook/assets/api.json)
-{% endswagger %}
+{% openapi src="../.gitbook/assets/API_spec.json" path="/validator-dashboards/{dashboard_id}/groups/{group_id}/validators" method="delete" %}
+[API_spec.json](../.gitbook/assets/API_spec.json)
+{% endopenapi %}
+
+{% openapi src="../.gitbook/assets/API_spec.json" path="/validator-dashboards/{dashboard_id}/validators/bulk-deletions" method="post" %}
+[API_spec.json](../.gitbook/assets/API_spec.json)
+{% endopenapi %}
+
