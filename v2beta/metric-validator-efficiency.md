@@ -46,7 +46,7 @@ Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rew
 
 {% code overflow="wrap" %}
 ```
-attester_efficiency = actualReward / idealReward
+attester_efficiency = attester_actualReward / attester_idealReward
 ```
 {% endcode %}
 
@@ -58,14 +58,14 @@ attester_efficiency = actualReward / idealReward
 
 Block proposals are purely luck-based, but over the long run, 12.5% (8/64) of validators' rewards come from block proposals. Blocks include execution rewards (transaction rewards + MEV rewards) and scale with the number of attestations and sync committee outputs included in a block.
 
-Comparing validator performance based on the luck of inclusion of attestations and MEV rewards (which highly depend on market volatility) would not provide meaningful context. Thus, proposer efficiency solely depends on the number of successfully proposed blocks divided by the total number of blocks that a validator could have proposed.
-
+Comparing validator performance based on MEV rewards (which highly depend on market volatility) would not provide meaningful context. Thus, proposer efficiency solely depends on CL rewards. The sum of all received proposal-related rewards is divided by the possible maximum. Since this value is not trivially available, it has to be approximated. We do this by assuming the median rewards of the surrounding 32 proposals (missing skipped, 0 if none).
 \
 This leads to the following formula:
 
 {% code overflow="wrap" %}
 ```
-proposer_efficiency = proposedBlocks / totalBlocks
+proposer_idealReward = max(proposer_actualReward, medianReward([x-16 ... x+16]))
+proposer_efficiency = proposer_actualReward / proposer_idealReward
 ```
 {% endcode %}
 
@@ -79,7 +79,7 @@ Every 256 epochs, 512 validators are elected to be part of the sync committee. L
 
 Compared to attestations, which occur once per epoch, sync duties occur in every slot for 256 epochs, totaling 8192 duties per sync committee member.
 
-To reflect actual performance, sync efficiency doesn’t rely on rewards but on the number of correctly executed sync duties. To avoid skewing the sync efficiency by the scheduled duties, we divide it. Since sync duties need to be included in a block by the block proposer, we subtract missed blocks that occurred during this period to avoid penalizing the sync committee member.
+Since sync duties need to be included in a block by the block proposer, we ignore missed blocks that occurred during this period to avoid penalizing the sync committee member.
 
 
 
@@ -107,7 +107,7 @@ When a validator has **attestations, block proposals, and sync committees**, the
 
 {% code overflow="wrap" %}
 ```
-efficiency = ((54/64 * attester_efficiency) + (8/64 * proposer_efficiency) + (2/64 * sync_efficiency))
+efficiency = (attester_actualReward + proposer_actualReward + sync_actualReward) / (attester_idealReward + proposer_idealReward + sync_idealReward)
 ```
 {% endcode %}
 
@@ -119,7 +119,7 @@ For validators who have participated in attestations and block proposals **but n
 
 {% code overflow="wrap" %}
 ```
-efficiency = ((56/64 * attester_efficiency) + (8/64 * proposer_efficiency))
+efficiency = (attester_actualReward + proposer_actualReward) / (attester_idealReward + proposer_idealReward)
 ```
 {% endcode %}
 
@@ -131,7 +131,7 @@ When a validator has participated in attestations and sync committees **but not 
 
 {% code overflow="wrap" %}
 ```
-efficiency = ((62/64 * attester_efficiency) + (2/64 * sync_efficiency))
+efficiency = (attester_actualReward + sync_actualReward) / (attester_idealReward + sync_idealReward)
 ```
 {% endcode %}
 
@@ -142,7 +142,7 @@ Example 4
 If a validator has participated only in attestations, the efficiency is simply:
 
 ```
-efficiency = 1 * attester_efficiency
+efficiency = attester_efficiency 
 ```
 
 
