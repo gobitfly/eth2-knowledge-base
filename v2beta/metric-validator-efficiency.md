@@ -42,7 +42,7 @@ An attestation consists of three votes:
 
 If a validator votes correctly on all three and is included in the block with the best inclusion delay (1), the reward will be 100%, as good as it can be.
 
-Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency.
+Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency. Negative rewards (penalties) from any of the 3 attestation components do not count towards `attester_actualReward`.
 
 {% code overflow="wrap" %}
 ```
@@ -79,7 +79,7 @@ Every 256 epochs, 512 validators are elected to be part of the sync committee. L
 
 Compared to attestations, which occur once per epoch, sync duties occur in every slot for 256 epochs, totaling 8192 duties per sync committee member.
 
-Since sync duties need to be included in a block by the block proposer, we ignore missed blocks that occurred during this period to avoid penalizing the sync committee member.
+Since sync duties need to be included in a block by the block proposer, we ignore missed blocks that occurred during this period to avoid penalizing the sync committee member. Penalties from missed sync participation are also not counted towards `sync_actualReward`.
 
 
 
@@ -142,7 +142,7 @@ Example 4
 If a validator has participated only in attestations, the efficiency is simply:
 
 ```
-efficiency = attester_efficiency 
+efficiency = 1 * attester_efficiency
 ```
 
 
