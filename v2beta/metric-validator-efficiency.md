@@ -58,7 +58,7 @@ attester_efficiency = attester_actualReward / attester_idealReward
 
 Block proposals are purely luck-based, but over the long run, 12.5% (8/64) of validators' rewards come from block proposals. Blocks include execution rewards (transaction rewards + MEV rewards) and scale with the number of attestations and sync committee outputs included in a block.
 
-Comparing validator performance based on MEV rewards (which highly depend on market volatility) would not provide meaningful context. Thus, proposer efficiency solely depends on CL rewards. The sum of all received proposal-related rewards is divided by the possible maximum. Since this value is not trivially available, it has to be approximated. We do this by assuming the median rewards of the surrounding 32 proposals (missing skipped, 0 if none).
+Comparing validator performance based on MEV rewards (which highly depend on market volatility) would not provide meaningful context. Thus, proposer efficiency solely depends on CL rewards. To remove some volatility from the result, the received proposal-related rewards are compared to the median proposal-related reward of surrounding proposals. Specifically, the surrounding 32 proposals (missing skipped, 0 if none) of each proposal are considered to be the the median proposal reward.
 \
 This leads to the following formula:
 
