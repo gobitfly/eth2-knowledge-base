@@ -87,7 +87,7 @@ This leads to the following formula
 
 {% code overflow="wrap" %}
 ```html
-sync_efficiency = executed_Sync / (scheduled_Sync - missed_Blocks)
+sync_efficiency = sync_actualReward / sync_idealReward
 ```
 {% endcode %}
 
@@ -97,11 +97,8 @@ Validators may not be lucky enough to be elected in a sync committee, but their 
 
 ***
 
-### Examples: Efficiency calculation
+### Example Efficiency calculation
 
-
-
-Example 1
 
 When a validator has **attestations, block proposals, and sync committees**, the efficiency is calculated as:
 
@@ -111,41 +108,4 @@ efficiency = (attester_actualReward + proposer_actualReward + sync_actualReward)
 ```
 {% endcode %}
 
-
-
-Example 2\
-\
-For validators who have participated in attestations and block proposals **but not in sync committees**, the efficiency is computed as:
-
-{% code overflow="wrap" %}
-```
-efficiency = (attester_actualReward + proposer_actualReward) / (attester_idealReward + proposer_idealReward)
-```
-{% endcode %}
-
-
-
-Example 3\
-\
-When a validator has participated in attestations and sync committees **but not in block proposals**, the efficiency formula is:
-
-{% code overflow="wrap" %}
-```
-efficiency = (attester_actualReward + sync_actualReward) / (attester_idealReward + sync_idealReward)
-```
-{% endcode %}
-
-
-
-Example 4
-
-If a validator has participated only in attestations, the efficiency is simply:
-
-```
-efficiency = 1 * attester_efficiency
-```
-
-
-
-
-
+When a validator did not participate in a sync committee and/or did not propose a block, the respective rewards & ideal rewards are set to 0
