@@ -12,7 +12,10 @@ The validator **Efficiency** metric is a comprehensive measure of validator perf
 
 This metric is designed to provide a holistic view of a validator's effectiveness. \
 \
-Some examples are available [here](metric-validator-efficiency.md#examples-efficiency-calculation).
+
+Validator efficiency can be calculated over an arbitrary timeframe. The longer the timeframe, the closer it is expected to approach the duty weighting as defined in the consensus layer specification. For shorter timeframes however (down to a single epoch), these values can vary significantly: A block proposal or sync committee participation can completely dominate the resulting efficiency in these cases.&#x20;
+
+In order to calculate the efficiency over multiple epochs correctly, the respective effective balance has to be factored in. To accomplish this, each individual value gets aggregated before calculating the percentage efficiency, instead of calculating the percentage for each epoch and averaging that.
 
 ***
 
@@ -21,8 +24,6 @@ Some examples are available [here](metric-validator-efficiency.md#examples-effic
 
 
 {% hint style="info" %}
-Note that the duty weighting is based on the consensus layer specification.&#x20;
-
 Huge thanks to [Ben Edington](https://x.com/benjaminion\_xyz) for providing [https://eth2book.info/capella/](https://eth2book.info/capella/)
 {% endhint %}
 
@@ -42,11 +43,11 @@ An attestation consists of three votes:
 
 If a validator votes correctly on all three and is included in the block with the best inclusion delay (1), the reward will be 100%, as good as it can be.
 
-Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency.
+Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency. Negative rewards (penalties) from any of the 3 attestation components do not count towards `attester_actualReward`.
 
 {% code overflow="wrap" %}
 ```
-attester_efficiency = actualReward / idealReward
+attester_efficiency = attester_actualReward / attester_idealReward
 ```
 {% endcode %}
 
@@ -58,18 +59,17 @@ attester_efficiency = actualReward / idealReward
 
 Block proposals are purely luck-based, but over the long run, 12.5% (8/64) of validators' rewards come from block proposals. Blocks include execution rewards (transaction rewards + MEV rewards) and scale with the number of attestations and sync committee outputs included in a block.
 
-Comparing validator performance based on the luck of inclusion of attestations and MEV rewards (which highly depend on market volatility) would not provide meaningful context. Thus, proposer efficiency solely depends on the number of successfully proposed blocks divided by the total number of blocks that a validator could have proposed.
-
+Comparing validator performance based on MEV rewards (which highly depend on market volatility) would not provide meaningful context. Thus, proposer efficiency solely depends on CL rewards. To remove some volatility from the result, the received proposal-related rewards are compared to the median proposal-related reward of surrounding proposals. Specifically, the surrounding 32 proposals (missing skipped, 0 if none) of each proposal are considered to be the the median proposal reward.
 \
 This leads to the following formula:
 
 {% code overflow="wrap" %}
 ```
-proposer_efficiency = proposedBlocks / totalBlocks
+proposer_idealReward = max(proposer_actualReward, medianReward([x-16 ... x+16]))
+proposer_efficiency = proposer_actualReward / proposer_idealReward
 ```
 {% endcode %}
 
-Some validators may not be lucky enough to propose a block, but their efficiency needs to be comparable with other validators who did propose a block. For this reason, the proposer efficiency will be `1` for validators who did not propose a block. Our v2 dashboard and API will provide both proposal efficiency and efficiency to provide more context.
 
 ***
 
@@ -79,7 +79,7 @@ Every 256 epochs, 512 validators are elected to be part of the sync committee. L
 
 Compared to attestations, which occur once per epoch, sync duties occur in every slot for 256 epochs, totaling 8192 duties per sync committee member.
 
-To reflect actual performance, sync efficiency doesn’t rely on rewards but on the number of correctly executed sync duties. To avoid skewing the sync efficiency by the scheduled duties, we divide it. Since sync duties need to be included in a block by the block proposer, we subtract missed blocks that occurred during this period to avoid penalizing the sync committee member.
+Since sync duties need to be included in a block by the block proposer, we ignore missed blocks that occurred during this period to avoid penalizing the sync committee member. Penalties from missed sync participation are also not counted towards `sync_actualReward`.
 
 
 
@@ -87,65 +87,22 @@ This leads to the following formula
 
 {% code overflow="wrap" %}
 ```html
-sync_efficiency = executed_Sync / (scheduled_Sync - missed_Blocks)
+sync_efficiency = sync_actualReward / sync_idealReward
 ```
 {% endcode %}
-
-Validators may not be lucky enough to be elected in a sync committee, but their efficiency needs to be comparable with other validators who did participate. For this reason, the sync efficiency will be `1` for validators who were not elected. Our v2 dashboard and API will provide both proposal efficiency and efficiency to provide more context.
-
 
 
 ***
 
-### Examples: Efficiency calculation
+### Example Efficiency calculation
 
-
-
-Example 1
 
 When a validator has **attestations, block proposals, and sync committees**, the efficiency is calculated as:
 
 {% code overflow="wrap" %}
 ```
-efficiency = ((54/64 * attester_efficiency) + (8/64 * proposer_efficiency) + (2/64 * sync_efficiency))
+efficiency = (attester_actualReward + proposer_actualReward + sync_actualReward) / (attester_idealReward + proposer_idealReward + sync_idealReward)
 ```
 {% endcode %}
 
-
-
-Example 2\
-\
-For validators who have participated in attestations and block proposals **but not in sync committees**, the efficiency is computed as:
-
-{% code overflow="wrap" %}
-```
-efficiency = ((56/64 * attester_efficiency) + (8/64 * proposer_efficiency))
-```
-{% endcode %}
-
-
-
-Example 3\
-\
-When a validator has participated in attestations and sync committees **but not in block proposals**, the efficiency formula is:
-
-{% code overflow="wrap" %}
-```
-efficiency = ((62/64 * attester_efficiency) + (2/64 * sync_efficiency))
-```
-{% endcode %}
-
-
-
-Example 4
-
-If a validator has participated only in attestations, the efficiency is simply:
-
-```
-efficiency = 1 * attester_efficiency
-```
-
-
-
-
-
+When a validator did not participate in a sync committee and/or did not propose a block, the respective rewards & ideal rewards are set to 0
