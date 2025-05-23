@@ -12,7 +12,10 @@ The validator **Efficiency** metric is a comprehensive measure of validator perf
 
 This metric is designed to provide a holistic view of a validator's effectiveness. \
 \
-Some examples are available [here](metric-validator-efficiency.md#examples-efficiency-calculation).
+
+Validator efficiency can be calculated over an arbitrary timeframe. The longer the timeframe, the closer it is expected to approach the duty weighting as defined in the consensus layer specification. For shorter timeframes however (down to a single epoch), these values can vary significantly: A block proposal or sync committee participation can completely dominate the resulting efficiency in these cases.&#x20;
+
+In order to calculate the efficiency over multiple epochs correctly, the respective effective balance has to be factored in. To accomplish this, each individual value gets aggregated before calculating the percentage efficiency, instead of calculating the percentage for each epoch and averaging that.
 
 ***
 
@@ -21,8 +24,6 @@ Some examples are available [here](metric-validator-efficiency.md#examples-effic
 
 
 {% hint style="info" %}
-Note that the duty weighting is based on the consensus layer specification.&#x20;
-
 Huge thanks to [Ben Edington](https://x.com/benjaminion\_xyz) for providing [https://eth2book.info/capella/](https://eth2book.info/capella/)
 {% endhint %}
 
@@ -69,7 +70,6 @@ proposer_efficiency = proposer_actualReward / proposer_idealReward
 ```
 {% endcode %}
 
-Some validators may not be lucky enough to propose a block, but their efficiency needs to be comparable with other validators who did propose a block. For this reason, the proposer efficiency will be `1` for validators who did not propose a block. Our v2 dashboard and API will provide both proposal efficiency and efficiency to provide more context.
 
 ***
 
@@ -90,9 +90,6 @@ This leads to the following formula
 sync_efficiency = sync_actualReward / sync_idealReward
 ```
 {% endcode %}
-
-Validators may not be lucky enough to be elected in a sync committee, but their efficiency needs to be comparable with other validators who did participate. For this reason, the sync efficiency will be `1` for validators who were not elected. Our v2 dashboard and API will provide both proposal efficiency and efficiency to provide more context.
-
 
 
 ***
