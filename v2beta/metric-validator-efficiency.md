@@ -85,6 +85,8 @@ Compared to attestations, which occur once per epoch, sync duties occur in every
 
 Since sync duties need to be included in a block by the block proposer, we ignore missed blocks that occurred during this period to avoid penalizing the sync committee member. Penalties from missed sync participation are also not counted towards `sync_actualReward`.
 
+Note: The second slot of each epoch often shows low sync committee participation, likely due to increased resource usage during the epoch transition. As a result, you may see a slight decrease in sync efficiency. This affects all validators equally, though some operators may handle it more effectively than others.
+
 
 
 This leads to the following formula
