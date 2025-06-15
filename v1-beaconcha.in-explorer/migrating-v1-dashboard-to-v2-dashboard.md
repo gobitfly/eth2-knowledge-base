@@ -1,0 +1,19 @@
+# Migrating v1 dashboard to v2 dashboard
+
+{% hint style="info" %}
+The new dashboard is limited to 20 validators for free users. For higher limits, please check out our subscriptions: [https://v2-beta-mainnet.beaconcha.in/pricing](https://v2-beta-mainnet.beaconcha.in/pricing)
+{% endhint %}
+
+\
+**Migration guide**
+
+1. Copy the validator indices from the v1 dashboard URL\
+   e.g `1,2641,2642,2643,2645,3288,3292,3400,3401,3402,3403,3404`
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+4. Login on [https://v2-beta-mainnet.beaconcha.in/login](https://v2-beta-mainnet.beaconcha.in/login), and create a v2 dashboard here: [https://v2-beta-mainnet.beaconcha.in/dashboard](https://v2-beta-mainnet.beaconcha.in/dashboard)\
+
+5. Click on `Manage Validators`and add your validators as a comma-separated list or use other methods as described in [#bulk-adding-to-the-validator-dashboard](../v2beta/manage-validators.md#bulk-adding-to-the-validator-dashboard "mention"):
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

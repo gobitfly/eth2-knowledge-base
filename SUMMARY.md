@@ -16,6 +16,7 @@
 
 ## v1 beaconcha.in Explorer
 
+* [Migrating v1 dashboard to v2 dashboard](v1-beaconcha.in-explorer/migrating-v1-dashboard-to-v2-dashboard.md)
 * [Notifications](v1-beaconcha.in-explorer/notifications/README.md)
   * [Understanding notifications](v1-beaconcha.in-explorer/notifications/understanding-notifications.md)
   * [Notification configuration](v1-beaconcha.in-explorer/notifications/beaconcha.in-notifications.md)
