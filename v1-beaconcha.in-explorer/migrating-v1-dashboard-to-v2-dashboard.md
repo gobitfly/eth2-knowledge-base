@@ -17,3 +17,9 @@ The v2 dashboard is limited to 20 validators for free users. For higher limits, 
 5. Click on `Manage Validators`and add your validators as a comma-separated list or use other methods as described in [#bulk-adding-to-the-validator-dashboard](../v2beta/manage-validators.md#bulk-adding-to-the-validator-dashboard "mention"):
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+**Done!**
+
+***
+
+Please note that the v2 dashboard includes new notifications. If you'd like to migrate those as well, check out:  [https://kb.beaconcha.in/v2beta/wip-notifications-v2#migrating-from-v1-notification-to-v2](https://kb.beaconcha.in/v2beta/wip-notifications-v2#migrating-from-v1-notification-to-v2)
