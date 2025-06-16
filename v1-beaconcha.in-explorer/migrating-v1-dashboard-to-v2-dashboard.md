@@ -1,7 +1,7 @@
 # Migrating v1 dashboard to v2 dashboard
 
 {% hint style="info" %}
-The v2 dashboard is limited to 20 validators for free users. For higher limits, please check out our subscriptions: [https://v2-beta-mainnet.beaconcha.in/pricing](https://v2-beta-mainnet.beaconcha.in/pricing)
+The v2 dashboard is limited to 20 validators (up to 3,200 maxEB) for free users. For higher limits, please check out our subscriptions: [https://v2-beta-mainnet.beaconcha.in/pricing](https://v2-beta-mainnet.beaconcha.in/pricing)
 {% endhint %}
 
 \
