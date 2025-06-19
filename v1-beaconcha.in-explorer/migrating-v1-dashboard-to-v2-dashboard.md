@@ -23,3 +23,11 @@ The v2 dashboard is limited to 20 validators (up to 3,200 maxEB) for free users.
 ***
 
 Please note that the v2 dashboard includes new notifications. If you'd like to migrate those as well, check out:  [https://kb.beaconcha.in/v2beta/wip-notifications-v2#migrating-from-v1-notification-to-v2](https://kb.beaconcha.in/v2beta/wip-notifications-v2#migrating-from-v1-notification-to-v2)
+
+
+
+## Backlinks
+
+The new dashboard can also be opened by passing the indices through the URL: \
+\
+[https://v2-beta-mainnet.beaconcha.in/dashboard?validators=1,5,8](https://v2-beta-mainnet.beaconcha.in/dashboard?validators=1,5,8)
