@@ -64,9 +64,14 @@ When a validator misses rewards — whether from the Consensus Layer (CL) or Exe
 
 ## APR calculation
 
-The total rewards are divided by the number of hours in the selected period and then by the 32 ETH stake per validator to calculate the base hourly return per validator. This hourly rate is then scaled up to an annual percentage.
+The APR is calculated based on the growth rate of your consensus layer (CL) staking balance over the selected period, using epoch-level granularity. At the start of the period, the total CL balance across all validators is recorded. The total rewards earned during the period are divided by this starting balance to determine the period growth rate. This rate is then annualized by scaling to one year.
 
-`APR = ((RewardsInPeriod / HoursInPeriod) / (32 * ValidatorCount)) * (24 * 365) * 100`
+`APR = (RewardsInPeriod / BalanceAtPeriodStart) * (EpochsPerYear / EpochsInPeriod) * 100`&#x20;
+
+* **BalanceAtPeriodStart**: Sum of all validator CL balances at the start of the period.
+* **RewardsInPeriod**: Total rewards accrued by those validators during the period.
+* **EpochsInPeriod**: Number of epochs in the selected period (each epoch is \~6.4 minutes).
+* **EpochsPerYear**: Total number of epochs in a year (≈51,480).
 
 {% hint style="warning" %}
 The **All time** period currently shows the **90-day APR**. This is subject to change in the future.
