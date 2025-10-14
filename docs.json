@@ -1,16 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "beaconcha.in Knowledge Base",
+  "name": "beaconcha.in docs",
   "colors": {
     "primary": "#22C55E"
   },
   "navigation": {
     "groups": [
       {
-        "group": "Welcome",
+        "group" : "Welcome",
         "pages": [
-          "welcome"
+          "introduction"
         ]
       },
       {
@@ -38,9 +38,9 @@
       {
         "group": "Notifications & Monitoring",
         "pages": [
-          "notifications-monitoring/mobile-app-less-than-greater-than-beacon-node",
-          "notifications-monitoring/notifications",
-          "notifications-monitoring/legacy-notifications"
+          "notifications-monitoring/mobile-app-monitoring",
+          "notifications-monitoring/v2-notifications",
+          "notifications-monitoring/v1-notifications"
         ]
       },
       {
