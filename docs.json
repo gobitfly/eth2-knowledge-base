@@ -1,0 +1,48 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "beaconcha.in Knowledge Base",
+  "colors": {
+    "primary": "#22C55E"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Welcome",
+        "pages": [
+          "welcome"
+        ]
+      },
+      {
+        "group": "Validator Dashboard",
+        "pages": [
+          "validator-dashboard/introduction",
+          "validator-dashboard/summary-table",
+          "validator-dashboard/slot-visualization",
+          "validator-dashboard/validator-groups",
+          "validator-dashboard/manage-validators",
+          "validator-dashboard/manage-validators-api",
+          "validator-dashboard/share-your-custom-dashboard",
+          "validator-dashboard/metric-validator-efficiency",
+          "validator-dashboard/migrating-legacy-dashboard"
+        ]
+      },
+      {
+        "group": "Notifications & Monitoring",
+        "pages": [
+          "notifications-monitoring/mobile-app-less-than-greater-than-beacon-node",
+          "notifications-monitoring/notifications",
+          "notifications-monitoring/legacy-notifications"
+        ]
+      },
+      {
+        "group": "FAQs",
+        "pages": [
+          "faqs/how-withdrawals-work",
+          "faqs/validator-withdrawals-execution-layer",
+          "faqs/optimal-inclusion-distance"
+        ]
+      }
+    ]
+  }
+}

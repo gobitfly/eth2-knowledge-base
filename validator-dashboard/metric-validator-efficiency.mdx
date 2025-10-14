@@ -1,14 +1,15 @@
 ---
 description: Efficiency aka. Beaconscore, a metric to measure validator performance
+title: Efficiency / Beaconscore
 ---
 
 # 📈 Metric: Validator Efficiency aka. Beaconscore
 
 The validator **Efficiency** / **Beaconscore** metric is a comprehensive measure of validator performance, integrating multiple components:&#x20;
 
-1. [**Attestations**](metric-validator-efficiency.md#attester-efficiency)
-2. [**Block proposals**](metric-validator-efficiency.md#proposer-efficiency)
-3. [**Sync committees**](metric-validator-efficiency.md#sync-efficiency)
+1. [**Attestations**](./metric-validator-efficiency#attester-efficiency)
+2. [**Block proposals**](./metric-validator-efficiency#proposer-efficiency)
+3. [**Sync committees**](./metric-validator-efficiency#sync-efficiency)
 
 This metric is designed to provide a holistic view of a validator's effectiveness.
 
@@ -22,9 +23,9 @@ In order to calculate the efficiency over multiple epochs correctly, the respect
 
 
 
-{% hint style="info" %}
+<Tip>
 Huge thanks to [Ben Edington](https://x.com/benjaminion\_xyz) for providing [https://eth2book.info/capella/](https://eth2book.info/capella/)
-{% endhint %}
+</Tip>
 
 ### **Attester Efficiency** 
 
@@ -44,11 +45,9 @@ If a validator votes correctly on all three and is included in the block with th
 
 Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency. Negative rewards (penalties) from any of the 3 attestation components do not count towards `attester_actualReward`.
 
-{% code overflow="wrap" %}
 ```
 attester_efficiency = attester_actualReward / attester_idealReward
 ```
-{% endcode %}
 
 
 
@@ -66,12 +65,10 @@ Primary reasons for using median instead of a calculated max:
 \
 This leads to the following formula:
 
-{% code overflow="wrap" %}
 ```
 proposer_idealReward = max(proposer_actualReward, medianReward([x-16 ... x+16]))
 proposer_efficiency = proposer_actualReward / proposer_idealReward
 ```
-{% endcode %}
 
 
 ***
@@ -90,11 +87,9 @@ Note: The second slot of each epoch often shows low sync committee participation
 
 This leads to the following formula
 
-{% code overflow="wrap" %}
-```html
+```
 sync_efficiency = sync_actualReward / sync_idealReward
 ```
-{% endcode %}
 
 
 ***
@@ -104,11 +99,9 @@ sync_efficiency = sync_actualReward / sync_idealReward
 
 When a validator has **attestations, block proposals, and sync committees**, the efficiency is calculated as:
 
-{% code overflow="wrap" %}
 ```
 efficiency = (attester_actualReward + proposer_actualReward + sync_actualReward) / (attester_idealReward + proposer_idealReward + sync_idealReward)
 ```
-{% endcode %}
 
 When a validator did not participate in a sync committee and/or did not propose a block, the respective rewards & ideal rewards are set to 0.
 

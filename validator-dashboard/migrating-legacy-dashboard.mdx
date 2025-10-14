@@ -1,0 +1,41 @@
+---
+title: "Migrating from the legacy dashboard"
+description: "Step-by-step guide to migrate your v1 dashboard and validators to the v2 dashboard."
+---
+
+# Migrating v1 dashboard to v2 dashboard
+
+<Info>
+The v2 dashboard is limited to 20 validators (up to 3,200 maxEB) for free users. For higher limits, please check out our subscriptions: https://beaconcha.in/premium
+</Info>
+
+**Migration guide**
+
+1.Copy the validator indices from the v1 dashboard URL
+   e.g `1,2641,2642,2643,2645,3288,3292,3400,3401,3402,3403,3404`
+
+<Frame>
+  <img src="../.gitbook/assets/image (2).png" alt="v1 dashboard URL showing validator indices" />
+</Frame>
+
+2.Log in at [https://beaconcha.in/login](https://beaconcha.in/login) and create a v2 dashboard: [https://beaconcha.in/dashboard](https://beaconcha.in/dashboard)
+
+3.Click on `Manage Validators` and add your validators as a comma-separated list or use other methods as described in [manage-validators](../validator-dashboard/manage-validators#bulk-adding-to-the-validator-dashboard):
+
+<Frame>
+  <img src="../.gitbook/assets/image (4).png" alt="Manage Validators modal in v2 dashboard" />
+</Frame>
+
+**Done!**
+
+***
+
+Please note that the new dashboard includes new notifications. If you'd like to migrate those as well, see [../notifications-monitoring/notifications#migrating-from-v1-notification-to-v2](../notifications-monitoring/notifications#migrating-from-v1-notification-to-v2)
+
+
+
+## Backlinks
+
+The new dashboard can also be opened by passing the indices through the URL:
+
+[https://beaconcha.in/dashboard?validators=1,5,8](https://beaconcha.in/dashboard?validators=1,5,8)

@@ -1,0 +1,47 @@
+---
+title: "Introduction"
+description: "Overview of the validator dashboard, key features, and transition notes from the legacy dashboard."
+---
+
+# 🎉 Introducing our new validator dashboard
+
+Our new validator dashboard features a variety of new features and addresses issues observed in the past years when monitoring validators. Most importantly, it scales up to 100,000 validators, a 35,600% increase over our V1 dashboard.\
+\
+
+Mainnet:  [https://beaconcha.in/dashboard](https://beaconcha.in/dashboard)
+
+Hoodi:  [https://hoodi.beaconcha.in/dashboard](https://hoodi.beaconcha.in/dashboard)
+
+***
+
+**New validator dashboard features**
+
+\
+[**Data**](./slot-visualization)
+
+Introduction of real-time data to identify problems and aggregated historical data for debugging and research purposes. Users will no longer need to _read_ the tables to spot problems with their validators; instead, they can _look_ at the slot viz which provides [multi-color feedback](./slot-visualization), and the best part – it scales to up to 100,000 validators per dashboard.
+
+[**Groups**](./validator-groups.md)
+
+Many of our users manage multiple nodes and servers, and it has been challenging to identify issues without a complex Grafana dashboard or a dedicated DevOps team. To address this, we have introduced "Groups," which allow users to assign validators to groups and track them separately in real-time.
+
+\
+[**Sharing**](./share-your-custom-dashboard)
+
+Sharing Grafana login information in large corporations can be complicated; the new Sharing feature allows users to easily provide view-only access to their team members.
+
+\
+**New Metric:** [**Efficiency / Beaconscore**](./metric-validator-efficiency)
+
+The familiar "Attestation Effectiveness" metric has been replaced by a new metric called "Efficiency aka. Beaconscore" which considers all validator duties and provides better feedback to the user.
+
+
+
+<Check>
+For those who have been subscribed to beaconcha.in in the past — thank you for supporting us!
+
+You will have access to the new premium features for the same price.
+
+- Plankton and Goldfish subscribers have been migrated to [Guppy](https://beaconcha.in/pricing).
+- Whale subscribers have been migrated to [Dolphin](https://beaconcha.in/pricing).
+</Check>

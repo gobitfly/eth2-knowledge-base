@@ -4,35 +4,45 @@ description: Visualizes your validator performance in multiple time frames
 
 # 🦸 Summary view
 
-The summary table is part of the [validator dashboard](https://beaconcha.in/dashboard). It provides detailed performance metrics for each validator [group](validator-groups.md), including [efficiency](summary-table.md#efficiency) and validator rewards across various time frames. It also features a [historical chart view](summary-table.md#summary-chart-view).
+The summary table is part of the [validator dashboard](https://beaconcha.in/dashboard). It provides detailed performance metrics for each validator [group](./validator-groups), including [efficiency](#efficiency) and validator rewards across various time frames. It also features a [historical chart view](#summary-chart-view).
 
 ***
 
 ## Overview
 
-Each row in the summary table represents a [validator group](validator-groups.md). Users with multiple groups will see an additional row above the thin orange line, labeled as the Σ-row.
+Each row in the summary table represents a [validator group](./validator-groups). Users with multiple groups will see an additional row above the thin orange line, labeled as the Σ-row.
 
-<figure><img src="../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (222).png" alt="" />
+</Frame>
 
 ### Expandable rows
 
 Expanding a row provides detailed data for each group.
 
-<figure><img src="../.gitbook/assets/image (211).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (211).png" alt="" />
+</Frame>
 
 ### Absolute vs relative values
 
 The summary table can be viewed in both absolute and relative values. This feature is especially useful for large entities with millions of attestations that prefer a relative value.
 
-<figure><img src="../.gitbook/assets/image (197).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (197).png" alt="" />
+</Frame>
 
 1. **Summary table with relative values**
 
-<figure><img src="../.gitbook/assets/image (195).png" alt=""><figcaption><p><strong>Summary table with relative values</strong></p></figcaption></figure>
+<Frame caption="Summary table with relative values">
+  <img src="../.gitbook/assets/image (195).png" alt="" />
+</Frame>
 
 2. **Summary table with absolute values**
 
-<figure><img src="../.gitbook/assets/image (194).png" alt=""><figcaption><p><strong>Summary table with absolute values</strong></p></figcaption></figure>
+<Frame caption="Summary table with absolute values">
+  <img src="../.gitbook/assets/image (194).png" alt="" />
+</Frame>
 
 
 
@@ -44,13 +54,15 @@ When a validator misses rewards — whether from the Consensus Layer (CL) or Exe
    * For each missed slot, consider the 32 slots surrounding it: slots where `slot >= missed.slot - 16` AND `slot < missed.slot + 16`
 2. **Calculate the Median (p50)**
    * Collect the rewards from each of those surrounding 32 slots.
-   * Compute the _median_ (50th percentile, or p50) of that set of rewards.\
+   * Compute the _median_ (50th percentile, or p50) of that set of rewards.
 
 3. **Assign the Median as the Missed Reward**
-   * The resulting median value becomes the _missed reward_ for that specific slot.\
+   * The resulting median value becomes the _missed reward_ for that specific slot.
 
 
-<figure><img src="../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (231).png" alt="" />
+</Frame>
 
 #### Example
 
@@ -73,21 +85,25 @@ The APR is calculated based on the growth rate of your consensus layer (CL) stak
 * **EpochsInPeriod**: Number of epochs in the selected period (each epoch is \~6.4 minutes).
 * **EpochsPerYear**: Total number of epochs in a year (≈51,480).
 
-{% hint style="warning" %}
-The **All time** period currently shows the **90-day APR**. This is subject to change in the future.
-{% endhint %}
+<Warning>
+The All time period currently shows the 90-day APR. This is subject to change in the future.
+</Warning>
 
-<figure><img src="../.gitbook/assets/apr.png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/apr.png" alt="" />
+</Frame>
 
 ## Luck calculation
 
-<figure><img src="../.gitbook/assets/luck.png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/luck.png" alt="" />
+</Frame>
 
 Validators are randomly selected for duties, such as proposing blocks or participating in the sync committee. The chance of being assigned duties depends on the total number of validators on the network and their effective balance.
 
-{% hint style="info" %}
+<Info>
 Luck values are purely informative and cannot be actively influenced.
-{% endhint %}
+</Info>
 
 **Blocks**
 
@@ -123,15 +139,19 @@ In practice, this calculation is performed for all validators over the selected 
 
 ## Summary chart view
 
-`[1]` View the historical performance of your validator groups by clicking this button and switching to the summary chart view.\\
+`[1]` View the historical performance of your validator groups by clicking this button and switching to the summary chart view.
 
-<figure><img src="../.gitbook/assets/image (212).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (212).png" alt="" />
+</Frame>
 
 `[2]` The summary chart view is perfect for debugging issues, as it provides historical performance data with epoch-level granularity. The Groups dropdown lets users filter specific groups, while the Total line (orange line) shows the average performance of all groups in the dashboard.\
 \
 To identify missed blocks, sync duties, or attestations, users can use the Efficiency dropdown to filter for those specific duties.
 
-<figure><img src="../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (213).png" alt="" />
+</Frame>
 
 ## Status column
 
@@ -139,7 +159,9 @@ The status column offers a quick way to check key duties, such as your current s
 \
 Hover over the icons for more details.
 
-<figure><img src="../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (223).png" alt="" />
+</Frame>
 
 ## Validator column
 
@@ -151,17 +173,23 @@ The validator column displays the state of each validator in each group:
 
 A comma-separated list of validator indices for each group can be found in the popout modal for each row in the table.
 
-<figure><img src="../.gitbook/assets/image (206).png" alt=""><figcaption><p>Validator states</p></figcaption></figure>
+<Frame caption="Validator states">
+  <img src="../.gitbook/assets/image (206).png" alt="" />
+</Frame>
 
-<figure><img src="../.gitbook/assets/image (224).png" alt=""><figcaption><p>Validators state in relative values</p></figcaption></figure>
+<Frame caption="Validators state in relative values">
+  <img src="../.gitbook/assets/image (224).png" alt="" />
+</Frame>
 
 _The relative value only accounts for online and offline validators, ignoring those that have already exited the chain. This offers quick insights into whether your group is experiencing issues._
 
-<figure><img src="../.gitbook/assets/image (210).png" alt="" width="227"><figcaption><p>Popout modal with comma separated validator indices</p></figcaption></figure>
+<Frame caption="Popout modal with comma separated validator indices">
+  <img src="../.gitbook/assets/image (210).png" alt="" width="227" />
+</Frame>
 
 ## Efficiency
 
-The Validator [Efficiency](summary-table.md#efficiency) metric is a new, comprehensive measure of validator performance, combining multiple components:
+The Validator [Efficiency](#efficiency) metric is a new, comprehensive measure of validator performance, combining multiple components:
 
 * **Red arrow**: Underperforming the network average by at least 0.25%.
 * **Green arrow**: Outperforming the network average by at least 0.25%.
@@ -169,7 +197,9 @@ The Validator [Efficiency](summary-table.md#efficiency) metric is a new, compreh
 
 Hovering over an arrow displays the exact performance of each group. For historical performance, switch to the summary chart view.
 
-<figure><img src="../.gitbook/assets/image (218).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (218).png" alt="" />
+</Frame>
 
 ### Attestations vs Attester efficiency
 
@@ -178,4 +208,6 @@ Hovering over an arrow displays the exact performance of each group. For histori
 
 The absolute values can be viewed by hovering over this percentage or by switching to the absolute-table view.
 
-<figure><img src="../.gitbook/assets/image (198).png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="../.gitbook/assets/image (198).png" alt="" />
+</Frame>
