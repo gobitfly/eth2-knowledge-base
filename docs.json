@@ -21,7 +21,15 @@
           "validator-dashboard/slot-visualization",
           "validator-dashboard/validator-groups",
           "validator-dashboard/manage-validators",
-          "validator-dashboard/manage-validators-api",
+          {
+            "group": "Dashboard Management API",
+            "openapi": ".gitbook/assets/API_spec.json",
+            "pages": [
+              "POST /validator-dashboards/{dashboard_id}/validators",
+              "DELETE /validator-dashboards/{dashboard_id}/groups/{group_id}/validators",
+              "POST /validator-dashboards/{dashboard_id}/validators/bulk-deletions"
+            ]
+          },
           "validator-dashboard/share-your-custom-dashboard",
           "validator-dashboard/metric-validator-efficiency",
           "validator-dashboard/migrating-legacy-dashboard"
