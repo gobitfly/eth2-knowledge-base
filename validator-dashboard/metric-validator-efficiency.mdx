@@ -43,7 +43,7 @@ An attestation consists of three votes:
 
 If a validator votes correctly on all three and is included in the block with the best inclusion delay (1), the reward will be 100%, as good as it can be.
 
-Conveniently, the [beacon node API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency. Negative rewards (penalties) from any of the 3 attestation components do not count towards `attester_actualReward`.
+Conveniently, the [beacon API](https://ethereum.github.io/beacon-APIs/#/Rewards/getAttestationsRewards) returns the idealReward for a given epoch. The idealReward represents the maximum potential rewards based on optimal performance, which allows us to calculate attester efficiency. Negative rewards (penalties) from any of the 3 attestation components do not count towards `attester_actualReward`.
 
 ```
 attester_efficiency = attester_actualReward / attester_idealReward

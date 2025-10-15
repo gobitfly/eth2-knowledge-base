@@ -8,11 +8,15 @@
   },
   "servers": [
     {
-      "url": "/api/v2"
+      "description": "Mainnet",
+      "url": "https://beaconcha.in"
+    }, {
+      "description": "Hoodi",
+      "url": "https://hoodi.beaconcha.in"
     }
   ],
   "paths": {
-    "/validator-dashboards/{dashboard_id}/groups/{group_id}/validators": {
+    "/api/v2/validator-dashboards/{dashboard_id}/groups/{group_id}/validators": {
       "delete": {
         "tags": [
           "Validator Dashboard Management"
@@ -62,7 +66,7 @@
         ]
       }
     },
-    "/validator-dashboards/{dashboard_id}/validators": {
+    "/api/v2/validator-dashboards/{dashboard_id}/validators": {
       "post": {
         "tags": [
           "Validator Dashboard Management"
@@ -73,7 +77,7 @@
           {
             "name": "dashboard_id",
             "in": "path",
-            "description": "The ID of the dashboard.",
+            "description": "The ID of the dashboard (visible in the dashboard URL).",
             "required": true,
             "schema": {
               "type": "integer"
@@ -81,7 +85,7 @@
           }
         ],
         "requestBody": {
-          "description": "`group_id`: (optional) Provide a single group id, to which all validators get added to. If omitted, the default group will be used.<br><br>To add validators or update their group, only one of the following fields can be set:<ul><li>`validators`: Provide a list of validator indices or public keys.</li><li>`deposit_address`: (limited to subscription tiers with 'Bulk adding') Provide a deposit address from which as many validators as possible will be added to the dashboard.</li><li>`withdrawal_credential`: (limited to subscription tiers with 'Bulk adding') Provide a withdrawal credential from which as many validators as possible will be added to the dashboard.</li><li>`graffiti`: (limited to subscription tiers with 'Bulk adding') Provide a graffiti string from which as many validators as possible will be added to the dashboard.</li></ul>",
+          "description": "`group_id`: (optional) Provide a single group id, to which all validators get added to. If omitted, the default group will be used.\n\nTo add validators or update their group, only one of the following fields can be set:\n\n`validators`: Provide a list of validator indices or public keys.\n\n`deposit_address`: (limited to subscription tiers with 'Bulk adding') Provide a deposit address from which as many validators as possible will be added to the dashboard.\n\n`withdrawal_credential`: (limited to subscription tiers with 'Bulk adding') Provide a withdrawal credential from which as many validators as possible will be added to the dashboard.\n\n`graffiti`: (limited to subscription tiers with 'Bulk adding') Provide a graffiti string from which as many validators as possible will be added to the dashboard.",
           "content": {
             "application/json": {
               "schema": {
@@ -117,11 +121,10 @@
           {
             "ApiKeyInHeader": []
           }
-        ],
-        "x-codegen-request-body-name": "request"
+        ]
       }
     },
-    "/validator-dashboards/{dashboard_id}/validators/bulk-deletions": {
+    "/api/v2/validator-dashboards/{dashboard_id}/validators/bulk-deletions": {
       "post": {
         "tags": [
           "Validator Dashboard Management"
@@ -170,8 +173,7 @@
           {
             "ApiKeyInHeader": []
           }
-        ],
-        "x-codegen-request-body-name": "request"
+        ]
       }
     }
   },
@@ -190,26 +192,51 @@
       },
       "handlers.PublicPostValidatorDashboardValidators.request": {
         "type": "object",
-        "properties": {
-          "deposit_address": {
-            "type": "string"
+        "oneOf": [
+          {
+            "type": "object",
+            "title": "Validators",
+            "properties": {
+              "group_id": { "type": "integer" },
+              "validators": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/handlers.intOrString" }
+              }
+            },
+            "required": ["validators"],
+            "additionalProperties": false
           },
-          "graffiti": {
-            "type": "string"
+          {
+            "type": "object",
+            "title": "Deposit Address",
+            "properties": {
+              "group_id": { "type": "integer" },
+              "deposit_address": { "type": "string" }
+            },
+            "required": ["deposit_address"],
+            "additionalProperties": false
           },
-          "group_id": {
-            "type": "integer"
+          {
+            "type": "object",
+            "title": "Withdrawal Credential",
+            "properties": {
+              "group_id": { "type": "integer" },
+              "withdrawal_credential": { "type": "string" }
+            },
+            "required": ["withdrawal_credential"],
+            "additionalProperties": false
           },
-          "validators": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/handlers.intOrString"
-            }
-          },
-          "withdrawal_credential": {
-            "type": "string"
+          {
+            "type": "object",
+            "title": "Graffiti",
+            "properties": {
+              "group_id": { "type": "integer" },
+              "graffiti": { "type": "string" }
+            },
+            "required": ["graffiti"],
+            "additionalProperties": false
           }
-        }
+        ]
       },
 
 
@@ -288,6 +315,5 @@
         "in": "header"
       }
     }
-  },
-  "x-original-swagger-version": "2.0"
+  }
 }

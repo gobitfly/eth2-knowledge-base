@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "beaconcha.in Knowledge Base",
+  "theme": "aspen",
+  "name": "Knowledge Base",
   "colors": {
     "primary": "#22C55E"
   },
@@ -23,11 +23,11 @@
           "validator-dashboard/manage-validators",
           {
             "group": "Dashboard Management API",
-            "openapi": ".gitbook/assets/API_spec.json",
             "pages": [
-              "POST /validator-dashboards/{dashboard_id}/validators",
-              "DELETE /validator-dashboards/{dashboard_id}/groups/{group_id}/validators",
-              "POST /validator-dashboards/{dashboard_id}/validators/bulk-deletions"
+              "validator-dashboard/manage-validators-api",
+              "/validator-dashboard/manage-validators-api-endpoints/validators_post",
+              "/validator-dashboard/manage-validators-api-endpoints/groups_delete",
+              "/validator-dashboard/manage-validators-api-endpoints/validators_bulk_delete_post"
             ]
           },
           "validator-dashboard/share-your-custom-dashboard",
@@ -38,7 +38,7 @@
       {
         "group": "Notifications & Monitoring",
         "pages": [
-          "notifications-monitoring/mobile-app-less-than-greater-than-beacon-node",
+          "notifications-monitoring/mobile-app-beacon-node",
           "notifications-monitoring/notifications",
           "notifications-monitoring/legacy-notifications"
         ]

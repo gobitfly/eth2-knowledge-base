@@ -1,73 +1,37 @@
 ---
 description: Manage your validators via API
+title: API Introduction
 ---
 
 # ⚒️ Manage Validators [API]
 
-To modify the validator dashboard via API, make sure you have an active Orca subscription.
+<Note>
+To modify the validator dashboard via API, make sure you have an active [**Orca**](https://beaconcha.in/premium) subscription.
+</Note>
 
 After creating a [validator dashboard](https://beaconcha.in/dashboard) and the desired [validator groups](./validator-groups) through the UI, you can add and assign validators to groups using our API.
 
 ***
-
-- For mainnet, use base URL: beaconcha.in
 - The Group ID is shown in the Group Manage modal on the Dashboard (see [validator groups](./validator-groups))
 - The Dashboard ID is visible in the dashboard URL
 - The API key is only visible in your account settings: https://beaconcha.in/user/settings#api
-- Pass the API key as a query parameter: api_key
-  - Example: `https://beaconcha.in/api/v2/validator-dashboards/{dashboard_id}/validators?api_key=KEY`
 
 <Warning>
 Adjust the base URL for your target network:
-
 - Mainnet: beaconcha.in
 - Hoodi: hoodi.beaconcha.in
 </Warning>
 
 ## Add validators to a dashboard
-
-Use the POST endpoint to add validators to a dashboard. Provide the API key as a query parameter and a JSON body. See the API spec below for the exact payload shape.
-
-<RequestExample>
-```bash cURL
-curl -X POST \
-  "https://beaconcha.in/api/v2/validator-dashboards/{dashboard_id}/validators?api_key=YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  --data @body.json
-```
-</RequestExample>
-
-[Download the API spec JSON](../.gitbook/assets/API_spec.json)
+Use the [POST endpoint](/validator-dashboard/manage-validators-api-endpoints/validators_post) to add validators to a dashboard. Provide the API key as a query parameter and a JSON body. See the API spec below for the exact payload shape.
 
 ## Remove validators from a group
-
-Use the DELETE endpoint to remove validators from a specific group.
-
-<RequestExample>
-```bash cURL
-curl -X DELETE \
-  "https://beaconcha.in/api/v2/validator-dashboards/{dashboard_id}/groups/{group_id}/validators?api_key=YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  --data @body.json
-```
-</RequestExample>
-
-[Download the API spec JSON](../.gitbook/assets/API_spec.json)
+Use the [DELETE endpoint](/validator-dashboard/manage-validators-api-endpoints/groups_delete) to remove validators from a specific group.
 
 ## Bulk delete validators from a dashboard
-
-Use the bulk deletions endpoint to remove many validators at once.
-
-<RequestExample>
-```bash cURL
-curl -X POST \
-  "https://beaconcha.in/api/v2/validator-dashboards/{dashboard_id}/validators/bulk-deletions?api_key=YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  --data @body.json
-```
-</RequestExample>
+Use the [bulk deletions endpoint](/validator-dashboard/manage-validators-api-endpoints/validators_bulk_delete_post) to remove many validators at once.
 
 <Tip>
-Looking for how to create and manage groups in the UI? See [validator groups](./validator-groups).
+Looking for how to create and manage groups in the UI? See [validator groups](/validator-dashboard/validator-groups).
 </Tip>
 
