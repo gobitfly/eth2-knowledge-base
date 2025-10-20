@@ -4,268 +4,2025 @@ info:
   version: 1.0.3
 
 servers:
-  - url: https://api-external-616724563735.us-central1.run.app
-    description: Staging
-  - url: http://localhost:8080
-    description: Local development
+  - url: http://beaconcha.in/api
+    description: Production API
 
 security:
   - ApiKeyAuth: []
-    GCPAuth: []
-
+  - GCPAuth: []
+  
 paths:
-  /ping:
-    get:
-      responses:
-        '200':
-          description: pet response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pong'
-  /v2/ethereum/slots/{slot}:
-    get:
+  /v2/ethereum/validators: # low prio
+    post:
       tags:
-        - Network
-      summary: Return basic information on the slot
-      parameters:
-        - name: slot
-          in: path
-          required: true
-          schema:
-            type: string
-            default: latest
-        - $ref: '#/components/parameters/chain'
+        - Validator
+      summary: ✅ Overview
+      operationId: GetValidatorOverview
+      x-mint:
+        href: "/api-reference/ethereum/validators"
+      description: |
+        Returns basic information about a set of validators at the current epoch. 
+
+        Data returned by the endpoint is based on the latest completed epoch of the beacon chain (not finalized).
+      requestBody:
+        $ref: "#/components/requestBodies/validatorChainCursorPageSize"
+      responses:
+        "200":     
+          $ref: '#/components/responses/ValidatorOverview'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/sync-committees: # low prio
+    post:
+      operationId: GetValidatorSyncCommittees
+      x-mint:
+        href: "/api-reference/ethereum/validators/sync-committees"
+      tags:
+        - Validator Aggregate
+      summary: 👀 Sync Committee
+      description: | 
+        Returns the sync committee periods in which a set of validators have participated or are scheduled to participate within a specified time range.
+      requestBody:
+         $ref : "#/components/requestBodies/aggregateValidatorChainStartEnd"
       responses:
         "200":
-          description: A successful response.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetSlotResponse'
+          $ref: '#/components/responses/ValidatorSyncCommittees'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
         default:
-          description: An unexpected error response.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/rpc.Status'
+          $ref: '#/components/responses/DefaultError'
 
-  # temp endpoint for testing pagination
-  /blocks/{block_number}/transactions:
-    get:
-      operationId: GetBlockTransactions
-      parameters:
-        - name: block_number
-          in: path
-          required: true
-          schema:
-            type: integer
-        - $ref: '#/components/parameters/cursor'
-        - $ref: '#/components/parameters/page_size'
+  /v2/ethereum/validators/apy-roi: # highest prio!
+    post:
+      tags:
+        - Validator Aggregate
+      summary: 👀 APY & ROI
+      operationId: GetValidatorApyRoi
+      x-mint:
+        href: "/api-reference/ethereum/validators/apy-roi"
+      description: |
+        Returns the annual percentage yield (APY) and return on investment (ROI) for a pre-computed set of validators.
+
+        For comparing performance across different staking providers, we recommend using the BeaconScore from the performance-summary endpoints instead of APY or ROI, as BeaconScore normalizes for luck and provides a fairer comparison.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chain:
+                  $ref: '#/components/schemas/Chain'
+                validator:
+                    $ref: '#/components/schemas/validatorSelector'
+                evaluation_window:
+                  description: |
+                    The time period over which to evaluate the APY and ROI. 
+                    If not provided, defaults to the last 30 days.
+                  $ref: '#/components/schemas/EvaluationWindow'
+              required:
+                - validator
+
       responses:
-        '200':
-          description: block transactions response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BlockTransactions'
-components:
-  parameters:
-    chain:
-      name: chain
-      in: query
-      required: false
-      schema:
-        $ref: '#/components/schemas/Chain'
+        "200":
+          $ref: '#/components/responses/ValidatorApyRoi'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/rewards-summary: # highest prio!
+    post:
+      tags:
+        - Validator Aggregate
+      operationId: GetValidatorRewardsSummary
+      x-mint:
+        href: "/api-reference/ethereum/validators/rewards-summary"
+      summary: Rewards Summary
+      description: |
+        Returns the cumulative rewards for a set for a pre-computed set of validators.
         
-    validator:
-      name: validator
-      in: query
-      required: false
-      schema:
-        $ref: '#/components/schemas/validatorIndexPubkey'
+         A pre-computed set is a deposit address, a withdrawal address or a single validator index or public key. 
+         
+         Must provide either start + end times or epochs. Must provide one of deposit_address, withdrawal_address or validator.
+      requestBody:
+        $ref : "#/components/requestBodies/aggregateValidatorChainStartEnd"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorRewardsSummary'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
 
-    cursor:
-      name: cursor
-      in: query
-      required: false
-      schema:
-        type: string
+  /v2/ethereum/validators/rewards-detailed: # highest prio!
+    post:
+      tags:
+        - Validator
+      operationId: GetValidatorRewardsDetailed
+      x-mint:
+        href: "/api-reference/ethereum/validators/rewards-detailed"
+      summary: Rewards Detailed
+      description: Returns a detailed description of a validator's rewards for a specific epoch for a set of validators
+      requestBody:
+        $ref : "#/components/requestBodies/validatorChainCursorPageSizeEpoch"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorRewardsDetailed'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
 
-    page_size:
-      name: page_size
-      in: query
-      required: false
+  /v2/ethereum/validators/performance-summary: # highest prio!
+    post:
+      tags:
+        - Validator Aggregate
+      summary: ✅ Performance Summary
+      x-mint:
+        href: "/api-reference/ethereum/validators/performance-summary"
+      operationId: GetValidatorPerformanceSummary
+      description: |
+        Returns the performance summary for a pre-computed set of validators. 
+      requestBody:
+        $ref : "#/components/requestBodies/aggregateValidatorChainStartEnd"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorPerformanceSummary'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/upcoming-duties: # highest prio!
+    post:
+      tags:
+        - Validator Aggregate
+      summary: Upcoming Slot Duties
+      x-mint:
+        href: "/api-reference/ethereum/validators/upcoming-duties"
+      operationId: GetValidatorUpcomingDuties
+      description: |
+        !! About to become obsolete. !!
+        Returns the upcoming duty slots for a pre-computed set of validators.
+
+          Currently, this endpoint returns only sync committee duties. 
+          Future releases will include proposer and attester duties as well.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                chain:
+                  $ref: '#/components/schemas/Chain'
+                validator:
+                    $ref: '#/components/schemas/validatorSelector'
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorUpcomingDuties'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/performance-detailed: # highest prio!
+    post:
+      tags:
+        - Validator
+      summary: 👀 Performance Detailed
+      x-mint:
+        href: "/api-reference/ethereum/validators/performance-detailed"
+      operationId: GetValidatorPerformanceDetailed
+      description: Returns a detailed description of a validator's performance for a specific epoch for a set of validators
+      requestBody:
+         $ref : "#/components/requestBodies/validatorChainCursorPageSizeEpoch"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorPerformanceDetailed'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/balances: # low prio
+    post:
+      tags:
+        - Validator
+      summary: ✅ Balances
+      operationId: GetValidatorBalances
+      x-mint:
+        href: "/api-reference/ethereum/validators/balances"
+      description: Returns the balances for a set of validators at a particular epoch
+      requestBody:
+         $ref : "#/components/requestBodies/validatorChainCursorPageSizeEpoch"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorBalances'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/proposals: # low prio
+    post:
+      tags:
+        - Validator
+      summary: Proposals
+      x-mint:
+        href: "/api-reference/ethereum/validators/proposals"
+      description: Returns proposal information for a set of validators
+      requestBody:
+        $ref: "#/components/requestBodies/validatorChainCursorPageSizeEpochNullable"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorProposals'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/attestations: # low prio
+    post:
+      tags:
+        - Validator
+      summary: Attestations
+      x-mint:
+        href: "/api-reference/ethereum/validators/attestations"
+      description: Returns attestation information for a set of validators at a particular epoch
+      requestBody:
+         $ref : "#/components/requestBodies/validatorChainCursorPageSizeEpoch"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorAttestations'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+
+
+  /v2/ethereum/validators/deposits: # mid priority
+    post:
+      tags:
+        - Validator
+      summary: Deposits
+      x-mint:
+        href: "/api-reference/ethereum/validators/deposits"
+      description: Returns the deposits for a set of validators
+      requestBody:
+         $ref : "#/components/requestBodies/validatorChainCursorPageSizeEpochNullable"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorDeposits'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/withdrawals: # mid priority
+    post:
+      tags:
+        - Validator
+      summary: Withdrawals
+      x-mint:
+        href: "/api-reference/ethereum/validators/withdrawals"
+      description: Returns the withdrawals for a set of validators
+      requestBody:
+        $ref : "#/components/requestBodies/validatorChainCursorPageSizeEpochNullable"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorWithdrawals'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  /v2/ethereum/validators/queue:
+    post:
+      tags:
+        - Validator
+      summary: 👀 Staking Queues
+      x-mint:
+        href: "/api-reference/ethereum/validators/queue"
+      operationId: GetValidatorQueueStats
+      description: Provides detailed information about staking-related queues (such as activation, exit, and withdrawal) and the estimated wait times specifically for the selected set of validators.
+      requestBody:
+        $ref : "#/components/requestBodies/validatorChainCursorPageSize"
+      responses:
+        "200":
+          $ref: '#/components/responses/ValidatorQueueStats'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+
+  /v2/ethereum/slot/{slot}:
+    post:
+      operationId: GetSlot
+      tags:
+        - Slot
+      summary: 👀 Overview
+      x-mint:
+        href: "/api-reference/ethereum/slot/overview"
+      description: |
+        Provides a basic overview about a specific slot. 
+
+        Query by slot number, block root hash or "latest" / "finalized".
+      parameters:
+        - $ref: '#/components/parameters/slot'
+      requestBody:
+        $ref : "#/components/requestBodies/JustChain"
+      responses:
+        "200":
+          $ref: '#/components/responses/SlotOverview'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+  
+  
+  /v2/ethereum/slot/{slot}/sync-committee-duties: # mid priority
+    post:
+      operationId: GetSyncCommitteeDutiesForSlot
+      tags:
+        - Slot
+      summary: 👀 Sync Committee Duties
+      x-mint:
+        href: "/api-reference/ethereum/slot/sync-committee-duties"
+      description: |
+        Provides status information about sync committee duties for a specific slot for each validator. 
+        The validator filter is optional; if omitted, results include all validators assigned sync duties for the slot.
+      parameters:
+        - $ref: '#/components/parameters/slot'
+      requestBody:
+        $ref : "#/components/requestBodies/optionalValidatorChainCursorPageSize"
+      responses:
+        "200":
+          $ref: '#/components/responses/SlotSyncCommittee'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+  
+
+  ######## Network endpoints ########
+
+  # /v2/ethereum/epochs/{epoch}:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Return basic information on the epoch
+  #     parameters:
+  #       - $ref: '#/components/parameters/epochPath'
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/Epoch'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/epochs/{epoch}/duty-summary:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns a summary of the validator duties for a particular epoch
+  #     parameters:
+  #       - $ref: '#/components/parameters/epochPath'
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/DutySummary'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/epochs/{epoch}/slashings:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns the validator indexes of the slashings that occurred during a specific epoch
+  #     parameters:
+  #       - $ref: '#/components/parameters/epochPath'
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/EpochSlashings' # TODO
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/slots/{slot}:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Return basic information on the slot. This endpoint supports historic slots as well as scheduled slots.
+  #     parameters:
+  #       - $ref: '#/components/parameters/slot'
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/Slot'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/blocks/{block}/rewards:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns information on the Block rewards
+  #     parameters:
+  #       - $ref: '#/components/parameters/chain'
+  #       - $ref: '#/components/parameters/block'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/BlockReward'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/slots/{slot}/attestations:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns basic information on the Attestations for a specific slot
+  #     parameters:
+  #       - $ref: '#/components/parameters/slot'
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/Attestations'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/slots/{slot}/attestations/details:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns detailed information on the Attestations for a specific slot
+  #     parameters:
+  #       - $ref: '#/components/parameters/slot'
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/Attestations'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  /v2/ethereum/sync-committees/{period}: # low prio (needed for synergy to access validator sync committees)
+    post:
+      tags:
+        - Sync Committee
+      summary: 👀 Overview
+      operationId: GetSyncCommitteeForPeriod
+      x-mint:
+        href: "/api-reference/ethereum/sync-committees/overview"
+      description: Returns basic sync committee information for a particular sync period. Use this to determine the range of epochs a given sync period entails.
+      requestBody:
+        $ref : "#/components/requestBodies/JustChain"
+      parameters:
+        - $ref: '#/components/parameters/syncCommitteePeriodPath'
+      responses:
+        "200":
+          $ref: '#/components/responses/SyncCommitteeOverview'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+  
+  /v2/ethereum/sync-committees/{period}/validators:
+    post:
+      tags:
+        - Sync Committee
+      operationId: GetSyncCommitteeValidatorsForPeriod
+      x-mint:
+        href: "/api-reference/ethereum/sync-committees/validators"
+      summary: 👀 Validators
+      description: |
+        Returns the validators in the sync committee for a particular sync period.
+      parameters:
+        - $ref: '#/components/parameters/syncCommitteePeriodPath'
+      requestBody:
+        $ref : "#/components/requestBodies/ChainOptionalValidator"
+      responses:
+        "200":
+          $ref: '#/components/responses/SyncCommitteeValidators'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  # /v2/ethereum/slots/{slot}/withdrawals:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns the withdrawals associated with a specific slot
+  #     parameters:
+  #       - $ref: '#/components/parameters/slotNoUnjustified'
+  #       - $ref: '#/components/parameters/chain'
+  #       - $ref: '#/components/parameters/cursor'
+  #       - $ref: '#/components/parameters/pageSize'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/SlotWithdrawals'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/blocks/{block}/withdrawals:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns the withdrawals associated with a specific block
+  #     parameters:
+  #       - $ref: '#/components/parameters/block'
+  #       - $ref: '#/components/parameters/chain'
+  #       - $ref: '#/components/parameters/cursor'
+  #       - $ref: '#/components/parameters/pageSize'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/BlockWithdrawals'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/slots/{slot}/deposits:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns the deposits associated with a specific slot
+  #     parameters:
+  #       - $ref: '#/components/parameters/slotNoUnjustified'
+  #       - $ref: '#/components/parameters/chain'
+  #       - $ref: '#/components/parameters/cursor'
+  #       - $ref: '#/components/parameters/pageSize'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/SlotDeposits'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/blocks/{block}/deposits:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns the deposits associated with a specific block
+  #     parameters:
+  #       - $ref: '#/components/parameters/block'
+  #       - $ref: '#/components/parameters/chain'
+  #       - $ref: '#/components/parameters/cursor'
+  #       - $ref: '#/components/parameters/pageSize'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/BlockDeposits'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # mid priority
+  /v2/ethereum/queue:
+    post:
+      tags:
+        - Network
+      summary: ✅ Staking Queues
+      operationId: GetQueueStats
+      x-mint:
+        href: "/api-reference/ethereum/queue"
+      description: Returns information about the various staking related queues (e.g. activation, exit, etc) and how long the expected wait time is.
+      requestBody:
+        $ref : "#/components/requestBodies/JustChain"
+      responses:
+        "200":
+          $ref: '#/components/responses/QueueStats'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+  # /v2/ethereum/health:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns statistics on general service health
+  #     parameters:
+  #       - $ref: '#/components/parameters/chain'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/Health'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  # /v2/ethereum/slashings:
+  #   get:
+  #     tags:
+  #       - Network
+  #     summary: Returns statistics on chain slashings.
+  #     description: Must provide either start + end times or epochs.
+  #     parameters:
+  #       - $ref: '#/components/parameters/chain'
+  #       - $ref: '#/components/parameters/startTs'
+  #       - $ref: '#/components/parameters/endTs'
+  #       - $ref: '#/components/parameters/startSlot'
+  #       - $ref: '#/components/parameters/endSlot'
+  #     responses:
+  #       "200":
+  #         $ref: '#/components/responses/Slashings'
+  #       default:
+  #         description: An unexpected error response.
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/Error'
+
+  /v2/ethereum/performance-summary: # highest prio!
+    post:
+      tags:
+        - Network
+      summary: 👀 Performance Summary
+      x-mint:
+        href: "/api-reference/ethereum/performance-summary"
+      operationId: GetPerformanceSummary
+      description: |
+        Returns performance metrics for the entire network in the given time range.
+
+        Must provide either start + end times or epochs
+      requestBody:
+        $ref : "#/components/requestBodies/aggregateChainStartEnd"
+      responses:
+        "200":
+          $ref: '#/components/responses/PerformanceSummary'
+        "400":
+          $ref: '#/components/responses/BadRequest'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+        "404":
+          $ref: '#/components/responses/NotFound'
+        "429":
+          $ref: '#/components/responses/RateLimitExceeded'
+        default:
+          $ref: '#/components/responses/DefaultError'
+
+components:
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+            example:
+              message: Unauthorized. Please provide a valid API key.
+
+    NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+            example:
+              message: The requested resource was not found.
+
+    RateLimitExceeded:
+      description: Rate Limit Exceeded
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+            example:
+              message: Rate limit exceeded. Please try again later.
+
+    DefaultError:
+      description: An unexpected error response.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+            example:
+              message: An unexpected error occurred.
+
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+            example:
+              message: Bad request. Please check your input and try again.
+
+    ValidatorOverview:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorOverview.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing basic information about the validator.
+
+    ValidatorApyRoi:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/ValidatorApyRoi.Data'
+            description: A Response containing apy and roi information of the validators.
+
+    ValidatorRewardsSummary:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/ValidatorRewardsSummary.Data'
+            description: A Response containing aggregated rewards information of the validators.
+
+    ValidatorRewardsDetailed:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorRewardsDetailed.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed rewards information of the validators.
+    
+    ValidatorPerformanceSummary:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/ValidatorPerformanceSummary.Data'
+            description: A response containing the aggregated beaconscore of the validators.
+
+    PerformanceSummary:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/PerformanceSummary.Data'
+            description: A Response containing performance summary information of the entire network.
+
+    ValidatorPerformanceDetailed:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorPerformanceDetailed.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed performance information of the validators.
+
+    ValidatorUpcomingDuties:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/ValidatorUpcomingDuties.Data'
+            description: A Response containing basic information about the upcoming duties.
+    
+    SlotSyncCommittee:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SlotSyncCommittee.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed information about the upcoming sync committee duties.
+
+    SlotOverview:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/SlotOverview.Data'
+            description: A Response containing basic information about the slot.
+
+    ValidatorBalances:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorBalances.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed balance information of the validators.
+
+    ValidatorProposals:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorProposals.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed proposal information of the validators.
+
+    ValidatorAttestations:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorAttestations.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed attestation information of the validators.
+
+
+    ValidatorDeposits:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorDeposits.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed deposit information of the validators.
+
+    ValidatorWithdrawals:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorWithdrawals.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing detailed withdrawal information of the validators.
+
+    # Epoch:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             $ref: '#/components/schemas/Epoch.Data'
+    #         description: A Response containing basic information about the epoch.
+
+    # DutySummary:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             description: A Response containing basic information about the duty summary.
+    #             type: object
+    #             properties:
+    #               block_counts:
+    #                 type: object
+    #                 properties:
+    #                   proposed:
+    #                     $ref: '#/components/schemas/count'
+    #                   missed:
+    #                     $ref: '#/components/schemas/count'
+    #                   orphaned:
+    #                     $ref: '#/components/schemas/count'
+    #                   scheduled:
+    #                     $ref: '#/components/schemas/count'
+    #               slashing_counts:
+    #                 type: object
+    #                 properties:
+    #                   proposer:
+    #                     $ref: '#/components/schemas/count'
+    #                   attestation:
+    #                     $ref: '#/components/schemas/count'
+    #               sync_committee:
+    #                 type: object
+    #                 properties:
+    #                   participation:
+    #                     $ref: '#/components/schemas/percent'
+    #               attestations:
+    #                 type: object
+    #                 properties:
+    #                   count:
+    #                     $ref: '#/components/schemas/count'
+    #                   eligible:
+    #                     $ref: '#/components/schemas/wei'
+    #                   attested:
+    #                     $ref: '#/components/schemas/wei'
+
+    # Slot:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             $ref: '#/components/schemas/Slot.Data'
+    #         description: A Response containing basic information about the slot.
+  
+    # BlockReward:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             $ref: '#/components/schemas/BlockReward.Data'
+    #         description: A Response containing basic information about the proposal.
+
+    # Attestations:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             $ref: '#/components/schemas/Attestations.Data'
+    #         description: A Response containing basic information about the attestations.
+
+    SyncCommitteeOverview:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/SyncCommitteeOverview.Data'
+            description: A Response containing basic information about the sync committee.
+
+    ValidatorSyncCommittees:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ValidatorSyncCommittees.Data'
+              - $ref: '#/components/schemas/PagingRangeTemplate'
+            description: A Response containing sync committee information of the validators.
+
+
+    SyncCommitteeValidators:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/SyncCommitteeValidators.Data'
+            description: A Response containing the validators in the sync committee.
+
+    # SlotWithdrawals:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             type: array
+    #             items:
+    #               $ref: '#/components/schemas/Withdrawals'
+    #           paging:
+    #             $ref: '#/components/schemas/Paging'
+    #         description: A Response containing basic information about the withdrawals.
+    
+    # BlockWithdrawals:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             type: array
+    #             items:
+    #               $ref: '#/components/schemas/Withdrawals'
+    #           paging:
+    #             $ref: '#/components/schemas/Paging'
+    #         description: A Response containing basic information about the withdrawals.
+
+    # SlotDeposits:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             type: array
+    #             items:
+    #               $ref: '#/components/schemas/Deposits'
+    #           paging:
+    #             $ref: '#/components/schemas/Paging'
+    #         description: A Response containing basic information about the deposits.
+
+    # BlockDeposits:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             type: array
+    #             items:
+    #               $ref: '#/components/schemas/Deposits'
+    #           paging:
+    #             $ref: '#/components/schemas/Paging'
+    #         description: A Response containing basic information about the deposits.
+
+    ValidatorQueueStats:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ValidatorQueueStats.Data'
+            description: A Response containing basic information about the queue.
+            
+
+    QueueStats:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/QueueStats.Data'
+            description: A Response containing basic information about the queue.
+
+    Health:
+      description: A successful response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/Health.Data'
+            description: A Response containing basic information about service health.
+
+    # Slashings:
+    #   description: A successful response.
+    #   content:
+    #     application/json:
+    #       schema:
+    #         type: object
+    #         properties:
+    #           data:
+    #             type: array
+    #             items:
+    #               $ref: '#/components/schemas/Slashings.Data'
+    #           paging:
+    #             $ref: '#/components/schemas/Paging'
+    #         description: A Response containing information about chain slashings.
+
+
+                # todo add duties?
+          
+  # headers:
+  # examples:
+  # links:
+  # callbacks:
+  parameters:
+    slot:
+      name: slot
+      in: path
+      required: true
       schema:
-        type: integer
-        minimum: 1
-        maximum: 100
-        default: 10
+        oneOf:
+          - $ref: '#/components/schemas/Slot'
+          - $ref: '#/components/schemas/chainView'
+          - $ref: '#/components/schemas/ConsensusLayerBlockRoot'
+        default: latest
+
+    slotNoUnjustified:
+      name: slot
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref: '#/components/schemas/Slot'
+          - $ref: '#/components/schemas/chainViewFinalized'
+          - $ref: '#/components/schemas/ConsensusLayerBlockRoot'
+        default: finalized
+
+    block:
+      name: block
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - type: integer
+            minimum: 0
+          - $ref: '#/components/schemas/chainView'
+          - $ref: '#/components/schemas/ExecutionLayerBlockHash'
+        default: latest
+
+    # epochQuery:
+    #   name: epoch
+    #   in: query
+    #   required: true
+    #   schema:
+    #     $ref: '#/components/schemas/epochParam'
+
+    epochPath:
+      name: epoch
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/epochParam'
+
+    syncCommitteePeriodPath:
+      name: period
+      in: path
+      required: true
+      schema:
+        oneOf:
+          - $ref : '#/components/schemas/SyncCommitteePeriod'
+          - type: string
+            enum: [latest, next]
+
+    # chain:
+    #   name: chain
+    #   in: query
+    #   required: false
+    #   schema:
+    #     $ref: '#/components/schemas/Chain'
+
+    # cursor:
+    #   name: cursor
+    #   in: query
+    #   required: false
+    #   description: Cursor for pagination
+    #   schema:
+    #     $ref: '#/components/schemas/Cursor'
+
+    # pageSize:
+    #   name: page_size
+    #   in: query
+    #   required: false
+    #   description: Number of results to return
+    #   schema:
+    #     $ref: '#/components/schemas/PageSize'
+
+    # depositAddress, withdrawalAddress and validator are the "validator selector", they're mutually exclusive
+    # see confluence HLD for details
+
+    # startTs:
+    #   name: start_time
+    #   in: query
+    #   required: false
+    #   description: Start of the time range (inclusive) 
+    #   schema:
+    #     $ref: '#/components/schemas/timestamp'
+    
+    # endTs:
+    #   name: end_time
+    #   in: query
+    #   required: false
+    #   description: End of the time range (inclusive)
+    #   schema:
+    #     $ref: '#/components/schemas/timestamp'
+
+    # startEpoch:
+    #   name: start_epoch
+    #   in: query
+    #   required: false
+    #   description: Start of the time range (inclusive)
+    #   schema:
+    #     $ref: '#/components/schemas/epochParam'
+
+    # endEpoch:
+    #   name: end_epoch
+    #   in: query
+    #   required: false
+    #   description: End of the time range (inclusive)
+    #   schema:
+    #     $ref: '#/components/schemas/epochParam'
+
+    # startSlot:
+    #   name: start_slot
+    #   in: query
+    #   required: false
+    #   description: Start of the time range (inclusive)
+    #   schema:
+    #     $ref: '#/components/schemas/slotParam'
+
+    # endSlot:
+    #   name: end_slot
+    #   in: query
+    #   required: false
+    #   description: End of the time range (inclusive)
+    #   schema:
+    #     $ref: '#/components/schemas/slotParam'
+
+  requestBodies:
+    JustChain:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              chain:
+                $ref: '#/components/schemas/Chain'
+
+    aggregateChainStartEnd:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              chain:
+                $ref: '#/components/schemas/Chain'
+              range:
+                $ref: '#/components/schemas/timeRangeSelector'
+            required:
+              - range
+
+    aggregateValidatorChainStartEnd:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AggregateValidatorChainStartEnd'
+
+    validatorChainCursorPageSize:
+      content:
+        application/json:
+          schema:
+             allOf:
+              - $ref: '#/components/schemas/ValidatorChainCursorPageSizeBase'
+              - type: object
+                required: [validator]
+
+
+    ChainOptionalValidator:
+      description: "`validator` is optional in this request body"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              chain:
+                $ref: '#/components/schemas/Chain'
+              validator:
+                $ref: '#/components/schemas/validatorsSelector'
+
+    optionalValidatorChainCursorPageSize:
+      description: "`validator` is optional in this request body"
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ValidatorChainCursorPageSizeBase'
+
+
+    validatorChainCursorPageSizeEpoch:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/ValidatorChainCursorPageSizeBase'
+              - type: object
+                properties:
+                  epoch:
+                    $ref: '#/components/schemas/epochParam'
+                required:
+                  - epoch
+                  - validator
+
+    validatorChainCursorPageSizeEpochNullable:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: '#/components/schemas/ValidatorChainCursorPageSizeBase'
+              - type: object
+                properties:
+                  epoch:
+                    $ref: '#/components/schemas/epochParamNullable'
+                required:
+                  - validator
+
   schemas:
-    Paging: 
+    
+    PagingRangeTemplate:
       type: object
       properties:
-        next_cursor:
-          type: string
+        paging:
+          $ref: '#/components/schemas/Paging'
+        range:
+          $ref: '#/components/schemas/ResultRange'
+
+    PagingTemplate:
+      type: object
+      properties:
+        paging:
+          $ref: '#/components/schemas/Paging'
+
+    ValidatorChainCursorPageSizeBase:
+      type: object
+      properties:
+        chain:
+          $ref: '#/components/schemas/Chain'
+        cursor:
+          $ref: '#/components/schemas/Cursor'
+        page_size:
+          $ref: '#/components/schemas/PageSize'
+        validator:
+          $ref: '#/components/schemas/validatorsSelector'
+
+    
+    AggregateValidatorChainStartEnd:
+      type: object
+      properties:
+        chain:
+          $ref: '#/components/schemas/Chain'
+        validator:
+          $ref: '#/components/schemas/validatorSelector'
+        range:
+          $ref: '#/components/schemas/timeRangeSelector'
+      required:
+        - validator
+        - range
+
+    timeRangeSelectorTime:
+      type: object
+      title: Unix Timestamp
+      description: Unix timestamp
+      properties:
+        timestamp:
+          type: object
+          description: Range provided via Unix timestamp range (inclusive)
+          properties:
+            start:
+              description: Start Unix Timestamp
+              $ref: '#/components/schemas/timestamp'
+            end:
+              description: End Unix Timestamp
+              $ref: '#/components/schemas/timestamp'
+
+    timeRangeSelectorEpoch:
+      type: object
+      title: Epoch
+      description: Range provided via epoch number
+      properties:
+        epoch:
+          type: object
+          description: Epoch range (inclusive)
+          properties:
+            start:
+              description: Start Epoch 
+              $ref: '#/components/schemas/epochParam'
+            end:
+              description: End Epoch
+              $ref: '#/components/schemas/epochParam'
+
+    timeRangeSelector:
+      description: |
+        Specify a time range using either Unix timestamps or epoch numbers.
+      oneOf:
+        - $ref: '#/components/schemas/timeRangeSelectorTime'
+        - $ref: '#/components/schemas/timeRangeSelectorEpoch'
+      
+
+    validatorsSelector:
+      description: |-
+        One of the following fields is required to select validators:
+
+        - deposit_address: The Ethereum wallet address used for the validator's deposit.
+        - withdrawal: The validator's withdrawal credential or the Ethereum wallet address used for withdrawals.
+        - validator_identifiers: One or more validator indices or public keys to filter by.
+      oneOf:
+        - $ref: '#/components/schemas/ValidatorsByDeposit'
+        - $ref: '#/components/schemas/ValidatorsByWithdrawal'
+        - $ref: '#/components/schemas/ValidatorsByIdentifiers'
+          
+    validatorSelector:
+      description: |-
+        One of the following fields is required to select validators:
+
+        - deposit_address: The Ethereum wallet address used for the validator's deposit.
+        - withdrawal: The validator's withdrawal credential or the Ethereum wallet address used for withdrawals.
+        - validator_identifiers: One validator index or public key to filter by.
+      oneOf:
+        - $ref: '#/components/schemas/ValidatorsByDeposit'
+        - $ref: '#/components/schemas/ValidatorsByWithdrawal'
+        - $ref: '#/components/schemas/ValidatorsByIdentifier'
+          
+    EvaluationWindow:
+      type: string
+      enum:
+        - 24h
+        - 7d
+        - 30d
+        - 1y
+        - all_time
+      default: 30d
+      description: The supported evaluation window to use for performance metrics.
+
+    clQueues:
+      type: object
+      properties:
+        execution_layer_queued:
+          type: integer
+          minimum: 0
+          nullable: true
+        execution_layer_processed:
+          type: integer
+          minimum: 0
+          nullable: true
+        consensus_layer_queued:
+          type: integer
+          minimum: 0
+          nullable: true
+          x-sortable: true
+        consensus_layer_processed:
+          type: integer
+          minimum: 0
+          nullable: true
+          x-sortable: true
+
     Chain:
       type: string
       enum:
         - mainnet
         - hoodi
-        - sepolia
       default: mainnet
       description: The Ethereum chain to query.
 
+    Cursor:
+      type: string
+      description: A cursor value for pagination.
+
+    PageSize:
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 10
+
+    timestamp:
+      type: integer
+      minimum: 0
+
     wei:
       type: string
-      pattern: ^-?[0-9]+$
+      description: Amount in wei (1 ETH = 10^18 wei)
+      pattern: ^(0|-?[1-9][0-9]*)$
 
-    uwei:
+    chainView:
       type: string
-      pattern: ^[0-9]+$
+      enum:
+        - latest
+        - finalized
+      description: |
+        - "latest": Refers to the most recent block, which may be subject to reorganization.
+        - "finalized": Refers to the latest block that has been finalized and is not subject to change.
+    
+    chainViewFinalized:
+      type: string
+      enum:
+        - finalized
 
     validator:
       type: object
       properties:
         index:
-          $ref: '#/components/schemas/validatorIndex'
+          allOf:
+            - $ref: '#/components/schemas/validatorIndex'
           nullable: true
-        pubkey:
-          $ref: '#/components/schemas/validatorPubkey'
+        public_key:
+          $ref: '#/components/schemas/validatorPublicKey'
 
-    validatorPubkey:
+    validatorPublicKey:
       type: string
+      description: Public key of a validator
       pattern: ^0x[a-fA-F0-9]{96}$
 
     validatorIndex:
+      description: Validator Index
       type: integer
-      format: int32
       minimum: 0
 
-    chainTimestamp:
+    count:
+      type: integer
+      minimum: 0
+
+    ValidatorsByDeposit:
       type: object
+      title: Deposit
       properties:
-        timestamp:
-          type: string
-          format: int64
-        consensus_algorithm:
-          type: string
-          enum:
-            - proof_of_work
-            - proof_of_stake
-    
-    validatorIndexPubkey:
-      description: Validator index or pubkey
+        deposit_address:
+          $ref: '#/components/schemas/ExecutionLayerAddress'
+      required: [deposit_address]
+
+    ValidatorsByWithdrawal:
+      type: object
+      title: Withdrawal
+      properties:
+        withdrawal:
+          description: |
+            Specifies the withdrawal credential used to select validators.
+            - For withdrawal credentials with prefix "0x01" or "0x02", you may provide either the full 32-byte withdrawal credential or, for convenience, just the execution address (20-byte hex string, standard Ethereum address).
+            - For withdrawal credentials with prefix "0x00" (BLS withdrawal credentials), only the full 32-byte withdrawal credential is accepted, as there is no associated execution address.
+          oneOf:
+            - $ref: '#/components/schemas/ExecutionLayerAddress'
+              title: Execution Address
+            - $ref: '#/components/schemas/withdrawalCredentialPrimitive'
+              title: Full Withdrawal Credential
+      required: [withdrawal]
+
+
+    ValidatorsByIdentifiers: # array with multiple elements
+      type: object
+      title: Indexes/Public Keys
+      properties:
+        validator_identifiers:
+          $ref: '#/components/schemas/validatorIndexPublicKeys'
+      required: [validator_identifiers]
+
+    ValidatorsByIdentifier: # array with one element (for now)
+      type: object
+      title: Indexes/Public Keys
+      properties:
+        validator_identifiers:
+          $ref: '#/components/schemas/validatorIndexPublicKeysLimited'
+      required: [validator_identifiers]
+
+    epochParam:
       oneOf:
-        - index:
-          $ref: '#/components/schemas/validatorIndex'
-        - pubkey:
-          $ref: '#/components/schemas/validatorPubkey'
+        - $ref: '#/components/schemas/Epoch'
+        - type: string
+          enum:
+            - latest
+            - finalized
+      default: latest
 
-    Pong:
+    epochParamNullable:
+      oneOf:
+        - $ref: '#/components/schemas/Epoch'
+        - type: string
+          enum:
+            - latest
+            - finalized
+      default: null
+      description: The epoch filter is optional. If not specified, results will include all epochs.
+      nullable: true
+
+    slotParam:
+      oneOf:
+        - $ref: '#/components/schemas/Slot'
+        - type: string
+          enum:
+            - latest
+            - finalized
+      default: latest
+
+    transactionHash:
+      type: string
+      pattern: ^0x[a-fA-F0-9]{64}$
+
+    ExecutionLayerAddress:
+      type: string
+      pattern: ^0x[a-fA-F0-9]{40}$
+      description: A standard Ethereum address (20-byte hex string with 0x prefix).
+
+    ConsensusLayerBlockRoot:
+      type: string
+      pattern: ^0x[a-fA-F0-9]{64}$
+      description: A 32-byte block root represented as a hex string with 0x prefix.
+
+    ExecutionLayerBlockHash:
+      type: string
+      pattern: ^0x[a-fA-F0-9]{64}$ 
+
+    ExecutionLayerAddressDetails:
       type: object
-      required:
-        - ping
       properties:
-        ping:
+        address:
+          $ref: '#/components/schemas/ExecutionLayerAddress'
+        is_contract:
+          type: boolean
+        ens:
           type: string
-          example: pong
+          nullable: true
 
+    ValidatorDutyType:
+      type: string
+      enum:
+        - proposal
+        - attestation
+        - sync_committee
 
-    clEventDetails:
+    EOAPublicKey:
+      description: The public key of an externally owned account (EOA, ie. user-controlled)
+      type: string
+      pattern: ^0x[a-fA-F0-9]{96}$
+      
+    validatorIndexPublicKey:
+      oneOf:
+        - $ref: '#/components/schemas/validatorIndex'
+        - $ref: '#/components/schemas/validatorPublicKey'
+          
+    validatorIndexPublicKeys:
+      description: An array containing either validator indices or public keys. Index and public key can be mixed in the same array.
+      type: array
+      items:
+        $ref : '#/components/schemas/validatorIndexPublicKey'
+      minItems: 1
+      maxItems: 100
+
+    validatorIndexPublicKeysLimited:
+      description: |
+        An array containing either a validator index or a public key. 
+
+        Only a single entry is allowed in this array at this time; support for multiple entries may be added in the future.
+      type: array
+      items:
+        $ref : '#/components/schemas/validatorIndexPublicKey'
+      minItems: 1
+      maxItems: 1
+
+    withdrawalCredentialType:
+      type: string
+      description: | 
+        Specifies whether the withdrawal credential is a BLS withdrawal credential or an execution address withdrawal credential.
+      enum:
+        - bls
+        - execution_address
+
+    withdrawalCredentialPrimitive:
+      type: string
+      pattern: ^0x[a-fA-F0-9]{64}$
+      description: A full 32-byte withdrawal credential represented as a hex string with 0x prefix.
+
+    withdrawalCredentialPrefix:
+      type: string
+      enum:
+        - "0x00"
+        - "0x01"
+        - "0x02"
+      description: |
+        Hexadecimal prefix indicating the type of withdrawal credential:
+        - "0x00": BLS withdrawal credential
+        - "0x01": Execution address withdrawal credential
+        - "0x02": Execution address withdrawal credential with consolidation support (Electra Fork)
+
+        Credentials can be upgraded in one direction only:
+        - From "0x00" (BLS) to "0x01" (execution address)
+        - From "0x01" to "0x02" (consolidation-enabled execution address)
+        Downgrades are not permitted.
+
+    withdrawalCredential:
       type: object
+      properties:
+        type:
+          $ref: '#/components/schemas/withdrawalCredentialType'
+        prefix:
+          $ref: '#/components/schemas/withdrawalCredentialPrefix'
+        credential:
+          $ref: '#/components/schemas/withdrawalCredentialPrimitive'
+        address:
+          $ref: '#/components/schemas/ExecutionLayerAddress'
+          nullable: true
+          description: Present only if type is execution_address
+
+
+    ValidatorBalancesBase:
+      type: object
+      properties:
+        current:
+          description: |
+            The validator's balance at a given state.
+            This includes all rewards and penalties accrued up to that point, excluding any withdrawn amounts.
+          $ref: '#/components/schemas/wei'
+        effective:
+          description: |
+            The effective balance is the amount used to calculate rewards and penalties for the validator on the consensus layer. 
+            
+            It relates to the current balance to some extent, but is not the same. 
+            Unlike the current balance, the effective balance is updated less frequently, only in whole ETH increments, and is subject to a maximum cap: 
+            32 ETH for withdrawal credential prefixes "0x00" or "0x01", and 2048 ETH for prefix "0x02".
+          $ref: '#/components/schemas/wei'
+
+    validatorBalancesHead:
+      allOf:
+        - $ref: '#/components/schemas/ValidatorBalancesBase'
+        - type: object
+          description: |
+            The balances object provides detailed information about a validator's balances at the head of the chain.
+
+            Balances are measured immediately before the first slot of the head chain.
+            For example, a balance reported for epoch 10 reflects the state after the final slot of epoch 9 and before the first slot of epoch 10.
+
+            For more details about balances, see: https://eth2book.info/latest/part2/incentives/balances/
+
+    validatorBalance:
+      allOf:
+        - $ref: '#/components/schemas/ValidatorBalancesBase'
+        - type: object
+          description: |
+            The balances object provides detailed information about a validator's balances at a specific epoch.
+
+            Balances are measured immediately before the first slot of the requested epoch.
+            For example, a balance reported for epoch 10 reflects the state after the final slot of epoch 9 and before the first slot of epoch 10.
+
+            For more details about balances, see: https://eth2book.info/latest/part2/incentives/balances/
+
+        # deposited: # will be added later
+        #   description: The amount of ETH that was actively deposited to the validator by the owner, not including any accumulated rewards or penalties.
+        #   $ref: '#/components/schemas/wei'
+
+    ConsensusLayerEventStatus:
+      type: string
+      enum:
+        - queued
+        - completed
+        - rejected
+      nullable: true
+
+    QueueDetail:
+      type : object
       properties:
         count:
-          type: integer
-          format: int32
-          minimum: 0
-        amount:
-          $ref: '#/components/schemas/uwei'
+          $ref: '#/components/schemas/count'
+          description: Number of validators in the queue
+          nullable: true
+        balance:
+          $ref: '#/components/schemas/wei'
+          description: Total balance of validators in the queue
+          nullable: true
+        estimated_processed_at:
+          $ref: '#/components/schemas/timestamp'
+          description: Estimated unix timestamp when the last validator in the queue will be processed
+          nullable: true
+        churn:
+          description: Current churn limit in wei, i.e. how much balance can be processed per epoch.
+          $ref: '#/components/schemas/wei'
 
-    clEvents:
+    Data.Status:
+      type: string
+      enum:
+        - pending_initialized
+        - pending_queued
+        - active_ongoing
+        - active_exiting
+        - active_slashed
+        - exited_unslashed
+        - exited_slashed
+        - withdrawal_possible
+        - withdrawal_done
+      nullable: true
+
+    Deposits:
       type: object
       properties:
-        deposits:
-          $ref: '#/components/schemas/clEventDetails'
-        withdrawals:
-          $ref: '#/components/schemas/clEventDetails'
-        consolidations:
-          $ref: '#/components/schemas/clEventDetails'
-
-    GetSlotResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/GetSlotResponse.Data'
-      description: A Response containing basic information about the slot.
-
-    GetSlotResponse.Data:
-      type: object
-      properties:
-        time:
-          $ref: '#/components/schemas/chainTimestamp'
-        proposer:
+        validator:
           $ref: '#/components/schemas/validator'
+        amount:
+          $ref: '#/components/schemas/wei'
+        withdrawal_credential:
+          type: string
+          format: byte
+        signature:
+          type: string
+          format: byte
         status:
-          $ref: '#/components/schemas/DutyStatus'
-        block_root:
-          type: string
-          format: byte
-          nullable: true
-        attestation_count:
-          type: integer
-          format: int32
-          nullable: true
-        attestation_slashing_count:
-          type: integer
-          format: int32
-          nullable: true
-        events:
-          type: object
-          properties:
-            queued:
-              type: object
-              properties:
-                deposits:
-                  $ref: '#/components/schemas/clEventDetails'
-                withdrawals:
-                  $ref: '#/components/schemas/clEventDetails'
-                consolidations:
-                  $ref: '#/components/schemas/clEventDetails'
-            processed:
-              type: object
-              properties:
-                deposits:
-                  $ref: '#/components/schemas/clEventDetails'
-                auto_withdrawals:
-                  $ref: '#/components/schemas/clEventDetails'
-                manual_withdrawals:
-                  $ref: '#/components/schemas/clEventDetails'
-                consolidations:
-                  $ref: '#/components/schemas/clEventDetails'
-        graffiti:
-          type: string
-          format: byte
-          nullable: true
-        data_recency:
-          $ref: '#/components/schemas/DataRecency'
-
-    DataRecency:
-      type: object
-      properties:
-        time:
-          $ref: '#/components/schemas/chainTimestamp'
-        is_epoch_finalized:
+          $ref: '#/components/schemas/ConsensusLayerEventStatus'
+        is_processed:
           type: boolean
-
-    rpc.Status:
-      type: object
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
+        queues:
+          $ref: '#/components/schemas/clQueues'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
 
     DutyStatus:
       type: string
@@ -274,31 +2031,1286 @@ components:
         - missed
         - orphaned
         - scheduled
+        
+    SyncDutyStatus:
+      type: string
+      enum:
+        - success
+        - missed
+        - scheduled
+        
+    Epoch:
+      type: integer
+      minimum: 0
 
-    BlockTransaction:
+    Slot: 
+      type: integer
+      minimum: 0
+      description: Slot by number.
+
+    Block:
+      type: integer
+      minimum: 0
+
+    graffiti:
+      type: string
+      nullable: true
+      pattern: ^[A-Za-z0-9+/]{0,44}={0,2}$
+      description: |
+        Validators can include an optional message called "graffiti" in proposed blocks.
+        The graffiti is limited to 32 bytes and is returned as a base64-encoded string here.
+        If no graffiti was included, this field will be null.
+
+    SyncCommitteePeriod:
+      description: |
+        The sync committee period number.
+
+        Each sync committee period spans 256 epochs (approximately 27.3 hours with 12-second epochs).
+        The first sync committee period (period 290 on Ethereum Mainnet) started at the Altair hard fork on Oct 27, 2021, 10:56:23am UTC (epoch 74240).
+      type: integer
+      minimum: 0
+
+    ResultRange:
+      type: object
+      description: The range of data covered by the results, specified in both epochs and Unix timestamps.
+      properties:
+        slot:
+          $ref: '#/components/schemas/SlotRange'
+        epoch:
+          $ref: '#/components/schemas/EpochRange'
+        timestamp: 
+          $ref: '#/components/schemas/TimeRange'
+    SlotRange:
       type: object
       properties:
-        hash:
-          type: string
-    BlockTransactions:
+        start:
+          $ref: '#/components/schemas/Slot'
+        end:
+          $ref: '#/components/schemas/Slot'
+    EpochRange:
       type: object
       properties:
-        data:
+        start:
+          $ref: '#/components/schemas/Epoch'
+        end:
+          $ref: '#/components/schemas/Epoch'
+
+    TimeRange:
+      type: object
+      properties:
+        start:
+          $ref: '#/components/schemas/timestamp'
+        end:
+          $ref: '#/components/schemas/timestamp'
+
+    # Attestations.Data:
+    #   type: object
+    #   properties:
+    #     attested_slot:
+    #       type: integer
+    #     committee_index:
+    #       type: integer
+    #     committee_bits:
+    #       type: array
+    #       items:
+    #         type: boolean
+    #     aggregation_bits:
+    #       type: array
+    #       items:
+    #         type: boolean
+    #     validators:
+    #       type: array
+    #       items:
+    #         $ref: '#/components/schemas/validator'
+    #     block_root:
+    #       type: string
+    #       format: byte
+    #     source_epoch:
+    #       type: integer
+    #     target_epoch:
+    #       type: integer
+    #     signature:
+    #       type: string
+    #       format: byte
+    #     finality:
+    #       $ref: '#/components/schemas/FinalityParams'
+
+    # rewardDetails:
+    #   type: object
+    #   properties:
+    #     amount:
+    #       $ref: '#/components/schemas/wei'
+    #     recipient:
+    #       $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+
+    Health.Data:
+      type: object
+      properties:
+        chain:
+          $ref: '#/components/schemas/FinalityDetailed'
+        explorer:
+          $ref: '#/components/schemas/FinalityDetailed'
+        on_head:
+          type: boolean
+
+    # Epoch.Data:
+    #   type: object
+    #   properties:
+    #     epoch:
+    #       type: integer
+    #       minimum: 0
+    #     timestamp:
+    #       $ref: '#/components/schemas/timestamp'
+    #     validator_count:
+    #       type: integer
+    #     voluntary_exit_count:
+    #       type: integer
+    #     finality:
+    #       $ref: '#/components/schemas/FinalityParams'
+
+    # BlockReward.Data:
+    #   type: object
+    #   properties:
+    #     priority_fees:
+    #       $ref: '#/components/schemas/rewardDetails'
+    #       description: Information about the transaction priority fees (PoW and PoS blocks)
+    #     mev:
+    #       allOf:
+    #         - $ref: '#/components/schemas/rewardDetails'
+    #       nullable: true
+    #       description: Information about the Maximal Extractable Value (MEV) rewards (PoS blocks only)
+    #     # pow
+    #     mining:
+    #       nullable: true
+    #       description: Information about the mining rewards (PoW blocks only)
+    #       type: object
+    #       properties:
+    #         recipient:
+    #           $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+    #         block_reward:
+    #           $ref: '#/components/schemas/wei'
+    #           description: The flat reward for mining a block in the PoW era
+    #         uncle_inclusion_reward:
+    #           $ref: '#/components/schemas/wei'
+    #           description: The reward for including uncle blocks in the PoW era
+    #     finality:
+    #       $ref: '#/components/schemas/FinalityParams'
+
+
+
+    EstimatedWithEpoch:
+      type: object
+      properties:
+        epoch:
+          $ref: '#/components/schemas/Epoch'
+          description: Epoch number
+        timestamp:
+          $ref: '#/components/schemas/timestamp'
+          description: Unix timestamp
+
+    ValidatorQueueStats.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+
+        deposit:
+          type: object
+          nullable: true
+          properties:
+            next:
+              $ref: '#/components/schemas/PendingAction'
+              description: Details for the next in line pending deposit/top-up.
+            all:
+              $ref: '#/components/schemas/PendingActionAll'
+              description: Details for all pending deposits/top-ups combined.
+            estimated_activation:
+              $ref: '#/components/schemas/EstimatedWithEpoch'
+              description: |
+                Estimated time and epoch when a newly deposited validator will become active.
+                Null for top-ups, or if balance+pending deposits < 32 ETH.
+              nullable: true
+
+        exit:
+          type: object
+          nullable: true
+          properties:
+            estimated_exit:
+              $ref: '#/components/schemas/EstimatedWithEpoch'
+              description: |
+                Estimated time/epoch when the validator will exit the active set.
+            estimated_last_duty:
+              $ref: '#/components/schemas/EstimatedWithEpoch'
+              description: |
+                Estimated time/epoch of the validator's last duty.
+                Usually aligns with `estimated_exit`, but rare sync-committee assignments may happen afterward.
+            estimated_eligible_withdrawal:
+              $ref: '#/components/schemas/EstimatedWithEpoch'
+              description: |
+                Estimated epoch and timestamp when the validator becomes eligible for withdrawal
+                (at least 256 epochs after exit).
+
+                Eligibility marks the earliest point at which the validator can be withdrawn.
+                The actual withdrawal may, in the worst case, occur up to ~10 days later due to the automatic sweeping process (sweep delay). 
+                For the estimated time when the balance will actually be withdrawn, see `estimated_withdrawal` below.
+            estimated_withdrawal:
+              $ref: '#/components/schemas/EstimatedWithEpoch'
+              description: |
+                Estimated epoch when the validator’s balance will actually be withdrawn.
+                Accounts for the sweep delay after eligibility.
+
+        withdrawal:
+          type: object
+          nullable: true
+          description: |
+            Information about the validator's automatic and manual withdrawals.
+
+            Withdrawals can be automatic (auto-sweep) or manual (initiated by the validator owner).
+            A validator may have either, both, or neither type of pending withdrawals.
+          properties:
+            withdrawal_sweep:
+              type: object
+              nullable: true
+              description: |
+                Automatic withdrawals occur periodically for exited validators or when balance exceeds the maximum effective balance.
+
+                Will be null for validators that are not eligible for auto-sweeps at the moment.
+              properties:
+                next:
+                  type: object
+                  description: Details of the next in line scheduled automatic withdrawal (sweep/skimming).
+                  nullable: true
+                  properties:
+                    estimated_amount:
+                      $ref: '#/components/schemas/wei'
+                      description: Estimated withdrawal amount in the next sweep.
+                    estimated_withdrawal:
+                      $ref: '#/components/schemas/EstimatedWithEpoch'
+                      description: Estimated epoch when next sweep occurs.
+        finality:
+          $ref: '#/components/schemas/FinalityParamsOnlyNoFinalization'
+            # manual_withdrawal:
+            #   type: object
+            #   nullable: true
+            #   properties:
+            #     next:
+            #       $ref: '#/components/schemas/PendingAction'
+            #       description: Details of the next pending manual withdrawal.
+            #     all:
+            #       $ref: '#/components/schemas/PendingActionAll'
+            #       description: Aggregated details of all pending manual withdrawals.
+
+    PendingAction:
+      type: object
+      nullable: true
+      properties:
+        amount:
+          $ref: '#/components/schemas/wei'
+          description: Amount of the next pending action in wei.
+        estimated_processed:
+          $ref: '#/components/schemas/EstimatedWithEpoch'
+          description: Estimated epoch when this action will be processed.
+
+    PendingActionAll:
+      type: object
+      nullable: true
+      properties:
+        amount:
+          $ref: '#/components/schemas/wei'
+          description: Total amount of all pending actions in wei.
+        estimated_processed:
+          $ref: '#/components/schemas/EstimatedWithEpoch'
+          description: Estimated epoch when all actions will be processed.
+
+
+                
+       # - $ref: '#/components/schemas/QueueStats.Data'
+     
+
+    QueueStats.Data:
+      type: object
+      properties:
+        deposit_queue:
+          type : object
+          properties:
+            deposit_count:
+              $ref: '#/components/schemas/count'
+              description: |
+                Total number of deposits currently in the queue, including both new validator deposits and top-ups.
+                Note: A single validator may have multiple pending deposits (top-ups) in the queue; this value counts all deposits without deduplication by validator.
+              nullable: true
+            balance:
+              $ref: '#/components/schemas/wei'
+              description: Total balance of deposits in the queue
+              nullable: true
+            estimated_processed_at:
+              $ref: '#/components/schemas/timestamp'
+              description: Estimated unix timestamp when the last deposit in the queue will be processed
+              nullable: true
+            churn:
+              description: Current churn limit in wei, i.e. how much balance can be processed per epoch.
+              $ref: '#/components/schemas/wei'
+        exit_queue:
+          $ref: '#/components/schemas/QueueDetail'
+        withdrawal_sweep:
+          type: object
+          properties:
+            estimated_sweep_delay:
+              $ref: '#/components/schemas/timestamp'
+              description: |
+                Estimated maximum time, in seconds, before a newly submitted and valid withdrawal is processed.
+
+                Note: Withdrawals are handled using a rotational (clock hand) mechanism rather than a traditional queue.
+                As a result, your withdrawal may be processed sooner than this estimate, depending on its position relative to the current location of the processing clock hand.
+
+                This value reflects the duration required for the clock hand to complete a full rotation.
+              nullable: true
+            last_swept_validator_index:
+              description: |
+                The index of the last validator for which an automatic withdrawal was processed.
+                
+                This can be used to determine the current position of the withdrawal processing clock hand.
+              type: integer
+
+        # TODO: other queues
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    Slashings.Data:
+      type: object
+      properties:
+        slashed_validator:
+          $ref: '#/components/schemas/validator'
+        slashing_validator:
+          $ref: '#/components/schemas/validator'
+        violation:
+          $ref: '#/components/schemas/Slashings.Violation'
+        slot:
+          $ref: '#/components/schemas/Slot'
+
+    Slashings.Violation:
+      type: string
+      enum:
+        - multiple_attestations_checkpoints
+        - surrounding_attestation
+        - multiple_blocks
+        - multiple_attestations_head
+
+    clEventDetails:
+      type: object
+      properties:
+        count:
+          type: integer
+          minimum: 0
+        amount:
+          $ref: '#/components/schemas/wei'
+
+    SlotOverview.Data:
+      type: object
+      properties:
+        slot:
+          $ref: '#/components/schemas/Slot'
+        epoch:
+          $ref: '#/components/schemas/Epoch'
+        block:
+          $ref: '#/components/schemas/Block'
+        sync_committee_period:
+          $ref: '#/components/schemas/SyncCommitteePeriod'
+        timestamp:
+          $ref: '#/components/schemas/timestamp'
+        proposer:
+          $ref: '#/components/schemas/validator'
+        status:
+          $ref: '#/components/schemas/DutyStatus'
+        block_root:
+          $ref: '#/components/schemas/ConsensusLayerBlockRoot'
+        attestation_count:
+          type: integer
+          nullable: true
+        included_slashing_count:
+          type: object
+          description: |
+            Statistics about slashing proofs included in this slot.
+            A slashing proof provides cryptographic evidence that one or more validators have committed a slashable offense, such as:
+              - double voting (submitting two conflicting attestations or proposals for the same target epoch)
+              - surround voting (submitting two attestations or proposals where one surrounds the other in terms of source and target epochs)
+          properties:
+            proposer:
+              description: |
+                Number of slashing proofs included in this slot where a previous block proposer committed a slashable offense.
+              $ref: '#/components/schemas/validatorIndex'
+              nullable: true
+            attestation:
+              description: |
+                Number of slashing proofs included in this slot where a previous attester committed a slashable offense.
+              $ref: '#/components/schemas/validatorIndex'
+              nullable: true
+        sync_participation:
+          type: object
+          description: |
+            Statistics showing sync committee participation for this slot.
+
+            Note: This represents participation by validators assigned to the sync committee for this period.
+          properties:
+            total:
+              type: integer
+              nullable: true
+            participated:
+              type: integer
+              nullable: true
+            participation_rate:
+              type: number
+              format: float
+              nullable: true
+        vote_participation:
+          type: object
+          description: |
+            Statistics showing attestation vote participation for this slot.
+
+            Note: This represents participation by validators assigned attestation duties for this slot.
+          properties:
+            total:
+              type: integer
+              nullable: true
+            participated:
+              type: integer
+              nullable: true
+            participation_rate:
+              type: number
+              format: float
+              nullable: true
+        included_blob_commitment_count:
+          type: integer
+          nullable: true
+          description: |
+            The count of data blobs commitments (kzg commitments) included in this slot, if present.
+
+            Data blobs are introduced by EIP-4844 (Proto-Danksharding) as part of the data availability layer in the Pectra hardfork.
+            This field is null for slots prior to the hardfork activation.
+        queue_events:
+          type: object
+          properties:
+            queued:
+              type: object
+              description: |
+                Statistics about consensus layer events that were added to the queue in this slot.
+              properties:
+                deposit:
+                  $ref: '#/components/schemas/clEventDetails'
+                withdrawal_manual:
+                  $ref: '#/components/schemas/clEventDetails'
+                consolidation:
+                  $ref: '#/components/schemas/clEventDetails'
+                exits:
+                  $ref: '#/components/schemas/clEventDetails'
+            processed:
+              type: object
+              description: |
+                Statistics about consensus layer events that were processed from the queue in this slot.
+              properties:
+                deposit:
+                  $ref: '#/components/schemas/clEventDetails'
+                withdrawal_sweep:
+                  $ref: '#/components/schemas/clEventDetails'
+                withdrawal_manual:
+                  $ref: '#/components/schemas/clEventDetails'
+                consolidation:
+                  $ref: '#/components/schemas/clEventDetails'
+                exits:
+                  $ref: '#/components/schemas/clEventDetails'
+        graffiti:
+          $ref: "#/components/schemas/graffiti"
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    SyncCommitteeOverview.Data:
+      type: object
+      properties:
+        period:
+          $ref: '#/components/schemas/SyncCommitteePeriod'
+        range:
+          $ref : '#/components/schemas/ResultRange'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    ValidatorSyncCommittees.Data:
+      type: object
+      properties:
+        sync_committee_period:
+          $ref: '#/components/schemas/SyncCommitteePeriod'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+      
+    SyncCommitteeValidators.Data:
+      type: object
+      properties:
+        validators:
           type: array
           items:
-            $ref: '#/components/schemas/BlockTransaction'
-        paging:
-          $ref: '#/components/schemas/Paging'
+            type: object
+            properties:
+              validator:
+                $ref: '#/components/schemas/validator'
+              duties:
+                nullable: true
+                description: |
+                  Sync committee duties assigned to the validator in the specified period.
+                  Null if the sync committee period is in the future.
+                $ref: '#/components/schemas/ValidatorSyncCommitteeDutyCount'
+              
+    RoiApyMetrics:
+      type: object
+      properties:
+        roi:
+          type: object
+          description: Raw performance in the evaluation window (not annualized).
+          properties:
+            total:
+              type: number
+              format: float
+              example: 0.15
+              description: >
+                ROI including total rewards and penalties on the execution layer, calculated only over the evaluation window.
+            missed:
+              type: number
+              format: float
+              maximum: 0
+              example: -0.02
+              description: >
+                ROI penalty from missed execution layer proposals. Estimated as the missed reward compared to the average
+                block reward in each individual epoch of the evaluation window.
+        apy:
+          type: object
+          description: Annualized performance extrapolated from the evaluation window.
+          properties:
+            total:
+              type: number
+              format: float
+              example: 2.76
+              description: >
+                Annual Percentage Yield (APY) including total rewards and penalties on the consensus layer.
+            missed:
+              type: number
+              format: float
+              maximum: 0
+              example: -0.5
+              description: >
+                Negative APY impact from missed consensus duties, annualized to approximate yearly effect.
+    ValidatorApyRoi.Data:
+      type: object
+      description: >
+        Validator performance metrics, expressed both as ROI (Return on Investment) and APY (Annual Percentage Yield).
 
+          - ROI represents the actual return over the selected evaluation window, not annualized.
+          - APY is the same return but annualized to show the equivalent yearly rate.
+
+        ROI helps understand raw performance during the evaluation range, while APY allows comparison against annualized benchmarks.
+
+        Note that APY is an extrapolation and does not reflect future performance.
+      properties:
+        execution_layer:
+          $ref: '#/components/schemas/RoiApyMetrics'
+          description: Performance from execution layer activities (block proposals, MEV, transaction fees).
+        consensus_layer:
+          $ref: '#/components/schemas/RoiApyMetrics'
+          description: Performance from consensus layer activities (attestations, sync committees, and block proposals).
+        combined:
+          $ref: '#/components/schemas/RoiApyMetrics'
+          description: Combined ROI and APY across execution and consensus layers.
+        range:
+          $ref: '#/components/schemas/ResultRange'
+        finality:
+          $ref: '#/components/schemas/FinalityParamsOnlyFinalized'
+
+    ValidatorAttestations.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+        attester_slot:
+          $ref: "#/components/schemas/Slot"
+          x-sortable: true
+        inclusion_slot:
+          $ref: "#/components/schemas/Slot"
+        epoch:
+          $ref: '#/components/schemas/Epoch'
+        attestation_committee_index: # TODO: add a network endpoint to get all validators of an attestation committee
+          type: integer
+        status:
+          $ref: '#/components/schemas/DutyStatus'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    ValidatorBalances.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+        balance:
+          $ref: '#/components/schemas/validatorBalance'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    SlotSyncCommittee.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+        # slot:
+        #   $ref: '#/components/schemas/Slot'
+        #   description: Slot number for which the sync committee duty is assigned
+        # epoch: 
+        #   $ref: '#/components/schemas/Epoch'
+        #   description: Epoch number for the given slot
+        # timestamp: 
+        #   $ref: '#/components/schemas/timestamp'
+        #   description: Unix timestamp when the slot begins
+        # period:
+        #   $ref: '#/components/schemas/SyncCommitteePeriod'
+        status: 
+          $ref: '#/components/schemas/SyncDutyStatus'
+          description: Status of the sync committee duty
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+
+    ValidatorUpcomingDuties.Data:
+      type: object
+      properties:
+        duty_slots:
+          type: object
+          properties:
+            # attestation:
+            #   type: array
+            #   example: [3, 5, 6]
+            #   description: Slots at which the selected validator set is assigned attestation duties
+            #   items:
+            #     $ref: '#/components/schemas/Slot'
+            # proposal:
+            #   type: array
+            #   example: [4, 12]
+            #   description: Slots at which the selected validator set is assigned to propose blocks
+            #   items:
+            #     $ref: '#/components/schemas/Slot'
+            sync_committee:
+              type: array
+              example: [1, 2, 3, 4, 5]
+              description: Slots at which the selected validator set is assigned sync committee duties
+              items:
+                $ref: '#/components/schemas/Slot'
+        next_duty:
+          type: object
+          nullable: true
+          description: Details about the very next upcoming duty for any of the selected validators
+          properties:
+            slot:
+              $ref: '#/components/schemas/Slot'
+            type:
+              $ref: '#/components/schemas/ValidatorDutyType'
+              description: Type of the next duty
+            timestamp:
+              $ref: '#/components/schemas/timestamp'
+              description: Unix timestamp when the duty slot begins
+        chain_head:
+          type: object
+          description: Information about the current head of the chain at the time of the response.
+          properties:
+            slot:
+              $ref: '#/components/schemas/Slot'
+              description: The slot number of the current chain head.
+            epoch:
+              $ref: '#/components/schemas/Epoch'
+              description: The epoch number of the current chain head.
+            next_slot_start_timestamp:
+              $ref: '#/components/schemas/timestamp'
+              description: Unix timestamp for when the next slot will begin.
+            next_epoch_start_timestamp:
+              $ref: '#/components/schemas/timestamp'
+              description: Unix timestamp for when the next epoch will begin.
+        finality:
+          $ref: '#/components/schemas/FinalityParamsOnlyNoFinalization'
+
+    ValidatorDeposits.Data:
+      type: object
+      properties:
+        amount:
+          $ref: '#/components/schemas/wei'
+        validator:
+          $ref: '#/components/schemas/validator'
+        reject_reason:
+          allOf:
+            - $ref: '#/components/schemas/ValidatorDeposits.RejectReason'
+          nullable: true
+        status:
+          allOf:
+            - $ref: '#/components/schemas/ConsensusLayerEventStatus'
+          nullable: true
+        signature:
+          type: string
+          format: byte
+        DepositValidity:
+          $ref: '#/components/schemas/DepositValidity'
+        type:
+          allOf:
+            - $ref: '#/components/schemas/ValidatorDeposits.Type'
+          nullable: true
+        queues:
+          $ref: '#/components/schemas/clQueues'
+        withdrawal_credentials:
+          type: string
+          format: byte
+        request:
+          type: object
+          nullable: true
+          properties:
+            tx_hash:
+              $ref: '#/components/schemas/transactionHash'
+            tx_sender:
+              $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+            depositor:
+              $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    ValidatorDeposits.RejectReason:
+      type: string
+      enum:
+        - invalid_signature
+
+    ValidatorDeposits.Type:
+      type: string
+      enum:
+        - manual
+        - network
+
+    ValidatorOverview.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+        slashed:
+          type: boolean
+        status:
+          $ref: '#/components/schemas/Data.Status'
+        online:
+          description: |
+            Indicates whether the validator has been recently observed as online. This field is null if the validator is not in an active status (e.g., pending or exited).
+            A validator is considered online if it is active and has attested within the last 2 epochs.
+          nullable: true
+          type: boolean
+        # capabilities: # on hold for extended discussion, ideally we go beyond prefix capabilities and provide at the current state whether f.e consolidation is possible or not
+        #   type: object
+        #   description: Capabilities are determined based on the prefix of the validator's withdrawal credentials. 
+        #   properties:
+        #     withdraw:
+        #       type: boolean
+        #       description: Indicates whether the validator supports withdrawals. True for all validators with an execution_address as withdrawal credential (prefix "0x01" or "0x02").
+        #     receive_consolidate:
+        #       type: boolean
+        #       description: Indicates if the validator can be targeted as recipient of a validator consolidation. This is true for validators with a withdrawal credential that have the prefix "0x02".
+        #     max_balance:
+        #       $ref: '#/components/schemas/wei'
+        #       description: The maximum balance the validator can have based on its withdrawal credential type. Validators with withdrawal credentials prefix of "0x00" or "0x01" have a max stake of 32 ETH, while those with "0x02" prefix can have up to 2048 ETH.
+        withdrawal_credentials:
+          $ref: '#/components/schemas/withdrawalCredential'
+        lifecycle_epochs:
+          type: object
+          description: Epochs marking significant lifecycle events for the validator. Unlike the official spec, null is returned for events that have not yet occurred, instead of using "FAR_FUTURE_EPOCH" (max uint64), to simplify client handling.
+          properties:
+            activation_eligibility:
+              description: The epoch at which the validator became eligible for activation by meeting the activation criteria.
+              type: integer
+              nullable: true
+            activation:
+              description: The epoch at which the validator was activated and started participating in the consensus process & earning rewards.
+              type: integer
+              nullable: true
+            exit:
+              type: integer
+              description: The epoch at which the validator exited and stopped participating in the consensus process.
+              nullable: true
+            withdrawable:
+              type: integer
+              description: The epoch at which the validator became eligible for withdrawal after they have exited.
+              nullable: true
+        balances:
+          $ref: '#/components/schemas/validatorBalancesHead'
+        finality:
+          $ref: '#/components/schemas/FinalityParamsOnlyNoFinalization'
+
+    percent:
+      type: number
+      format: float
+      minimum: 0.0
+      maximum: 1.0
+
+    performanceBeaconscore:
+      type: object
+      properties:
+        total:
+          allOf:
+            - $ref: '#/components/schemas/percent'
+          nullable: true
+        attestation:
+          allOf:
+            - $ref: '#/components/schemas/percent'
+          nullable: true
+        proposal:
+          allOf:
+            - $ref: '#/components/schemas/percent'
+          nullable: true
+        sync_committee:
+          allOf:
+            - $ref: '#/components/schemas/percent'
+          nullable: true
+
+    ValidatorPerformanceDetailed.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+        beaconscore:
+          $ref: '#/components/schemas/performanceBeaconscore'
+        duties:
+          $ref: '#/components/schemas/PerformanceDuties.Duties'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+
+    ValidatorPerformanceSummary.Data:
+      type: object
+      properties:
+        beaconscore:
+          $ref: '#/components/schemas/performanceBeaconscore'
+        duties:
+          $ref: '#/components/schemas/PerformanceDuties.Duties'
+        range:
+          $ref : '#/components/schemas/ResultRange'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    PerformanceSummary.Data:
+      type: object
+      properties:
+        beaconscore:
+          $ref: '#/components/schemas/performanceBeaconscore'
+        duties:
+          $ref: '#/components/schemas/PerformanceDuties.Duties'
+        range:
+          $ref: '#/components/schemas/ResultRange'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    performanceDuties:
+      type: array
+      items:
+        type: object
+        properties:
+          slot:
+            $ref: '#/components/schemas/Slot'
+          success:
+            type: boolean
+
+    ValidatorSyncCommitteeDutyCount:
+      type: object
+      properties:
+        successful:
+          type: integer
+          description: Number of times the validator successfully participated in the sync committee.
+          minimum: 0
+        assigned:
+          type: integer
+          description: Number of times the validator was assigned to participate in the sync committee.
+          minimum: 0
+        missed:
+          type: integer
+          description: Number of times the validator missed participation in the sync committee.
+          minimum: 0
+
+    PerformanceDuties.Duties:
+      type: object
+      properties:
+        attestation:
+          type: object
+          properties:
+            included:
+              type: integer
+              description: |
+                  Number of times the validator's attestation was included on-chain.
+
+                  This count includes all attestations submitted by the validator, even if they were included too late to earn a reward (such late attestations are still considered "missed" for reward purposes).
+                  "Included" reflects every attestation that made it on-chain, regardless of timeliness or eligibility for rewards.
+
+                  This metric indicates whether your validator is actively submitting attestations to the network.
+            assigned:
+              type: integer
+              description: |
+                Number of times the validator was assigned an attestation duty.
+                This represents the total opportunities to attest, regardless of whether the validator fulfilled the duty.
+            correct_head:
+              description: |
+                Number of times the validator attested with the correct head block.
+                Correct references are necessary to be rewarded by the chain. but incorrect references result in no reward or a penalty.
+              type: integer
+            correct_source:
+              description: |
+                Number of times the validator attested with the correct source block.
+                Correct references are necessary to be rewarded by the chain. but incorrect references result in no reward or a penalty.
+              type: integer
+            correct_target:
+              description: |
+                Number of times the validator attested with the correct target block.
+                Correct references are necessary to be rewarded by the chain. but incorrect references result in no reward or a penalty.
+              type: integer
+            valuable_correct_head:
+              description: |
+                Counts the number of correct head attestations that were included early enough to receive a reward.
+
+                Attestations that were included too late to earn a reward (and are treated as missed for reward purposes) are not counted as valuable.
+              type: integer
+            valuable_correct_source:
+              description: |
+                Counts the number of correct source attestations that were included early enough to receive a reward.
+
+                Attestations that were included too late to earn a reward (and are treated as missed for reward purposes) are not counted as valuable.
+              type: integer
+            valuable_correct_target:
+              description: |
+                Counts the number of correct target attestations that were included early enough to receive a reward.
+
+                Attestations that were included too late to earn a reward (and are treated as missed for reward purposes) are not counted as valuable.
+              type: integer
+            avg_inclusion_delay:
+              description: |
+                Average inclusion delay measures how quickly a validator's attestations are included in the chain, expressed in slots. 
+                Lower values indicate more timely inclusion and better performance.
+
+                An ideal value of 0 means every attestation was included at the earliest possible opportunity—one slot after it was assigned to you.
+              type: number
+              format: float
+              example: 1.2
+              minimum: 0
+              maximum: 63
+            avg_inclusion_delay_excluding_missed_slots:
+              description: |
+                This is your average inclusion delay, excluding any missed blocks.
+
+                - If avg_inclusion_delay_excluding_missed_slots is close to zero but avg_inclusion_delay is higher, this indicates that most of your attestations are included promptly, and any lost rewards are primarily due to missed blocks on the network (outside your control). 
+                - If both values are large, it suggests your validator is experiencing delays in submitting attestations, likely due to issues with your validator's setup or connectivity.             
+                  
+                Note: avg_inclusion_delay is used for reward calculations. Therefore, an avg_inclusion_delay_excluding_missed_slots of zero does not mean there were no missed rewards.
+                
+                The optimal average inclusion delay is always less than or equal to your actual avg_inclusion_delay.
+              type: number
+              format: float
+              example: 1.2
+              minimum: 0
+              maximum: 63
+            missed:
+              type: integer
+        sync_committee:
+          $ref: '#/components/schemas/ValidatorSyncCommitteeDutyCount'
+        proposal:
+          type: object
+          properties:
+            successful:
+              type: integer
+              description: Number of times the validator successfully proposed a block.
+            assigned:
+              type: integer
+              description: Number of times the validator was assigned to propose a block.
+            missed:
+              type: integer
+              description: Number of times the validator either missed a scheduled block proposal or had their proposed block orphaned
+            included_slashings:
+              type: integer
+              description: |
+                Number of slashing proofs included in blocks proposed by the validator.
+                A slashing proof provides cryptographic evidence that one or more validators have committed a slashable offense, such as:
+                  - double voting (submitting two conflicting attestations or proposals for the same target epoch)
+                  - surround voting (submitting two attestations or proposals where one surrounds the other in terms of source and target epochs)
+
+    ValidatorProposals.Data:
+      type: object
+      properties:
+        validator:
+          $ref: '#/components/schemas/validator'
+        slot:
+          $ref: '#/components/schemas/Slot'
+        epoch:
+          $ref: '#/components/schemas/Epoch'
+        block:
+          type: integer
+          minimum: 0
+          nullable: true
+        graffiti:
+          $ref: "#/components/schemas/graffiti"
+        status:
+          $ref: '#/components/schemas/DutyStatus'
+        relayers:
+          type: array
+          items:
+            type: string
+        builder_public_key:
+          allOf:
+            - $ref: "#/components/schemas/EOAPublicKey"
+          nullable: true
+        gas:
+          type: object
+          properties:
+            used:
+              type: integer
+            limit:
+              type: integer
+        fees_burned:
+          $ref: '#/components/schemas/wei'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    ValidatorRewardsDetailed.Data:
+      allOf:
+        - type: object
+          properties:
+            validator:
+              $ref: '#/components/schemas/validator'
+        - $ref: '#/components/schemas/RewardsData'
+        - type: object
+          properties:
+            finality:
+              $ref: '#/components/schemas/FinalityParams'
+
+    rewardBreakdown:
+      type: object
+      properties:
+        reward:
+          $ref: '#/components/schemas/wei'
+        penalty:
+          $ref: '#/components/schemas/wei'
+        total:
+          $ref: '#/components/schemas/wei'
+
+    attestationRewards:
+      type: object
+      properties:
+        head:
+          $ref: '#/components/schemas/rewardBreakdown'
+        source:
+          $ref: '#/components/schemas/rewardBreakdown'
+        target:
+          $ref: '#/components/schemas/rewardBreakdown'
+        inactivity_leak_penalty:
+          $ref: '#/components/schemas/wei'
+        inclusion_delay_reward:
+          allOf:
+            - $ref: '#/components/schemas/wei'
+          nullable: true
+    
+    proposalRewards:
+      type: object
+      properties:
+        attestation_inclusion_reward:
+          $ref: '#/components/schemas/wei'
+        sync_inclusion_reward:
+          $ref: '#/components/schemas/wei'
+        slashing_inclusion_reward:
+          $ref: '#/components/schemas/wei'
+        execution_layer_fees_reward:
+          $ref: '#/components/schemas/wei'
+        execution_layer_mev_reward:
+          allOf:
+            - $ref: '#/components/schemas/wei'
+          nullable: true
+
+    RewardsData:
+      type: object
+      properties:
+        attestation:
+          $ref: '#/components/schemas/attestationRewards'
+        sync_committee:
+          $ref: '#/components/schemas/rewardBreakdown'
+        proposal:
+          $ref: '#/components/schemas/proposalRewards'
+
+    ValidatorRewardsSummary.Data:
+      allOf:
+        - $ref: '#/components/schemas/RewardsData'
+        - type: object
+          properties:
+            range:
+              $ref : '#/components/schemas/ResultRange'
+            finality:
+              $ref: '#/components/schemas/FinalityParams'
+
+    ValidatorWithdrawals.Data:
+      type: object
+      properties:
+        amount:
+          $ref: '#/components/schemas/wei'
+        validator:
+          $ref: '#/components/schemas/validator'
+        reject_reason:
+          allOf:
+            - $ref: '#/components/schemas/ValidatorWithdrawals.RejectReason'
+          nullable: true
+        status:
+          allOf:
+            - $ref: '#/components/schemas/ConsensusLayerEventStatus'
+          nullable: true
+        type:
+          allOf:
+            - $ref: '#/components/schemas/ValidatorWithdrawals.Type'
+          nullable: true
+        queues:
+          $ref: '#/components/schemas/clQueues'
+        withdrawal_credentials:
+          $ref: '#/components/schemas/withdrawalCredential'
+        recipient:
+          type: string
+          format: byte
+          nullable: true
+        request:
+          type: object
+          nullable: true
+          properties:
+            tx_hash:
+              $ref: '#/components/schemas/transactionHash'
+            tx_sender:
+              $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+            withdrawer:
+              $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+            fee:
+              $ref: '#/components/schemas/wei'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    ValidatorWithdrawals.RejectReason:
+      type: string
+      enum:
+        - full_queue
+        - unknown_public_key
+        - no_execution_withdrawal_credentials
+        - address_mismatch
+        - inactive
+        - exiting
+        - too_young
+        - pending_withdrawals
+        - not_compounding
+        - insufficient_effective_balance
+        - excess_balance
+
+    ValidatorWithdrawals.Type:
+      type: string
+      enum:
+        - manual
+        - network
+        - skimming
+
+    Paging:
+      type: object
+      properties:
+        next_cursor:
+          type: string
+
+    DepositValidity:
+      type: string
+      enum:
+        - valid
+        - invalid
+        - invalid_skipped
+
+    FinalityDetailed:
+      type: object
+      properties:
+        head:
+          type: object
+          properties:
+            epoch:
+              $ref: '#/components/schemas/Epoch'
+            slot:
+              $ref: '#/components/schemas/Slot'
+        justified:
+          type: object
+          properties:
+            epoch:
+              $ref: '#/components/schemas/Epoch'
+              minimum: 0
+            slot:
+              $ref: '#/components/schemas/Slot'
+              minimum: 0
+        finalized:
+          type: object
+          properties:
+            epoch:
+              $ref: '#/components/schemas/Epoch'
+            slot:
+              $ref: '#/components/schemas/Slot'
+
+    FinalityParams:
+      type: string
+      description: |
+        Indicates the finality status of the data provided. 
+          - Finalized data cannot be changed without slashing at least one-third of all validators, providing strong economic guarantees.
+          - Data marked as not_finalized does not have this guarantee and may still change.
+      enum:
+        - not_finalized
+        - finalized
+    
+    FinalityParamsOnlyNoFinalization:
+      type: string
+      description: |
+        Indicates the finality status of the data provided. 
+          - Finalized data cannot be changed without slashing at least one-third of all validators, providing strong economic guarantees.
+          - Data marked as not_finalized does not have this guarantee and may still change.
+      enum:
+        - not_finalized
+    
+    FinalityParamsOnlyFinalized:
+      type: string
+      description: |
+        Indicates the finality status of the data provided. 
+          - Finalized data cannot be changed without slashing at least one-third of all validators, providing strong economic guarantees.
+          - Data marked as not_finalized does not have this guarantee and may still change.
+      enum:
+        - finalized
+
+    Withdrawals:
+      type: object
+      properties:
+        next_withdrawal_index:
+          type: integer
+        validator:
+          $ref: '#/components/schemas/validator'
+        recipient:
+          $ref: '#/components/schemas/ExecutionLayerAddressDetails'
+        amount:
+          $ref: '#/components/schemas/wei'
+        fee:
+          allOf:
+            - $ref: '#/components/schemas/wei'
+          nullable: true
+        status:
+          $ref: '#/components/schemas/ConsensusLayerEventStatus'
+        is_processed:
+          type: boolean
+        queues:
+          $ref: '#/components/schemas/clQueues'
+        finality:
+          $ref: '#/components/schemas/FinalityParams'
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+  
   securitySchemes:
     ApiKeyAuth:
-      type: apiKey
-      description: 'Authorization header with value: Bearer <token>'
-      name: authorization
-      in: header
+      type: http
+      scheme: bearer
+      description: 'Authorization header with value: Bearer <token>. Refer to the [Authentication](/authentication) section to create your API key.'
 
     GCPAuth:
       type: apiKey
-      description: 'Authorization header with value: Bearer <token>'
+      description: 'Authorization header with value: Bearer <token>. Refer to the [Authentication](/authentication) section to create your API key.'
       name: X-Serverless-Authorization
       in: header
