@@ -1,0 +1,304 @@
+openapi: 3.0.4
+info:
+  title: External Service API
+  version: 1.0.3
+
+servers:
+  - url: https://api-external-616724563735.us-central1.run.app
+    description: Staging
+  - url: http://localhost:8080
+    description: Local development
+
+security:
+  - ApiKeyAuth: []
+    GCPAuth: []
+
+paths:
+  /ping:
+    get:
+      responses:
+        '200':
+          description: pet response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pong'
+  /v2/ethereum/slots/{slot}:
+    get:
+      tags:
+        - Network
+      summary: Return basic information on the slot
+      parameters:
+        - name: slot
+          in: path
+          required: true
+          schema:
+            type: string
+            default: latest
+        - $ref: '#/components/parameters/chain'
+      responses:
+        "200":
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetSlotResponse'
+        default:
+          description: An unexpected error response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpc.Status'
+
+  # temp endpoint for testing pagination
+  /blocks/{block_number}/transactions:
+    get:
+      operationId: GetBlockTransactions
+      parameters:
+        - name: block_number
+          in: path
+          required: true
+          schema:
+            type: integer
+        - $ref: '#/components/parameters/cursor'
+        - $ref: '#/components/parameters/page_size'
+      responses:
+        '200':
+          description: block transactions response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlockTransactions'
+components:
+  parameters:
+    chain:
+      name: chain
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/Chain'
+        
+    validator:
+      name: validator
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/validatorIndexPubkey'
+
+    cursor:
+      name: cursor
+      in: query
+      required: false
+      schema:
+        type: string
+
+    page_size:
+      name: page_size
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 10
+  schemas:
+    Paging: 
+      type: object
+      properties:
+        next_cursor:
+          type: string
+    Chain:
+      type: string
+      enum:
+        - mainnet
+        - hoodi
+        - sepolia
+      default: mainnet
+      description: The Ethereum chain to query.
+
+    wei:
+      type: string
+      pattern: ^-?[0-9]+$
+
+    uwei:
+      type: string
+      pattern: ^[0-9]+$
+
+    validator:
+      type: object
+      properties:
+        index:
+          $ref: '#/components/schemas/validatorIndex'
+          nullable: true
+        pubkey:
+          $ref: '#/components/schemas/validatorPubkey'
+
+    validatorPubkey:
+      type: string
+      pattern: ^0x[a-fA-F0-9]{96}$
+
+    validatorIndex:
+      type: integer
+      format: int32
+      minimum: 0
+
+    chainTimestamp:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: int64
+        consensus_algorithm:
+          type: string
+          enum:
+            - proof_of_work
+            - proof_of_stake
+    
+    validatorIndexPubkey:
+      description: Validator index or pubkey
+      oneOf:
+        - index:
+          $ref: '#/components/schemas/validatorIndex'
+        - pubkey:
+          $ref: '#/components/schemas/validatorPubkey'
+
+    Pong:
+      type: object
+      required:
+        - ping
+      properties:
+        ping:
+          type: string
+          example: pong
+
+
+    clEventDetails:
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int32
+          minimum: 0
+        amount:
+          $ref: '#/components/schemas/uwei'
+
+    clEvents:
+      type: object
+      properties:
+        deposits:
+          $ref: '#/components/schemas/clEventDetails'
+        withdrawals:
+          $ref: '#/components/schemas/clEventDetails'
+        consolidations:
+          $ref: '#/components/schemas/clEventDetails'
+
+    GetSlotResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/GetSlotResponse.Data'
+      description: A Response containing basic information about the slot.
+
+    GetSlotResponse.Data:
+      type: object
+      properties:
+        time:
+          $ref: '#/components/schemas/chainTimestamp'
+        proposer:
+          $ref: '#/components/schemas/validator'
+        status:
+          $ref: '#/components/schemas/DutyStatus'
+        block_root:
+          type: string
+          format: byte
+          nullable: true
+        attestation_count:
+          type: integer
+          format: int32
+          nullable: true
+        attestation_slashing_count:
+          type: integer
+          format: int32
+          nullable: true
+        events:
+          type: object
+          properties:
+            queued:
+              type: object
+              properties:
+                deposits:
+                  $ref: '#/components/schemas/clEventDetails'
+                withdrawals:
+                  $ref: '#/components/schemas/clEventDetails'
+                consolidations:
+                  $ref: '#/components/schemas/clEventDetails'
+            processed:
+              type: object
+              properties:
+                deposits:
+                  $ref: '#/components/schemas/clEventDetails'
+                auto_withdrawals:
+                  $ref: '#/components/schemas/clEventDetails'
+                manual_withdrawals:
+                  $ref: '#/components/schemas/clEventDetails'
+                consolidations:
+                  $ref: '#/components/schemas/clEventDetails'
+        graffiti:
+          type: string
+          format: byte
+          nullable: true
+        data_recency:
+          $ref: '#/components/schemas/DataRecency'
+
+    DataRecency:
+      type: object
+      properties:
+        time:
+          $ref: '#/components/schemas/chainTimestamp'
+        is_epoch_finalized:
+          type: boolean
+
+    rpc.Status:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+    DutyStatus:
+      type: string
+      enum:
+        - success
+        - missed
+        - orphaned
+        - scheduled
+
+    BlockTransaction:
+      type: object
+      properties:
+        hash:
+          type: string
+    BlockTransactions:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/BlockTransaction'
+        paging:
+          $ref: '#/components/schemas/Paging'
+
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      description: 'Authorization header with value: Bearer <token>'
+      name: authorization
+      in: header
+
+    GCPAuth:
+      type: apiKey
+      description: 'Authorization header with value: Bearer <token>'
+      name: X-Serverless-Authorization
+      in: header
