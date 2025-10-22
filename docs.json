@@ -6,7 +6,7 @@
   "logo": {
     "light": "/images/logo_light.png",
     "dark": "/images/logo_dark.png",
-    "href": "https://beaconcha.in"
+    "href": "https://docs.beaconcha.in"
   },
   "colors": {
     "primary": "#ffaa31",
@@ -86,6 +86,7 @@
           },
           {
             "group": "FAQs",
+            "expanded": false,
             "pages": [
               "faqs/how-withdrawals-work",
               "faqs/validator-withdrawals-execution-layer",
@@ -97,6 +98,19 @@
       {
         "tab": "API",
         "icon": "code",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "API Pricing",
+              "href": "https://beaconcha.in/pricing",
+              "icon": "gem",
+              "color": {
+                "light": "#ffaa31",
+                "dark": "#ffaa31"
+              }
+            }
+          ]
+        },
         "groups": [
           {
             "group": "Introduction",
